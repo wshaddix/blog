@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag on Wes Shaddix</title>
+    <link>http://localhost:1313/tags/tag/</link>
+    <description>Recent content in Tag on Wes Shaddix</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>wes@wshaddix.com (Wes Shaddix)</managingEditor>
+    <webMaster>wes@wshaddix.com (Wes Shaddix)</webMaster>
+    <copyright>© 2024 Wes Shaddix</copyright>
+    <lastBuildDate>Fri, 18 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/tag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>new-article</title>
+      <link>http://localhost:1313/posts/1729264581695-new-article/</link>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
+      <author>wes@wshaddix.com (Wes Shaddix)</author>
+      <guid>http://localhost:1313/posts/1729264581695-new-article/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/1729264581695-new-article/featured.png" />
+    </item>
+    
+    <item>
+      <title>new-article</title>
+      <link>http://localhost:1313/posts/</link>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
+      <author>wes@wshaddix.com (Wes Shaddix)</author>
+      <guid>http://localhost:1313/posts/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
