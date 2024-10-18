@@ -9,12 +9,11 @@ displayName = "EN"
 isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
-#author = { name = "Wes Shaddix" }
 
 [params.author]
  name = "Wes Shaddix"
  email = "wes@wshaddix.com"
- #image = "img/blowfish_logo_transparent.png"
+ image = "img/coding-in-the-forest.png"
  imageQuality = 96
  headline = ""
  bio = ""
