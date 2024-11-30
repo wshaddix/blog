@@ -1,0 +1,29 @@
+input: .
+output: .retype
+url: https://wshaddix.com
+branding:
+  title: Wes Shaddix
+  label: # Insights
+  logo: static/images/coding-in-the-forest.png
+  logo-dark: static/images/coding-in-the-forest.png
+edit:
+  repo: https://github.com/wshaddix/blog/edit/
+favicon: static/images/favicon.ico
+links:
+- text: GitHub
+  link: https://github.com/wshaddix
+  icon: mark-github
+  target: _blank
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."
+integrations:
+  plausible:
+    domain: wshaddix.com
+markdown:
+  lineBreaks: hard # or, soft
+poweredByRetype: false 
+snippets:
+  lineNumbers:
+    - *
+toc:
+  depth: 1-4
