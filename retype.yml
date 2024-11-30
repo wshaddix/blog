@@ -10,9 +10,17 @@ edit:
   repo: https://github.com/wshaddix/blog/edit/
 favicon: static/images/favicon.ico
 links:
-- text: GitHub
+- text: "github"
   link: https://github.com/wshaddix
-  icon: mark-github
+  icon: static/images/github-svgrepo-com.svg
+- text: "twitter"
+  link: https://x.com/wshaddix
+  icon: static/images/twitter-round-svgrepo-com.svg
+  target: _blank
+- text: "rss"
+  link: /blog/
+  icon: static/images/rss-round-svgrepo-com.svg
+  iconDark: static/images/rss-dark-svgrepo-com.svg
   target: _blank
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
