@@ -10,17 +10,25 @@ edit:
   repo: https://github.com/wshaddix/blog/edit/
 favicon: static/images/favicon.ico
 links:
-- text: "github"
-  link: https://github.com/wshaddix
-  icon: static/images/github-svgrepo-com.svg
-- text: "twitter"
-  link: https://x.com/wshaddix
-  icon: static/images/twitter-round-svgrepo-com.svg
-  target: _blank
-- text: "rss"
+- text: Home
+  link: /
+  icon:
+  target:
+- text: My Blog
   link: /blog/
-  icon: static/images/rss-round-svgrepo-com.svg
-  iconDark: static/images/rss-dark-svgrepo-com.svg
+  icon:
+  target:
+- text: GitHub
+  link: https://github.com/wshaddix
+  icon: 
+  target: _blank
+- text: X
+  link: https://x.com/wshaddix
+  icon: 
+  target: _blank
+- text: RSS
+  link: /blog/feed.xml
+  icon: 
   target: _blank
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
