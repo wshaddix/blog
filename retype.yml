@@ -40,6 +40,8 @@ markdown:
 poweredByRetype: false 
 snippets:
   lineNumbers:
-    - *
+    - js
+    - json
+    - csharp
 toc:
   depth: 1-4
