@@ -8,8 +8,13 @@ links:
 - text: Home
   icon: home
   link: /
+- text: Blog
+  icon: book
+  link: /blog
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
 start:
   pro: true
 poweredByRetype: false
+editor:
+  enabled: false # Default is true
