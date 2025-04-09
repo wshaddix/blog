@@ -1,5 +1,5 @@
 ---
 title: Workstation Setup
 icon: codespaces
-order: 1001
+order: 1002
 ---
