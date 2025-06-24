@@ -18,3 +18,5 @@ start:
 poweredByRetype: false
 editor:
   enabled: false # Default is true
+nav:
+  mode: stack
