@@ -9,29 +9,32 @@
     <meta name="generator" content="Retype 3.10.1">
 
     <!-- Primary Meta Tags -->
-    <title>Sqlite Configuration Provider</title>
-    <meta name="title" content="Sqlite Configuration Provider">
+    <title>Overview</title>
+    <meta name="title" content="Overview">
+    <meta name="description" content="Below is a bullet list of refactoring patterns from Martin Fowler's book Refactoring: Improving the Design of Existing Code">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://wshaddix.com/dotnet-projects/sqlite-configuration-provider/">
+    <link rel="canonical" href="https://wshaddix.com/patterns/refactoring-patterns/overview/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wshaddix.com/dotnet-projects/sqlite-configuration-provider/">
-    <meta property="og:title" content="Sqlite Configuration Provider">
+    <meta property="og:url" content="https://wshaddix.com/patterns/refactoring-patterns/overview/">
+    <meta property="og:title" content="Overview">
+    <meta property="og:description" content="Below is a bullet list of refactoring patterns from Martin Fowler's book Refactoring: Improving the Design of Existing Code">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wshaddix.com/dotnet-projects/sqlite-configuration-provider/">
-    <meta property="twitter:title" content="Sqlite Configuration Provider">
+    <meta property="twitter:url" content="https://wshaddix.com/patterns/refactoring-patterns/overview/">
+    <meta property="twitter:title" content="Overview">
+    <meta property="twitter:description" content="Below is a bullet list of refactoring patterns from Martin Fowler's book Refactoring: Improving the Design of Existing Code">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.10.1.804273076993" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.10.1.804273076993" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.10.1.804273076993" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.10.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.10.1.804273076993" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.10.1.804273076993" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.10.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.10.1.804273076993" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -46,7 +49,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                        <a id="retype-branding-logo" href="../../../" class="flex items-center leading-snug text-2xl">
                             <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Wes Shaddix</span>
                         </a>
                     </div>
@@ -59,7 +62,7 @@
                     <nav id="retype-header-nav" class="hidden md:flex">
                         <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
@@ -69,7 +72,7 @@
                                 </a>
                             </li>
                             <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../blog/">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../blog/">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                         <g fill="currentColor">
                                             <path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/>
@@ -146,7 +149,7 @@
                             <nav>
                                 <ul class="flex flex-wrap justify-center items-center">
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
@@ -156,7 +159,7 @@
                                         </a>
                                     </li>
                                     <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../blog/">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../../blog/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
                                                 <g fill="currentColor">
                                                     <path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/>
@@ -182,12 +185,87 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="overview" class="break-words">
+<doc-anchor-target id="refactoring-patterns-from-martin-fowlers-refactoring" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#overview">#</doc-anchor-trigger>
-        <span>Overview</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#refactoring-patterns-from-martin-fowlers-refactoring">#</doc-anchor-trigger>
+        <span>Refactoring Patterns from Martin Fowler&#x27;s <em>Refactoring</em></span>
     </h1>
 </doc-anchor-target>
+<p>Below is a bullet list of refactoring patterns from Martin Fowler&#x27;s book <em>Refactoring: Improving the Design of Existing Code</em> (2nd Edition). Each pattern includes its name and a brief description of its purpose.</p>
+<ul>
+<li><strong>Add Parameter</strong>: Introduce a new parameter to a method to pass additional data needed for its functionality, improving flexibility without altering the method&#x27;s core logic.</li>
+<li><strong>Change Bidirectional Association to Unidirectional</strong>: Convert a two-way relationship between classes to a one-way relationship to reduce coupling and simplify dependencies.</li>
+<li><strong>Change Reference to Value</strong>: Replace a reference object with a value object when the object is immutable and small, improving performance and reducing complexity.</li>
+<li><strong>Change Unidirectional Association to Bidirectional</strong>: Add a back-reference to create a two-way relationship between classes, enabling easier navigation and consistency.</li>
+<li><strong>Change Value to Reference</strong>: Convert a value object to a reference object when multiple parts of the code need to share the same instance, ensuring consistency.</li>
+<li><strong>Collapse Hierarchy</strong>: Merge a superclass and its subclass into a single class when they share similar responsibilities, reducing unnecessary complexity.</li>
+<li><strong>Consolidate Conditional Expression</strong>: Combine multiple related conditional checks into a single expression to improve readability and reduce duplication.</li>
+<li><strong>Consolidate Duplicate Conditional Fragments</strong>: Move identical code fragments shared across conditional branches outside the conditional to eliminate redundancy.</li>
+<li><strong>Convert Procedural Design to Objects</strong>: Transform procedural code into an object-oriented design by grouping related data and behavior into classes, improving modularity.</li>
+<li><strong>Decompose Conditional</strong>: Break a complex conditional statement into smaller, named methods to clarify the logic and improve readability.</li>
+<li><strong>Duplicate Observed Data</strong>: Copy data from a domain model to a separate presentation model to decouple the UI from the business logic, often used in layered architectures.</li>
+<li><strong>Encapsulate Collection</strong>: Restrict direct access to a collection by providing methods to manipulate it, ensuring better control and consistency.</li>
+<li><strong>Encapsulate Downcast</strong>: Replace explicit downcasting with a method that returns the correct type, improving type safety and code clarity.</li>
+<li><strong>Encapsulate Field</strong>: Make a public field private and provide getter/setter methods to control access and improve encapsulation.</li>
+<li><strong>Extract Class</strong>: Move a subset of fields and methods from a large class into a new class to improve cohesion and reduce class size.</li>
+<li><strong>Extract Function</strong>: Move a block of code into a separate function with a descriptive name to improve readability and reusability.</li>
+<li><strong>Extract Interface</strong>: Create an interface from a class’s methods to define a contract, allowing multiple implementations and improving flexibility.</li>
+<li><strong>Extract Module</strong>: Move related functions and data into a separate module or namespace to organize code better and reduce global scope pollution.</li>
+<li><strong>Extract Subclass</strong>: Create a subclass to handle specific behavior variations, improving separation of concerns in a class hierarchy.</li>
+<li><strong>Extract Superclass</strong>: Move common fields and methods from related classes into a shared superclass to eliminate duplication and improve structure.</li>
+<li><strong>Extract Variable</strong>: Assign a complex expression to a named variable to improve code clarity and make debugging easier.</li>
+<li><strong>Form Template Method</strong>: Move varying steps of an algorithm to subclasses while keeping the common structure in a superclass, reducing duplication in similar methods.</li>
+<li><strong>Hide Delegate</strong>: Encapsulate access to a delegate object by providing methods in the client class, reducing coupling and simplifying interactions.</li>
+<li><strong>Hide Method</strong>: Make a public method private or protected when it’s only used internally, improving encapsulation and reducing the public API.</li>
+<li><strong>Inline Class</strong>: Merge a class’s responsibilities into another class when it no longer justifies its existence, simplifying the codebase.</li>
+<li><strong>Inline Function</strong>: Replace a function call with its body when the function is simple or only called once, reducing overhead and improving clarity.</li>
+<li><strong>Inline Temp</strong>: Replace a temporary variable with its expression when it adds no clarity, simplifying the code.</li>
+<li><strong>Introduce Assertion</strong>: Add an explicit check to verify assumptions in the code, improving reliability and catching errors early.</li>
+<li><strong>Introduce Foreign Method</strong>: Add a utility method to a class from another module or library when you can’t modify the original class, improving code organization.</li>
+<li><strong>Introduce Local Extension</strong>: Create a subclass or wrapper to add new behavior to an unmodifiable class, providing a clean way to extend functionality.</li>
+<li><strong>Introduce Null Object</strong>: Replace null checks with an object that implements the same interface but does nothing, simplifying conditional logic.</li>
+<li><strong>Introduce Parameter Object</strong>: Group related parameters into a single object to simplify method signatures and improve data cohesion.</li>
+<li><strong>Move Field</strong>: Relocate a field from one class to another when it’s more closely related to the target class’s responsibilities, improving cohesion.</li>
+<li><strong>Move Function</strong>: Relocate a function to the class or module where it’s most relevant, improving organization and reducing coupling.</li>
+<li><strong>Move Statements into Function</strong>: Move repeated statements into a function to reduce duplication and improve maintainability.</li>
+<li><strong>Move Statements to Callers</strong>: Move statements out of a function to its callers when they’re specific to certain use cases, improving function generality.</li>
+<li><strong>Parameterize Function</strong>: Generalize a function by adding parameters to handle variations, reducing the need for similar functions.</li>
+<li><strong>Preserve Whole Object</strong>: Pass an entire object to a method instead of multiple individual fields, simplifying the interface and improving cohesion.</li>
+<li><strong>Pull Up Constructor Body</strong>: Move common constructor logic from subclasses to the superclass to reduce duplication and ensure consistency.</li>
+<li><strong>Pull Up Field</strong>: Move a field from subclasses to a superclass when it’s used identically across them, reducing duplication.</li>
+<li><strong>Pull Up Method</strong>: Move a method from subclasses to a superclass when it’s identical or nearly identical, eliminating duplication.</li>
+<li><strong>Push Down Field</strong>: Move a field from a superclass to subclasses when it’s only relevant to some subclasses, improving specialization.</li>
+<li><strong>Push Down Method</strong>: Move a method from a superclass to subclasses when it’s only relevant to some subclasses, improving clarity.</li>
+<li><strong>Remove Assignments to Parameters</strong>: Avoid modifying parameter values within a method by using local variables instead, improving clarity and safety.</li>
+<li><strong>Remove Dead Code</strong>: Eliminate code that’s no longer used to reduce clutter and improve maintainability.</li>
+<li><strong>Remove Flag Argument</strong>: Replace a boolean parameter that controls behavior with separate methods, improving clarity and reducing complexity.</li>
+<li><strong>Remove Middle Man</strong>: Eliminate unnecessary delegation methods to directly access a delegate object, reducing indirection when appropriate.</li>
+<li><strong>Remove Subclass</strong>: Eliminate a subclass when its differences are minimal, merging its behavior into the superclass or another class.</li>
+<li><strong>Rename Field</strong>: Change a field’s name to better reflect its purpose, improving code readability and maintainability.</li>
+<li><strong>Rename Function</strong>: Change a function’s name to better describe its purpose, improving code clarity and intent.</li>
+<li><strong>Rename Variable</strong>: Change a variable’s name to make its purpose clearer, improving readability and maintainability.</li>
+<li><strong>Replace Conditional with Polymorphism</strong>: Use subclasses or polymorphic behavior to handle conditionals, simplifying logic and improving extensibility.</li>
+<li><strong>Replace Constructor with Factory Function</strong>: Replace a constructor with a factory function to provide more flexibility in object creation.</li>
+<li><strong>Replace Derived Variable with Query</strong>: Replace a variable that stores a computed value with a method that calculates it, ensuring up-to-date values.</li>
+<li><strong>Replace Exception with Precheck</strong>: Replace exception handling with a precondition check to simplify control flow and improve performance.</li>
+<li><strong>Replace Function with Command</strong>: Convert a function into a command object to encapsulate complex logic or support undoable operations.</li>
+<li><strong>Replace Inline Code with Function Call</strong>: Replace inline code with a call to an existing or new function to improve reusability and clarity.</li>
+<li><strong>Replace Loop with Pipeline</strong>: Convert a loop into a pipeline of operations (e.g., using map, filter, reduce) to improve readability and functional style.</li>
+<li><strong>Replace Nested Conditional with Guard Clauses</strong>: Use early returns (guard clauses) to simplify nested conditionals, improving readability.</li>
+<li><strong>Replace Parameter with Query</strong>: Replace a parameter with a method call to compute its value, reducing parameter lists and improving encapsulation.</li>
+<li><strong>Replace Primitive with Object</strong>: Replace a primitive type with a rich object to encapsulate behavior and improve type safety.</li>
+<li><strong>Replace Subclass with Fields</strong>: Eliminate a subclass by moving its distinguishing fields to the superclass, simplifying the hierarchy when polymorphism isn’t needed.</li>
+<li><strong>Replace Temp with Query</strong>: Replace a temporary variable with a method that computes its value, reducing variable scope and improving clarity.</li>
+<li><strong>Replace Type Code with Subclasses</strong>: Use subclasses to represent type codes, enabling polymorphic behavior and improving extensibility.</li>
+<li><strong>Replace Type Code with State/Strategy</strong>: Replace a type code with a state or strategy pattern to encapsulate behavior variations, improving flexibility.</li>
+<li><strong>Separate Query from Modifier</strong>: Split a method that both queries and modifies state into two methods, improving clarity and safety.</li>
+<li><strong>Slide Statements</strong>: Reorder statements to group related code together, improving readability and preparing for further refactoring.</li>
+<li><strong>Split Loop</strong>: Break a loop that performs multiple tasks into separate loops for each task, improving clarity and maintainability.</li>
+<li><strong>Split Phase</strong>: Divide a process into distinct phases with clear inputs and outputs, improving modularity and testability.</li>
+<li><strong>Split Variable</strong>: Split a variable used for multiple purposes into separate variables, improving clarity and reducing errors.</li>
+<li><strong>Substitute Algorithm</strong>: Replace an algorithm with a simpler or more efficient one, improving performance or readability.</li>
+<li><strong>Unify Interfaces with Adapter</strong>: Use an adapter to make classes with similar responsibilities share a common interface, improving consistency and interchangeability.</li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->
@@ -197,7 +275,7 @@
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../real-world-app-development/overview/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../patterns/integration-patterns/overview/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
@@ -207,10 +285,10 @@
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../c-sharp-howto/overview/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../tool-references/git/git-installation/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Overview</span>
+                                                <span class="block mt-1">Installation</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -254,6 +332,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Sqlite Configuration Provider", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Overview", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

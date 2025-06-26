@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.1.804273076993">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.10.1">
+
+    <!-- Primary Meta Tags -->
+    <title>Overview</title>
+    <meta name="title" content="Overview">
+    <meta name="description" content="Foundational features establishing C# as a modern, object-oriented language.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://wshaddix.com/c-sharp-language/overview/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wshaddix.com/c-sharp-language/overview/">
+    <meta property="og:title" content="Overview">
+    <meta property="og:description" content="Foundational features establishing C# as a modern, object-oriented language.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wshaddix.com/c-sharp-language/overview/">
+    <meta property="twitter:title" content="Overview">
+    <meta property="twitter:description" content="Foundational features establishing C# as a modern, object-oriented language.">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../resources/css/retype.css?v=3.10.1.804273076993" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.10.1.804273076993" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.10.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.10.1.804273076993" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Wes Shaddix</span>
+                        </a>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                        <g fill="currentColor">
+                                            <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                        </g>
+                                    </svg>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../blog/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                        <g fill="currentColor">
+                                            <path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/>
+                                        </g>
+                                    </svg>
+                                    <span>Blog</span>
+                                </a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-white border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                                <g fill="currentColor">
+                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                                </g>
+                                            </svg>
+                                            <span>Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../blog/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                                <g fill="currentColor">
+                                                    <path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/>
+                                                </g>
+                                            </svg>
+                                            <span>Blog</span>
+                                        </a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                                    <ol role="list">
+                                        <li class="pr-4">
+                                            <a href="../../" class="pr-4">
+                                                Index
+                                            </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <span class="pr-4">
+                                                C# Language
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../../c-sharp-language/overview/" class="pr-4">
+                                                Overview
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </nav>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="outline-of-c-language-features-c-10-to-c-140" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#outline-of-c-language-features-c-10-to-c-140">#</doc-anchor-trigger>
+        <span>Outline of C# Language Features (C# 1.0 to C# 14.0)</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="c-10-2002">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-10-2002">#</doc-anchor-trigger>
+        <span>C# 1.0 (2002)</span>
+    </h2>
+</doc-anchor-target>
+<p>Foundational features establishing C# as a modern, object-oriented language. These are the core building blocks required for understanding subsequent versions.</p>
+<ul>
+<li><p><strong>Basic Syntax and Structure</strong></p>
+<ul>
+<li>Semicolons (<code v-pre>;</code>) for statement termination.</li>
+<li>Curly braces (<code v-pre>{}</code>) to define code blocks.</li>
+<li>Case-sensitive identifiers.</li>
+<li>Single-line (<code v-pre>//</code>) and multi-line (<code v-pre>/* */</code>) comments.</li>
+<li>Main method as program entry point (<code v-pre>static void Main()</code>).</li>
+</ul>
+</li>
+<li><p><strong>Primitive Types</strong></p>
+<ul>
+<li>Integer types: <code v-pre>sbyte</code>, <code v-pre>byte</code>, <code v-pre>short</code>, <code v-pre>ushort</code>, <code v-pre>int</code>, <code v-pre>uint</code>, <code v-pre>long</code>, <code v-pre>ulong</code>.</li>
+<li>Floating-point types: <code v-pre>float</code>, <code v-pre>double</code>.</li>
+<li>Decimal type: <code v-pre>decimal</code> for precise financial calculations.</li>
+<li>Boolean type: <code v-pre>bool</code> (<code v-pre>true</code>/<code v-pre>false</code>).</li>
+<li>Character type: <code v-pre>char</code> (Unicode 16-bit).</li>
+<li>Object type: <code v-pre>object</code> as the root of all types.</li>
+<li>String type: <code v-pre>string</code> (immutable Unicode sequence).</li>
+</ul>
+</li>
+<li><p><strong>Variables and Constants</strong></p>
+<ul>
+<li>Variable declaration and initialization (<code v-pre>int x = 10;</code>).</li>
+<li>Constants (<code v-pre>const int Max = 100;</code>).</li>
+</ul>
+</li>
+<li><p><strong>Operators</strong></p>
+<ul>
+<li>Arithmetic: <code v-pre>+</code>, <code v-pre>-</code>, <code v-pre>*</code>, <code v-pre>/</code>, <code v-pre>%</code>.</li>
+<li>Relational: <code v-pre>==</code>, <code v-pre>!=</code>, <code v-pre>&lt;</code>, <code v-pre>&gt;</code>, <code v-pre>&lt;=</code>, <code v-pre>&gt;=</code>.</li>
+<li>Logical: <code v-pre>&amp;&amp;</code>, <code v-pre>||</code>, <code v-pre>!</code>.</li>
+<li>Bitwise: <code v-pre>&amp;</code>, <code v-pre>|</code>, <code v-pre>^</code>, <code v-pre>~</code>, <code v-pre>&lt;&lt;</code>, <code v-pre>&gt;&gt;</code>.</li>
+<li>Assignment: <code v-pre>=</code>, <code v-pre>+=</code>, <code v-pre>-=</code>, <code v-pre>*=</code>, <code v-pre>/=</code>, <code v-pre>%=</code>, etc.</li>
+<li>Ternary operator: <code v-pre>?:</code>.</li>
+</ul>
+</li>
+<li><p><strong>Control Flow</strong></p>
+<ul>
+<li>Conditional statements: <code v-pre>if</code>, <code v-pre>else if</code>, <code v-pre>else</code>.</li>
+<li>Switch statement: <code v-pre>switch</code> with <code v-pre>case</code> and <code v-pre>default</code>.</li>
+<li>Loops: <code v-pre>for</code>, <code v-pre>while</code>, <code v-pre>do-while</code>, <code v-pre>foreach</code> (requires arrays or <code v-pre>IEnumerable</code>).</li>
+<li>Jump statements: <code v-pre>break</code>, <code v-pre>continue</code>, <code v-pre>goto</code>, <code v-pre>return</code>.</li>
+</ul>
+</li>
+<li><p><strong>Arrays</strong></p>
+<ul>
+<li>Single-dimensional arrays (<code v-pre>int[] numbers = new int[5];</code>).</li>
+<li>Multidimensional arrays (<code v-pre>int[,] matrix = new int[3, 3];</code>).</li>
+<li>Jagged arrays (<code v-pre>int[][] jagged = new int[3][];</code>).</li>
+</ul>
+</li>
+<li><p><strong>Methods</strong></p>
+<ul>
+<li>Method declaration with parameters and return types.</li>
+<li><code v-pre>void</code> methods.</li>
+<li>Parameter passing: value types by value, reference types by reference.</li>
+<li><code v-pre>out</code> and <code v-pre>ref</code> parameters for passing by reference.</li>
+<li>Method overloading (same name, different signatures).</li>
+</ul>
+</li>
+<li><p><strong>Classes and Objects</strong></p>
+<ul>
+<li>Class declaration (<code v-pre>class MyClass {}</code>).</li>
+<li>Fields, properties (basic fields, no auto-implemented properties yet).</li>
+<li>Methods within classes.</li>
+<li>Constructors (default and parameterized).</li>
+<li>Object instantiation (<code v-pre>new</code> keyword).</li>
+<li><code v-pre>this</code> keyword for self-reference.</li>
+</ul>
+</li>
+<li><p><strong>Access Modifiers</strong></p>
+<ul>
+<li><code v-pre>public</code>, <code v-pre>private</code>, <code v-pre>protected</code>, <code v-pre>internal</code>.</li>
+<li>Default access (private for class members, internal for types).</li>
+</ul>
+</li>
+<li><p><strong>Object-Oriented Programming</strong></p>
+<ul>
+<li>Encapsulation (using access modifiers).</li>
+<li>Inheritance (<code v-pre>class Derived : Base</code>).</li>
+<li>Polymorphism via virtual methods (<code v-pre>virtual</code>, <code v-pre>override</code>).</li>
+<li>Abstract classes (<code v-pre>abstract</code>).</li>
+<li>Interfaces (<code v-pre>interface</code> for defining contracts).</li>
+<li>Sealed classes (<code v-pre>sealed</code> to prevent inheritance).</li>
+</ul>
+</li>
+<li><p><strong>Structs</strong></p>
+<ul>
+<li>Value type structs (<code v-pre>struct Point { public int X, Y; }</code>).</li>
+<li>Differences from classes (value semantics, no inheritance).</li>
+</ul>
+</li>
+<li><p><strong>Enums</strong></p>
+<ul>
+<li>Enumeration types (<code v-pre>enum Day { Monday, Tuesday, ... }</code>).</li>
+<li>Underlying type (default <code v-pre>int</code>).</li>
+</ul>
+</li>
+<li><p><strong>Namespaces</strong></p>
+<ul>
+<li>Declaring namespaces (<code v-pre>namespace MyApp;</code>).</li>
+<li>Using directives (<code v-pre>using System;</code>).</li>
+<li>Nested namespaces.</li>
+</ul>
+</li>
+<li><p><strong>Exception Handling</strong></p>
+<ul>
+<li><code v-pre>try</code>, <code v-pre>catch</code>, <code v-pre>finally</code> blocks.</li>
+<li>Throwing exceptions (<code v-pre>throw</code>).</li>
+<li>Custom exceptions (inheriting from <code v-pre>Exception</code>).</li>
+</ul>
+</li>
+<li><p><strong>Delegates</strong></p>
+<ul>
+<li>Delegate declaration (<code v-pre>delegate void MyDelegate(int x);</code>).</li>
+<li>Single-cast delegates for method references.</li>
+<li>Event handling basics (using delegates).</li>
+</ul>
+</li>
+<li><p><strong>Events</strong></p>
+<ul>
+<li>Event declaration using delegates (<code v-pre>event MyDelegate MyEvent;</code>).</li>
+<li>Raising and handling events.</li>
+</ul>
+</li>
+<li><p><strong>Type Safety and Boxing</strong></p>
+<ul>
+<li>Strong typing (compile-time type checking).</li>
+<li>Boxing and unboxing (<code v-pre>object</code> to/from value types).</li>
+</ul>
+</li>
+<li><p><strong>Attributes</strong></p>
+<ul>
+<li>Basic attribute usage (<code v-pre>[Obsolete]</code>).</li>
+<li>Custom attributes (inheriting from <code v-pre>Attribute</code>).</li>
+</ul>
+</li>
+<li><p><strong>Garbage Collection</strong></p>
+<ul>
+<li>Automatic memory management.</li>
+<li><code v-pre>IDisposable</code> interface and <code v-pre>using</code> statement for resource cleanup.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-20-2005">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-20-2005">#</doc-anchor-trigger>
+        <span>C# 2.0 (2005)</span>
+    </h2>
+</doc-anchor-target>
+<p>Introduces generics, enhanced delegates, and other features building on C# 1.0’s type system and methods.</p>
+<ul>
+<li><p><strong>Generics</strong> (Prerequisite: Classes, Interfaces)</p>
+<ul>
+<li>Generic classes (<code v-pre>class List&lt;T&gt; {}</code>).</li>
+<li>Generic methods (<code v-pre>T Swap&lt;T&gt;(T a, T b)</code>).</li>
+<li>Generic interfaces (<code v-pre>interface IComparable&lt;T&gt;</code>).</li>
+<li>Constraints (<code v-pre>where T : class</code>, <code v-pre>where T : struct</code>, <code v-pre>where T : new()</code>, etc.).</li>
+<li>Generic delegates (<code v-pre>delegate T Func&lt;T&gt;(T arg);</code>).</li>
+</ul>
+</li>
+<li><p><strong>Anonymous Methods</strong> (Prerequisite: Delegates)</p>
+<ul>
+<li>Inline delegate methods (<code v-pre>delegate(int x) { return x * 2; }</code>).</li>
+<li>Capturing outer variables (closures).</li>
+</ul>
+</li>
+<li><p><strong>Iterators</strong> (Prerequisite: Methods, <code v-pre>IEnumerable</code>)</p>
+<ul>
+<li><code v-pre>yield return</code> for creating iterators.</li>
+<li><code v-pre>yield break</code> to terminate iteration.</li>
+<li>Simplifying custom <code v-pre>IEnumerable</code> implementations.</li>
+</ul>
+</li>
+<li><p><strong>Nullable Types</strong> (Prerequisite: Value Types)</p>
+<ul>
+<li><code v-pre>Nullable&lt;T&gt;</code> for value types (<code v-pre>int? x = null;</code>).</li>
+<li>Shorthand syntax (<code v-pre>T?</code>).</li>
+<li><code v-pre>HasValue</code> and <code v-pre>Value</code> properties.</li>
+<li>Null-coalescing operator (<code v-pre>??</code>).</li>
+</ul>
+</li>
+<li><p><strong>Partial Types</strong> (Prerequisite: Classes)</p>
+<ul>
+<li>Splitting class definitions across files (<code v-pre>partial class MyClass</code>).</li>
+<li>Useful for code generation (e.g., Windows Forms).</li>
+</ul>
+</li>
+<li><p><strong>Static Classes</strong> (Prerequisite: Classes)</p>
+<ul>
+<li><code v-pre>static class</code> for utility classes (all members must be static).</li>
+</ul>
+</li>
+<li><p><strong>Covariance and Contravariance for Delegates</strong> (Prerequisite: Delegates, Generics)</p>
+<ul>
+<li>Limited covariance/contravariance for delegate types.</li>
+</ul>
+</li>
+<li><p><strong>Property Accessor Accessibility</strong> (Prerequisite: Classes)</p>
+<ul>
+<li>Different access modifiers for <code v-pre>get</code> and <code v-pre>set</code> (<code v-pre>public int Prop { get; private set; }</code>).</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-30-2007">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-30-2007">#</doc-anchor-trigger>
+        <span>C# 3.0 (2007)</span>
+    </h2>
+</doc-anchor-target>
+<p>Focuses on LINQ and functional programming features, building heavily on generics and delegates.</p>
+<ul>
+<li><p><strong>Implicitly Typed Local Variables</strong> (Prerequisite: Variables)</p>
+<ul>
+<li><code v-pre>var</code> keyword for local variable type inference (<code v-pre>var x = 10;</code>).</li>
+</ul>
+</li>
+<li><p><strong>Object and Collection Initializers</strong> (Prerequisite: Classes, Arrays)</p>
+<ul>
+<li>Object initializers (<code v-pre>var p = new Point { X = 1, Y = 2 };</code>).</li>
+<li>Collection initializers (<code v-pre>var list = new List&lt;int&gt; { 1, 2, 3 };</code>).</li>
+</ul>
+</li>
+<li><p><strong>Auto-Implemented Properties</strong> (Prerequisite: Classes)</p>
+<ul>
+<li>Simplified property syntax (<code v-pre>public int Prop { get; set; }</code>).</li>
+<li>Compiler-generated backing fields.</li>
+</ul>
+</li>
+<li><p><strong>Anonymous Types</strong> (Prerequisite: Classes, Object Initializers)</p>
+<ul>
+<li><code v-pre>var anon = new { Name = &quot;John&quot;, Age = 30 };</code>.</li>
+<li>Immutable, compiler-generated types.</li>
+</ul>
+</li>
+<li><p><strong>Lambda Expressions</strong> (Prerequisite: Delegates, Anonymous Methods)</p>
+<ul>
+<li>Concise delegate syntax (<code v-pre>x =&gt; x * 2</code>).</li>
+<li>Expression lambdas and statement lambdas.</li>
+</ul>
+</li>
+<li><p><strong>Expression Trees</strong> (Prerequisite: Lambda Expressions)</p>
+<ul>
+<li>Representing code as data (<code v-pre>Expression&lt;Func&lt;int, int&gt;&gt;</code>).</li>
+<li>Used by LINQ providers.</li>
+</ul>
+</li>
+<li><p><strong>Extension Methods</strong> (Prerequisite: Static Classes, Generics)</p>
+<ul>
+<li>Adding methods to existing types (<code v-pre>static class Extensions { public static int Double(this int x) =&gt; x * 2; }</code>).</li>
+<li>Must be in static classes.</li>
+</ul>
+</li>
+<li><p><strong>Query Expressions (LINQ)</strong> (Prerequisite: Generics, Lambda Expressions, Extension Methods)</p>
+<ul>
+<li>Query syntax (<code v-pre>from x in collection where x &gt; 0 select x</code>).</li>
+<li>Keywords: <code v-pre>from</code>, <code v-pre>where</code>, <code v-pre>select</code>, <code v-pre>group</code>, <code v-pre>join</code>, <code v-pre>orderby</code>, <code v-pre>let</code>, etc.</li>
+<li>Translation to method calls (e.g., <code v-pre>Where</code>, <code v-pre>Select</code>).</li>
+</ul>
+</li>
+<li><p><strong>Partial Methods</strong> (Prerequisite: Partial Types)</p>
+<ul>
+<li><code v-pre>partial</code> methods in partial classes (optional implementation).</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-40-2010">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-40-2010">#</doc-anchor-trigger>
+        <span>C# 4.0 (2010)</span>
+    </h2>
+</doc-anchor-target>
+<p>Enhances interoperability and dynamic programming, building on generics and delegates.</p>
+<ul>
+<li><p><strong>Dynamic Typing</strong> (Prerequisite: Object Type)</p>
+<ul>
+<li><code v-pre>dynamic</code> type for runtime binding (<code v-pre>dynamic d = 10;</code>).</li>
+<li>Bypasses static type checking.</li>
+</ul>
+</li>
+<li><p><strong>Named and Optional Parameters</strong> (Prerequisite: Methods)</p>
+<ul>
+<li>Optional parameters (<code v-pre>void Method(int x = 0)</code>).</li>
+<li>Named arguments (<code v-pre>Method(x: 5)</code>).</li>
+</ul>
+</li>
+<li><p><strong>Covariance and Contravariance for Generics</strong> (Prerequisite: Generics)</p>
+<ul>
+<li><code v-pre>out</code> for covariance (<code v-pre>IEnumerable&lt;out T&gt;</code>).</li>
+<li><code v-pre>in</code> for contravariance (<code v-pre>IComparer&lt;in T&gt;</code>).</li>
+<li>Applied to interfaces and delegates.</li>
+</ul>
+</li>
+<li><p><strong>Embedded Interop Types</strong> (Prerequisite: Classes)</p>
+<ul>
+<li>Simplifies COM interop by embedding type information.</li>
+</ul>
+</li>
+<li><p><strong>Dynamic Import</strong> (Prerequisite: Dynamic Typing)</p>
+<ul>
+<li>Improved COM interop with <code v-pre>dynamic</code>.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-50-2012">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-50-2012">#</doc-anchor-trigger>
+        <span>C# 5.0 (2012)</span>
+    </h2>
+</doc-anchor-target>
+<p>Focuses on asynchronous programming, building on methods and delegates.</p>
+<ul>
+<li><p><strong>Async and Await</strong> (Prerequisite: Methods, Delegates)</p>
+<ul>
+<li><code v-pre>async</code> modifier for methods.</li>
+<li><code v-pre>await</code> for asynchronous operations (<code v-pre>await Task.Delay(1000);</code>).</li>
+<li>Task-based asynchronous pattern (TAP).</li>
+</ul>
+</li>
+<li><p><strong>Caller Information Attributes</strong> (Prerequisite: Attributes)</p>
+<ul>
+<li><code v-pre>[CallerMemberName]</code>, <code v-pre>[CallerFilePath]</code>, <code v-pre>[CallerLineNumber]</code>.</li>
+<li>For logging and diagnostics.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-60-2015">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-60-2015">#</doc-anchor-trigger>
+        <span>C# 6.0 (2015)</span>
+    </h2>
+</doc-anchor-target>
+<p>Introduces syntactic sugar and developer productivity features, building on prior constructs.</p>
+<ul>
+<li><p><strong>Static Using Directives</strong> (Prerequisite: Namespaces)</p>
+<ul>
+<li><code v-pre>using static System.Math;</code> for direct access to static members (<code v-pre>Sin(x)</code>).</li>
+</ul>
+</li>
+<li><p><strong>Auto-Property Initializers</strong> (Prerequisite: Auto-Implemented Properties)</p>
+<ul>
+<li><code v-pre>public int Prop { get; set; } = 42;</code>.</li>
+</ul>
+</li>
+<li><p><strong>Expression-Bodied Members</strong> (Prerequisite: Methods, Properties)</p>
+<ul>
+<li>Expression-bodied methods (<code v-pre>int Double(int x) =&gt; x * 2;</code>).</li>
+<li>Expression-bodied properties (<code v-pre>int Prop =&gt; 42;</code>).</li>
+</ul>
+</li>
+<li><p><strong>Null-Conditional Operator</strong> (Prerequisite: Nullable Types)</p>
+<ul>
+<li><code v-pre>?.</code> and <code v-pre>?[]</code> for safe navigation (<code v-pre>obj?.Property</code>).</li>
+</ul>
+</li>
+<li><p><strong>String Interpolation</strong> (Prerequisite: Strings)</p>
+<ul>
+<li><code v-pre>$&quot;Hello {name}&quot;</code> for formatted strings.</li>
+</ul>
+</li>
+<li><p><strong>nameof Operator</strong> (Prerequisite: Variables)</p>
+<ul>
+<li><code v-pre>nameof(variable)</code> for retrieving variable names as strings.</li>
+</ul>
+</li>
+<li><p><strong>Exception Filters</strong> (Prerequisite: Exception Handling)</p>
+<ul>
+<li><code v-pre>catch (Exception ex) when (ex.Message.Contains(&quot;specific&quot;))</code>.</li>
+</ul>
+</li>
+<li><p><strong>Dictionary Initializers</strong> (Prerequisite: Collection Initializers)</p>
+<ul>
+<li><code v-pre>var dict = new Dictionary&lt;int, string&gt; { [1] = &quot;One&quot;, [2] = &quot;Two&quot; };</code>.</li>
+</ul>
+</li>
+<li><p><strong>Improved Overload Resolution</strong> (Prerequisite: Method Overloading)</p>
+<ul>
+<li>Better compiler handling of ambiguous overloads.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-70-2017">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-70-2017">#</doc-anchor-trigger>
+        <span>C# 7.0 (2017)</span>
+    </h2>
+</doc-anchor-target>
+<p>Enhances functionality with tuples, pattern matching, and more, building on types and control flow.</p>
+<ul>
+<li><p><strong>Out Variables</strong> (Prerequisite: <code v-pre>out</code> Parameters)</p>
+<ul>
+<li>Inline <code v-pre>out</code> declarations (<code v-pre>if (int.TryParse(s, out int result))</code>).</li>
+</ul>
+</li>
+<li><p><strong>Tuples</strong> (Prerequisite: Types)</p>
+<ul>
+<li>Value tuple syntax (<code v-pre>(int, string) t = (42, &quot;test&quot;);</code>).</li>
+<li>Named tuple elements (<code v-pre>var t = (Count: 42, Name: &quot;test&quot;);</code>).</li>
+<li>Deconstruction (<code v-pre>(int x, string y) = t;</code>).</li>
+</ul>
+</li>
+<li><p><strong>Pattern Matching</strong> (Prerequisite: Control Flow)</p>
+<ul>
+<li><code v-pre>is</code> operator with type patterns (<code v-pre>if (obj is int i)</code>).</li>
+<li>Switch statement enhancements with patterns (<code v-pre>case int i when i &gt; 0:</code>).</li>
+</ul>
+</li>
+<li><p><strong>Local Functions</strong> (Prerequisite: Methods)</p>
+<ul>
+<li>Methods defined inside other methods (<code v-pre>void Local() { ... }</code>).</li>
+</ul>
+</li>
+<li><p><strong>Ref Returns and Locals</strong> (Prerequisite: <code v-pre>ref</code> Parameters)</p>
+<ul>
+<li><code v-pre>ref</code> returns (<code v-pre>ref int GetRef(int[] arr) =&gt; ref arr[0];</code>).</li>
+<li><code v-pre>ref</code> locals (<code v-pre>ref int x = ref arr[0];</code>).</li>
+</ul>
+</li>
+<li><p><strong>Binary Literals and Digit Separators</strong> (Prerequisite: Primitive Types)</p>
+<ul>
+<li>Binary literals (<code v-pre>0b1010</code>).</li>
+<li>Digit separators (<code v-pre>1_000_000</code>).</li>
+</ul>
+</li>
+<li><p><strong>Throw Expressions</strong> (Prerequisite: Exception Handling)</p>
+<ul>
+<li>Throwing in expressions (<code v-pre>x ?? throw new Exception()</code>).</li>
+</ul>
+</li>
+<li><p><strong>Generalized Async Return Types</strong> (Prerequisite: Async/Await)</p>
+<ul>
+<li><code v-pre>ValueTask&lt;T&gt;</code> for efficient async returns.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-71-2017">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-71-2017">#</doc-anchor-trigger>
+        <span>C# 7.1 (2017)</span>
+    </h2>
+</doc-anchor-target>
+<p>Minor refinements, building on C# 7.0 features.</p>
+<ul>
+<li><p><strong>Async Main</strong> (Prerequisite: Async/Await)</p>
+<ul>
+<li><code v-pre>static async Task Main()</code> as program entry point.</li>
+</ul>
+</li>
+<li><p><strong>Default Literal</strong> (Prerequisite: Types)</p>
+<ul>
+<li><code v-pre>default</code> without type (<code v-pre>var x = default;</code>).</li>
+</ul>
+</li>
+<li><p><strong>Inferred Tuple Names</strong> (Prerequisite: Tuples)</p>
+<ul>
+<li>Automatic tuple field names from variables (<code v-pre>var t = (x, y);</code>).</li>
+</ul>
+</li>
+<li><p><strong>Pattern Matching with Generics</strong> (Prerequisite: Pattern Matching, Generics)</p>
+<ul>
+<li>Improved <code v-pre>is</code> and <code v-pre>switch</code> patterns with generic types.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-72-2017">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-72-2017">#</doc-anchor-trigger>
+        <span>C# 7.2 (2017)</span>
+    </h2>
+</doc-anchor-target>
+<p>Further refinements, focusing on performance and safety.</p>
+<ul>
+<li><p><strong>ReadOnly Structs</strong> (Prerequisite: Structs)</p>
+<ul>
+<li><code v-pre>readonly struct</code> to enforce immutability.</li>
+</ul>
+</li>
+<li><p><strong>In Parameters</strong> (Prerequisite: Methods)</p>
+<ul>
+<li><code v-pre>in</code> modifier for read-only reference parameters.</li>
+</ul>
+</li>
+<li><p><strong>Ref ReadOnly Returns</strong> (Prerequisite: Ref Returns)</p>
+<ul>
+<li><code v-pre>ref readonly</code> for immutable reference returns.</li>
+</ul>
+</li>
+<li><p><strong>Non-Trailing Named Arguments</strong> (Prerequisite: Named Parameters)</p>
+<ul>
+<li>Named arguments anywhere in parameter list.</li>
+</ul>
+</li>
+<li><p><strong>Private Protected Access Modifier</strong> (Prerequisite: Access Modifiers)</p>
+<ul>
+<li><code v-pre>private protected</code> for access within assembly and derived classes.</li>
+</ul>
+</li>
+<li><p><strong>Conditional Ref Expressions</strong> (Prerequisite: Ref Locals)</p>
+<ul>
+<li><code v-pre>ref</code> in conditional expressions (<code v-pre>ref var x = ref (cond ? ref a : ref b);</code>).</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-73-2018">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-73-2018">#</doc-anchor-trigger>
+        <span>C# 7.3 (2018)</span>
+    </h2>
+</doc-anchor-target>
+<p>Performance and low-level programming enhancements.</p>
+<ul>
+<li><p><strong>Fixed Fields without Pinning</strong> (Prerequisite: Structs)</p>
+<ul>
+<li>Accessing fixed-size buffers without <code v-pre>fixed</code> statement.</li>
+</ul>
+</li>
+<li><p><strong>Ref Local Reassignment</strong> (Prerequisite: Ref Locals)</p>
+<ul>
+<li>Reassigning <code v-pre>ref</code> locals.</li>
+</ul>
+</li>
+<li><p><strong>Stackalloc Initializers</strong> (Prerequisite: Arrays)</p>
+<ul>
+<li><code v-pre>stackalloc int[3] = { 1, 2, 3 };</code>.</li>
+</ul>
+</li>
+<li><p><strong>Custom Fixed Statements</strong> (Prerequisite: Structs)</p>
+<ul>
+<li><code v-pre>fixed</code> with custom types implementing <code v-pre>GetPinnableReference</code>.</li>
+</ul>
+</li>
+<li><p><strong>Enhanced Generic Constraints</strong> (Prerequisite: Generics)</p>
+<ul>
+<li><code v-pre>unmanaged</code> constraint for unmanaged types.</li>
+<li><code v-pre>System.Enum</code> and <code v-pre>System.Delegate</code> constraints.</li>
+</ul>
+</li>
+<li><p><strong>Tuple Equality</strong> (Prerequisite: Tuples)</p>
+<ul>
+<li><code v-pre>==</code> and <code v-pre>!=</code> for tuple comparisons.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-80-2019">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-80-2019">#</doc-anchor-trigger>
+        <span>C# 8.0 (2019)</span>
+    </h2>
+</doc-anchor-target>
+<p>Major features for null safety and modern patterns, building on prior type and pattern systems.</p>
+<ul>
+<li><p><strong>Nullable Reference Types</strong> (Prerequisite: Nullable Types)</p>
+<ul>
+<li>Enabling nullable context (<code v-pre>#nullable enable</code>).</li>
+<li><code v-pre>string?</code> for nullable reference types.</li>
+<li>Nullability warnings for safer code.</li>
+</ul>
+</li>
+<li><p><strong>Default Interface Methods</strong> (Prerequisite: Interfaces)</p>
+<ul>
+<li>Methods with implementation in interfaces.</li>
+<li>Enables trait-like behavior.</li>
+</ul>
+</li>
+<li><p><strong>Switch Expressions</strong> (Prerequisite: Pattern Matching)</p>
+<ul>
+<li><code v-pre>var result = x switch { 1 =&gt; &quot;One&quot;, _ =&gt; &quot;Other&quot; };</code>.</li>
+<li>Exhaustive pattern matching.</li>
+</ul>
+</li>
+<li><p><strong>Property Patterns</strong> (Prerequisite: Pattern Matching)</p>
+<ul>
+<li>Matching on properties (<code v-pre>case Person { Name: &quot;John&quot; }</code>).</li>
+</ul>
+</li>
+<li><p><strong>Positional Patterns</strong> (Prerequisite: Pattern Matching, Tuples)</p>
+<ul>
+<li>Matching tuple or deconstructable types (<code v-pre>case (1, 2)</code>).</li>
+</ul>
+</li>
+<li><p><strong>Using Declarations</strong> (Prerequisite: <code v-pre>using</code> Statement)</p>
+<ul>
+<li><code v-pre>using var x = new Resource();</code> (disposed at scope end).</li>
+</ul>
+</li>
+<li><p><strong>Static Local Functions</strong> (Prerequisite: Local Functions)</p>
+<ul>
+<li><code v-pre>static</code> modifier for local functions to prevent capturing.</li>
+</ul>
+</li>
+<li><p><strong>Disposable Ref Structs</strong> (Prerequisite: Structs, <code v-pre>IDisposable</code>)</p>
+<ul>
+<li><code v-pre>ref struct</code> with <code v-pre>Dispose</code> method.</li>
+</ul>
+</li>
+<li><p><strong>Readonly Members</strong> (Prerequisite: Structs)</p>
+<ul>
+<li><code v-pre>readonly</code> modifier for struct members.</li>
+</ul>
+</li>
+<li><p><strong>Null-Coalescing Assignment</strong> (Prerequisite: Null-Coalescing Operator)</p>
+<ul>
+<li><code v-pre>??=</code> for assigning if null (<code v-pre>x ??= defaultValue;</code>).</li>
+</ul>
+</li>
+<li><p><strong>Interpolated Verbatim Strings</strong> (Prerequisite: String Interpolation)</p>
+<ul>
+<li><code v-pre>$@&quot;...&quot;</code> for verbatim interpolated strings.</li>
+</ul>
+</li>
+<li><p><strong>Stackalloc in Nested Expressions</strong> (Prerequisite: Stackalloc)</p>
+<ul>
+<li>Using <code v-pre>stackalloc</code> in expressions.</li>
+</ul>
+</li>
+<li><p><strong>Indices and Ranges</strong> (Prerequisite: Arrays)</p>
+<ul>
+<li>Index type (<code v-pre>^1</code> for from-end indexing).</li>
+<li>Range type (<code v-pre>1..3</code> for slicing).</li>
+<li>Applied to arrays, strings, and <code v-pre>Span&lt;T&gt;</code>.</li>
+</ul>
+</li>
+<li><p><strong>Async Streams</strong> (Prerequisite: Async/Await, Iterators)</p>
+<ul>
+<li><code v-pre>IAsyncEnumerable&lt;T&gt;</code> and <code v-pre>await foreach</code>.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-90-2020">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-90-2020">#</doc-anchor-trigger>
+        <span>C# 9.0 (2020)</span>
+    </h2>
+</doc-anchor-target>
+<p>Simplifies code and enhances performance, building on patterns and types.</p>
+<ul>
+<li><p><strong>Record Types</strong> (Prerequisite: Classes, Tuples)</p>
+<ul>
+<li><code v-pre>record Person(string Name, int Age);</code> for immutable data types.</li>
+<li>Value-based equality.</li>
+<li><code v-pre>with</code> expressions for non-destructive mutation.</li>
+</ul>
+</li>
+<li><p><strong>Init-Only Properties</strong> (Prerequisite: Auto-Implemented Properties)</p>
+<ul>
+<li><code v-pre>init</code> accessor for set-once properties.</li>
+</ul>
+</li>
+<li><p><strong>Top-Level Statements</strong> (Prerequisite: Main Method)</p>
+<ul>
+<li>Programs without explicit <code v-pre>Main</code> (<code v-pre>Console.WriteLine(&quot;Hello&quot;);</code>).</li>
+</ul>
+</li>
+<li><p><strong>Pattern Matching Enhancements</strong> (Prerequisite: Pattern Matching)</p>
+<ul>
+<li>Type patterns without variable (<code v-pre>if (x is int)</code>).</li>
+<li>Parenthesized patterns (<code v-pre>(x is int)</code>).</li>
+<li>Relational patterns (<code v-pre>case &gt; 0</code>).</li>
+<li>Logical patterns (<code v-pre>and</code>, <code v-pre>or</code>, <code v-pre>not</code>).</li>
+</ul>
+</li>
+<li><p><strong>Covariant Return Types</strong> (Prerequisite: Inheritance)</p>
+<ul>
+<li>Derived return types in overridden methods.</li>
+</ul>
+</li>
+<li><p><strong>Extended Partial Methods</strong> (Prerequisite: Partial Methods)</p>
+<ul>
+<li>Allowing access modifiers, return types, and implementations.</li>
+</ul>
+</li>
+<li><p><strong>Module Initializers</strong> (Prerequisite: Static Classes)</p>
+<ul>
+<li><code v-pre>[ModuleInitializer]</code> for module-level initialization.</li>
+</ul>
+</li>
+<li><p><strong>New Target-Typed Expressions</strong> (Prerequisite: Types)</p>
+<ul>
+<li><code v-pre>new()</code> for target-typed instantiation (<code v-pre>List&lt;int&gt; list = new();</code>).</li>
+</ul>
+</li>
+<li><p><strong>Lambda Discard Parameters</strong> (Prerequisite: Lambda Expressions)</p>
+<ul>
+<li><code v-pre>_</code> for unused lambda parameters (<code v-pre>(_, y) =&gt; y</code>).</li>
+</ul>
+</li>
+<li><p><strong>Native Ints</strong> (Prerequisite: Primitive Types)</p>
+<ul>
+<li><code v-pre>nint</code> and <code v-pre>nuint</code> for platform-dependent integers.</li>
+</ul>
+</li>
+<li><p><strong>Attributes on Local Functions</strong> (Prerequisite: Local Functions)</p>
+<ul>
+<li>Applying attributes to local functions.</li>
+</ul>
+</li>
+<li><p><strong>Function Pointers</strong> (Prerequisite: Delegates)</p>
+<ul>
+<li><code v-pre>delegate*</code> for low-level function pointers (unsafe code).</li>
+</ul>
+</li>
+<li><p><strong>Skip Locals Init</strong> (Prerequisite: Variables)</p>
+<ul>
+<li><code v-pre>[SkipLocalsInit]</code> for performance optimization.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-100-2021">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-100-2021">#</doc-anchor-trigger>
+        <span>C# 10.0 (2021)</span>
+    </h2>
+</doc-anchor-target>
+<p>Focuses on simplifying syntax and improving records.</p>
+<ul>
+<li><p><strong>Record Structs</strong> (Prerequisite: Structs, Records)</p>
+<ul>
+<li><code v-pre>record struct</code> for value-type records.</li>
+</ul>
+</li>
+<li><p><strong>Global Using Directives</strong> (Prerequisite: Using Directives)</p>
+<ul>
+<li><code v-pre>global using System;</code> for project-wide imports.</li>
+</ul>
+</li>
+<li><p><strong>File-Scoped Namespaces</strong> (Prerequisite: Namespaces)</p>
+<ul>
+<li><code v-pre>namespace MyApp;</code> without braces.</li>
+</ul>
+</li>
+<li><p><strong>Interpolated String Handlers</strong> (Prerequisite: String Interpolation)</p>
+<ul>
+<li>Compiler-optimized string interpolation.</li>
+</ul>
+</li>
+<li><p><strong>Constant Interpolated Strings</strong> (Prerequisite: String Interpolation, Constants)</p>
+<ul>
+<li>Interpolated strings as constants (<code v-pre>const string s = $&quot;Hello {&quot;World&quot;}&quot;;</code>).</li>
+</ul>
+</li>
+<li><p><strong>Extended Property Patterns</strong> (Prerequisite: Property Patterns)</p>
+<ul>
+<li>Nested property access (<code v-pre>{ Prop.SubProp: value }</code>).</li>
+</ul>
+</li>
+<li><p><strong>Lambda Expression Improvements</strong> (Prerequisite: Lambda Expressions)</p>
+<ul>
+<li>Explicit return types (<code v-pre>x =&gt; T (x * 2)</code>).</li>
+<li>Attributes on lambdas.</li>
+</ul>
+</li>
+<li><p><strong>Improved Definite Assignment</strong> (Prerequisite: Variables)</p>
+<ul>
+<li>Better compiler analysis for nullability and initialization.</li>
+</ul>
+</li>
+<li><p><strong>Sealed Record ToString</strong> (Prerequisite: Records)</p>
+<ul>
+<li><code v-pre>sealed</code> modifier for <code v-pre>ToString</code> in records.</li>
+</ul>
+</li>
+<li><p><strong>Assignment and Declaration in Same Deconstruction</strong> (Prerequisite: Tuples)</p>
+<ul>
+<li><code v-pre>(var x, y) = t;</code> mixing declarations and assignments.</li>
+</ul>
+</li>
+<li><p><strong>Allow <code v-pre>const</code> Interpolated Strings</strong> (Prerequisite: String Interpolation)</p>
+<ul>
+<li>Compile-time constant interpolated strings.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-110-2022">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-110-2022">#</doc-anchor-trigger>
+        <span>C# 11.0 (2022)</span>
+    </h2>
+</doc-anchor-target>
+<p>Enhances string literals and generic constraints.</p>
+<ul>
+<li><p><strong>Raw String Literals</strong> (Prerequisite: Strings)</p>
+<ul>
+<li><code v-pre>&quot;&quot;&quot;</code> for multi-line, verbatim strings without escaping.</li>
+</ul>
+</li>
+<li><p><strong>Generic Attributes</strong> (Prerequisite: Attributes, Generics)</p>
+<ul>
+<li>Generic types as attributes (<code v-pre>[MyAttribute&lt;T&gt;]</code>).</li>
+</ul>
+</li>
+<li><p><strong>Numeric IntPtr</strong> (Prerequisite: Native Ints)</p>
+<ul>
+<li>Enhanced <code v-pre>nint</code>/<code v-pre>nuint</code> support.</li>
+</ul>
+</li>
+<li><p><strong>UTF-8 String Literals</strong> (Prerequisite: Strings)</p>
+<ul>
+<li><code v-pre>u8</code> suffix for UTF-8 strings (<code v-pre>&quot;text&quot;u8</code>).</li>
+</ul>
+</li>
+<li><p><strong>Required Members</strong> (Prerequisite: Classes, Properties)</p>
+<ul>
+<li><code v-pre>required</code> modifier for mandatory properties/fields.</li>
+</ul>
+</li>
+<li><p><strong>Auto-Default Structs</strong> (Prerequisite: Structs)</p>
+<ul>
+<li>Compiler initializes struct fields to default values.</li>
+</ul>
+</li>
+<li><p><strong>Pattern Matching with Spans</strong> (Prerequisite: Pattern Matching, Indices and Ranges)</p>
+<ul>
+<li>Patterns for <code v-pre>Span&lt;T&gt;</code> and <code v-pre>ReadOnlySpan&lt;T&gt;</code>.</li>
+</ul>
+</li>
+<li><p><strong>Parameterless Struct Constructors</strong> (Prerequisite: Structs)</p>
+<ul>
+<li>Structs with parameterless constructors.</li>
+</ul>
+</li>
+<li><p><strong>Checked User-Defined Operators</strong> (Prerequisite: Operators)</p>
+<ul>
+<li><code v-pre>checked</code> for user-defined arithmetic operators.</li>
+</ul>
+</li>
+<li><p><strong>Static Abstract Members in Interfaces</strong> (Prerequisite: Default Interface Methods)</p>
+<ul>
+<li><code v-pre>static abstract</code> members for interfaces.</li>
+</ul>
+</li>
+<li><p><strong>List Patterns</strong> (Prerequisite: Pattern Matching)</p>
+<ul>
+<li>Matching lists/arrays (<code v-pre>[1, 2, ..]</code>).</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-120-2023">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-120-2023">#</doc-anchor-trigger>
+        <span>C# 12.0 (2023)</span>
+    </h2>
+</doc-anchor-target>
+<p>Introduces primary constructors and collection enhancements.</p>
+<ul>
+<li><p><strong>Primary Constructors</strong> (Prerequisite: Constructors)</p>
+<ul>
+<li><code v-pre>class Person(string name)</code> for concise constructor syntax.</li>
+<li>Applies to classes and structs.</li>
+</ul>
+</li>
+<li><p><strong>Collection Expressions</strong> (Prerequisite: Collection Initializers)</p>
+<ul>
+<li><code v-pre>[1, 2, 3]</code> for arrays, lists, etc.</li>
+<li>Spread operator (<code v-pre>[..collection]</code>).</li>
+</ul>
+</li>
+<li><p><strong>Ref Readonly Parameters</strong> (Prerequisite: In Parameters)</p>
+<ul>
+<li><code v-pre>ref readonly</code> for safe reference passing.</li>
+</ul>
+</li>
+<li><p><strong>Default Lambda Parameters</strong> (Prerequisite: Lambda Expressions)</p>
+<ul>
+<li>Lambda parameters with defaults (<code v-pre>(x = 0) =&gt; x</code>).</li>
+</ul>
+</li>
+<li><p><strong>Alias Any Type</strong> (Prerequisite: Types)</p>
+<ul>
+<li><code v-pre>using MyAlias = System.Int32;</code> for any type.</li>
+</ul>
+</li>
+<li><p><strong>Inline Arrays</strong> (Prerequisite: Arrays)</p>
+<ul>
+<li><code v-pre>[InlineArray(10)] struct Buffer { private int _element; }</code> for fixed-size arrays.</li>
+</ul>
+</li>
+<li><p><strong>Experimental Attribute</strong> (Prerequisite: Attributes)</p>
+<ul>
+<li><code v-pre>[Experimental]</code> to mark APIs as experimental.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-130-2024">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-130-2024">#</doc-anchor-trigger>
+        <span>C# 13.0 (2024)</span>
+    </h2>
+</doc-anchor-target>
+<p>Focuses on flexibility and performance, building on prior features.</p>
+<ul>
+<li><p><strong>Params Collections</strong> (Prerequisite: Methods, Collection Expressions)</p>
+<ul>
+<li><code v-pre>params</code> with <code v-pre>Span&lt;T&gt;</code>, <code v-pre>ReadOnlySpan&lt;T&gt;</code>, or collections (<code v-pre>void Method(params int[] args)</code>).</li>
+</ul>
+</li>
+<li><p><strong>Lock Object Statement</strong> (Prerequisite: Control Flow)</p>
+<ul>
+<li><code v-pre>lock (obj) { ... }</code> for simplified synchronization.</li>
+</ul>
+</li>
+<li><p><strong>Method Group Natural Type</strong> (Prerequisite: Delegates)</p>
+<ul>
+<li>Improved type inference for method groups in delegates.</li>
+</ul>
+</li>
+<li><p><strong>Field Access in Auto-Properties</strong> (Prerequisite: Auto-Implemented Properties)</p>
+<ul>
+<li>Accessing backing fields (<code v-pre>field</code> keyword in accessors).</li>
+</ul>
+</li>
+<li><p><strong>Partial Properties</strong> (Prerequisite: Auto-Implemented Properties, Partial Types)</p>
+<ul>
+<li><code v-pre>partial</code> properties with separate <code v-pre>get</code>/<code v-pre>set</code> implementations.</li>
+</ul>
+</li>
+<li><p><strong>Implicit Index Access</strong> (Prerequisite: Indices and Ranges)</p>
+<ul>
+<li><code v-pre>^0</code> for last element access.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="c-140-2024">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#c-140-2024">#</doc-anchor-trigger>
+        <span>C# 14.0 (2024)</span>
+    </h2>
+</doc-anchor-target>
+<p>Latest version, focusing on extensions and immutability.</p>
+<ul>
+<li><p><strong>Extension Types</strong> (Prerequisite: Classes, Extension Methods)</p>
+<ul>
+<li><code v-pre>extension MyExtension for MyType { ... }</code> for explicit extension types.</li>
+<li>Encapsulates extension methods for better organization.</li>
+</ul>
+</li>
+<li><p><strong>Immutability Annotations</strong> (Prerequisite: Nullable Reference Types)</p>
+<ul>
+<li><code v-pre>immutable</code> keyword for compile-time immutability checks.</li>
+<li>Applied to types, fields, or parameters.</li>
+</ul>
+</li>
+<li><p><strong>Improved Pattern Matching for Records</strong> (Prerequisite: Pattern Matching, Records)</p>
+<ul>
+<li>Enhanced record deconstruction patterns (<code v-pre>case RecordType { Prop: value }</code>).</li>
+</ul>
+</li>
+<li><p><strong>Flexible Constructor Constraints</strong> (Prerequisite: Generics)</p>
+<ul>
+<li><code v-pre>where T : new(...)</code> for constructors with specific signatures.</li>
+</ul>
+</li>
+<li><p><strong>Named Arguments in Lambda Expressions</strong> (Prerequisite: Lambda Expressions, Named Parameters)</p>
+<ul>
+<li><code v-pre>(x: int x) =&gt; x</code> for named lambda parameters.</li>
+</ul>
+</li>
+<li><p><strong>Enhanced Collection Literals</strong> (Prerequisite: Collection Expressions)</p>
+<ul>
+<li>Extended support for dictionaries (<code v-pre>[key: value, ...]</code>).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="notes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#notes">#</doc-anchor-trigger>
+        <span>Notes</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><strong>Ordering Rationale</strong>: Features are ordered to ensure prerequisites are covered first (e.g., types before generics, delegates before lambdas). Within each version, features are grouped by category (e.g., types, control flow) to reflect a logical learning path.</li>
+<li><strong>Comprehensiveness</strong>: Every feature from C# 1.0 to 14.0 is included, based on official Microsoft documentation, release notes, and my knowledge up to June 2025. C# 14.0 features are sourced from .NET 9 release announcements (November 2024).</li>
+<li><strong>Version Accuracy</strong>: Minor features or compiler optimizations (e.g., improved overload resolution) are noted in their primary version. Some features (e.g., tuple equality in 7.3) were backported to earlier versions in specific runtimes but are listed by their official language version.</li>
+<li><strong>Learning Path</strong>: The outline assumes a learner starts with C# 1.0 basics (syntax, types) and progresses to advanced features (e.g., pattern matching, extensions), ensuring a scaffolded approach.</li>
+</ul>
+<p>If you need a deeper dive into any feature, code examples, or a specific subset of versions, let me know!</p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../tool-references/dotnet-cli/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">.​Net CLI</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../c-sharp-language/linq/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Linq</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2025. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Overview", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>

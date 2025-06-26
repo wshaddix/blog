@@ -5,19 +5,19 @@
     <link>https://wshaddix.com/blog/</link>
     <description>Blog</description>
     <copyright>© Copyright 2025. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 24 Jun 2025 21:44:50 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Jun 2025 17:11:03 GMT</lastBuildDate>
     <generator>https://retype.com</generator>
     <atom:link rel="self" type="application/rss+xml" href="https://wshaddix.com/blog/feed.xml" />
     <item>
       <title>Setting up Git aliases</title>
       <guid isPermaLink="true">https://wshaddix.com/blog/git/git-aliases/</guid>
       <author>wes@wshaddix.com (Wes Shaddix)</author>
-      <pubDate>Tue, 24 Jun 2025 21:44:50 GMT</pubDate>
+      <pubDate>Thu, 26 Jun 2025 17:11:03 GMT</pubDate>
     </item>
     <item>
       <title>Tailwind 4 with Asp.Net</title>
       <guid isPermaLink="true">https://wshaddix.com/blog/tailwind-4-with-aspnet/</guid>
-      <pubDate>Tue, 24 Jun 2025 21:44:50 GMT</pubDate>
+      <pubDate>Thu, 26 Jun 2025 17:11:03 GMT</pubDate>
     </item>
   </channel>
 </rss>
