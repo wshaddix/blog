@@ -1,0 +1,81 @@
+---
+title: Overview
+---
+
+
+# Refactoring Patterns from Martin Fowler's *Refactoring*
+
+Below is a bullet list of refactoring patterns from Martin Fowler's book *Refactoring: Improving the Design of Existing Code* (2nd Edition). Each pattern includes its name and a brief description of its purpose.
+
+- **Add Parameter**: Introduce a new parameter to a method to pass additional data needed for its functionality, improving flexibility without altering the method's core logic.
+- **Change Bidirectional Association to Unidirectional**: Convert a two-way relationship between classes to a one-way relationship to reduce coupling and simplify dependencies.
+- **Change Reference to Value**: Replace a reference object with a value object when the object is immutable and small, improving performance and reducing complexity.
+- **Change Unidirectional Association to Bidirectional**: Add a back-reference to create a two-way relationship between classes, enabling easier navigation and consistency.
+- **Change Value to Reference**: Convert a value object to a reference object when multiple parts of the code need to share the same instance, ensuring consistency.
+- **Collapse Hierarchy**: Merge a superclass and its subclass into a single class when they share similar responsibilities, reducing unnecessary complexity.
+- **Consolidate Conditional Expression**: Combine multiple related conditional checks into a single expression to improve readability and reduce duplication.
+- **Consolidate Duplicate Conditional Fragments**: Move identical code fragments shared across conditional branches outside the conditional to eliminate redundancy.
+- **Convert Procedural Design to Objects**: Transform procedural code into an object-oriented design by grouping related data and behavior into classes, improving modularity.
+- **Decompose Conditional**: Break a complex conditional statement into smaller, named methods to clarify the logic and improve readability.
+- **Duplicate Observed Data**: Copy data from a domain model to a separate presentation model to decouple the UI from the business logic, often used in layered architectures.
+- **Encapsulate Collection**: Restrict direct access to a collection by providing methods to manipulate it, ensuring better control and consistency.
+- **Encapsulate Downcast**: Replace explicit downcasting with a method that returns the correct type, improving type safety and code clarity.
+- **Encapsulate Field**: Make a public field private and provide getter/setter methods to control access and improve encapsulation.
+- **Extract Class**: Move a subset of fields and methods from a large class into a new class to improve cohesion and reduce class size.
+- **Extract Function**: Move a block of code into a separate function with a descriptive name to improve readability and reusability.
+- **Extract Interface**: Create an interface from a class’s methods to define a contract, allowing multiple implementations and improving flexibility.
+- **Extract Module**: Move related functions and data into a separate module or namespace to organize code better and reduce global scope pollution.
+- **Extract Subclass**: Create a subclass to handle specific behavior variations, improving separation of concerns in a class hierarchy.
+- **Extract Superclass**: Move common fields and methods from related classes into a shared superclass to eliminate duplication and improve structure.
+- **Extract Variable**: Assign a complex expression to a named variable to improve code clarity and make debugging easier.
+- **Form Template Method**: Move varying steps of an algorithm to subclasses while keeping the common structure in a superclass, reducing duplication in similar methods.
+- **Hide Delegate**: Encapsulate access to a delegate object by providing methods in the client class, reducing coupling and simplifying interactions.
+- **Hide Method**: Make a public method private or protected when it’s only used internally, improving encapsulation and reducing the public API.
+- **Inline Class**: Merge a class’s responsibilities into another class when it no longer justifies its existence, simplifying the codebase.
+- **Inline Function**: Replace a function call with its body when the function is simple or only called once, reducing overhead and improving clarity.
+- **Inline Temp**: Replace a temporary variable with its expression when it adds no clarity, simplifying the code.
+- **Introduce Assertion**: Add an explicit check to verify assumptions in the code, improving reliability and catching errors early.
+- **Introduce Foreign Method**: Add a utility method to a class from another module or library when you can’t modify the original class, improving code organization.
+- **Introduce Local Extension**: Create a subclass or wrapper to add new behavior to an unmodifiable class, providing a clean way to extend functionality.
+- **Introduce Null Object**: Replace null checks with an object that implements the same interface but does nothing, simplifying conditional logic.
+- **Introduce Parameter Object**: Group related parameters into a single object to simplify method signatures and improve data cohesion.
+- **Move Field**: Relocate a field from one class to another when it’s more closely related to the target class’s responsibilities, improving cohesion.
+- **Move Function**: Relocate a function to the class or module where it’s most relevant, improving organization and reducing coupling.
+- **Move Statements into Function**: Move repeated statements into a function to reduce duplication and improve maintainability.
+- **Move Statements to Callers**: Move statements out of a function to its callers when they’re specific to certain use cases, improving function generality.
+- **Parameterize Function**: Generalize a function by adding parameters to handle variations, reducing the need for similar functions.
+- **Preserve Whole Object**: Pass an entire object to a method instead of multiple individual fields, simplifying the interface and improving cohesion.
+- **Pull Up Constructor Body**: Move common constructor logic from subclasses to the superclass to reduce duplication and ensure consistency.
+- **Pull Up Field**: Move a field from subclasses to a superclass when it’s used identically across them, reducing duplication.
+- **Pull Up Method**: Move a method from subclasses to a superclass when it’s identical or nearly identical, eliminating duplication.
+- **Push Down Field**: Move a field from a superclass to subclasses when it’s only relevant to some subclasses, improving specialization.
+- **Push Down Method**: Move a method from a superclass to subclasses when it’s only relevant to some subclasses, improving clarity.
+- **Remove Assignments to Parameters**: Avoid modifying parameter values within a method by using local variables instead, improving clarity and safety.
+- **Remove Dead Code**: Eliminate code that’s no longer used to reduce clutter and improve maintainability.
+- **Remove Flag Argument**: Replace a boolean parameter that controls behavior with separate methods, improving clarity and reducing complexity.
+- **Remove Middle Man**: Eliminate unnecessary delegation methods to directly access a delegate object, reducing indirection when appropriate.
+- **Remove Subclass**: Eliminate a subclass when its differences are minimal, merging its behavior into the superclass or another class.
+- **Rename Field**: Change a field’s name to better reflect its purpose, improving code readability and maintainability.
+- **Rename Function**: Change a function’s name to better describe its purpose, improving code clarity and intent.
+- **Rename Variable**: Change a variable’s name to make its purpose clearer, improving readability and maintainability.
+- **Replace Conditional with Polymorphism**: Use subclasses or polymorphic behavior to handle conditionals, simplifying logic and improving extensibility.
+- **Replace Constructor with Factory Function**: Replace a constructor with a factory function to provide more flexibility in object creation.
+- **Replace Derived Variable with Query**: Replace a variable that stores a computed value with a method that calculates it, ensuring up-to-date values.
+- **Replace Exception with Precheck**: Replace exception handling with a precondition check to simplify control flow and improve performance.
+- **Replace Function with Command**: Convert a function into a command object to encapsulate complex logic or support undoable operations.
+- **Replace Inline Code with Function Call**: Replace inline code with a call to an existing or new function to improve reusability and clarity.
+- **Replace Loop with Pipeline**: Convert a loop into a pipeline of operations (e.g., using map, filter, reduce) to improve readability and functional style.
+- **Replace Nested Conditional with Guard Clauses**: Use early returns (guard clauses) to simplify nested conditionals, improving readability.
+- **Replace Parameter with Query**: Replace a parameter with a method call to compute its value, reducing parameter lists and improving encapsulation.
+- **Replace Primitive with Object**: Replace a primitive type with a rich object to encapsulate behavior and improve type safety.
+- **Replace Subclass with Fields**: Eliminate a subclass by moving its distinguishing fields to the superclass, simplifying the hierarchy when polymorphism isn’t needed.
+- **Replace Temp with Query**: Replace a temporary variable with a method that computes its value, reducing variable scope and improving clarity.
+- **Replace Type Code with Subclasses**: Use subclasses to represent type codes, enabling polymorphic behavior and improving extensibility.
+- **Replace Type Code with State/Strategy**: Replace a type code with a state or strategy pattern to encapsulate behavior variations, improving flexibility.
+- **Separate Query from Modifier**: Split a method that both queries and modifies state into two methods, improving clarity and safety.
+- **Slide Statements**: Reorder statements to group related code together, improving readability and preparing for further refactoring.
+- **Split Loop**: Break a loop that performs multiple tasks into separate loops for each task, improving clarity and maintainability.
+- **Split Phase**: Divide a process into distinct phases with clear inputs and outputs, improving modularity and testability.
+- **Split Variable**: Split a variable used for multiple purposes into separate variables, improving clarity and reducing errors.
+- **Substitute Algorithm**: Replace an algorithm with a simpler or more efficient one, improving performance or readability.
+- **Unify Interfaces with Adapter**: Use an adapter to make classes with similar responsibilities share a common interface, improving consistency and interchangeability.

@@ -1,6 +1,5 @@
 ---
 title: Conventional Commits
-icon: comment
 layout: default
 ---
 

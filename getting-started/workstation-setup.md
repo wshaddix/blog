@@ -1,6 +1,5 @@
 ---
 title: Workstation Setup
-icon: codespaces
 order: 1002
 nextprev:
   mode: hide
