@@ -1,3 +1,0 @@
----
-title: Benchmark your code
----

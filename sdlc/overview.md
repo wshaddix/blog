@@ -2,8 +2,6 @@
 title: Overview
 ---
 
-
-
 # Software Development Lifecycle (SDLC) Steps
 
 The Software Development Lifecycle (SDLC) is a structured process for planning, creating, testing, deploying, and maintaining software. Below is a comprehensive list of SDLC phases, each with a brief description of its purpose and activities.
