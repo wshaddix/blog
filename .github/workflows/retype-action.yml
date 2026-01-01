@@ -17,10 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 9.0.x
-
       - uses: retypeapp/action-build@latest
         with:
           license: ${{ secrets.RETYPE_SECRET }}
