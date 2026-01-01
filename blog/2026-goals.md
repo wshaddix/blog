@@ -1,8 +1,9 @@
 ---
-title: Setting up Git aliases
+title: 2026 Goals - Happy New Year!
 author:
     name: Wes Shaddix
     email: wes@wshaddix.com
 ---
 
-# This is a good post
+# Happy New Year 🎉
+
