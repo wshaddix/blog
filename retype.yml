@@ -20,3 +20,5 @@ editor:
   enabled: false # Default is true
 nav:
   mode: stack
+include:
+  - "wrangler.jsonc"
