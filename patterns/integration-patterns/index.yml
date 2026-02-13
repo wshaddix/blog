@@ -1,1 +1,5 @@
-order: 2
+icon: plug
+expanded: false
+order: 1000
+label: Integration Patterns
+breadcrumb: false

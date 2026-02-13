@@ -1,0 +1,5 @@
+icon: shield-lock
+expanded: false
+order: 1100
+label: Authentication
+breadcrumb: false

@@ -1,0 +1,5 @@
+icon: database
+expanded: false
+order: 1000
+label: Entity Framework
+breadcrumb: false

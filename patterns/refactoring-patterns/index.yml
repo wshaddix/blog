@@ -1,1 +1,5 @@
-order: 1
+icon: tools
+expanded: false
+order: 900
+label: Refactoring Patterns
+breadcrumb: false

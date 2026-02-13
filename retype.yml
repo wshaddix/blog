@@ -19,6 +19,6 @@ poweredByRetype: false
 editor:
   enabled: false # Default is true
 nav:
-  mode: stack
+  mode: default
 include:
   - "wrangler.jsonc"

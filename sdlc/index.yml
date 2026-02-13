@@ -1,2 +1,5 @@
-order: 1003
 icon: sync
+expanded: false
+order: 9400
+label: SDLC
+breadcrumb: false
