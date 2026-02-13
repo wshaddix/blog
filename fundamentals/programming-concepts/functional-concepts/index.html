@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0.824312226111">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.12.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Functional Concepts</title>
+    <meta name="title" content="Functional Concepts">
+    <meta name="description" content="Functional programming (FP) treats computation as the evaluation of mathematical functions, emphasizing immutability and avoiding side effects.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://wshaddix.com/fundamentals/programming-concepts/functional-concepts/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wshaddix.com/fundamentals/programming-concepts/functional-concepts/">
+    <meta property="og:title" content="Functional Concepts">
+    <meta property="og:description" content="Functional programming (FP) treats computation as the evaluation of mathematical functions, emphasizing immutability and avoiding side effects.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wshaddix.com/fundamentals/programming-concepts/functional-concepts/">
+    <meta property="twitter:title" content="Functional Concepts">
+    <meta property="twitter:description" content="Functional programming (FP) treats computation as the evaluation of mathematical functions, emphasizing immutability and avoiding side effects.">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../../resources/css/retype.css?v=3.12.0.824312226111" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.12.0.824312226111" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.12.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.12.0.824312226111" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.12.0.824312226111" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../../../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Wes Shaddix</span>
+                        </a>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                        <g fill="currentColor">
+                                            <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                        </g>
+                                    </svg>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../blog/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                        <g fill="currentColor">
+                                            <path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/>
+                                        </g>
+                                    </svg>
+                                    <span>Blog</span>
+                                </a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                </div>
+            
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                                <g fill="currentColor">
+                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                                </g>
+                                            </svg>
+                                            <span>Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../../blog/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                                <g fill="currentColor">
+                                                    <path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/>
+                                                </g>
+                                            </svg>
+                                            <span>Blog</span>
+                                        </a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 bg-body-bg">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="functional-programming-concepts" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#functional-programming-concepts">#</doc-anchor-trigger>
+        <span>Functional Programming Concepts</span>
+    </h1>
+</doc-anchor-target>
+<p>Functional programming (FP) treats computation as the evaluation of mathematical functions, emphasizing immutability and avoiding side effects.</p>
+<doc-anchor-target id="why-learn-functional-concepts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#why-learn-functional-concepts">#</doc-anchor-trigger>
+        <span>Why Learn Functional Concepts?</span>
+    </h2>
+</doc-anchor-target>
+<p>Even if you write primarily OOP code, functional concepts help you:</p>
+<ul>
+<li>Write more predictable, testable code</li>
+<li>Use LINQ effectively in C#</li>
+<li>Leverage async/parallel programming safely</li>
+<li>Understand modern language features</li>
+</ul>
+<doc-anchor-target id="core-principles">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#core-principles">#</doc-anchor-trigger>
+        <span>Core Principles</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="1-pure-functions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-pure-functions">#</doc-anchor-trigger>
+        <span>1. Pure Functions</span>
+    </h3>
+</doc-anchor-target>
+<p>A pure function:</p>
+<ul>
+<li>Always returns the same output for the same input</li>
+<li>Has no side effects (doesn&#x27;t modify external state)</li>
+</ul>
+<p><strong>Why it matters:</strong> Pure functions are predictable, testable, and cacheable.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">// Pure - no side effects, deterministic
+int Add(int a, int b) =&gt; a + b;
+
+// Impure - depends on/modifies external state
+int counter = 0;
+int IncrementAndGet() =&gt; ++counter;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="2-immutability">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-immutability">#</doc-anchor-trigger>
+        <span>2. Immutability</span>
+    </h3>
+</doc-anchor-target>
+<p>Data structures are never modified after creation. Instead, create new versions with changes.</p>
+<p><strong>Why it matters:</strong></p>
+<ul>
+<li>No shared mutable state = no race conditions</li>
+<li>Easier to reason about code</li>
+<li>Enables safe parallelism</li>
+</ul>
+<doc-anchor-target id="3-first-class-functions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-first-class-functions">#</doc-anchor-trigger>
+        <span>3. First-Class Functions</span>
+    </h3>
+</doc-anchor-target>
+<p>Functions can be:</p>
+<ul>
+<li>Assigned to variables</li>
+<li>Passed as arguments</li>
+<li>Returned from other functions</li>
+</ul>
+<p>This enables higher-order functions and composition.</p>
+<doc-anchor-target id="4-declarative-style">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-declarative-style">#</doc-anchor-trigger>
+        <span>4. Declarative Style</span>
+    </h3>
+</doc-anchor-target>
+<p>Describe <em>what</em> you want, not <em>how</em> to get it.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">// Imperative (how)
+var results = new List&lt;int&gt;();
+foreach (var n in numbers)
+    if (n &gt; 5)
+        results.Add(n * 2);
+
+// Declarative (what)
+var results = numbers.Where(n =&gt; n &gt; 5).Select(n =&gt; n * 2);</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="key-concepts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#key-concepts">#</doc-anchor-trigger>
+        <span>Key Concepts</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="higher-order-functions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#higher-order-functions">#</doc-anchor-trigger>
+        <span>Higher-Order Functions</span>
+    </h3>
+</doc-anchor-target>
+<p>Functions that take functions as arguments or return functions.</p>
+<p>Common examples:</p>
+<ul>
+<li><code translate="no" v-pre>Map</code> (Select) - Transform each element</li>
+<li><code translate="no" v-pre>Filter</code> (Where) - Keep elements matching predicate</li>
+<li><code translate="no" v-pre>Reduce</code> (Aggregate) - Combine elements into single value</li>
+</ul>
+<doc-anchor-target id="function-composition">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#function-composition">#</doc-anchor-trigger>
+        <span>Function Composition</span>
+    </h3>
+</doc-anchor-target>
+<p>Building complex functions from simpler ones.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">var processUser = Compose(Validate, Normalize, Save);</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="closures">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#closures">#</doc-anchor-trigger>
+        <span>Closures</span>
+    </h3>
+</doc-anchor-target>
+<p>Functions that capture variables from their enclosing scope.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-csharp"><code v-pre class="language-csharp">int multiplier = 3;
+Func&lt;int, int&gt; multiply = x =&gt; x * multiplier;  // Captures 'multiplier'</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="currying-and-partial-application">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#currying-and-partial-application">#</doc-anchor-trigger>
+        <span>Currying and Partial Application</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong>Currying:</strong> Transforming a function with multiple arguments into a sequence of single-argument functions</li>
+<li><strong>Partial Application:</strong> Fixing some arguments of a function, producing a function with fewer arguments</li>
+</ul>
+<doc-anchor-target id="pattern-matching">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pattern-matching">#</doc-anchor-trigger>
+        <span>Pattern Matching</span>
+    </h3>
+</doc-anchor-target>
+<p>Checking a value against patterns and destructuring it.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-csharp"><code v-pre class="language-csharp">string Describe(object obj) =&gt; obj switch
+{
+    int n when n &gt; 0 =&gt; &quot;positive integer&quot;,
+    string s =&gt; $&quot;string of length {s.Length}&quot;,
+    null =&gt; &quot;nothing&quot;,
+    _ =&gt; &quot;something else&quot;
+};</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="functional-vs-oop">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#functional-vs-oop">#</doc-anchor-trigger>
+        <span>Functional vs OOP</span>
+    </h2>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Functional</th>
+<th>OOP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary unit</td>
+<td>Function</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Immutable</td>
+<td>Mutable</td>
+</tr>
+<tr>
+<td>Side effects</td>
+<td>Avoided</td>
+<td>Common</td>
+</tr>
+<tr>
+<td>Data flow</td>
+<td>Explicit (parameters)</td>
+<td>Implicit (object state)</td>
+</tr>
+<tr>
+<td>Polymorphism</td>
+<td>Via functions</td>
+<td>Via inheritance/interfaces</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>They&#x27;re not mutually exclusive.</strong> C# supports both, and modern code often blends them.</p>
+<doc-anchor-target id="when-to-use-functional-style">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#when-to-use-functional-style">#</doc-anchor-trigger>
+        <span>When to Use Functional Style</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Good fit:</strong></p>
+<ul>
+<li>Data transformations (LINQ pipelines)</li>
+<li>Stateless computations</li>
+<li>Parallel/concurrent code</li>
+<li>Event processing</li>
+</ul>
+<p><strong>Less ideal:</strong></p>
+<ul>
+<li>Heavy I/O operations</li>
+<li>Complex object interactions</li>
+<li>When mutability is more natural</li>
+</ul>
+<doc-anchor-target id="practical-examples-in-c">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#practical-examples-in-c">#</doc-anchor-trigger>
+        <span>Practical Examples in C#</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>See <a href="../../../csharp/advanced-features/linq/">LINQ</a> - Functional programming in C#</li>
+<li>See <a href="../../../csharp/advanced-features/records/">Records</a> - Immutable data types</li>
+<li>See <a href="../../../csharp/advanced-features/pattern-matching/">Pattern Matching</a> - Declarative conditionals</li>
+</ul>
+<doc-anchor-target id="practice-exercises">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#practice-exercises">#</doc-anchor-trigger>
+        <span>Practice Exercises</span>
+    </h2>
+</doc-anchor-target>
+<!-- TODO: Add exercises -->
+<hr>
+<p><strong>Next:</strong> <a href="../concurrency/">Concurrency</a> - Parallel and async programming</p>
+<div id="backlinks">
+    <h2>See also</h2>
+    <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+        <a href="../../../csharp/advanced-features/linq/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>LINQ</span>
+                </div>
+                <p>Query collections with a consistent, expressive syntax.</p>
+            </div>
+        </a>
+        <a href="../../../fundamentals/programming-concepts/oop-principles/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>OOP Principles</span>
+                </div>
+                <p>Object-oriented programming (OOP) organizes code around objects that contain data and behavior.</p>
+            </div>
+        </a>
+        <a href="../../../fundamentals/overview/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Overview</span>
+                </div>
+                <p>This section covers the foundational computer science concepts that every software engineer should understand.</p>
+            </div>
+        </a>
+        <a href="../../../csharp/advanced-features/pattern-matching/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Pattern Matching</span>
+                </div>
+                <p>Declarative way to check and destructure data.</p>
+            </div>
+        </a>
+        <a href="../../../csharp/advanced-features/records/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Records</span>
+                </div>
+                <p>Immutable data types with value semantics.</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../fundamentals/programming-concepts/concurrency/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                                <span class="block mt-1">Concurrency</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../fundamentals/programming-concepts/oop-principles/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">OOP Principles</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Functional Concepts", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
