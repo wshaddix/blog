@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0.824312226111">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0.824401948684">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.12.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.12.0.824312226111" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.12.0.824401948684" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.12.0.824312226111" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.12.0.824401948684" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.12.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.12.0.824312226111" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.12.0.824312226111" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.12.0.824401948684" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.12.0.824401948684" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -182,8 +182,8 @@
 </doc-anchor-target>
 <p>You are going to be looking at your desktop a lot, so pick a background that brings you happiness. Every time you look at it you should feel joy and excitement. I use the following background that I found from <a href="https://www.youtube.com/@typecraft_dev">https://www.youtube.com/@typecraft_dev</a>
 <figure class="content-center">
-    <img src="../../static/img/wallpaper.jpeg" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
-    <figcaption class="caption"></figcaption>
+    <img src="../../static/img/wallpaper.jpeg" alt="Wallpaper" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption">Wallpaper</figcaption>
 </figure>
 </p>
 <doc-anchor-target id="git">
@@ -256,8 +256,8 @@ config.font = wezterm.font(&quot;SF Mono Powerline&quot;)
 -- Colors
 config.color_scheme = &quot;Catppuccin Mocha&quot;
 config.colors = {
-	cursor_bg = &quot;#7aa2f7&quot;,
-	cursor_border = &quot;#7aa2f7&quot;,
+ cursor_bg = &quot;#7aa2f7&quot;,
+ cursor_border = &quot;#7aa2f7&quot;,
 }
 
 -- Tabs
@@ -266,21 +266,21 @@ config.tab_max_width = 32
 config.show_new_tab_button_in_tab_bar = false
 
 config.keys = {
-	{
-		key = &quot;E&quot;,
-		mods = &quot;CTRL|SHIFT&quot;,
-		action = act.PromptInputLine({
-			description = &quot;Enter new name for tab&quot;,
-			action = wezterm.action_callback(function(window, pane, line)
-				-- line will be `nil` if they hit escape without entering anything
-				-- An empty string if they just hit enter
-				-- Or the actual line of text they wrote
-				if line then
-					window:active_tab():set_title(line)
-				end
-			end),
-		}),
-	},
+ {
+  key = &quot;E&quot;,
+  mods = &quot;CTRL|SHIFT&quot;,
+  action = act.PromptInputLine({
+   description = &quot;Enter new name for tab&quot;,
+   action = wezterm.action_callback(function(window, pane, line)
+    -- line will be `nil` if they hit escape without entering anything
+    -- An empty string if they just hit enter
+    -- Or the actual line of text they wrote
+    if line then
+     window:active_tab():set_title(line)
+    end
+   end),
+  }),
+ },
 }
 
 return config</code></pre>
