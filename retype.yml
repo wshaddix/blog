@@ -22,3 +22,5 @@ nav:
   mode: default
 include:
   - "wrangler.jsonc"
+exclude:
+  - "AGENTS.md"
