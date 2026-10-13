@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wshaddix.com/sitemap.xml.gz
+Sitemap: https://wshaddix.com/sitemap.xml
