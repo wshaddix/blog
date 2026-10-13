@@ -40,10 +40,20 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 
 <!-- TODO: Ensuring tenant isolation in tests -->
 
+## Architecture tests
+
+<!-- TODO: Fail the build when a project reference crosses a boundary -->
+
+## Time-dependent tests
+
+<!-- TODO: TimeProvider for trials, token expiry, and anything else that reads the clock -->
+
 ## Related Topics
 
 - See [C#: Testing](/csharp/testing/unit-testing) - TUnit, TUnit.Mocks, and API tests
 - See [Reqnroll](/csharp/testing/reqnroll/overview) - Behavior scenarios on the TUnit runner
+- See [Architecture tests](/patterns/architecture-styles/architecture-tests)
+- See [Time-dependent code](/csharp/testing/time-dependent-code)
 
 ---
 

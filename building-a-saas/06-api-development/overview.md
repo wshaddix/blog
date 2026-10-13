@@ -15,7 +15,7 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - Response formatting
 - Error handling
 - API versioning
-- OpenAPI/Swagger documentation
+- OpenAPI documentation (built-in generator, Scalar or Swagger UI)
 
 ## API Design Principles
 
@@ -35,11 +35,26 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 ## Documentation
 
-<!-- TODO: Swagger/OpenAPI setup -->
+<!-- TODO: Built-in OpenAPI document generation, with Scalar or Swagger UI -->
+
+## Output caching
+
+<!-- TODO: Output cache on read endpoints -->
+
+## Keyset pagination
+
+<!-- TODO: List endpoints use a keyset cursor -->
+
+## Async request-reply
+
+<!-- TODO: 202 Accepted and a status resource for work that outlives the request -->
 
 ## Related Topics
 
 - See [ASP.NET Core: Web APIs](/csharp/aspnet-core/web-apis/overview)
+- See [Caching](/csharp/aspnet-core/web-apis/caching)
+- See [Pagination](/csharp/aspnet-core/web-apis/pagination)
+- See [Polling, server-sent events, and async request-reply](/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply)
 
 ---
 

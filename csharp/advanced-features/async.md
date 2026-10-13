@@ -31,6 +31,14 @@ Write asynchronous code that reads like synchronous code.
 
 <!-- TODO: async void, blocking on async, deadlocks -->
 
+## Cancellation
+
+<!-- TODO: CancellationToken through the async call stack. See [Cancellation](/csharp/advanced-features/cancellation). -->
+
+## Bounded concurrency
+
+<!-- TODO: A cap on how much work runs at once -->
+
 ## Practical Examples
 
 - See [Fundamentals: Concurrency](/fundamentals/programming-concepts/concurrency) - The theory
@@ -38,4 +46,4 @@ Write asynchronous code that reads like synchronous code.
 
 ---
 
-**Next:** [Records](/csharp/advanced-features/records)
+**Next:** [Cancellation](/csharp/advanced-features/cancellation)

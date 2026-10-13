@@ -17,6 +17,34 @@ Why a shared `new HttpClient()` is the wrong default.
 
 A class that wraps one downstream API.
 
+## Named versus typed clients
+
+<!-- TODO: When to pick each -->
+
+## Resilience pipelines
+
+<!-- TODO: Microsoft.Extensions.Http.Resilience -->
+
+### Standard handler
+
+<!-- TODO: What the standard handler bundles -->
+
+### Total timeout, per-attempt timeout, jitter, and the circuit breaker
+
+<!-- TODO -->
+
+## What must not be retried
+
+<!-- TODO: Non-idempotent POSTs without keys -->
+
+## Polly licensing
+
+<!-- TODO: Check current terms before choosing a package -->
+
+## Testing resilience
+
+<!-- TODO: Fault injection with a fake handler -->
+
 ## Timeouts
 
 A timeout on the client, and a timeout that cancels the attempt.

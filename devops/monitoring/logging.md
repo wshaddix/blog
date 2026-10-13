@@ -27,6 +27,10 @@ Capturing application behavior for debugging and monitoring.
 
 <!-- TODO: What to log, sensitive data, performance -->
 
+## Message templates
+
+<!-- TODO: Named placeholders so a log line stays queryable -->
+
 ## Practical Examples
 
 - See [Building a SaaS: Monitoring](/building-a-saas/12-monitoring-operations/overview) - Logging in production

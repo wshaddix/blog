@@ -14,6 +14,11 @@ These are lessons. The long lists further down this section are catalogs of name
 - [Repository](/patterns/application-patterns/repository) - A collection-shaped front for one aggregate
 - [CQRS](/patterns/application-patterns/cqrs) - A write model and a read model, when they have diverged
 - [Decorator](/patterns/coding-patterns/decorator) - The shape behind middleware and HTTP handlers
+- [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer) - One transaction for the state change and the message
+- [Sagas](/patterns/integration-patterns/sagas) - Multi-step workflows across services
+- [Choreography and orchestration](/patterns/integration-patterns/choreography-vs-orchestration) - Who decides the next step
+- [Architecture tests](/patterns/architecture-styles/architecture-tests) - Fail the build when a boundary is crossed
+- [Event sourcing and change data capture](/patterns/architecture-styles/event-sourcing-and-cdc) - A stream of facts
 
 ## What's Covered
 
@@ -39,6 +44,15 @@ Patterns for connecting systems:
 
 - [API Patterns](/patterns/integration-patterns/overview) - REST, versioning, pagination
 - [Messaging Patterns](/patterns/integration-patterns/overview) - Async communication
+- [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer) - State and the message commit together
+- [Sagas](/patterns/integration-patterns/sagas) - Multi-step workflows across services
+- [Choreography and orchestration](/patterns/integration-patterns/choreography-vs-orchestration) - Who decides the next step
+
+### Architecture Styles
+
+- [Overview](/patterns/architecture-styles/overview) - Slicing a codebase
+- [Architecture tests](/patterns/architecture-styles/architecture-tests) - Enforcing boundaries
+- [Event sourcing and change data capture](/patterns/architecture-styles/event-sourcing-and-cdc) - A stream of facts
 
 ### Refactoring Patterns
 

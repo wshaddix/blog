@@ -29,6 +29,18 @@ A single syntax for creating lists, spans, and arrays.
 
 Where the pattern-matching page goes deeper.
 
+## Unions and closed hierarchies
+
+<!-- TODO: A closed set of cases the compiler can check -->
+
+## Result-style errors
+
+<!-- TODO: Success and failure as data, using a closed hierarchy -->
+
+## .NET 8, 10, and 11
+
+<!-- TODO: What this site assumes, and what moved in later releases -->
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

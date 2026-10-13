@@ -37,9 +37,18 @@ Security is non-negotiable. We'll implement robust authentication that's also us
 
 <!-- TODO: Password hashing, token storage, HTTPS -->
 
+## Passkeys and machine-to-machine authentication
+
+<!-- TODO: Passkeys, device-bound sessions, and service-to-service calls -->
+
+## Token expiry and the clock
+
+<!-- TODO: Expiry that tests can control -->
+
 ## Related Topics
 
 - See [ASP.NET Core: Authentication](/csharp/aspnet-core/authentication/overview)
+- See [Modern authentication](/csharp/aspnet-core/authentication/modern-auth)
 
 ---
 

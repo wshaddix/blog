@@ -40,7 +40,25 @@ Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscr
 
 ## Trial Periods
 
-<!-- TODO: Free trials, conversion -->
+<!-- TODO: Free trials, conversion, and a clock tests can control -->
+
+## Usage-based billing
+
+<!-- TODO: Meter product usage for usage-based prices -->
+
+## Resilient outbound calls
+
+<!-- TODO: Stripe client and email provider: timeouts, retries, and idempotency keys -->
+
+## Concurrency for seats and plan changes
+
+<!-- TODO: Lost updates on seat counts and plan changes -->
+
+## Related Topics
+
+- See [Concurrency](/csharp/entity-framework/concurrency)
+- See [HTTP clients](/csharp/platform/http-clients)
+- See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
 
 ---
 

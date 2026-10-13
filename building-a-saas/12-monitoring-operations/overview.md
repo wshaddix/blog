@@ -36,9 +36,15 @@ Your job isn't done when code ships. Observability keeps your SaaS running smoot
 
 <!-- TODO: ASP.NET health checks, readiness vs liveness -->
 
+## OpenTelemetry
+
+<!-- TODO: Traces, metrics, and logs exported to Application Insights -->
+
 ## Related Topics
 
 - See [DevOps: Monitoring](/devops/monitoring/logging)
+- See [Observability](/csharp/aspnet-core/observability/overview)
+- See [Health checks](/csharp/aspnet-core/observability/health-checks)
 
 ---
 

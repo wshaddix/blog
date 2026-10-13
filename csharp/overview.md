@@ -36,8 +36,10 @@ Taking your C# skills to the next level:
 - [Generics](/csharp/advanced-features/generics) - Type-safe reusable code
 - [LINQ](/csharp/advanced-features/linq) - Query syntax for collections
 - [Async/Await](/csharp/advanced-features/async) - Asynchronous programming
+- [Cancellation](/csharp/advanced-features/cancellation) - Tokens and bounded concurrency
 - [Records and Init](/csharp/advanced-features/records) - Immutable data types
 - [Pattern Matching](/csharp/advanced-features/pattern-matching) - Declarative conditionals
+- [High-Performance C#](/csharp/advanced-features/high-performance-csharp) - Primitives for hot paths
 - [Attributes](/csharp/advanced-features/attributes) - Metadata for validation and tools
 - [Modern C#](/csharp/advanced-features/modern-csharp) - The dialect current .NET code uses
 
@@ -59,6 +61,7 @@ Microsoft's ORM for database access:
 - [Change Tracking](/csharp/entity-framework/change-tracking) - What `SaveChanges` writes
 - [Migrations](/csharp/entity-framework/migrations) - Database schema evolution
 - [Transactions](/csharp/entity-framework/transactions) - More than one save, one commit
+- [Concurrency](/csharp/entity-framework/concurrency) - Lost updates, tokens, and atomic counters
 - [Performance](/csharp/entity-framework/performance) - Avoiding common pitfalls
 - [Testing](/csharp/entity-framework/testing) - Relational tests, not the in-memory provider
 
@@ -91,6 +94,7 @@ TUnit is the runner. Reqnroll runs behavior scenarios on that same runner.
 - [Project setup](/csharp/testing/project-setup) - A TUnit executable
 - [Unit Testing](/csharp/testing/unit-testing) - `[Test]` and `Assert.That`
 - [Mocking](/csharp/testing/mocking) - TUnit.Mocks
+- [Time-dependent code](/csharp/testing/time-dependent-code) - A clock the test controls
 - [Integration Testing](/csharp/testing/integration-testing) - The API and a real database
 - [Reqnroll](/csharp/testing/reqnroll/overview) - Gherkin features
 

@@ -21,6 +21,10 @@ Summaries, response types, and status codes.
 
 A development-only browser for the document.
 
+## Scalar
+
+<!-- TODO: Another UI over the same OpenAPI document -->
+
 ## Clients
 
 What a generated client will get wrong if the document is incomplete.

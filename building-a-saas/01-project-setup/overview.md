@@ -14,6 +14,8 @@ A well-organized project structure sets the foundation for maintainability and s
 - Initial configuration
 - Git repository setup
 - CI pipeline foundation
+- Directory.Build.props, central package management, and EditorConfig
+- Aspire AppHost for local dependencies
 
 ## Solution Structure
 
@@ -30,6 +32,27 @@ A well-organized project structure sets the foundation for maintainability and s
 ## Git Setup
 
 <!-- TODO: .gitignore, branching strategy, initial commit -->
+
+## Directory.Build.props
+
+<!-- TODO: Language version, nullable, warnings as errors -->
+
+## Central Package Management
+
+<!-- TODO: Directory.Packages.props and transitive pinning -->
+
+## EditorConfig
+
+<!-- TODO: .editorconfig, analyzers, and dotnet format in CI -->
+
+## Aspire AppHost
+
+<!-- TODO: SQL, Redis, API, worker, and the dashboard -->
+
+## Related Topics
+
+- See [Projects and Solutions](/csharp/language-basics/projects-and-solutions)
+- See [.NET Aspire](/csharp/platform/aspire)
 
 ---
 

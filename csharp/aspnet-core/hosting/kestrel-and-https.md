@@ -21,6 +21,10 @@ The developer certificate.
 
 Forwarded headers, the original scheme, and the original client address.
 
+## YARP load balancing
+
+<!-- TODO: A .NET reverse proxy in front of the app, and how it spreads requests -->
+
 ## HSTS
 
 Telling a browser to stay on HTTPS.

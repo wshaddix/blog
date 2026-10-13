@@ -40,4 +40,4 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ---
 
-**Next:** [Dependency Injection](/csharp/platform/dependency-injection)
+**Next:** [.NET Aspire](/csharp/platform/aspire)

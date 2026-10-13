@@ -40,10 +40,20 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 <!-- TODO: Retries, dead letter, alerting -->
 
+## Reliable messaging
+
+<!-- TODO: Publish domain events through an outbox -->
+
+## Shutdown and cancellation
+
+<!-- TODO: The host stops, and in-flight work honors the token -->
+
 ## Related Topics
 
 - See [Azure Functions](/devops/azure/functions)
 - See [Fundamentals: Concurrency](/fundamentals/programming-concepts/concurrency)
+- See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
+- See [Background services](/csharp/aspnet-core/web-apis/background-services)
 
 ---
 

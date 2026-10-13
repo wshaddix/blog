@@ -25,6 +25,18 @@ A check per dependency, with a timeout.
 
 A check that takes a lock or writes a row.
 
+## Startup
+
+<!-- TODO: A third probe, distinct from liveness and readiness -->
+
+## Business-level checks
+
+<!-- TODO: Job lag and an outbox backlog -->
+
+## Exposing checks safely
+
+<!-- TODO: Auth, detail level, and an App Service health probe -->
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

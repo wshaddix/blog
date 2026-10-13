@@ -34,11 +34,22 @@ The data layer connects your domain model to the database. Done right, it's reli
 
 ## Performance
 
-<!-- TODO: N+1, tracking, projections -->
+<!-- TODO: N+1, tracking, projections, keyset pagination -->
+
+## HybridCache
+
+<!-- TODO: Tenant settings and plan lookups, keyed by tenant -->
+
+## Audit logging
+
+<!-- TODO: A record of changes for the tenant -->
 
 ## Related Topics
 
 - See [Entity Framework](/csharp/entity-framework/getting-started)
+- See [Entity Framework performance](/csharp/entity-framework/performance)
+- See [Concurrency](/csharp/entity-framework/concurrency)
+- See [Caching](/csharp/aspnet-core/web-apis/caching)
 - See [Databases](/databases/overview)
 
 ---

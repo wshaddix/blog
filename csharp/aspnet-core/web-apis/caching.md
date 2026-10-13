@@ -25,6 +25,34 @@ A cache key that includes the user or the tenant when the body does.
 
 A write that makes a cached read wrong.
 
+## Before you cache
+
+<!-- TODO: Fix the query first. See [Entity Framework performance](/csharp/entity-framework/performance). -->
+
+## Cache options
+
+<!-- TODO: In-process, distributed, hybrid, output, and response: scope, consistency, and cost -->
+
+## HybridCache
+
+<!-- TODO: One API over a local cache and a distributed cache -->
+
+### Setup with Redis as L2
+
+<!-- TODO -->
+
+### GetOrCreateAsync, tags, and stampede protection
+
+<!-- TODO -->
+
+### Invalidation strategies
+
+<!-- TODO: Tag on write, TTL, versioned keys -->
+
+## Measuring hit ratio
+
+<!-- TODO: Hit ratio, latency, and memory -->
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

@@ -31,6 +31,26 @@ Avoiding common performance pitfalls.
 
 <!-- TODO: Logging SQL, profiling tools -->
 
+## Where the query actually runs
+
+<!-- TODO: IQueryable vs IEnumerable boundary -->
+
+## Existence checks and counting
+
+<!-- TODO: Any translates to EXISTS, and counting pitfalls -->
+
+## Projections versus loading entities
+
+<!-- TODO: Select vs loading entities -->
+
+## Bulk writes
+
+<!-- TODO: ExecuteUpdate, ExecuteDelete, and AddRange batching -->
+
+## Reading SQL logs
+
+<!-- TODO: A review checklist for rows, query count, allocations, indexes, and the plan -->
+
 ## Practical Examples
 
 - See [Building a SaaS: Data Layer](/building-a-saas/07-data-layer/overview) - Performance in practice

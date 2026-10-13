@@ -40,4 +40,4 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ---
 
-**Next:** [Choosing a Scheme](/csharp/aspnet-core/authentication/choosing-a-scheme)
+**Next:** [Modern Authentication](/csharp/aspnet-core/authentication/modern-auth)

@@ -17,6 +17,26 @@ A log says what happened. A metric says how often. A trace says where the time w
 
 One pipeline for all three, and an exporter per environment.
 
+### Wiring in ASP.NET Core
+
+<!-- TODO -->
+
+### Auto versus manual instrumentation
+
+<!-- TODO: ActivitySource and Meter -->
+
+### Exporters
+
+<!-- TODO: OTLP to Application Insights or the Aspire dashboard -->
+
+### Tenant id on a span
+
+<!-- TODO -->
+
+### A slow 200
+
+<!-- TODO: Find the time in a trace when the status code is success -->
+
 ## Correlation
 
 A trace id on the request, the log, and the downstream call.

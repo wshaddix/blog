@@ -23,6 +23,10 @@ Managed platform for hosting web applications.
 
 <!-- TODO: Scale up, scale out, autoscaling -->
 
+## Capacity math
+
+<!-- TODO: Turn traffic, latency, and concurrency into an instance count -->
+
 ## Custom Domains and SSL
 
 <!-- TODO: Domain mapping, certificates -->

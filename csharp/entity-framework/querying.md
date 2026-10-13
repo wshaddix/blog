@@ -27,6 +27,22 @@ Using LINQ to query databases.
 
 <!-- TODO: Skip, Take, keyset pagination -->
 
+### Offset versus keyset
+
+<!-- TODO -->
+
+### Composite index design
+
+<!-- TODO -->
+
+### Opaque cursor encoding
+
+<!-- TODO -->
+
+### API response shape
+
+<!-- TODO -->
+
 ## Raw SQL
 
 <!-- TODO: FromSqlRaw, when to use it -->

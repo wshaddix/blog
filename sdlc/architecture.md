@@ -21,6 +21,42 @@ A project reference is a dependency. Draw the ones you mean to keep.
 
 One deployable with internal boundaries, and when that is the right shape.
 
+### Module boundaries and public contracts
+
+<!-- TODO -->
+
+### Data ownership
+
+<!-- TODO: Schema per module -->
+
+### In-process versus async integration
+
+<!-- TODO -->
+
+### Extraction path
+
+<!-- TODO: What would have to move if a module left the process -->
+
+## Vertical slice
+
+<!-- TODO: Organize by feature -->
+
+### Organizing by feature
+
+<!-- TODO -->
+
+### Anatomy of a slice
+
+<!-- TODO: Endpoint, handler, validator, test -->
+
+### Sharing code without coupling
+
+<!-- TODO -->
+
+### With or without MediatR
+
+<!-- TODO -->
+
 ## Clients and the server
 
 Business rules stay on the server. Clients render and call.

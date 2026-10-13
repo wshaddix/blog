@@ -70,3 +70,7 @@ Below is a bullet list of the 65 patterns from *Enterprise Integration Patterns:
 - **Test Message**: Sends a test message through the system to verify functionality or diagnose issues, ensuring system reliability.
 - **Transactional Client**: Ensures message sending or receiving is part of a transaction, guaranteeing atomicity and consistency.
 - **Wire Tap**: Copies messages to a secondary channel for monitoring or auditing without affecting the primary flow, enabling observability.
+
+---
+
+**Next:** [Outbox and the Idempotent Consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
