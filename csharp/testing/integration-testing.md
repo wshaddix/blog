@@ -1,36 +1,40 @@
 ---
 title: Integration Testing
-order: 3
+order: 70
 ---
 
 # Integration Testing
 
-Testing how components work together.
+An integration test checks that two or more real parts work together. On this site that usually means the API, the database, or both. The runner is still TUnit.
 
-## What is Integration Testing?
+*This page is an outline. The sections will be filled in over time, including a C# sample where the topic has one.*
 
-<!-- TODO: Definition, scope, vs unit testing -->
+## What it proves
 
-## WebApplicationFactory
+A request reaches a handler, the handler talks to a real database or a real HTTP boundary, and the status and body match the contract. It does not replace the unit tests around the domain rules.
 
-<!-- TODO: Testing ASP.NET Core apps -->
+## ASP.NET Core
 
-## Database Testing
+Boot the app in-process with `TUnit.AspNetCore`. The factory, the test base class, and per-test isolation are on the [ASP.NET Core tests](/csharp/testing/webapplicationfactory) page.
 
-<!-- TODO: Test databases, transactions, cleanup -->
+## Databases
 
-## HTTP Client Testing
+Use SQLite when you need a relational engine and the SQL is ordinary. Use [Testcontainers](/csharp/testing/testcontainers) when the behavior is SQL Server-specific. Do not use the EF in-memory provider to stand in for either one.
 
-<!-- TODO: Testing API endpoints -->
+## Parallelism
 
-## Test Containers
+TUnit runs tests in parallel. Give each test its own database, or mark the class `[NotInParallel]` when the tests share one.
 
-<!-- TODO: Docker-based integration tests -->
+## Code example
 
-## Practical Examples
+A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.
 
-- See [Building a SaaS: Testing Strategy](/building-a-saas/10-testing-strategy/overview) - Testing in practice
+## Related
+
+- [Testing strategy](/sdlc/testing-strategy)
+- [Testing Entity Framework](/csharp/entity-framework/testing)
+- [Building a SaaS: Testing](/building-a-saas/10-testing-strategy/overview)
 
 ---
 
-**Continue to:** [Databases](/databases/overview)
+**Next:** [ASP.NET Core Tests](/csharp/testing/webapplicationfactory)

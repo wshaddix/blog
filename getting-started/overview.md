@@ -42,6 +42,7 @@ Start with [Career Development](/career-development/overview):
 | Section | What You'll Learn |
 |---------|-------------------|
 | [Getting Started](/getting-started/overview) | Setup, prerequisites, learning path |
+| [AI-Assisted Development](/ai-assisted-development/overview) | Terms, tools, and techniques for working with an assistant |
 | [Fundamentals](/fundamentals/overview) | Data structures, algorithms, CS theory |
 | [C#](/csharp/overview) | Language, frameworks, .NET ecosystem |
 | [Databases](/databases/overview) | SQL, NoSQL, data modeling |

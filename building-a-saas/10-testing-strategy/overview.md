@@ -30,7 +30,7 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 
 ## Unit Tests
 
-<!-- TODO: Domain logic, services, xUnit setup -->
+<!-- TODO: Domain logic, services, TUnit setup. See [TUnit project setup](/csharp/testing/project-setup). -->
 
 ## Integration Tests
 
@@ -42,7 +42,8 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 
 ## Related Topics
 
-- See [C#: Testing](/csharp/testing/unit-testing)
+- See [C#: Testing](/csharp/testing/unit-testing) - TUnit, TUnit.Mocks, and API tests
+- See [Reqnroll](/csharp/testing/reqnroll/overview) - Behavior scenarios on the TUnit runner
 
 ---
 

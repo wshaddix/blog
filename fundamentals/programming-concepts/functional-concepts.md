@@ -1,6 +1,6 @@
 ---
 title: Functional Concepts
-order: 2
+order: 40
 ---
 
 # Functional Programming Concepts

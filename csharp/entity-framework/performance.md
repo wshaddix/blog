@@ -1,6 +1,6 @@
 ---
 title: Performance
-order: 5
+order: 40
 ---
 
 # Entity Framework Performance

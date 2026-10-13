@@ -7,6 +7,14 @@ order: 1
 
 Patterns are proven solutions to common problems. Understanding them helps you write better code and communicate with other engineers.
 
+## Taught on this path
+
+These are lessons. The long lists further down this section are catalogs of names.
+
+- [Repository](/patterns/application-patterns/repository) - A collection-shaped front for one aggregate
+- [CQRS](/patterns/application-patterns/cqrs) - A write model and a read model, when they have diverged
+- [Decorator](/patterns/coding-patterns/decorator) - The shape behind middleware and HTTP handlers
+
 ## What's Covered
 
 ### Coding Patterns (GoF)

@@ -1,40 +1,26 @@
 ---
-title: Overview
-order: 1
+title: Authentication
+order: 200
 ---
 
-# Authentication in ASP.NET Core
+# Authentication
 
-Verifying who users are and what they can do.
+How an ASP.NET Core app establishes who the caller is. Pick the scheme on the choosing page before implementing any of the others.
 
-## Authentication vs Authorization
+## In this section
 
-<!-- TODO: Who you are vs what you can do -->
+- [Choosing a scheme](/csharp/aspnet-core/authentication/choosing-a-scheme) - Cookies, JWT, OpenID Connect, and a backend-for-frontend.
+- [ASP.NET Core Identity](/csharp/aspnet-core/authentication/identity) - Users, passwords, and the Identity store.
+- [Cookie authentication](/csharp/aspnet-core/authentication/cookies) - The browser session for Blazor and server-rendered pages.
+- [JWT bearer](/csharp/aspnet-core/authentication/jwt) - Tokens for services, MCP, and non-browser clients.
+- [Refresh tokens](/csharp/aspnet-core/authentication/refresh-tokens) - Rotation and storage.
+- [OpenID Connect](/csharp/aspnet-core/authentication/openid-connect) - An external identity provider.
 
-## ASP.NET Core Identity
+## Related
 
-<!-- TODO: Built-in user management -->
-
-## JWT (JSON Web Tokens)
-
-<!-- TODO: Token-based auth, claims -->
-
-## OAuth and OpenID Connect
-
-<!-- TODO: Third-party auth, social logins -->
-
-## Cookie Authentication
-
-<!-- TODO: Traditional web app auth -->
-
-## Authorization Policies
-
-<!-- TODO: Role-based, claims-based, policy-based -->
-
-## Practical Examples
-
-- See [Building a SaaS: Authentication](/building-a-saas/04-authentication/overview) - Auth in practice
+- [Authorization](/csharp/aspnet-core/authorization/overview)
+- [Building a SaaS: Authentication](/building-a-saas/04-authentication/overview)
 
 ---
 
-**Next:** [Middleware](/csharp/aspnet-core/middleware/overview)
+**Next:** [Choosing a Scheme](/csharp/aspnet-core/authentication/choosing-a-scheme)

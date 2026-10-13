@@ -44,6 +44,17 @@ Core programming paradigms and principles:
 - [OOP Principles](/fundamentals/programming-concepts/oop-principles) - SOLID, DRY, encapsulation
 - [Functional Concepts](/fundamentals/programming-concepts/functional-concepts) - Immutability, pure functions
 - [Concurrency](/fundamentals/programming-concepts/concurrency) - Parallel and async programming
+- [Error Handling](/fundamentals/programming-concepts/error-handling) - What a caller is owed when something fails
+- [Memory and Garbage Collection](/fundamentals/programming-concepts/memory-and-gc) - Stack, heap, and disposal
+
+### Networking
+
+- [HTTP and the Web](/fundamentals/networking/http) - DNS, TLS, methods, and status codes
+
+### Security
+
+- [Security Concepts](/fundamentals/security/overview) - Injection, XSS, CSRF, secrets, and transport
+- [Authentication and Authorization](/fundamentals/security/authentication-and-authorization) - Who the caller is, and what they may do
 
 ## How to Use This Section
 

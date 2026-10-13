@@ -1,6 +1,6 @@
 ---
 title: Classes and Objects
-order: 5
+order: 80
 ---
 
 # Classes and Objects

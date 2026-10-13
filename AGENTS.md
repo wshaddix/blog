@@ -33,7 +33,7 @@ This is a comprehensive software engineering knowledge base covering:
 - Use `retype start` to preview documentation locally before deploying
 - For code changes, build and test locally first: `dotnet build` and `dotnet test`
 - The solution uses standard .NET project structure with multiple projects
-- Tests use xUnit framework with Moq for mocking
+- Tests use TUnit (https://tunit.dev), TUnit.Mocks, and Reqnroll.TUnit for behavior scenarios. Do not add xUnit, NUnit, MSTest, Moq, or Coverlet.
 
 #### Code Style
 - Follow existing C# conventions seen in the codebase
@@ -45,6 +45,7 @@ This is a comprehensive software engineering knowledge base covering:
 ```
 /
 ├── getting-started/           # New user onboarding
+├── ai-assisted-development/   # Terms, tools, and techniques
 ├── fundamentals/              # CS theory
 ├── csharp/                   # Language and framework specific content
 ├── databases/                 # Database theory and practice
@@ -149,6 +150,8 @@ When adding code examples:
 - Include necessary error handling
 - Add explanatory comments for complex code
 - Ensure examples compile and run
+- Keep a short snippet on the page. Put a sample longer than about 30 lines in a companion `.cs` file next to that page and link it
+- Test projects are TUnit executables (`dotnet new TUnit`). Assertions use `await Assert.That(...)`. API tests use `TUnit.AspNetCore`. Behavior specs use Reqnroll with the `Reqnroll.TUnit` package
 
 ### Git Workflow
 

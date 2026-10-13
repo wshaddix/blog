@@ -14,6 +14,7 @@ DevOps bridges development and operations, focusing on automation, collaboration
 Source code management and collaboration:
 
 - [Git Fundamentals](/devops/version-control/git-installation) - Setup and basics
+- [Branching and Pull Requests](/devops/version-control/branching-and-pull-requests) - How a change lands on `main`
 - [Git Configuration](/devops/version-control/git-configuration) - Customizing your workflow
 - [Git Recipes](/devops/version-control/git-recipes) - Common tasks and solutions
 - [Conventional Commits](/devops/version-control/conventional-commits) - Standardized commit messages

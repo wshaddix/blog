@@ -1,6 +1,6 @@
 ---
 title: SQL Fundamentals
-order: 1
+order: 50
 ---
 
 # SQL Fundamentals

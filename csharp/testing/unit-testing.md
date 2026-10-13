@@ -1,35 +1,62 @@
 ---
 title: Unit Testing
-order: 1
+order: 90
 ---
 
-# Unit Testing in C#
+# Unit Testing
 
-Testing individual units of code in isolation.
+A unit test checks one behavior of one type. Collaborators are replaced so the test does not touch a database, the network, or the clock. The runner is [TUnit](https://tunit.dev).
 
-## What is Unit Testing?
+*This page is an outline. The sections will be filled in over time, including a C# sample where the topic has one.*
 
-<!-- TODO: Definition, benefits, test pyramid -->
+## Arrange, act, assert
 
-## xUnit Framework
+Set up the object, call one method, and assert the outcome. A test that asserts several unrelated outcomes is two tests.
 
-<!-- TODO: Setup, Facts, Theories, assertions -->
+## What a test looks like
 
-## Test Structure
+```csharp
+public class PricingTests
+{
+    [Test]
+    public async Task Applies_the_discount()
+    {
+        var pricing = new Pricing();
 
-<!-- TODO: Arrange-Act-Assert, naming conventions -->
+        var total = pricing.ApplyDiscount(100m, 0.10m);
 
-## Test Organization
+        await Assert.That(total).IsEqualTo(90m);
+    }
+}
+```
 
-<!-- TODO: Project structure, test classes -->
+Assertions are asynchronous. An `Assert.That` that is not awaited does not run.
 
-## Best Practices
+## Arguments
 
-<!-- TODO: Single assertion, independence, fast tests -->
+`[Arguments]` supplies another set of inputs to the same method. There is no `[Fact]` or `[Theory]`.
 
-## Practical Examples
+## Hooks
 
-- See [Building a SaaS: Testing Strategy](/building-a-saas/10-testing-strategy/overview) - Testing in practice
+`[Before(Test)]` and `[After(Test)]` run around each test. Class, assembly, and session hooks exist for more expensive setup. Prefer a fresh object inside the test when setup is cheap.
+
+## Names
+
+The method name says the behavior: `Applies_the_discount`. The class name says the type under test.
+
+## What stays out
+
+A unit test does not open a connection or boot the web host. Those are the integration pages.
+
+## Code example
+
+The sample above is the shape. A longer sample will live in a companion `.cs` file next to this page.
+
+## Related
+
+- [TUnit project setup](/csharp/testing/project-setup)
+- [Mocking](/csharp/testing/mocking)
+- [Testing strategy](/sdlc/testing-strategy)
 
 ---
 

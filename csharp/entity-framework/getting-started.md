@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-order: 1
+order: 110
 ---
 
 # Getting Started with Entity Framework Core

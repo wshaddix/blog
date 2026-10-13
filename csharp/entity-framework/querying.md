@@ -1,6 +1,6 @@
 ---
 title: Querying
-order: 3
+order: 80
 ---
 
 # Querying with Entity Framework

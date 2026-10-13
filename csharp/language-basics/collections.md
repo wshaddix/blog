@@ -1,6 +1,6 @@
 ---
 title: Collections
-order: 6
+order: 50
 ---
 
 # Collections

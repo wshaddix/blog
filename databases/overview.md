@@ -16,13 +16,16 @@ Traditional SQL databases with structured schemas:
 - [SQL Fundamentals](/databases/relational/sql-fundamentals) - The language of relational databases
 - [Database Design](/databases/relational/database-design) - Normalization, relationships, constraints
 - [SQL Server](/databases/relational/sql-server/overview) - Microsoft's enterprise database
+- [Indexes and Query Plans](/databases/relational/indexes-and-query-plans) - Why a query is fast or slow
+- [Transactions and Isolation](/databases/relational/transactions-and-isolation) - Atomic changes and the anomalies isolation allows
 
 ### NoSQL Databases
 
 Alternative data models for specific use cases:
 
 - [Document Databases](/databases/nosql/overview) - MongoDB, CosmosDB
-- [Key-Value Stores](/databases/nosql/overview) - Redis, caching
+- [Key-Value Stores](/databases/nosql/overview) - When a key-value model fits
+- [Redis and Caching](/databases/nosql/redis) - A cache next to SQL Server
 - [When to Use NoSQL](/databases/nosql/overview) - Picking the right tool
 
 ### Data Modeling

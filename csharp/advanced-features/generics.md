@@ -1,6 +1,6 @@
 ---
 title: Generics
-order: 1
+order: 70
 ---
 
 # Generics

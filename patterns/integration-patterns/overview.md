@@ -1,9 +1,14 @@
 ---
+order: 100
 title: Overview
 ---
 
 
 # Patterns from *Enterprise Integration Patterns* by Gregor Hohpe and Bobby Woolf
+
+!!!
+This page is a catalog of names, not a lesson. Messaging shows up in practice in [background services](/csharp/aspnet-core/web-apis/background-services) and in [Building a SaaS: Background Jobs](/building-a-saas/08-background-jobs/overview).
+!!!
 
 Below is a bullet list of the 65 patterns from *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions* by Gregor Hohpe and Bobby Woolf (2003). Each pattern includes its name and a brief description of its purpose, focusing on solutions for enterprise application integration using messaging.[](https://en.wikipedia.org/wiki/Enterprise_Integration_Patterns)
 

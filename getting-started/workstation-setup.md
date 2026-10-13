@@ -1,6 +1,6 @@
 ---
 title: Workstation Setup
-order: 100
+order: 325
 nextprev:
   mode: hide
 ---

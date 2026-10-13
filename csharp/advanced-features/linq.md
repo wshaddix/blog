@@ -1,6 +1,6 @@
 ---
 title: LINQ
-order: 2
+order: 60
 ---
 
 # LINQ (Language Integrated Query)

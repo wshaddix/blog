@@ -1,10 +1,21 @@
 ---
+order: 100
 title: Overview
 ---
 
 # Software Development Lifecycle (SDLC) Steps
 
 The Software Development Lifecycle (SDLC) is a structured process for planning, creating, testing, deploying, and maintaining software. Below is a comprehensive list of SDLC phases, each with a brief description of its purpose and activities.
+
+## Guides
+
+These pages go into the work inside those phases:
+
+- [Architecture](/sdlc/architecture) - Where a console app, an API, and a client each sit
+- [Requirements and Stories](/sdlc/requirements-and-stories) - A change described so it can be built and tested
+- [Debugging](/sdlc/debugging) - Reproduce, narrow, fix, and prove
+- [Testing Strategy](/sdlc/testing-strategy) - What each kind of test proves
+- [Code Review](/sdlc/code-review) - How a change gets read before it merges
 
 ## 1. Requirement Analysis
 **Description**: Gather and analyze project requirements to define the scope and objectives.  

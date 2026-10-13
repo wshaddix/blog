@@ -1,9 +1,14 @@
 ---
+order: 100
 title: Overview
 ---
 
 
 # Patterns from Martin Fowler's *Patterns of Enterprise Application Architecture*
+
+!!!
+This page is a catalog of names, not a lesson. The patterns this path teaches are [Repository](/patterns/application-patterns/repository) and [CQRS](/patterns/application-patterns/cqrs).
+!!!
 
 Below is a bullet list of patterns from Martin Fowler's book *Patterns of Enterprise Application Architecture* (2002). Each pattern includes its name and a brief description of its purpose, based on the book's catalog of solutions for common enterprise application challenges.[](https://martinfowler.com/eaaCatalog/)
 

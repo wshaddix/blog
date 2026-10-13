@@ -1,6 +1,6 @@
 ---
 title: Pattern Matching
-order: 5
+order: 30
 ---
 
 # Pattern Matching
