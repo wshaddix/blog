@@ -30,4 +30,4 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ---
 
-**Next:** [Performance](/csharp/entity-framework/performance)
+**Next:** [Concurrency](/csharp/entity-framework/concurrency)

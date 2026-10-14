@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -185,17 +185,62 @@
 <!-- TODO: Consistency boundaries, aggregate roots -->
 <h2 id="our-domain-model">Our Domain Model</h2>
 <!-- TODO: Tenant, User, Subscription, etc. -->
+<h2 id="domain-events">Domain events</h2>
+<!-- TODO: Events inside the model, and why they are not the public API -->
+<h2 id="aggregate-version">Aggregate version</h2>
+<!-- TODO: rowversion on the aggregate -->
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../fundamentals/programming-concepts/oop-principles/">Fundamentals: OOP Principles</a></li>
 <li>See <a href="../../../csharp/advanced-features/records/">C#: Records</a> for value objects</li>
 <li>See <a href="../../../databases/data-modeling/overview/">Databases: Data Modeling</a></li>
+<li>See <a href="../../../patterns/architecture-styles/event-sourcing-and-cdc/">Event sourcing and change data capture</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../04-authentication/overview/">Chapter 4: Authentication</a></p>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/patterns/integration-patterns/choreography-vs-orchestration/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Choreography and Orchestration</span>
+            </div>
+            <p class="card-compact-description">Who decides the next step when a workflow is split across components.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/entity-framework/concurrency/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Concurrency</span>
+            </div>
+            <p class="card-compact-description">How two saves of the same row avoid a lost update.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/event-sourcing-and-cdc/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Event Sourcing and Change Data Capture</span>
+            </div>
+            <p class="card-compact-description">Two ways a change becomes a stream of facts.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/integration-patterns/outbox-and-idempotent-consumer/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Outbox and the Idempotent Consumer</span>
+            </div>
+            <p class="card-compact-description">Saving state and sending a message are two writes, and either one can fail on its own.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/building-a-saas/02-architecture-decisions/overview/" class="group card-compact no-link">
         <div class="card-compact-body">

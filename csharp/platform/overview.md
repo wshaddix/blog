@@ -7,6 +7,7 @@ Console apps, MCP servers, APIs, Blazor, WinUI, and Uno are composed the same wa
 ## In this section
 
 - [Generic host](/csharp/platform/generic-host) - The process model every app type starts from.
+- [.NET Aspire](/csharp/platform/aspire) - Local SQL, Redis, the API, and a worker.
 - [Dependency injection](/csharp/platform/dependency-injection) - Registration and lifetimes.
 - [Configuration and options](/csharp/platform/configuration-and-options) - Settings, environments, and the options pattern.
 - [Logging](/csharp/platform/logging) - `ILogger` and structured events.

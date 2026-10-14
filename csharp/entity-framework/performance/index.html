@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -179,6 +179,16 @@
 <!-- TODO: Connection pooling, async -->
 <h2 id="profiling">Profiling</h2>
 <!-- TODO: Logging SQL, profiling tools -->
+<h2 id="where-the-query-actually-runs">Where the query actually runs</h2>
+<!-- TODO: IQueryable vs IEnumerable boundary -->
+<h2 id="existence-checks-and-counting">Existence checks and counting</h2>
+<!-- TODO: Any translates to EXISTS, and counting pitfalls -->
+<h2 id="projections-versus-loading-entities">Projections versus loading entities</h2>
+<!-- TODO: Select vs loading entities -->
+<h2 id="bulk-writes">Bulk writes</h2>
+<!-- TODO: ExecuteUpdate, ExecuteDelete, and AddRange batching -->
+<h2 id="reading-sql-logs">Reading SQL logs</h2>
+<!-- TODO: A review checklist for rows, query count, allocations, indexes, and the plan -->
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
 <li>See <a href="../../../building-a-saas/07-data-layer/overview/">Building a SaaS: Data Layer</a> - Performance in practice</li>
@@ -188,6 +198,26 @@
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/csharp/entity-framework/concurrency/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Concurrency</span>
+            </div>
+            <p class="card-compact-description">How two saves of the same row avoid a lost update.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/advanced-features/high-performance-csharp/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">High-Performance C#</span>
+            </div>
+            <p class="card-compact-description">Primitives you reach for when an ordinary allocation shows up on a hot path.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/databases/relational/indexes-and-query-plans/" class="group card-compact no-link">
         <div class="card-compact-body">
@@ -209,22 +239,22 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/building-a-saas/07-data-layer/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The data layer connects your domain model to the database. Done right, it's reliable and performant.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/csharp/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">C# is a modern, object-oriented programming language developed by Microsoft. Combined with the .NET platform, it's one of the most versatile ecosystems for building applications.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/csharp/entity-framework/transactions/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Transactions</span>
-            </div>
-            <p class="card-compact-description">SaveChanges is already one transaction. You open your own when more than one save must commit together.</p>
         </div>
     </a>
 </div>
@@ -239,11 +269,11 @@
             
                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                     <div class="w-1/2">
-                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../csharp/entity-framework/transactions/">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../csharp/entity-framework/concurrency/">
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                             <span>
                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                <span class="block mt-1">Transactions</span>
+                                <span class="block mt-1">Concurrency Control in EF Core</span>
                             </span>
                         </a>
                     </div>

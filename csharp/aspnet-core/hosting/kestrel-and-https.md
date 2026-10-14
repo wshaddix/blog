@@ -16,6 +16,8 @@ The developer certificate.
 
 Forwarded headers, the original scheme, and the original client address.
 
+## YARP load balancing
+
 ## HSTS
 
 Telling a browser to stay on HTTPS.

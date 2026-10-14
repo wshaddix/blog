@@ -31,8 +31,10 @@ Taking your C# skills to the next level:
 - [Generics](/csharp/advanced-features/generics) - Type-safe reusable code
 - [LINQ](/csharp/advanced-features/linq) - Query syntax for collections
 - [Async/Await](/csharp/advanced-features/async) - Asynchronous programming
+- [Cancellation](/csharp/advanced-features/cancellation) - Tokens and bounded concurrency
 - [Records and Init](/csharp/advanced-features/records) - Immutable data types
 - [Pattern Matching](/csharp/advanced-features/pattern-matching) - Declarative conditionals
+- [High-Performance C#](/csharp/advanced-features/high-performance-csharp) - Primitives for hot paths
 - [Attributes](/csharp/advanced-features/attributes) - Metadata for validation and tools
 - [Modern C#](/csharp/advanced-features/modern-csharp) - The dialect current .NET code uses
 
@@ -54,6 +56,7 @@ Microsoft's ORM for database access:
 - [Change Tracking](/csharp/entity-framework/change-tracking) - What `SaveChanges` writes
 - [Migrations](/csharp/entity-framework/migrations) - Database schema evolution
 - [Transactions](/csharp/entity-framework/transactions) - More than one save, one commit
+- [Concurrency](/csharp/entity-framework/concurrency) - Lost updates, tokens, and atomic counters
 - [Performance](/csharp/entity-framework/performance) - Avoiding common pitfalls
 - [Testing](/csharp/entity-framework/testing) - Relational tests, not the in-memory provider
 
@@ -63,7 +66,7 @@ Building web applications and APIs:
 
 - [Web APIs](/csharp/aspnet-core/web-apis/overview) - HTTP APIs, validation, rate limiting, OpenAPI
 - [Authentication](/csharp/aspnet-core/authentication/overview) - Cookies, JWT, OpenID Connect
-- [Authorization](/csharp/aspnet-core/authorization/overview) - Roles, policies, and a specific row
+- [Authorization](/csharp/aspnet-core/authorization/overview) - Roles, permissions, policies, and a specific row
 - [Middleware](/csharp/aspnet-core/middleware/overview) - Request pipeline
 - [Blazor](/csharp/aspnet-core/blazor/overview) - The C# web UI
 - [Observability](/csharp/aspnet-core/observability/overview) - Logs, metrics, and traces
@@ -73,11 +76,11 @@ Building web applications and APIs:
 - [Shared client code](/csharp/clients/overview) - MVVM, XAML, and the API client
 - [WinUI 3](/csharp/winui/overview) - Native Windows
 - [Uno Platform](/csharp/uno/overview) - iOS, Android, WebAssembly, and desktop
-- [MCP servers](/csharp/mcp/overview) - Tools, resources, and prompts for an AI client
+- [MCP servers](/csharp/mcp/overview) - Clients, tools, resources, and prompts for an AI client
 
 ### Security
 
-- [Secrets, transport, and data protection](/csharp/security/overview)
+- [Secrets, log redaction, transport, and data protection](/csharp/security/overview)
 
 ### Testing
 
@@ -86,6 +89,7 @@ TUnit is the runner. Reqnroll runs behavior scenarios on that same runner.
 - [Project setup](/csharp/testing/project-setup) - A TUnit executable
 - [Unit Testing](/csharp/testing/unit-testing) - `[Test]` and `Assert.That`
 - [Mocking](/csharp/testing/mocking) - TUnit.Mocks
+- [Time-dependent code](/csharp/testing/time-dependent-code) - A clock the test controls
 - [Integration Testing](/csharp/testing/integration-testing) - The API and a real database
 - [Reqnroll](/csharp/testing/reqnroll/overview) - Gherkin features
 

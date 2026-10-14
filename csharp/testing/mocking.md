@@ -44,6 +44,8 @@ Interfaces at the edge of the type under test: a clock, a mailer, an HTTP API.
 
 The type under test, a value object, or a `DbContext` when the test claims to prove a query. Query tests use a real database provider. See [Testing Entity Framework](/csharp/entity-framework/testing).
 
+## FakeLogger
+
 ## Code example
 
 The sample above is the shape. A longer sample will live in a companion `.cs` file next to this page.
@@ -55,4 +57,4 @@ The sample above is the shape. A longer sample will live in a companion `.cs` fi
 
 ---
 
-**Next:** [Integration Testing](/csharp/testing/integration-testing)
+**Next:** [Time-Dependent Code](/csharp/testing/time-dependent-code)

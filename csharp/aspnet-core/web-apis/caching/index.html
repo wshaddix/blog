@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,20 @@
 <p>A cache key that includes the user or the tenant when the body does.</p>
 <h2 id="invalidation">Invalidation</h2>
 <p>A write that makes a cached read wrong.</p>
+<h2 id="before-you-cache">Before you cache</h2>
+<!-- TODO: Fix the query first. See [Entity Framework performance](/csharp/entity-framework/performance). -->
+<h2 id="cache-options">Cache options</h2>
+<!-- TODO: In-process, distributed, hybrid, output, and response: scope, consistency, and cost -->
+<h2 id="hybridcache">HybridCache</h2>
+<!-- TODO: One API over a local cache and a distributed cache -->
+<h3 id="setup-with-redis-as-l2">Setup with Redis as L2</h3>
+<!-- TODO -->
+<h3 id="getorcreateasync-tags-and-stampede-protection">GetOrCreateAsync, tags, and stampede protection</h3>
+<!-- TODO -->
+<h3 id="invalidation-strategies">Invalidation strategies</h3>
+<!-- TODO: Tag on write, TTL, versioned keys -->
+<h2 id="measuring-hit-ratio">Measuring hit ratio</h2>
+<!-- TODO: Hit ratio, latency, and memory -->
 <h2 id="code-example">Code example</h2>
 <p>A short C# sample will go here. A sample longer than about 30 lines will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>
 <h2 id="related">Related</h2>
@@ -194,6 +208,26 @@
                 <span class="card-compact-title">API Versioning</span>
             </div>
             <p class="card-compact-description">How a contract changes without breaking a client you already shipped.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/07-data-layer/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The data layer connects your domain model to the database. Done right, it's reliable and performant.</p>
         </div>
     </a>
 </div>

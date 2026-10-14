@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -173,6 +173,12 @@
 <li><a href="../application-patterns/repository/">Repository</a> - A collection-shaped front for one aggregate</li>
 <li><a href="../application-patterns/cqrs/">CQRS</a> - A write model and a read model, when they have diverged</li>
 <li><a href="../coding-patterns/decorator/">Decorator</a> - The shape behind middleware and HTTP handlers</li>
+<li><a href="../integration-patterns/outbox-and-idempotent-consumer/">Outbox and the idempotent consumer</a> - One transaction for the state change and the message</li>
+<li><a href="../integration-patterns/sagas/">Sagas</a> - Multi-step workflows across services</li>
+<li><a href="../integration-patterns/choreography-vs-orchestration/">Choreography and orchestration</a> - Who decides the next step</li>
+<li><a href="../architecture-styles/modular-monolith/">Modular monolith</a> - One deployable, modules that own their data, slices inside each module</li>
+<li><a href="../architecture-styles/architecture-tests/">Architecture tests</a> - Fail the build when a boundary is crossed</li>
+<li><a href="../architecture-styles/event-sourcing-and-cdc/">Event sourcing and change data capture</a> - A stream of facts</li>
 </ul>
 <h2 id="whats-covered">What&#x27;s Covered</h2>
 <h3 id="coding-patterns-gof">Coding Patterns (GoF)</h3>
@@ -194,6 +200,16 @@
 <ul>
 <li><a href="../integration-patterns/overview/">API Patterns</a> - REST, versioning, pagination</li>
 <li><a href="../integration-patterns/overview/">Messaging Patterns</a> - Async communication</li>
+<li><a href="../integration-patterns/outbox-and-idempotent-consumer/">Outbox and the idempotent consumer</a> - State and the message commit together</li>
+<li><a href="../integration-patterns/sagas/">Sagas</a> - Multi-step workflows across services</li>
+<li><a href="../integration-patterns/choreography-vs-orchestration/">Choreography and orchestration</a> - Who decides the next step</li>
+</ul>
+<h3 id="architecture-styles">Architecture Styles</h3>
+<ul>
+<li><a href="../architecture-styles/overview/">Overview</a> - Slicing a codebase</li>
+<li><a href="../architecture-styles/modular-monolith/">Modular monolith</a> - Modules, slices, and data ownership</li>
+<li><a href="../architecture-styles/architecture-tests/">Architecture tests</a> - Enforcing boundaries</li>
+<li><a href="../architecture-styles/event-sourcing-and-cdc/">Event sourcing and change data capture</a> - A stream of facts</li>
 </ul>
 <h3 id="refactoring-patterns">Refactoring Patterns</h3>
 <p>Techniques for improving existing code:</p>

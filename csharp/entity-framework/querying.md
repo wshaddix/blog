@@ -12,6 +12,14 @@ Using LINQ to query databases.
 
 ## Pagination
 
+### Offset versus keyset
+
+### Composite index design
+
+### Opaque cursor encoding
+
+### API response shape
+
 ## Raw SQL
 
 ## Practical Examples

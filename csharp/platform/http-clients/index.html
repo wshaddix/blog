@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -172,6 +172,20 @@
 <p>Why a shared <code translate="no" v-pre>new HttpClient()</code> is the wrong default.</p>
 <h2 id="typed-clients">Typed clients</h2>
 <p>A class that wraps one downstream API.</p>
+<h2 id="named-versus-typed-clients">Named versus typed clients</h2>
+<!-- TODO: When to pick each -->
+<h2 id="resilience-pipelines">Resilience pipelines</h2>
+<!-- TODO: Microsoft.Extensions.Http.Resilience -->
+<h3 id="standard-handler">Standard handler</h3>
+<!-- TODO: What the standard handler bundles -->
+<h3 id="total-timeout-per-attempt-timeout-jitter-and-the-circuit-breaker">Total timeout, per-attempt timeout, jitter, and the circuit breaker</h3>
+<!-- TODO -->
+<h2 id="what-must-not-be-retried">What must not be retried</h2>
+<!-- TODO: Non-idempotent POSTs without keys -->
+<h2 id="polly-licensing">Polly licensing</h2>
+<!-- TODO: Check current terms before choosing a package -->
+<h2 id="testing-resilience">Testing resilience</h2>
+<!-- TODO: Fault injection with a fake handler -->
 <h2 id="timeouts">Timeouts</h2>
 <p>A timeout on the client, and a timeout that cancels the attempt.</p>
 <h2 id="retries-and-circuit-breakers">Retries and circuit breakers</h2>
@@ -183,6 +197,7 @@
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../../clients/http-and-auth/">Client HTTP and auth</a></li>
+<li><a href="../../aspnet-core/web-apis/idempotent-requests/">Idempotent requests</a></li>
 <li><a href="../../aspnet-core/web-apis/overview/">Resilience in the API</a></li>
 </ul>
 <hr>
@@ -221,12 +236,32 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/idempotent-requests/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Idempotent Requests</span>
+            </div>
+            <p class="card-compact-description">A client that retries a POST needs the server to recognize the same attempt.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/csharp/platform/logging/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Logging</span>
             </div>
             <p class="card-compact-description">ILogger is the logging abstraction. The sink (console, file, or a vendor) is a registration.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/09-billing-integration/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscription billing.</p>
         </div>
     </a>
 </div>

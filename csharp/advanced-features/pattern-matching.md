@@ -18,4 +18,4 @@ Declarative way to check and destructure data.
 
 ---
 
-**Continue to:** [Entity Framework](/csharp/entity-framework/getting-started)
+**Next:** [High-Performance C#](/csharp/advanced-features/high-performance-csharp)

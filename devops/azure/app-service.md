@@ -10,6 +10,8 @@ Managed platform for hosting web applications.
 
 ## Scaling
 
+## Capacity math
+
 ## Custom Domains and SSL
 
 ---

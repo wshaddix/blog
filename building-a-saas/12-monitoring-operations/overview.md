@@ -21,9 +21,16 @@ Your job isn't done when code ships. Observability keeps your SaaS running smoot
 
 ## Health Checks
 
+## OpenTelemetry
+
+## Sensitive data in logs
+
 ## Related Topics
 
 - See [DevOps: Monitoring](/devops/monitoring/logging)
+- See [Observability](/csharp/aspnet-core/observability/overview)
+- See [Health checks](/csharp/aspnet-core/observability/health-checks)
+- See [Sensitive data in logs](/csharp/security/sensitive-data-in-logs)
 
 ---
 

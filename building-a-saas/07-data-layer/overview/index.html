@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -185,10 +185,17 @@
 <h2 id="repository-pattern">Repository Pattern?</h2>
 <!-- TODO: When to use, when DbContext is enough -->
 <h2 id="performance">Performance</h2>
-<!-- TODO: N+1, tracking, projections -->
+<!-- TODO: N+1, tracking, projections, keyset pagination -->
+<h2 id="hybridcache">HybridCache</h2>
+<!-- TODO: Tenant settings and plan lookups, keyed by tenant -->
+<h2 id="audit-logging">Audit logging</h2>
+<!-- TODO: A record of changes for the tenant -->
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/entity-framework/getting-started/">Entity Framework</a></li>
+<li>See <a href="../../../csharp/entity-framework/performance/">Entity Framework performance</a></li>
+<li>See <a href="../../../csharp/entity-framework/concurrency/">Concurrency</a></li>
+<li>See <a href="../../../csharp/aspnet-core/web-apis/caching/">Caching</a></li>
 <li>See <a href="../../../databases/overview/">Databases</a></li>
 </ul>
 <hr>
@@ -196,6 +203,16 @@
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/event-sourcing-and-cdc/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Event Sourcing and Change Data Capture</span>
+            </div>
+            <p class="card-compact-description">Two ways a change becomes a stream of facts.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/csharp/entity-framework/getting-started/" class="group card-compact no-link">
         <div class="card-compact-body">

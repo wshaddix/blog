@@ -31,6 +31,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Observability](/csharp/aspnet-core/observability/overview)
+- [Sensitive data in logs](/csharp/security/sensitive-data-in-logs)
 - [DevOps logging](/devops/monitoring/logging)
 
 ---

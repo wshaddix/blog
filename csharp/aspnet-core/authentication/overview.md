@@ -10,6 +10,7 @@ How an ASP.NET Core app establishes who the caller is. Pick the scheme on the ch
 - [JWT bearer](/csharp/aspnet-core/authentication/jwt) - Tokens for services, MCP, and non-browser clients.
 - [Refresh tokens](/csharp/aspnet-core/authentication/refresh-tokens) - Rotation and storage.
 - [OpenID Connect](/csharp/aspnet-core/authentication/openid-connect) - An external identity provider.
+- [Modern authentication](/csharp/aspnet-core/authentication/modern-auth) - Passkeys, device-bound sessions, and machine-to-machine calls.
 
 ## Related
 

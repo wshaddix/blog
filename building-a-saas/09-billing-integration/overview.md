@@ -29,6 +29,21 @@ Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscr
 
 ## Trial Periods
 
+## Usage-based billing
+
+## Resilient outbound calls
+
+## Concurrency for seats and plan changes
+
+## When compensation fails
+
+## Related Topics
+
+- See [Concurrency](/csharp/entity-framework/concurrency)
+- See [HTTP clients](/csharp/platform/http-clients)
+- See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
+- See [Sagas](/patterns/integration-patterns/sagas)
+
 ---
 
 **Next:** [Chapter 10: Testing Strategy](/building-a-saas/10-testing-strategy/overview)

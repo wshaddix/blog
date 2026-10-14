@@ -24,6 +24,8 @@ When the work has to survive a deploy. Hangfire and Functions stay in the SaaS c
 
 Stopping the host stops the loop.
 
+## Quartz
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

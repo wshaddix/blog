@@ -24,6 +24,8 @@ One server holds the connection. A backplane when there are many servers.
 
 The .NET client shared by WinUI and Uno, and the Blazor client.
 
+## Batching and backpressure
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.
@@ -34,4 +36,4 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ---
 
-**Next:** [Versioning](/csharp/aspnet-core/web-apis/versioning)
+**Next:** [Polling, Server-Sent Events, and Async Request-Reply](/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply)

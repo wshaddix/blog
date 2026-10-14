@@ -28,6 +28,12 @@ Which project is allowed to see which other project.
 
 One TFM, and what changes when a project multi-targets.
 
+## Directory.Build.props
+
+## Central Package Management
+
+## EditorConfig and analyzers
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

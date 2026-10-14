@@ -16,6 +16,24 @@ A project reference is a dependency. Draw the ones you mean to keep.
 
 One deployable with internal boundaries, and when that is the right shape.
 
+### Module boundaries and public contracts
+
+### Data ownership
+
+### In-process versus async integration
+
+### Extraction path
+
+## Vertical slice
+
+### Organizing by feature
+
+### Anatomy of a slice
+
+### Sharing code without coupling
+
+### With or without MediatR
+
 ## Clients and the server
 
 Business rules stay on the server. Clients render and call.
@@ -31,6 +49,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Building a SaaS: Architecture](/building-a-saas/02-architecture-decisions/overview)
+- [Modular monolith](/patterns/architecture-styles/modular-monolith)
 - [Platform](/csharp/platform/overview)
 
 ---

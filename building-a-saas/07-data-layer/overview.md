@@ -21,9 +21,16 @@ The data layer connects your domain model to the database. Done right, it's reli
 
 ## Performance
 
+## HybridCache
+
+## Audit logging
+
 ## Related Topics
 
 - See [Entity Framework](/csharp/entity-framework/getting-started)
+- See [Entity Framework performance](/csharp/entity-framework/performance)
+- See [Concurrency](/csharp/entity-framework/concurrency)
+- See [Caching](/csharp/aspnet-core/web-apis/caching)
 - See [Databases](/databases/overview)
 
 ---

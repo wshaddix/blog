@@ -24,6 +24,12 @@ A single syntax for creating lists, spans, and arrays.
 
 Where the pattern-matching page goes deeper.
 
+## Unions and closed hierarchies
+
+## Result-style errors
+
+## .NET 8, 10, and 11
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

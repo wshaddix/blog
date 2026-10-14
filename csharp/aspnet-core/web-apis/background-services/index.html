@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -178,6 +178,8 @@
 <p>When the work has to survive a deploy. Hangfire and Functions stay in the SaaS chapter.</p>
 <h2 id="cancellation">Cancellation</h2>
 <p>Stopping the host stops the loop.</p>
+<h2 id="quartz">Quartz</h2>
+<!-- TODO: Scheduled jobs with Quartz -->
 <h2 id="code-example">Code example</h2>
 <p>A short C# sample will go here. A sample longer than about 30 lines will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>
 <h2 id="related">Related</h2>
@@ -191,12 +193,42 @@
     <h2>See also</h2>
 <div class="card-compact-group">
 <div class="card-compact-container">
+    <a href="/csharp/advanced-features/cancellation/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Cancellation</span>
+            </div>
+            <p class="card-compact-description">Cooperative cancellation, and a limit on how much work runs at once.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/getting-started/learning-path/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/integration-patterns/outbox-and-idempotent-consumer/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Outbox and the Idempotent Consumer</span>
+            </div>
+            <p class="card-compact-description">Saving state and sending a message are two writes, and either one can fail on its own.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/08-background-jobs/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Not everything should happen in the request/response cycle. Background jobs handle async work.</p>
         </div>
     </a>
 </div>
@@ -217,6 +249,16 @@
                 <span class="card-compact-title">Pagination, Filtering, and Sorting</span>
             </div>
             <p class="card-compact-description">List endpoints return a page, not a table.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Polling, Server-Sent Events, and Async Request-Reply</span>
+            </div>
+            <p class="card-compact-description">Ways to deliver a result after the first request has returned.</p>
         </div>
     </a>
 </div>

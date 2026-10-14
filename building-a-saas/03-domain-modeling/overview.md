@@ -20,11 +20,16 @@ The domain model is the heart of your application - getting it right is crucial.
 
 ## Our Domain Model
 
+## Domain events
+
+## Aggregate version
+
 ## Related Topics
 
 - See [Fundamentals: OOP Principles](/fundamentals/programming-concepts/oop-principles)
 - See [C#: Records](/csharp/advanced-features/records) for value objects
 - See [Databases: Data Modeling](/databases/data-modeling/overview)
+- See [Event sourcing and change data capture](/patterns/architecture-styles/event-sourcing-and-cdc)
 
 ---
 

@@ -20,6 +20,12 @@ A check per dependency, with a timeout.
 
 A check that takes a lock or writes a row.
 
+## Startup
+
+## Business-level checks
+
+## Exposing checks safely
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

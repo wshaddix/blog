@@ -12,6 +12,8 @@ Capturing application behavior for debugging and monitoring.
 
 ## Best Practices
 
+## Message templates
+
 ## Practical Examples
 
 - See [Building a SaaS: Monitoring](/building-a-saas/12-monitoring-operations/overview) - Logging in production

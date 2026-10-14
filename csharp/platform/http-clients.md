@@ -12,6 +12,20 @@ Why a shared `new HttpClient()` is the wrong default.
 
 A class that wraps one downstream API.
 
+## Named versus typed clients
+
+## Resilience pipelines
+
+### Standard handler
+
+### Total timeout, per-attempt timeout, jitter, and the circuit breaker
+
+## What must not be retried
+
+## Polly licensing
+
+## Testing resilience
+
 ## Timeouts
 
 A timeout on the client, and a timeout that cancels the attempt.
@@ -31,6 +45,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Client HTTP and auth](/csharp/clients/http-and-auth)
+- [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests)
 - [Resilience in the API](/csharp/aspnet-core/web-apis/overview)
 
 ---

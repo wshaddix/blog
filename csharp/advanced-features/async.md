@@ -14,6 +14,10 @@ Write asynchronous code that reads like synchronous code.
 
 ## Common Pitfalls
 
+## Cancellation
+
+## Bounded concurrency
+
 ## Practical Examples
 
 - See [Fundamentals: Concurrency](/fundamentals/programming-concepts/concurrency) - The theory
@@ -21,4 +25,4 @@ Write asynchronous code that reads like synchronous code.
 
 ---
 
-**Next:** [Records](/csharp/advanced-features/records)
+**Next:** [Cancellation](/csharp/advanced-features/cancellation)

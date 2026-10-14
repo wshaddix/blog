@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -170,6 +170,7 @@
 <p><em>This page is an outline. The sections will be filled in over time, including a C# sample where the topic has one.</em></p>
 <h2 id="in-this-section">In this section</h2>
 <ul>
+<li><a href="../clients-and-agents/">Clients and agents</a> - A client that calls a server, and an <code translate="no" v-pre>IChatClient</code> that uses its tools.</li>
 <li><a href="../tools-resources-and-prompts/">Tools, resources, and prompts</a> - The three things a server exposes.</li>
 <li><a href="../hosting/">Hosting</a> - stdio on the generic host, and HTTP on ASP.NET Core.</li>
 <li><a href="../authentication/">Authentication</a> - Who may call a remote server.</li>
@@ -190,7 +191,7 @@
 <li><a href="../../../ai-assisted-development/using-mcp/">Using MCP from an assistant</a></li>
 </ul>
 <hr>
-<p><strong>Next:</strong> <a href="../tools-resources-and-prompts/">Tools, Resources, and Prompts</a></p>
+<p><strong>Next:</strong> <a href="../clients-and-agents/">MCP Clients and Agents</a></p>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
@@ -221,6 +222,16 @@
                 <span class="card-compact-title">MCP Authentication</span>
             </div>
             <p class="card-compact-description">A local stdio server runs as the user. A remote HTTP server has to know who is calling.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/mcp/clients-and-agents/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">MCP Clients and Agents</span>
+            </div>
+            <p class="card-compact-description">An MCP client calls a server. An agent uses that client when a model asks for a tool.</p>
         </div>
     </a>
 </div>
@@ -275,10 +286,10 @@
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../csharp/mcp/tools-resources-and-prompts/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../csharp/mcp/clients-and-agents/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Tools, Resources, and Prompts</span>
+                                <span class="block mt-1">MCP Clients and Agents</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>

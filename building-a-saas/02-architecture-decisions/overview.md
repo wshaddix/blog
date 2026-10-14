@@ -14,6 +14,8 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 
 ## Why Monolith First?
 
+## Modular monolith
+
 ## Patterns We'll Use
 
 ## Dependency Injection
@@ -24,6 +26,11 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 2. **Testability** - Architecture should make testing easy
 3. **Boundaries** - Clear separation between concerns
 4. **Flexibility** - Easy to change decisions later
+
+## Related Topics
+
+- See [Modular monolith](/patterns/architecture-styles/modular-monolith)
+- See [SDLC: Architecture](/sdlc/architecture)
 
 ---
 

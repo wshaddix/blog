@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -193,8 +193,10 @@
 <li><a href="../advanced-features/generics/">Generics</a> - Type-safe reusable code</li>
 <li><a href="../advanced-features/linq/">LINQ</a> - Query syntax for collections</li>
 <li><a href="../advanced-features/async/">Async/Await</a> - Asynchronous programming</li>
+<li><a href="../advanced-features/cancellation/">Cancellation</a> - Tokens and bounded concurrency</li>
 <li><a href="../advanced-features/records/">Records and Init</a> - Immutable data types</li>
 <li><a href="../advanced-features/pattern-matching/">Pattern Matching</a> - Declarative conditionals</li>
+<li><a href="../advanced-features/high-performance-csharp/">High-Performance C#</a> - Primitives for hot paths</li>
 <li><a href="../advanced-features/attributes/">Attributes</a> - Metadata for validation and tools</li>
 <li><a href="../advanced-features/modern-csharp/">Modern C#</a> - The dialect current .NET code uses</li>
 </ul>
@@ -214,6 +216,7 @@
 <li><a href="../entity-framework/change-tracking/">Change Tracking</a> - What <code translate="no" v-pre>SaveChanges</code> writes</li>
 <li><a href="../entity-framework/migrations/">Migrations</a> - Database schema evolution</li>
 <li><a href="../entity-framework/transactions/">Transactions</a> - More than one save, one commit</li>
+<li><a href="../entity-framework/concurrency/">Concurrency</a> - Lost updates, tokens, and atomic counters</li>
 <li><a href="../entity-framework/performance/">Performance</a> - Avoiding common pitfalls</li>
 <li><a href="../entity-framework/testing/">Testing</a> - Relational tests, not the in-memory provider</li>
 </ul>
@@ -222,7 +225,7 @@
 <ul>
 <li><a href="../aspnet-core/web-apis/overview/">Web APIs</a> - HTTP APIs, validation, rate limiting, OpenAPI</li>
 <li><a href="../aspnet-core/authentication/overview/">Authentication</a> - Cookies, JWT, OpenID Connect</li>
-<li><a href="../aspnet-core/authorization/overview/">Authorization</a> - Roles, policies, and a specific row</li>
+<li><a href="../aspnet-core/authorization/overview/">Authorization</a> - Roles, permissions, policies, and a specific row</li>
 <li><a href="../aspnet-core/middleware/overview/">Middleware</a> - Request pipeline</li>
 <li><a href="../aspnet-core/blazor/overview/">Blazor</a> - The C# web UI</li>
 <li><a href="../aspnet-core/observability/overview/">Observability</a> - Logs, metrics, and traces</li>
@@ -232,11 +235,11 @@
 <li><a href="../clients/overview/">Shared client code</a> - MVVM, XAML, and the API client</li>
 <li><a href="../winui/overview/">WinUI 3</a> - Native Windows</li>
 <li><a href="../uno/overview/">Uno Platform</a> - iOS, Android, WebAssembly, and desktop</li>
-<li><a href="../mcp/overview/">MCP servers</a> - Tools, resources, and prompts for an AI client</li>
+<li><a href="../mcp/overview/">MCP servers</a> - Clients, tools, resources, and prompts for an AI client</li>
 </ul>
 <h3 id="security">Security</h3>
 <ul>
-<li><a href="../security/overview/">Secrets, transport, and data protection</a></li>
+<li><a href="../security/overview/">Secrets, log redaction, transport, and data protection</a></li>
 </ul>
 <h3 id="testing">Testing</h3>
 <p>TUnit is the runner. Reqnroll runs behavior scenarios on that same runner.</p>
@@ -244,6 +247,7 @@
 <li><a href="../testing/project-setup/">Project setup</a> - A TUnit executable</li>
 <li><a href="../testing/unit-testing/">Unit Testing</a> - <code translate="no" v-pre>[Test]</code> and <code translate="no" v-pre>Assert.That</code></li>
 <li><a href="../testing/mocking/">Mocking</a> - TUnit.Mocks</li>
+<li><a href="../testing/time-dependent-code/">Time-dependent code</a> - A clock the test controls</li>
 <li><a href="../testing/integration-testing/">Integration Testing</a> - The API and a real database</li>
 <li><a href="../testing/reqnroll/overview/">Reqnroll</a> - Gherkin features</li>
 </ul>

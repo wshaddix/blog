@@ -16,6 +16,8 @@ Summaries, response types, and status codes.
 
 A development-only browser for the document.
 
+## Scalar
+
 ## Clients
 
 What a generated client will get wrong if the document is incomplete.

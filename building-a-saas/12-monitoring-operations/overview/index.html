@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -186,9 +186,16 @@
 <!-- TODO: Runbooks, post-mortems -->
 <h2 id="health-checks">Health Checks</h2>
 <!-- TODO: ASP.NET health checks, readiness vs liveness -->
+<h2 id="opentelemetry">OpenTelemetry</h2>
+<!-- TODO: Traces, metrics, and logs exported to Application Insights -->
+<h2 id="sensitive-data-in-logs">Sensitive data in logs</h2>
+<!-- TODO: Redact secrets and personal data before a sink stores the event -->
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../devops/monitoring/logging/">DevOps: Monitoring</a></li>
+<li>See <a href="../../../csharp/aspnet-core/observability/overview/">Observability</a></li>
+<li>See <a href="../../../csharp/aspnet-core/observability/health-checks/">Health checks</a></li>
+<li>See <a href="../../../csharp/security/sensitive-data-in-logs/">Sensitive data in logs</a></li>
 </ul>
 <hr>
 <p><strong>Congratulations!</strong> You&#x27;ve built a production-ready SaaS application. Continue to <a href="../../../career-development/overview/">Career Development</a> to learn how to grow as an engineer and leader.</p>
@@ -242,6 +249,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/security/sensitive-data-in-logs/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Sensitive Data in Logs</span>
+            </div>
+            <p class="card-compact-description">A value written to a log is copied into every sink that stores that log.</p>
         </div>
     </a>
 </div>

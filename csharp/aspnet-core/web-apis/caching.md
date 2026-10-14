@@ -20,6 +20,20 @@ A cache key that includes the user or the tenant when the body does.
 
 A write that makes a cached read wrong.
 
+## Before you cache
+
+## Cache options
+
+## HybridCache
+
+### Setup with Redis as L2
+
+### GetOrCreateAsync, tags, and stampede protection
+
+### Invalidation strategies
+
+## Measuring hit ratio
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

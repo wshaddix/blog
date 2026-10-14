@@ -29,10 +29,16 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 
 ## Testing Multi-Tenancy
 
+## Architecture tests
+
+## Time-dependent tests
+
 ## Related Topics
 
 - See [C#: Testing](/csharp/testing/unit-testing) - TUnit, TUnit.Mocks, and API tests
 - See [Reqnroll](/csharp/testing/reqnroll/overview) - Behavior scenarios on the TUnit runner
+- See [Architecture tests](/patterns/architecture-styles/architecture-tests)
+- See [Time-dependent code](/csharp/testing/time-dependent-code)
 
 ---
 

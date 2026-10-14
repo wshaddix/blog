@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -179,6 +179,8 @@
 <!-- TODO: Clean Architecture / Vertical Slices hybrid -->
 <h2 id="why-monolith-first">Why Monolith First?</h2>
 <!-- TODO: Premature optimization, splitting later -->
+<h2 id="modular-monolith">Modular monolith</h2>
+<!-- TODO: Modules that own their schema, with vertical slices inside each module -->
 <h2 id="patterns-well-use">Patterns We&#x27;ll Use</h2>
 <!-- TODO: Repository, CQRS-lite, MediatR decision -->
 <h2 id="dependency-injection">Dependency Injection</h2>
@@ -190,6 +192,11 @@
 <li><strong>Boundaries</strong> - Clear separation between concerns</li>
 <li><strong>Flexibility</strong> - Easy to change decisions later</li>
 </ol>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li>See <a href="../../../patterns/architecture-styles/modular-monolith/">Modular monolith</a></li>
+<li>See <a href="../../../sdlc/architecture/">SDLC: Architecture</a></li>
+</ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../03-domain-modeling/overview/">Chapter 3: Domain Modeling</a></p>
 <div id="retype-backlinks">
@@ -202,6 +209,26 @@
                 <span class="card-compact-title">Architecture</span>
             </div>
             <p class="card-compact-description">Where the code of a console app, an API, a web UI, a Windows app, and a mobile app each sits.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/architecture-tests/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Architecture Tests</span>
+            </div>
+            <p class="card-compact-description">Tests that fail when code reaches across a boundary you meant to keep.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/modular-monolith/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Modular Monolith</span>
+            </div>
+            <p class="card-compact-description">One deployable, divided into modules that own their data and their features.</p>
         </div>
     </a>
 </div>
@@ -222,6 +249,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">How a codebase is sliced, and how those slices are kept from leaking.</p>
         </div>
     </a>
 </div>

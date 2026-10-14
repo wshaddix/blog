@@ -81,8 +81,10 @@
 - [Generics](https://wshaddix.com/csharp/advanced-features/generics.md): Write type-safe, reusable code without sacrificing performance.
 - [LINQ](https://wshaddix.com/csharp/advanced-features/linq.md): Query collections with a consistent, expressive syntax.
 - [Async/Await](https://wshaddix.com/csharp/advanced-features/async.md): Write asynchronous code that reads like synchronous code.
+- [Cancellation](https://wshaddix.com/csharp/advanced-features/cancellation.md): Cooperative cancellation, and a limit on how much work runs at once.
 - [Records](https://wshaddix.com/csharp/advanced-features/records.md): Immutable data types with value semantics.
 - [Pattern Matching](https://wshaddix.com/csharp/advanced-features/pattern-matching.md): Declarative way to check and destructure data.
+- [High-Performance C#](https://wshaddix.com/csharp/advanced-features/high-performance-csharp.md): Primitives you reach for when an ordinary allocation shows up on a hot path.
 - [Attributes](https://wshaddix.com/csharp/advanced-features/attributes.md): Attributes attach metadata to code. Validation, JSON, and MCP tools all read that metadata.
 - [Modern C#](https://wshaddix.com/csharp/advanced-features/modern-csharp.md): Language features you will see in current .NET code. Each one is small. Together they are the dialect this site uses.
 
@@ -90,6 +92,7 @@
 
 - [The .NET Platform](https://wshaddix.com/csharp/platform/overview.md): Console apps, MCP servers, APIs, Blazor, WinUI, and Uno are composed the same way: a host, a service container, configuration, and logging.
 - [Generic Host](https://wshaddix.com/csharp/platform/generic-host.md): The host builds configuration, the service provider, and logging, then runs until it is stopped.
+- [.NET Aspire](https://wshaddix.com/csharp/platform/aspire.md): Orchestrate the local dependencies of a multi-project app.
 - [Dependency Injection](https://wshaddix.com/csharp/platform/dependency-injection.md): A type asks for what it needs. The container creates it.
 - [Configuration and Options](https://wshaddix.com/csharp/platform/configuration-and-options.md): Settings come from files, environment variables, and user secrets. Code reads them through the options pattern.
 - [Logging](https://wshaddix.com/csharp/platform/logging.md): ILogger is the logging abstraction. The sink (console, file, or a vendor) is a registration.
@@ -110,6 +113,7 @@
 - [Change Tracking](https://wshaddix.com/csharp/entity-framework/change-tracking.md): A context remembers the entities it loaded. That memory is how SaveChanges knows what to write.
 - [Migrations](https://wshaddix.com/csharp/entity-framework/migrations.md): Evolving your database schema over time.
 - [Transactions](https://wshaddix.com/csharp/entity-framework/transactions.md): SaveChanges is already one transaction. You open your own when more than one save must commit together.
+- [Concurrency](https://wshaddix.com/csharp/entity-framework/concurrency.md): How two saves of the same row avoid a lost update.
 - [Performance](https://wshaddix.com/csharp/entity-framework/performance.md): Avoiding common performance pitfalls.
 - [Seeding](https://wshaddix.com/csharp/entity-framework/seeding.md): Reference data the app assumes is present.
 - [Raw SQL](https://wshaddix.com/csharp/entity-framework/raw-sql.md): LINQ is the default. SQL is for a query LINQ cannot express, or a procedure the database already owns.
@@ -120,6 +124,7 @@
 #### Web APIs
 
 - [Web APIs](https://wshaddix.com/csharp/aspnet-core/web-apis/overview.md): HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sample.
+- [Idempotent Requests](https://wshaddix.com/csharp/aspnet-core/web-apis/idempotent-requests.md): A client that retries a POST needs the server to recognize the same attempt.
 - [Minimal APIs and Controllers](https://wshaddix.com/csharp/aspnet-core/web-apis/minimal-apis-and-controllers.md): ASP.NET Core has two ways to declare an endpoint. Pick one per project and stay with it unless a feature forces the other.
 - [Routing and Model Binding](https://wshaddix.com/csharp/aspnet-core/web-apis/routing-and-binding.md): How a request URL and body become arguments on a handler.
 - [Validation](https://wshaddix.com/csharp/aspnet-core/web-apis/validation.md): Reject a request that cannot succeed before any state changes.
@@ -130,6 +135,7 @@
 - [Pagination, Filtering, and Sorting](https://wshaddix.com/csharp/aspnet-core/web-apis/pagination.md): List endpoints return a page, not a table.
 - [Background Services](https://wshaddix.com/csharp/aspnet-core/web-apis/background-services.md): Work that must finish even though the HTTP request already returned.
 - [SignalR](https://wshaddix.com/csharp/aspnet-core/web-apis/signalr.md): A persistent connection so the server can push a message to a Blazor, WinUI, or Uno client.
+- [Polling, Server-Sent Events, and Async Request-Reply](https://wshaddix.com/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply.md): Ways to deliver a result after the first request has returned.
 - [API Versioning](https://wshaddix.com/csharp/aspnet-core/web-apis/versioning.md): How a contract changes without breaking a client you already shipped.
 - [Caching](https://wshaddix.com/csharp/aspnet-core/web-apis/caching.md): Cache a response when the bytes do not depend on a side effect.
 
@@ -142,10 +148,12 @@
 - [JWT Bearer](https://wshaddix.com/csharp/aspnet-core/authentication/jwt.md): A JSON Web Token is a signed set of claims. The API checks the signature, the issuer, the audience, and the expiry.
 - [Refresh Tokens](https://wshaddix.com/csharp/aspnet-core/authentication/refresh-tokens.md): An access token is short-lived. A refresh token gets the next one without asking for the password again.
 - [OpenID Connect](https://wshaddix.com/csharp/aspnet-core/authentication/openid-connect.md): OpenID Connect is how WinUI, Uno, and a web app sign in with an external provider such as Microsoft Entra ID.
+- [Modern Authentication](https://wshaddix.com/csharp/aspnet-core/authentication/modern-auth.md): Schemes that sit next to passwords, cookies, and bearer tokens.
 
 #### Authorization
 
 - [Authorization](https://wshaddix.com/csharp/aspnet-core/authorization/overview.md): Authorization runs after authentication. A valid token is not permission to do the thing.
+- [Permission-Based Authorization](https://wshaddix.com/csharp/aspnet-core/authorization/permissions.md): A permission names one action the caller may perform.
 - [Resource-Based Authorization](https://wshaddix.com/csharp/aspnet-core/authorization/resource-based.md): The question is not only whether the caller is an editor. It is whether they may edit this row.
 
 #### Middleware
@@ -197,6 +205,7 @@
 ### MCP Servers
 
 - [MCP Servers](https://wshaddix.com/csharp/mcp/overview.md): A Model Context Protocol server exposes tools, resources, and prompts to an AI client. In C# it is a hosted process, either on standard I/O or on HTTP.
+- [MCP Clients and Agents](https://wshaddix.com/csharp/mcp/clients-and-agents.md): An MCP client calls a server. An agent uses that client when a model asks for a tool.
 - [Tools, Resources, and Prompts](https://wshaddix.com/csharp/mcp/tools-resources-and-prompts.md): Tools do something. Resources are data the model can read. Prompts are reusable instructions.
 - [Hosting an MCP Server](https://wshaddix.com/csharp/mcp/hosting.md): The same server can run as a local stdio process or as an HTTP endpoint.
 - [MCP Authentication](https://wshaddix.com/csharp/mcp/authentication.md): A local stdio server runs as the user. A remote HTTP server has to know who is calling.
@@ -205,6 +214,7 @@
 
 - [Security](https://wshaddix.com/csharp/security/overview.md): Platform controls that sit under every app type. The concepts are in Fundamentals. Authentication and authorization have their own ASP.NET Core sections.
 - [Secrets](https://wshaddix.com/csharp/security/secrets.md): A secret in a repository is a published secret.
+- [Sensitive Data in Logs](https://wshaddix.com/csharp/security/sensitive-data-in-logs.md): A value written to a log is copied into every sink that stores that log.
 - [Transport and Headers](https://wshaddix.com/csharp/security/transport-and-headers.md): TLS is the floor. Response headers close a set of browser mistakes.
 - [Data Protection](https://wshaddix.com/csharp/security/data-protection.md): ASP.NET Core encrypts cookies and tokens with a key ring. More than one server means a shared ring.
 
@@ -213,6 +223,7 @@
 - [TUnit Project Setup](https://wshaddix.com/csharp/testing/project-setup.md): Tests on this site run on TUnit. A test project is an executable that discovers tests at compile time. It is not an xUnit, NUnit, or MSTest project.
 - [Unit Testing](https://wshaddix.com/csharp/testing/unit-testing.md): A unit test checks one behavior of one type. Collaborators are replaced so the test does not touch a database, the network, or the clock. The runner is TUnit.
 - [Mocking](https://wshaddix.com/csharp/testing/mocking.md): A mock stands in for a collaborator so the test can decide what that collaborator returns and can check that it was called. This site uses TUnit.Mocks.
+- [Time-Dependent Code](https://wshaddix.com/csharp/testing/time-dependent-code.md): Tests that depend on the clock should take a clock you control.
 - [Integration Testing](https://wshaddix.com/csharp/testing/integration-testing.md): An integration test checks that two or more real parts work together. On this site that usually means the API, the database, or both. The runner is still TUnit.
 - [ASP.NET Core Tests](https://wshaddix.com/csharp/testing/webapplicationfactory.md): API tests boot the app in-process with TUnit.AspNetCore. Use TestWebApplicationFactoryTEntryPoint, not the vanilla WebApplicationFactoryT, so traces and logs stay tied to the test that made the call.
 - [Testcontainers](https://wshaddix.com/csharp/testing/testcontainers.md): A test can start a real SQL Server in Docker and throw it away when the test session ends.
@@ -272,6 +283,13 @@
 - [Overview](https://wshaddix.com/patterns/coding-patterns/behavioral-patterns/overview.md): Behavioral patterns are concerned with algorithms and the assignment of responsibilities between objects.
 - [Decorator](https://wshaddix.com/patterns/coding-patterns/decorator.md): A decorator wraps an object and adds behavior without changing the object's type. Middleware and HTTP handlers are decorators.
 
+### Architecture Styles
+
+- [Overview](https://wshaddix.com/patterns/architecture-styles/overview.md): How a codebase is sliced, and how those slices are kept from leaking.
+- [Modular Monolith](https://wshaddix.com/patterns/architecture-styles/modular-monolith.md): One deployable, divided into modules that own their data and their features.
+- [Architecture Tests](https://wshaddix.com/patterns/architecture-styles/architecture-tests.md): Tests that fail when code reaches across a boundary you meant to keep.
+- [Event Sourcing and Change Data Capture](https://wshaddix.com/patterns/architecture-styles/event-sourcing-and-cdc.md): Two ways a change becomes a stream of facts.
+
 ### Application Patterns
 
 - [Overview](https://wshaddix.com/patterns/application-patterns/overview.md): This page is a catalog of names, not a lesson. The patterns this path teaches are Repository and CQRS.
@@ -281,6 +299,9 @@
 ### Integration Patterns
 
 - [Overview](https://wshaddix.com/patterns/integration-patterns/overview.md): This page is a catalog of names, not a lesson. Messaging shows up in practice in background services and in Building a SaaS: Background Jobs.
+- [Outbox and the Idempotent Consumer](https://wshaddix.com/patterns/integration-patterns/outbox-and-idempotent-consumer.md): Saving state and sending a message are two writes, and either one can fail on its own.
+- [Sagas](https://wshaddix.com/patterns/integration-patterns/sagas.md): A multi-step workflow that crosses service boundaries.
+- [Choreography and Orchestration](https://wshaddix.com/patterns/integration-patterns/choreography-vs-orchestration.md): Who decides the next step when a workflow is split across components.
 
 ### Refactoring Patterns
 

@@ -31,10 +31,19 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 ## Error Handling
 
+## Reliable messaging
+
+## Shutdown and cancellation
+
+## When a saga needs a person
+
 ## Related Topics
 
 - See [Azure Functions](/devops/azure/functions)
 - See [Fundamentals: Concurrency](/fundamentals/programming-concepts/concurrency)
+- See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
+- See [Background services](/csharp/aspnet-core/web-apis/background-services)
+- See [Sagas](/patterns/integration-patterns/sagas)
 
 ---
 

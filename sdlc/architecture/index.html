@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -174,6 +174,24 @@
 <p>A project reference is a dependency. Draw the ones you mean to keep.</p>
 <h2 id="a-modular-monolith">A modular monolith</h2>
 <p>One deployable with internal boundaries, and when that is the right shape.</p>
+<h3 id="module-boundaries-and-public-contracts">Module boundaries and public contracts</h3>
+<!-- TODO -->
+<h3 id="data-ownership">Data ownership</h3>
+<!-- TODO: Schema per module -->
+<h3 id="in-process-versus-async-integration">In-process versus async integration</h3>
+<!-- TODO -->
+<h3 id="extraction-path">Extraction path</h3>
+<!-- TODO: What would have to move if a module left the process -->
+<h2 id="vertical-slice">Vertical slice</h2>
+<!-- TODO: Organize by feature -->
+<h3 id="organizing-by-feature">Organizing by feature</h3>
+<!-- TODO -->
+<h3 id="anatomy-of-a-slice">Anatomy of a slice</h3>
+<!-- TODO: Endpoint, handler, validator, test -->
+<h3 id="sharing-code-without-coupling">Sharing code without coupling</h3>
+<!-- TODO -->
+<h3 id="with-or-without-mediatr">With or without MediatR</h3>
+<!-- TODO -->
 <h2 id="clients-and-the-server">Clients and the server</h2>
 <p>Business rules stay on the server. Clients render and call.</p>
 <h2 id="trade-offs">Trade-offs</h2>
@@ -183,6 +201,7 @@
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../../building-a-saas/02-architecture-decisions/overview/">Building a SaaS: Architecture</a></li>
+<li><a href="../../patterns/architecture-styles/modular-monolith/">Modular monolith</a></li>
 <li><a href="../../csharp/platform/overview/">Platform</a></li>
 </ul>
 <hr>
@@ -190,6 +209,16 @@
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/architecture-tests/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Architecture Tests</span>
+            </div>
+            <p class="card-compact-description">Tests that fail when code reaches across a boundary you meant to keep.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/sdlc/code-review/" class="group card-compact no-link">
         <div class="card-compact-body">
@@ -207,6 +236,36 @@
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/modular-monolith/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Modular Monolith</span>
+            </div>
+            <p class="card-compact-description">One deployable, divided into modules that own their data and their features.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/02-architecture-decisions/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Good architecture enables teams to move fast while maintaining quality. Here we make key decisions for our SaaS platform.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">How a codebase is sliced, and how those slices are kept from leaking.</p>
         </div>
     </a>
 </div>

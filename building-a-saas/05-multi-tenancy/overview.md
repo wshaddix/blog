@@ -26,10 +26,13 @@ We'll use **shared database with row-level filtering** - good balance for most S
 
 ## EF Core Implementation
 
+## Contextual options
+
 ## Related Topics
 
 - See [Databases: Data Modeling](/databases/data-modeling/overview)
 - See [Entity Framework: Querying](/csharp/entity-framework/querying)
+- See [Configuration and options](/csharp/platform/configuration-and-options)
 
 ---
 

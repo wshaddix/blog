@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -175,7 +175,7 @@
 <li>Response formatting</li>
 <li>Error handling</li>
 <li>API versioning</li>
-<li>OpenAPI/Swagger documentation</li>
+<li>OpenAPI documentation (built-in generator, Scalar or Swagger UI)</li>
 </ul>
 <h2 id="api-design-principles">API Design Principles</h2>
 <!-- TODO: Resource naming, HTTP methods, status codes -->
@@ -186,16 +186,38 @@
 <h2 id="api-versioning">API Versioning</h2>
 <!-- TODO: URL vs header versioning -->
 <h2 id="documentation">Documentation</h2>
-<!-- TODO: Swagger/OpenAPI setup -->
+<!-- TODO: Built-in OpenAPI document generation, with Scalar or Swagger UI -->
+<h2 id="output-caching">Output caching</h2>
+<!-- TODO: Output cache on read endpoints -->
+<h2 id="keyset-pagination">Keyset pagination</h2>
+<!-- TODO: List endpoints use a keyset cursor -->
+<h2 id="async-request-reply">Async request-reply</h2>
+<!-- TODO: 202 Accepted and a status resource for work that outlives the request -->
+<h2 id="idempotency-keys">Idempotency keys</h2>
+<!-- TODO: An Idempotency-Key header so a retried POST returns the first result -->
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/overview/">ASP.NET Core: Web APIs</a></li>
+<li>See <a href="../../../csharp/aspnet-core/web-apis/idempotent-requests/">Idempotent requests</a></li>
+<li>See <a href="../../../csharp/aspnet-core/web-apis/caching/">Caching</a></li>
+<li>See <a href="../../../csharp/aspnet-core/web-apis/pagination/">Pagination</a></li>
+<li>See <a href="../../../csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply/">Polling, server-sent events, and async request-reply</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../07-data-layer/overview/">Chapter 7: Data Layer</a></p>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/idempotent-requests/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Idempotent Requests</span>
+            </div>
+            <p class="card-compact-description">A client that retries a POST needs the server to recognize the same attempt.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/building-a-saas/05-multi-tenancy/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
@@ -213,6 +235,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Polling, Server-Sent Events, and Async Request-Reply</span>
+            </div>
+            <p class="card-compact-description">Ways to deliver a result after the first request has returned.</p>
         </div>
     </a>
 </div>

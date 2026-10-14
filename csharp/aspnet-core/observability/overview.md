@@ -12,6 +12,16 @@ A log says what happened. A metric says how often. A trace says where the time w
 
 One pipeline for all three, and an exporter per environment.
 
+### Wiring in ASP.NET Core
+
+### Auto versus manual instrumentation
+
+### Exporters
+
+### Tenant id on a span
+
+### A slow 200
+
 ## Correlation
 
 A trace id on the request, the log, and the downstream call.

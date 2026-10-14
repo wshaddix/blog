@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -174,6 +174,8 @@
 <li>Initial configuration</li>
 <li>Git repository setup</li>
 <li>CI pipeline foundation</li>
+<li>Directory.Build.props, central package management, and EditorConfig</li>
+<li>Aspire AppHost for local dependencies</li>
 </ul>
 <h2 id="solution-structure">Solution Structure</h2>
 <!-- TODO: Multi-project solution, separation of concerns -->
@@ -183,11 +185,34 @@
 <!-- TODO: appsettings.json, user secrets, environment variables -->
 <h2 id="git-setup">Git Setup</h2>
 <!-- TODO: .gitignore, branching strategy, initial commit -->
+<h2 id="directorybuildprops">Directory.Build.props</h2>
+<!-- TODO: Language version, nullable, warnings as errors -->
+<h2 id="central-package-management">Central Package Management</h2>
+<!-- TODO: Directory.Packages.props and transitive pinning -->
+<h2 id="editorconfig">EditorConfig</h2>
+<!-- TODO: .editorconfig, analyzers, and dotnet format in CI -->
+<h2 id="aspire-apphost">Aspire AppHost</h2>
+<!-- TODO: SQL, Redis, API, worker, and the dashboard -->
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li>See <a href="../../../csharp/language-basics/projects-and-solutions/">Projects and Solutions</a></li>
+<li>See <a href="../../../csharp/platform/aspire/">.NET Aspire</a></li>
+</ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../02-architecture-decisions/overview/">Chapter 2: Architecture Decisions</a></p>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/csharp/platform/aspire/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">.NET Aspire</span>
+            </div>
+            <p class="card-compact-description">Orchestrate the local dependencies of a multi-project app.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/building-a-saas/overview/" class="group card-compact no-link">
         <div class="card-compact-body">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845212019500">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845301992179">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845212019500" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845301992179" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845212019500" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845301992179" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -187,9 +187,17 @@
 <!-- TODO: Why, implementation, rotation -->
 <h2 id="security-considerations">Security Considerations</h2>
 <!-- TODO: Password hashing, token storage, HTTPS -->
+<h2 id="passkeys-and-machine-to-machine-authentication">Passkeys and machine-to-machine authentication</h2>
+<!-- TODO: Passkeys, device-bound sessions, and service-to-service calls -->
+<h2 id="token-expiry-and-the-clock">Token expiry and the clock</h2>
+<!-- TODO: Expiry that tests can control -->
+<h2 id="permission-based-authorization">Permission-based authorization</h2>
+<!-- TODO: Named permissions on the caller, enforced with a policy -->
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/aspnet-core/authentication/overview/">ASP.NET Core: Authentication</a></li>
+<li>See <a href="../../../csharp/aspnet-core/authentication/modern-auth/">Modern authentication</a></li>
+<li>See <a href="../../../csharp/aspnet-core/authorization/permissions/">Permission-based authorization</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../05-multi-tenancy/overview/">Chapter 5: Multi-Tenancy</a></p>
@@ -217,6 +225,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/csharp/aspnet-core/authentication/modern-auth/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Modern Authentication</span>
+            </div>
+            <p class="card-compact-description">Schemes that sit next to passwords, cookies, and bearer tokens.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/building-a-saas/03-domain-modeling/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -233,6 +251,26 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/authorization/permissions/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Permission-Based Authorization</span>
+            </div>
+            <p class="card-compact-description">A permission names one action the caller may perform.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/testing/time-dependent-code/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Time-Dependent Code</span>
+            </div>
+            <p class="card-compact-description">Tests that depend on the clock should take a clock you control.</p>
         </div>
     </a>
 </div>

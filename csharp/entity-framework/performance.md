@@ -14,6 +14,16 @@ Avoiding common performance pitfalls.
 
 ## Profiling
 
+## Where the query actually runs
+
+## Existence checks and counting
+
+## Projections versus loading entities
+
+## Bulk writes
+
+## Reading SQL logs
+
 ## Practical Examples
 
 - See [Building a SaaS: Data Layer](/building-a-saas/07-data-layer/overview) - Performance in practice

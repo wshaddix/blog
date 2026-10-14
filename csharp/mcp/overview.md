@@ -6,6 +6,7 @@ A Model Context Protocol server exposes tools, resources, and prompts to an AI c
 
 ## In this section
 
+- [Clients and agents](/csharp/mcp/clients-and-agents) - A client that calls a server, and an `IChatClient` that uses its tools.
 - [Tools, resources, and prompts](/csharp/mcp/tools-resources-and-prompts) - The three things a server exposes.
 - [Hosting](/csharp/mcp/hosting) - stdio on the generic host, and HTTP on ASP.NET Core.
 - [Authentication](/csharp/mcp/authentication) - Who may call a remote server.
@@ -37,4 +38,4 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ---
 
-**Next:** [Tools, Resources, and Prompts](/csharp/mcp/tools-resources-and-prompts)
+**Next:** [MCP Clients and Agents](/csharp/mcp/clients-and-agents)

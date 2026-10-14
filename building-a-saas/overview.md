@@ -17,7 +17,7 @@ A multi-tenant SaaS platform with:
 
 | Layer | Technology |
 |-------|------------|
-| Backend | ASP.NET Core 8 |
+| Backend | ASP.NET Core (current LTS) |
 | Database | SQL Server / Azure SQL |
 | ORM | Entity Framework Core |
 | Authentication | ASP.NET Identity + JWT |
