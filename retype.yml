@@ -24,3 +24,4 @@ include:
   - "wrangler.jsonc"
 exclude:
   - "AGENTS.md"
+  - "SOURCES.md"
