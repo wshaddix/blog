@@ -32,6 +32,7 @@ A worked example will go here. When an example produces more than about 30 lines
 ## Related
 
 - [MCP servers](/csharp/mcp/overview)
+- [MCP clients and agents](/csharp/mcp/clients-and-agents)
 - [Terms](/ai-assisted-development/terms)
 
 ---

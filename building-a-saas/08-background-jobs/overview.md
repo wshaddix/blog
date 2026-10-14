@@ -48,12 +48,17 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 <!-- TODO: The host stops, and in-flight work honors the token -->
 
+## When a saga needs a person
+
+<!-- TODO: Compensation that fails, and a parked state someone has to resolve -->
+
 ## Related Topics
 
 - See [Azure Functions](/devops/azure/functions)
 - See [Fundamentals: Concurrency](/fundamentals/programming-concepts/concurrency)
 - See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
 - See [Background services](/csharp/aspnet-core/web-apis/background-services)
+- See [Sagas](/patterns/integration-patterns/sagas)
 
 ---
 

@@ -72,6 +72,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Building a SaaS: Architecture](/building-a-saas/02-architecture-decisions/overview)
+- [Modular monolith](/patterns/architecture-styles/modular-monolith)
 - [Platform](/csharp/platform/overview)
 
 ---

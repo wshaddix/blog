@@ -10,6 +10,7 @@ Platform controls that sit under every app type. The concepts are in Fundamental
 ## In this section
 
 - [Secrets](/csharp/security/secrets) - User secrets, Key Vault, and connection strings.
+- [Sensitive data in logs](/csharp/security/sensitive-data-in-logs) - Redact secrets and personal data before they are written.
 - [Transport and headers](/csharp/security/transport-and-headers) - HTTPS, HSTS, and security headers.
 - [Data protection](/csharp/security/data-protection) - The key ring for cookies and tokens.
 

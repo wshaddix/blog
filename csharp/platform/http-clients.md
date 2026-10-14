@@ -64,6 +64,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Client HTTP and auth](/csharp/clients/http-and-auth)
+- [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests)
 - [Resilience in the API](/csharp/aspnet-core/web-apis/overview)
 
 ---

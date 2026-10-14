@@ -1,6 +1,6 @@
 ---
 title: Authorization
-order: 20
+order: 40
 ---
 
 # Authorization
@@ -36,8 +36,9 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Authentication concepts](/fundamentals/security/authentication-and-authorization)
+- [Permission-based authorization](/csharp/aspnet-core/authorization/permissions)
 - [Resource-based authorization](/csharp/aspnet-core/authorization/resource-based)
 
 ---
 
-**Next:** [Resource-Based Authorization](/csharp/aspnet-core/authorization/resource-based)
+**Next:** [Permission-Based Authorization](/csharp/aspnet-core/authorization/permissions)

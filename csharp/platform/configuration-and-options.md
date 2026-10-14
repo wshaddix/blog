@@ -25,6 +25,18 @@ A developer secret that never goes in the project file.
 
 `IOptions`, `IOptionsSnapshot`, and `IOptionsMonitor`.
 
+## Contextual options
+
+<!-- TODO: Named options, and options chosen for the current tenant or request -->
+
+### Named options
+
+<!-- TODO: More than one binding of the same options type -->
+
+### A context that selects them
+
+<!-- TODO: The tenant, the user, or the request decides which named options apply -->
+
 ## Validation
 
 Fail at startup when a required setting is missing.
@@ -37,6 +49,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 - [Secrets](/csharp/security/secrets)
 - [Generic host](/csharp/platform/generic-host)
+- [Building a SaaS: Multi-Tenancy](/building-a-saas/05-multi-tenancy/overview)
 
 ---
 

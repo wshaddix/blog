@@ -71,7 +71,7 @@ Building web applications and APIs:
 
 - [Web APIs](/csharp/aspnet-core/web-apis/overview) - HTTP APIs, validation, rate limiting, OpenAPI
 - [Authentication](/csharp/aspnet-core/authentication/overview) - Cookies, JWT, OpenID Connect
-- [Authorization](/csharp/aspnet-core/authorization/overview) - Roles, policies, and a specific row
+- [Authorization](/csharp/aspnet-core/authorization/overview) - Roles, permissions, policies, and a specific row
 - [Middleware](/csharp/aspnet-core/middleware/overview) - Request pipeline
 - [Blazor](/csharp/aspnet-core/blazor/overview) - The C# web UI
 - [Observability](/csharp/aspnet-core/observability/overview) - Logs, metrics, and traces
@@ -81,11 +81,11 @@ Building web applications and APIs:
 - [Shared client code](/csharp/clients/overview) - MVVM, XAML, and the API client
 - [WinUI 3](/csharp/winui/overview) - Native Windows
 - [Uno Platform](/csharp/uno/overview) - iOS, Android, WebAssembly, and desktop
-- [MCP servers](/csharp/mcp/overview) - Tools, resources, and prompts for an AI client
+- [MCP servers](/csharp/mcp/overview) - Clients, tools, resources, and prompts for an AI client
 
 ### Security
 
-- [Secrets, transport, and data protection](/csharp/security/overview)
+- [Secrets, log redaction, transport, and data protection](/csharp/security/overview)
 
 ### Testing
 

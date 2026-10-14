@@ -1,6 +1,6 @@
 ---
 title: Web APIs
-order: 200
+order: 220
 ---
 
 # Web APIs
@@ -9,6 +9,7 @@ HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sam
 
 ## In this section
 
+- [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests) - An Idempotency-Key so a retried POST runs once.
 - [Minimal APIs and controllers](/csharp/aspnet-core/web-apis/minimal-apis-and-controllers) - Both styles, and how to choose.
 - [Routing and model binding](/csharp/aspnet-core/web-apis/routing-and-binding) - Routes, parameters, and binding.
 - [Validation](/csharp/aspnet-core/web-apis/validation) - Reject a bad request before the handler runs.
@@ -30,4 +31,4 @@ HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sam
 
 ---
 
-**Next:** [Minimal APIs and Controllers](/csharp/aspnet-core/web-apis/minimal-apis-and-controllers)
+**Next:** [Idempotent Requests](/csharp/aspnet-core/web-apis/idempotent-requests)

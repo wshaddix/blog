@@ -49,9 +49,14 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 <!-- TODO: 202 Accepted and a status resource for work that outlives the request -->
 
+## Idempotency keys
+
+<!-- TODO: An Idempotency-Key header so a retried POST returns the first result -->
+
 ## Related Topics
 
 - See [ASP.NET Core: Web APIs](/csharp/aspnet-core/web-apis/overview)
+- See [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests)
 - See [Caching](/csharp/aspnet-core/web-apis/caching)
 - See [Pagination](/csharp/aspnet-core/web-apis/pagination)
 - See [Polling, server-sent events, and async request-reply](/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply)

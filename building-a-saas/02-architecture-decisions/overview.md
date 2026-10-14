@@ -23,6 +23,10 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 
 <!-- TODO: Premature optimization, splitting later -->
 
+## Modular monolith
+
+<!-- TODO: Modules that own their schema, with vertical slices inside each module -->
+
 ## Patterns We'll Use
 
 <!-- TODO: Repository, CQRS-lite, MediatR decision -->
@@ -37,6 +41,11 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 2. **Testability** - Architecture should make testing easy
 3. **Boundaries** - Clear separation between concerns
 4. **Flexibility** - Easy to change decisions later
+
+## Related Topics
+
+- See [Modular monolith](/patterns/architecture-styles/modular-monolith)
+- See [SDLC: Architecture](/sdlc/architecture)
 
 ---
 

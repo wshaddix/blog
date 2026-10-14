@@ -17,6 +17,7 @@ These are lessons. The long lists further down this section are catalogs of name
 - [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer) - One transaction for the state change and the message
 - [Sagas](/patterns/integration-patterns/sagas) - Multi-step workflows across services
 - [Choreography and orchestration](/patterns/integration-patterns/choreography-vs-orchestration) - Who decides the next step
+- [Modular monolith](/patterns/architecture-styles/modular-monolith) - One deployable, modules that own their data, slices inside each module
 - [Architecture tests](/patterns/architecture-styles/architecture-tests) - Fail the build when a boundary is crossed
 - [Event sourcing and change data capture](/patterns/architecture-styles/event-sourcing-and-cdc) - A stream of facts
 
@@ -51,6 +52,7 @@ Patterns for connecting systems:
 ### Architecture Styles
 
 - [Overview](/patterns/architecture-styles/overview) - Slicing a codebase
+- [Modular monolith](/patterns/architecture-styles/modular-monolith) - Modules, slices, and data ownership
 - [Architecture tests](/patterns/architecture-styles/architecture-tests) - Enforcing boundaries
 - [Event sourcing and change data capture](/patterns/architecture-styles/event-sourcing-and-cdc) - A stream of facts
 

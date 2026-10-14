@@ -54,11 +54,16 @@ Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscr
 
 <!-- TODO: Lost updates on seat counts and plan changes -->
 
+## When compensation fails
+
+<!-- TODO: A billing workflow whose undo fails, and a state that waits for a person -->
+
 ## Related Topics
 
 - See [Concurrency](/csharp/entity-framework/concurrency)
 - See [HTTP clients](/csharp/platform/http-clients)
 - See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
+- See [Sagas](/patterns/integration-patterns/sagas)
 
 ---
 

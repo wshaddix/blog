@@ -37,10 +37,15 @@ We'll use **shared database with row-level filtering** - good balance for most S
 
 <!-- TODO: ITenantProvider, SaveChanges override -->
 
+## Contextual options
+
+<!-- TODO: Tenant settings through named options, selected for the current tenant -->
+
 ## Related Topics
 
 - See [Databases: Data Modeling](/databases/data-modeling/overview)
 - See [Entity Framework: Querying](/csharp/entity-framework/querying)
+- See [Configuration and options](/csharp/platform/configuration-and-options)
 
 ---
 

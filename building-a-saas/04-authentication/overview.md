@@ -45,10 +45,15 @@ Security is non-negotiable. We'll implement robust authentication that's also us
 
 <!-- TODO: Expiry that tests can control -->
 
+## Permission-based authorization
+
+<!-- TODO: Named permissions on the caller, enforced with a policy -->
+
 ## Related Topics
 
 - See [ASP.NET Core: Authentication](/csharp/aspnet-core/authentication/overview)
 - See [Modern authentication](/csharp/aspnet-core/authentication/modern-auth)
+- See [Permission-based authorization](/csharp/aspnet-core/authorization/permissions)
 
 ---
 

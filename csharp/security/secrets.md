@@ -36,7 +36,8 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Configuration and options](/csharp/platform/configuration-and-options)
+- [Sensitive data in logs](/csharp/security/sensitive-data-in-logs)
 
 ---
 
-**Next:** [Transport and Headers](/csharp/security/transport-and-headers)
+**Next:** [Sensitive Data in Logs](/csharp/security/sensitive-data-in-logs)
