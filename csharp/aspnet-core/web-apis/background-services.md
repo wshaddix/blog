@@ -44,4 +44,4 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ---
 
-**Next:** [SignalR](/csharp/aspnet-core/web-apis/signalr)
+**Next:** [gRPC](/csharp/aspnet-core/web-apis/grpc)

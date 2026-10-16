@@ -33,4 +33,4 @@ Serverless compute for event-driven applications.
 
 ---
 
-**Continue to:** [Monitoring](/devops/monitoring/logging)
+**Continue to:** [Blob Storage](/devops/azure/blob-storage)

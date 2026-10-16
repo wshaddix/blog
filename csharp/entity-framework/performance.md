@@ -51,9 +51,15 @@ Avoiding common performance pitfalls.
 
 <!-- TODO: A review checklist for rows, query count, allocations, indexes, and the plan -->
 
+## Skewed tenant data
+
+- TODO: A database where every tenant has a few rows hides the tenant that has millions.
+- TODO: Seed one large tenant and assert the query shape, not only the small case.
+
 ## Practical Examples
 
 - See [Building a SaaS: Data Layer](/building-a-saas/07-data-layer/overview) - Performance in practice
+- See [Building a SaaS: Testing Strategy](/building-a-saas/10-testing-strategy/overview) - Test data for tenants of different sizes
 
 ---
 

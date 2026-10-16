@@ -43,6 +43,7 @@ Microsoft's cloud platform:
 - [App Service](/devops/azure/app-service) - Hosting web applications
 - [Azure SQL](/devops/azure/azure-sql) - Managed database
 - [Azure Functions](/devops/azure/functions) - Serverless compute
+- [Blob Storage](/devops/azure/blob-storage) - Files, conditional writes, and BlobCreated
 
 ### Monitoring
 

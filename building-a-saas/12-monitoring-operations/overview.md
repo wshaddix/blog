@@ -44,12 +44,18 @@ Your job isn't done when code ships. Observability keeps your SaaS running smoot
 
 <!-- TODO: Redact secrets and personal data before a sink stores the event -->
 
+## Degraded modes
+
+- TODO: Name what the product still does when a dependency is down.
+- TODO: Turn off the feature that failed. Leave the path a tenant needs in order to work.
+
 ## Related Topics
 
 - See [DevOps: Monitoring](/devops/monitoring/logging)
 - See [Observability](/csharp/aspnet-core/observability/overview)
 - See [Health checks](/csharp/aspnet-core/observability/health-checks)
 - See [Sensitive data in logs](/csharp/security/sensitive-data-in-logs)
+- See [Failure and degradation](/fundamentals/distributed-systems/failure-and-degradation)
 
 ---
 

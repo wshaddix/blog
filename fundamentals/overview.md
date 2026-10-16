@@ -56,6 +56,11 @@ Core programming paradigms and principles:
 - [Security Concepts](/fundamentals/security/overview) - Injection, XSS, CSRF, secrets, and transport
 - [Authentication and Authorization](/fundamentals/security/authentication-and-authorization) - Who the caller is, and what they may do
 
+### Distributed Systems
+
+- [Consistency](/fundamentals/distributed-systems/consistency) - How fresh a read has to be, chosen per operation
+- [Failure and degradation](/fundamentals/distributed-systems/failure-and-degradation) - Blast radius, retries, and what still works
+
 ## How to Use This Section
 
 Each topic includes:

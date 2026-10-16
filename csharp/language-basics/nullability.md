@@ -25,6 +25,11 @@ When `!` is a promise, and when it hides a bug.
 
 `is null`, `??`, and `?.`.
 
+### Empty collections
+
+- TODO: Return an empty array or list when the result is "no items."
+- TODO: Keep null for a value that was never supplied. Callers should not treat "nothing matched" as a missing value.
+
 ## Project setting
 
 `<Nullable>enable</Nullable>` and why new projects turn it on.

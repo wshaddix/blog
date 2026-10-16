@@ -27,4 +27,4 @@ Who decides the next step when a workflow is split across components.
 
 ---
 
-**Next:** [Event Sourcing and Change Data Capture](/patterns/architecture-styles/event-sourcing-and-cdc)
+**Next:** [Synchronous Call Chains](/patterns/integration-patterns/synchronous-call-chains)

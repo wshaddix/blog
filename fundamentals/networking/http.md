@@ -33,6 +33,12 @@ Which methods can be repeated, and which change state.
 
 Cache-Control, ETag, and what a client may reuse.
 
+## HTTP/2 and HTTP/3
+
+- TODO: HTTP/2 carries many streams on one connection. gRPC requires it.
+- TODO: HTTP/3 runs over QUIC. Clients and middleboxes still need a fallback.
+- TODO: The application contract is the choice. Which HTTP version carries it is a hosting decision.
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.
@@ -40,6 +46,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Security concepts](/fundamentals/security/overview)
+- [gRPC](/csharp/aspnet-core/web-apis/grpc)
 
 ---
 
