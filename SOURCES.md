@@ -126,9 +126,9 @@ Stubs from `docs: stub the October 14 content-gap topics`. Source is the daily s
 | [Needs a person](patterns/integration-patterns/sagas.md#needs-a-person) | Park a saga until a person chooses the next action | [Raul 2109989536151515433](https://x.com/i/status/2109989536151515433), [reply 2109997917264019586](https://x.com/i/status/2109997917264019586) | 2026-10-13 |
 | [Who resolves it](patterns/integration-patterns/sagas.md#who-resolves-it) | Who may close a saga that needs a person | [Raul 2109989536151515433](https://x.com/i/status/2109989536151515433), [reply 2109997917264019586](https://x.com/i/status/2109997917264019586) | 2026-10-13 |
 
-## 2026-10-16
+## 2026-10-16 (`1837f99`)
 
-Stubs from the daily summaries of posts from 2026-10-14 and 2026-10-15. Those summaries cite a status id with a first name, not an X handle, so the links use `https://x.com/i/status/<id>`.
+Stubs from `docs: stub the October 15 and 16 content-gap topics`. Sources are the daily summaries of posts from 2026-10-14 and 2026-10-15. Those summaries cite a status id with a first name, not an X handle, so the links use `https://x.com/i/status/<id>`.
 
 | Stub | Topic | Source URL(s) | Source date |
 | --- | --- | --- | --- |
