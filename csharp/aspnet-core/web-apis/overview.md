@@ -14,6 +14,7 @@ HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sam
 - [Rate limiting](/csharp/aspnet-core/web-apis/rate-limiting) - The built-in rate limiter.
 - [Pagination](/csharp/aspnet-core/web-apis/pagination) - Paging, filtering, and sorting.
 - [Background services](/csharp/aspnet-core/web-apis/background-services) - Work that outlives the request.
+- [gRPC](/csharp/aspnet-core/web-apis/grpc) - Contract-first calls on HTTP/2.
 - [SignalR](/csharp/aspnet-core/web-apis/signalr) - Realtime messages to web, WinUI, and Uno clients.
 - [Polling, server-sent events, and async request-reply](/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply) - When one request should not stay open.
 - [Versioning](/csharp/aspnet-core/web-apis/versioning) - How a contract changes without breaking callers.

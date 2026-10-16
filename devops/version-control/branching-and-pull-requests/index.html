@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845311374078">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845311374078" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,12 @@
 <p>Description, linked issue, and the checks that must pass.</p>
 <h2 id="review-and-merge">Review and merge</h2>
 <p>Who approves, how conflicts are resolved, and when to squash.</p>
+<h2 id="rebase-on-shared-branches">Rebase on shared branches</h2>
+<ul>
+<li>TODO: Rebase a branch only while you are the only person using it.</li>
+<li>TODO: After someone else has pulled it, merge to take new commits from the base.</li>
+<li>TODO: A force-push after that rebase rewrites commits other people already have.</li>
+</ul>
 <h2 id="what-stays-off-the-branch">What stays off the branch</h2>
 <p>Secrets, generated build output, and unrelated edits.</p>
 <h2 id="code-example">Code example</h2>
@@ -183,8 +189,10 @@
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../git-installation/">Git installation</a></li>
+<li><a href="../git-recipes/">Git recipes</a></li>
 <li><a href="../conventional-commits/">Conventional commits</a></li>
 <li><a href="../../../sdlc/code-review/">Code review</a></li>
+<li><a href="../../../building-a-saas/01-project-setup/overview/">Building a SaaS: Project Setup</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../../sdlc/code-review/">Code Review</a></p>
@@ -218,6 +226,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">DevOps bridges development and operations, focusing on automation, collaboration, and continuous delivery.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/devops/version-control/git-recipes/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Recipes</span>
+            </div>
+            <p class="card-compact-description">Short Git sequences for everyday work.</p>
         </div>
     </a>
 </div>

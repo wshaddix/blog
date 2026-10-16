@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845311374078">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845311374078" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -190,12 +190,18 @@
 <!-- TODO: Traces, metrics, and logs exported to Application Insights -->
 <h2 id="sensitive-data-in-logs">Sensitive data in logs</h2>
 <!-- TODO: Redact secrets and personal data before a sink stores the event -->
+<h2 id="degraded-modes">Degraded modes</h2>
+<ul>
+<li>TODO: Name what the product still does when a dependency is down.</li>
+<li>TODO: Turn off the feature that failed. Leave the path a tenant needs in order to work.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../devops/monitoring/logging/">DevOps: Monitoring</a></li>
 <li>See <a href="../../../csharp/aspnet-core/observability/overview/">Observability</a></li>
 <li>See <a href="../../../csharp/aspnet-core/observability/health-checks/">Health checks</a></li>
 <li>See <a href="../../../csharp/security/sensitive-data-in-logs/">Sensitive data in logs</a></li>
+<li>See <a href="../../../fundamentals/distributed-systems/failure-and-degradation/">Failure and degradation</a></li>
 </ul>
 <hr>
 <p><strong>Congratulations!</strong> You&#x27;ve built a production-ready SaaS application. Continue to <a href="../../../career-development/overview/">Career Development</a> to learn how to grow as an engineer and leader.</p>
@@ -209,6 +215,16 @@
                 <span class="card-compact-title">Alerting</span>
             </div>
             <p class="card-compact-description">Proactive notification of issues.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/fundamentals/distributed-systems/failure-and-degradation/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Failure and Degradation</span>
+            </div>
+            <p class="card-compact-description">Plan for the failure you did not write a test for.</p>
         </div>
     </a>
 </div>
@@ -259,6 +275,16 @@
                 <span class="card-compact-title">Sensitive Data in Logs</span>
             </div>
             <p class="card-compact-description">A value written to a log is copied into every sink that stores that log.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/integration-patterns/synchronous-call-chains/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Synchronous Call Chains</span>
+            </div>
+            <p class="card-compact-description">A request that waits on another module, which waits on another, stacks latency and failure.</p>
         </div>
     </a>
 </div>

@@ -9,6 +9,7 @@ Microsoft's cloud platform with first-class .NET support.
 | App Service | Managed web hosting |
 | Azure SQL | Managed SQL Server |
 | Azure Functions | Serverless compute |
+| [Blob Storage](/devops/azure/blob-storage) | Files and other objects |
 | Azure Container Apps | Managed containers |
 | Azure Key Vault | Secrets management |
 | Application Insights | Monitoring and diagnostics |

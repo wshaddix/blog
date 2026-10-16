@@ -16,7 +16,19 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 
 ## Modular monolith
 
+## Calls between modules
+
+- TODO: A module calls another through its public contract, in process, or by publishing an event.
+- TODO: A chain of synchronous calls stacks latency. Trace that chain before adding another hop.
+
+## Consistency per operation
+
+- TODO: A payment or a seat change needs one current answer. A feed or a count can lag.
+- TODO: Choose that per operation. One consistency mode for the whole product is the wrong default.
+
 ## Patterns We'll Use
+
+The public API stays JSON over HTTP. gRPC is a decision only when an internal client needs an HTTP/2 contract.
 
 ## Dependency Injection
 
@@ -30,6 +42,9 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 ## Related Topics
 
 - See [Modular monolith](/patterns/architecture-styles/modular-monolith)
+- See [Synchronous call chains](/patterns/integration-patterns/synchronous-call-chains)
+- See [Consistency](/fundamentals/distributed-systems/consistency)
+- See [gRPC](/csharp/aspnet-core/web-apis/grpc)
 - See [SDLC: Architecture](/sdlc/architecture)
 
 ---

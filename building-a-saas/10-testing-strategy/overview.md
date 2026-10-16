@@ -33,12 +33,18 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 
 ## Time-dependent tests
 
+## Test data management
+
+- TODO: Seed tenants of different sizes. One large tenant is the case that exposes a bad query.
+- TODO: Make the seed repeatable so a failure is the query, not a random row count.
+
 ## Related Topics
 
 - See [C#: Testing](/csharp/testing/unit-testing) - TUnit, TUnit.Mocks, and API tests
 - See [Reqnroll](/csharp/testing/reqnroll/overview) - Behavior scenarios on the TUnit runner
 - See [Architecture tests](/patterns/architecture-styles/architecture-tests)
 - See [Time-dependent code](/csharp/testing/time-dependent-code)
+- See [Entity Framework performance](/csharp/entity-framework/performance)
 
 ---
 

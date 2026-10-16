@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845311374078">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845311374078" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,11 @@
 <p>When <code translate="no" v-pre>!</code> is a promise, and when it hides a bug.</p>
 <h2 id="patterns">Patterns</h2>
 <p><code translate="no" v-pre>is null</code>, <code translate="no" v-pre>??</code>, and <code translate="no" v-pre>?.</code>.</p>
+<h3 id="empty-collections">Empty collections</h3>
+<ul>
+<li>TODO: Return an empty array or list when the result is &quot;no items.&quot;</li>
+<li>TODO: Keep null for a value that was never supplied. Callers should not treat &quot;nothing matched&quot; as a missing value.</li>
+</ul>
 <h2 id="project-setting">Project setting</h2>
 <p><code translate="no" v-pre>&lt;Nullable&gt;enable&lt;/Nullable&gt;</code> and why new projects turn it on.</p>
 <h2 id="code-example">Code example</h2>

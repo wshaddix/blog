@@ -56,6 +56,12 @@
 
 - [Security Concepts](https://wshaddix.com/fundamentals/security/overview.md): The failures a feature developer meets, before any framework. The C# pages show how ASP.NET Core implements the controls.
 - [Authentication and Authorization](https://wshaddix.com/fundamentals/security/authentication-and-authorization.md): Authentication answers who the caller is. Authorization answers what that caller may do. The two checks fail in different ways.
+
+### Distributed Systems
+
+- [Overview](https://wshaddix.com/fundamentals/distributed-systems/overview.md): Work that spans more than one process, and the guarantees you give up when it does.
+- [Consistency](https://wshaddix.com/fundamentals/distributed-systems/consistency.md): Each operation picks how up to date the data has to be.
+- [Failure and Degradation](https://wshaddix.com/fundamentals/distributed-systems/failure-and-degradation.md): Plan for the failure you did not write a test for.
 - [Overview](https://wshaddix.com/fundamentals/overview.md): This section covers the foundational computer science concepts that every software engineer should understand. These concepts transcend any specific programming language and form the bedrock of software engineering expertise.
 
 ## C#
@@ -134,6 +140,7 @@
 - [Rate Limiting](https://wshaddix.com/csharp/aspnet-core/web-apis/rate-limiting.md): The built-in rate limiter slows a caller down before they crowd out everyone else.
 - [Pagination, Filtering, and Sorting](https://wshaddix.com/csharp/aspnet-core/web-apis/pagination.md): List endpoints return a page, not a table.
 - [Background Services](https://wshaddix.com/csharp/aspnet-core/web-apis/background-services.md): Work that must finish even though the HTTP request already returned.
+- [gRPC](https://wshaddix.com/csharp/aspnet-core/web-apis/grpc.md): A contract-first RPC API that runs on HTTP/2.
 - [SignalR](https://wshaddix.com/csharp/aspnet-core/web-apis/signalr.md): A persistent connection so the server can push a message to a Blazor, WinUI, or Uno client.
 - [Polling, Server-Sent Events, and Async Request-Reply](https://wshaddix.com/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply.md): Ways to deliver a result after the first request has returned.
 - [API Versioning](https://wshaddix.com/csharp/aspnet-core/web-apis/versioning.md): How a contract changes without breaking a client you already shipped.
@@ -302,6 +309,7 @@
 - [Outbox and the Idempotent Consumer](https://wshaddix.com/patterns/integration-patterns/outbox-and-idempotent-consumer.md): Saving state and sending a message are two writes, and either one can fail on its own.
 - [Sagas](https://wshaddix.com/patterns/integration-patterns/sagas.md): A multi-step workflow that crosses service boundaries.
 - [Choreography and Orchestration](https://wshaddix.com/patterns/integration-patterns/choreography-vs-orchestration.md): Who decides the next step when a workflow is split across components.
+- [Synchronous Call Chains](https://wshaddix.com/patterns/integration-patterns/synchronous-call-chains.md): A request that waits on another module, which waits on another, stacks latency and failure.
 
 ### Refactoring Patterns
 
@@ -324,7 +332,7 @@
 - [Installation](https://wshaddix.com/devops/version-control/git-installation.md): Coming Soon
 - [Configuration](https://wshaddix.com/devops/version-control/git-configuration.md)
 - [Aliases](https://wshaddix.com/devops/version-control/git-aliases.md)
-- [Recipes](https://wshaddix.com/devops/version-control/git-recipes.md)
+- [Recipes](https://wshaddix.com/devops/version-control/git-recipes.md): Short Git sequences for everyday work.
 - [Branching and Pull Requests](https://wshaddix.com/devops/version-control/branching-and-pull-requests.md): How a change moves from your machine onto main.
 - [Conventional Commits](https://wshaddix.com/devops/version-control/conventional-commits.md): Conventional Commits is specification for adding human and machine readable meaning to commit messages.
 
@@ -342,6 +350,7 @@
 
 ### Azure
 
+- [Blob Storage](https://wshaddix.com/devops/azure/blob-storage.md): Object storage for files the database should not hold.
 - [Azure Functions](https://wshaddix.com/devops/azure/functions.md): Serverless compute for event-driven applications.
 - [Azure SQL](https://wshaddix.com/devops/azure/azure-sql.md): Managed SQL Server in the cloud.
 - [App Service](https://wshaddix.com/devops/azure/app-service.md): Managed platform for hosting web applications.

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845311374078">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845311374078" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -169,9 +169,16 @@
 <p>Primitives you reach for when an ordinary allocation shows up on a hot path.</p>
 <h2 id="performance-primitives">Performance primitives</h2>
 <!-- TODO -->
+<h2 id="lookups-inside-a-loop">Lookups inside a loop</h2>
+<ul>
+<li>TODO: Build the lookup before the loop. Do not scan for the same key on every iteration.</li>
+<li>TODO: A <code translate="no" v-pre>List&lt;T&gt;</code> check inside the loop is a scan per item. A set or dictionary keeps the check small.</li>
+<li>TODO: When the lookup data is fixed for the process, freeze it once and reuse that instance.</li>
+</ul>
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
 <li>See <a href="../../../fundamentals/programming-concepts/memory-and-gc/">Memory and Garbage Collection</a></li>
+<li>See <a href="../../../building-a-saas/07-data-layer/overview/">Building a SaaS: Data Layer</a> - Repeated lookups of tenant and plan data</li>
 </ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>

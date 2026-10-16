@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845311374078">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845311374078" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845311374078" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -181,8 +181,19 @@
 <!-- TODO: Premature optimization, splitting later -->
 <h2 id="modular-monolith">Modular monolith</h2>
 <!-- TODO: Modules that own their schema, with vertical slices inside each module -->
+<h2 id="calls-between-modules">Calls between modules</h2>
+<ul>
+<li>TODO: A module calls another through its public contract, in process, or by publishing an event.</li>
+<li>TODO: A chain of synchronous calls stacks latency. Trace that chain before adding another hop.</li>
+</ul>
+<h2 id="consistency-per-operation">Consistency per operation</h2>
+<ul>
+<li>TODO: A payment or a seat change needs one current answer. A feed or a count can lag.</li>
+<li>TODO: Choose that per operation. One consistency mode for the whole product is the wrong default.</li>
+</ul>
 <h2 id="patterns-well-use">Patterns We&#x27;ll Use</h2>
 <!-- TODO: Repository, CQRS-lite, MediatR decision -->
+<p>The public API stays JSON over HTTP. gRPC is a decision only when an internal client needs an HTTP/2 contract.</p>
 <h2 id="dependency-injection">Dependency Injection</h2>
 <!-- TODO: Service registration, lifetimes -->
 <h2 id="key-principles">Key Principles</h2>
@@ -195,6 +206,9 @@
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../patterns/architecture-styles/modular-monolith/">Modular monolith</a></li>
+<li>See <a href="../../../patterns/integration-patterns/synchronous-call-chains/">Synchronous call chains</a></li>
+<li>See <a href="../../../fundamentals/distributed-systems/consistency/">Consistency</a></li>
+<li>See <a href="../../../csharp/aspnet-core/web-apis/grpc/">gRPC</a></li>
 <li>See <a href="../../../sdlc/architecture/">SDLC: Architecture</a></li>
 </ul>
 <hr>
@@ -219,6 +233,26 @@
                 <span class="card-compact-title">Architecture Tests</span>
             </div>
             <p class="card-compact-description">Tests that fail when code reaches across a boundary you meant to keep.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/fundamentals/distributed-systems/consistency/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Consistency</span>
+            </div>
+            <p class="card-compact-description">Each operation picks how up to date the data has to be.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/grpc/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">gRPC</span>
+            </div>
+            <p class="card-compact-description">A contract-first RPC API that runs on HTTP/2.</p>
         </div>
     </a>
 </div>
@@ -253,12 +287,32 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/fundamentals/distributed-systems/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Work that spans more than one process, and the guarantees you give up when it does.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/patterns/architecture-styles/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">How a codebase is sliced, and how those slices are kept from leaking.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/integration-patterns/synchronous-call-chains/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Synchronous Call Chains</span>
+            </div>
+            <p class="card-compact-description">A request that waits on another module, which waits on another, stacks latency and failure.</p>
         </div>
     </a>
 </div>
