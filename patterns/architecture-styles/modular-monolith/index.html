@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -177,6 +177,22 @@
 <!-- TODO: The types and methods other modules are allowed to use -->
 <h2 id="data-ownership">Data ownership</h2>
 <!-- TODO: The module owns its tables. Queries against those tables stay inside the module -->
+<h3 id="schema-per-module">Schema per module</h3>
+<ul>
+<li>TODO: Give the module its own database schema, and put its tables there.</li>
+<li>TODO: Another module reaches a row by calling the public contract and passing an id.</li>
+</ul>
+<h3 id="dbcontext-per-module">DbContext per module</h3>
+<ul>
+<li>TODO: Register one <code translate="no" v-pre>DbContext</code> for the module. Its model contains that module&#x27;s entities.</li>
+<li>TODO: A handler takes the context for its own module.</li>
+</ul>
+<h2 id="finding-boundaries">Finding boundaries</h2>
+<ul>
+<li>TODO: List the changes that should ship together. The tables and features on that list are a candidate module.</li>
+<li>TODO: Draw the line where a transaction should stop. Work that must commit together stays in one module.</li>
+<li>TODO: Revisit a line that every feature has to cross.</li>
+</ul>
 <h2 id="how-modules-collaborate">How modules collaborate</h2>
 <!-- TODO: An in-process call through the public contract, or an integration event -->
 <h2 id="tests-for-the-boundaries">Tests for the boundaries</h2>
@@ -186,10 +202,12 @@
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
 <li>See <a href="../../../building-a-saas/02-architecture-decisions/overview/">Building a SaaS: Architecture Decisions</a> - The monolith, split into modules</li>
+<li>See <a href="../../../building-a-saas/07-data-layer/overview/">Building a SaaS: Data Layer</a> - A schema and a <code translate="no" v-pre>DbContext</code> per module</li>
 </ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../architecture-tests/">Architecture tests</a></li>
+<li>See <a href="../../../csharp/entity-framework/dbcontext/">DbContext</a></li>
 <li>See <a href="../../../sdlc/architecture/">SDLC: Architecture</a></li>
 <li>See <a href="../overview/">Architecture styles</a></li>
 </ul>
@@ -215,6 +233,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">Good architecture enables teams to move fast while maintaining quality. Here we make key decisions for our SaaS platform.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/07-data-layer/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The data layer connects your domain model to the database. Done right, it's reliable and performant.</p>
         </div>
     </a>
 </div>

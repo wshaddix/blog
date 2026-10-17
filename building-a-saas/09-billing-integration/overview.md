@@ -27,6 +27,11 @@ Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscr
 
 ## Subscription Management
 
+## Hold, then capture
+
+- TODO: When a subscription change needs a payment, authorize the amount and leave it as a hold.
+- TODO: Capture after the seat count and the plan have been saved. Release the hold when that save fails.
+
 ## Trial Periods
 
 ## Usage-based billing

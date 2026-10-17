@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -178,6 +178,21 @@
 <p>A browser that must call a JWT API talks to its own app, and the app holds the token.</p>
 <h2 id="one-api-several-callers">One API, several callers</h2>
 <p>The API validates a JWT. The web app can be a client of that API or the issuer of the cookie.</p>
+<h2 id="key-strength">Key strength</h2>
+<ul>
+<li>TODO: A bearer-token scheme depends on the key that signs the token. Pick a scheme whose key you can store outside the repo and rotate.</li>
+<li>TODO: A cookie session has a server-side key too. Give that key the same care.</li>
+</ul>
+<h2 id="readable-payload">Readable payload</h2>
+<ul>
+<li>TODO: Choose a cookie the browser will not show to script when the session contents have to stay on the server.</li>
+<li>TODO: Choose a JWT when the caller is a service that reads the claims. Those claims are visible to whoever holds the token.</li>
+</ul>
+<h2 id="immediate-revocation">Immediate revocation</h2>
+<ul>
+<li>TODO: Choose a server-side session when logout has to end access on the next request.</li>
+<li>TODO: Choose a short-lived JWT and a revocable refresh token when the caller cannot send a cookie.</li>
+</ul>
 <h2 id="code-example">Code example</h2>
 <p>A short C# sample will go here. A sample longer than about 30 lines will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>
 <h2 id="related">Related</h2>
@@ -185,12 +200,23 @@
 <li><a href="../../../../fundamentals/security/authentication-and-authorization/">Authentication concepts</a></li>
 <li><a href="../cookies/">Cookie authentication</a></li>
 <li><a href="../jwt/">JWT</a></li>
+<li><a href="../../../../building-a-saas/04-authentication/overview/">Building a SaaS: Authentication</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../identity/">ASP.NET Core Identity</a></p>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/apis-for-agents/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">APIs for Agents</span>
+            </div>
+            <p class="card-compact-description">An HTTP API whose caller is a model choosing a tool.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/csharp/aspnet-core/authentication/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
@@ -268,6 +294,16 @@
                 <span class="card-compact-title">MCP Authentication</span>
             </div>
             <p class="card-compact-description">A local stdio server runs as the user. A remote HTTP server has to know who is calling.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/04-authentication/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Security is non-negotiable. We'll implement robust authentication that's also user-friendly.</p>
         </div>
     </a>
 </div>

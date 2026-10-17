@@ -24,6 +24,21 @@ A browser that must call a JWT API talks to its own app, and the app holds the t
 
 The API validates a JWT. The web app can be a client of that API or the issuer of the cookie.
 
+## Key strength
+
+- TODO: A bearer-token scheme depends on the key that signs the token. Pick a scheme whose key you can store outside the repo and rotate.
+- TODO: A cookie session has a server-side key too. Give that key the same care.
+
+## Readable payload
+
+- TODO: Choose a cookie the browser will not show to script when the session contents have to stay on the server.
+- TODO: Choose a JWT when the caller is a service that reads the claims. Those claims are visible to whoever holds the token.
+
+## Immediate revocation
+
+- TODO: Choose a server-side session when logout has to end access on the next request.
+- TODO: Choose a short-lived JWT and a revocable refresh token when the caller cannot send a cookie.
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.
@@ -33,6 +48,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 - [Authentication concepts](/fundamentals/security/authentication-and-authorization)
 - [Cookie authentication](/csharp/aspnet-core/authentication/cookies)
 - [JWT](/csharp/aspnet-core/authentication/jwt)
+- [Building a SaaS: Authentication](/building-a-saas/04-authentication/overview)
 
 ---
 

@@ -30,8 +30,14 @@ The data layer connects your domain model to the database. Done right, it's reli
 - TODO: Keep file bytes in blob storage. Keep the blob name, content type, and owner on the tenant row.
 - TODO: Use a conditional write so a retry does not replace an object another request already stored.
 
+## Schemas per module
+
+- TODO: Give each module its own schema and its own `DbContext`.
+- TODO: Keep a module's queries inside its context. A join across those schemas belongs in a report.
+
 ## Related Topics
 
+- See [Modular monolith](/patterns/architecture-styles/modular-monolith)
 - See [Entity Framework](/csharp/entity-framework/getting-started)
 - See [Entity Framework performance](/csharp/entity-framework/performance)
 - See [Concurrency](/csharp/entity-framework/concurrency)

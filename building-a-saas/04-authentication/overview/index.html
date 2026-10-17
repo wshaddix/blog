@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -183,6 +183,21 @@
 <!-- TODO: Configuration, custom user class -->
 <h2 id="jwt-implementation">JWT Implementation</h2>
 <!-- TODO: Token generation, validation, claims -->
+<h2 id="key-strength">Key strength</h2>
+<ul>
+<li>TODO: Generate the signing key as long random material and store it with the other secrets.</li>
+<li>TODO: Rotate it on a plan, and accept the previous key until the longest access token has expired.</li>
+</ul>
+<h2 id="readable-payload">Readable payload</h2>
+<ul>
+<li>TODO: The access token carries the user id, the tenant id, and the permissions.</li>
+<li>TODO: Assume the holder of the token, and any proxy along the way, can read those claims.</li>
+</ul>
+<h2 id="immediate-revocation">Immediate revocation</h2>
+<ul>
+<li>TODO: Logout revokes the refresh token and clears the cookie.</li>
+<li>TODO: The access token stays valid until it expires. Keep that lifetime short, and check a denylist when a token has to die early.</li>
+</ul>
 <h2 id="refresh-tokens">Refresh Tokens</h2>
 <!-- TODO: Why, implementation, rotation -->
 <h2 id="security-considerations">Security Considerations</h2>
@@ -196,6 +211,8 @@
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/aspnet-core/authentication/overview/">ASP.NET Core: Authentication</a></li>
+<li>See <a href="../../../csharp/aspnet-core/authentication/jwt/">JWT bearer</a></li>
+<li>See <a href="../../../csharp/aspnet-core/authentication/choosing-a-scheme/">Choosing a scheme</a></li>
 <li>See <a href="../../../csharp/aspnet-core/authentication/modern-auth/">Modern authentication</a></li>
 <li>See <a href="../../../csharp/aspnet-core/authorization/permissions/">Permission-based authorization</a></li>
 </ul>
@@ -221,6 +238,26 @@
                 <span class="card-compact-title">Authentication</span>
             </div>
             <p class="card-compact-description">How an ASP.NET Core app establishes who the caller is. Pick the scheme on the choosing page before implementing any of the others.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/authentication/choosing-a-scheme/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Choosing a Scheme</span>
+            </div>
+            <p class="card-compact-description">The caller decides the scheme. A browser, a service, a Windows app, and a phone do not hold credentials the same way.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/authentication/jwt/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">JWT Bearer</span>
+            </div>
+            <p class="card-compact-description">A JSON Web Token is a signed set of claims. The API checks the signature, the issuer, the audience, and the expiry.</p>
         </div>
     </a>
 </div>

@@ -4,10 +4,10 @@ How an ASP.NET Core app establishes who the caller is. Pick the scheme on the ch
 
 ## In this section
 
-- [Choosing a scheme](/csharp/aspnet-core/authentication/choosing-a-scheme) - Cookies, JWT, OpenID Connect, and a backend-for-frontend.
+- [Choosing a scheme](/csharp/aspnet-core/authentication/choosing-a-scheme) - Cookies, JWT, OpenID Connect, and a backend-for-frontend. Key strength, a readable payload, and revocation decide which one fits.
 - [ASP.NET Core Identity](/csharp/aspnet-core/authentication/identity) - Users, passwords, and the Identity store.
 - [Cookie authentication](/csharp/aspnet-core/authentication/cookies) - The browser session for Blazor and server-rendered pages.
-- [JWT bearer](/csharp/aspnet-core/authentication/jwt) - Tokens for services, MCP, and non-browser clients.
+- [JWT bearer](/csharp/aspnet-core/authentication/jwt) - Tokens for services, MCP, and non-browser clients. Key strength, a readable payload, and revocation.
 - [Refresh tokens](/csharp/aspnet-core/authentication/refresh-tokens) - Rotation and storage.
 - [OpenID Connect](/csharp/aspnet-core/authentication/openid-connect) - An external identity provider.
 - [Modern authentication](/csharp/aspnet-core/authentication/modern-auth) - Passkeys, device-bound sessions, and machine-to-machine calls.

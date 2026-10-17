@@ -130,6 +130,7 @@
 #### Web APIs
 
 - [Web APIs](https://wshaddix.com/csharp/aspnet-core/web-apis/overview.md): HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sample.
+- [APIs for Agents](https://wshaddix.com/csharp/aspnet-core/web-apis/apis-for-agents.md): An HTTP API whose caller is a model choosing a tool.
 - [Idempotent Requests](https://wshaddix.com/csharp/aspnet-core/web-apis/idempotent-requests.md): A client that retries a POST needs the server to recognize the same attempt.
 - [Minimal APIs and Controllers](https://wshaddix.com/csharp/aspnet-core/web-apis/minimal-apis-and-controllers.md): ASP.NET Core has two ways to declare an endpoint. Pick one per project and stay with it unless a feature forces the other.
 - [Routing and Model Binding](https://wshaddix.com/csharp/aspnet-core/web-apis/routing-and-binding.md): How a request URL and body become arguments on a handler.
@@ -179,6 +180,7 @@
 #### Blazor
 
 - [Blazor](https://wshaddix.com/csharp/aspnet-core/blazor/overview.md): Blazor is the C# web UI. It talks to the API. It does not become a second place where business rules live.
+- [AI Features](https://wshaddix.com/csharp/aspnet-core/blazor/ai-features.md): A Blazor component that shows a model's answer. The prompt and the model key stay on the server.
 - [Components and Routing](https://wshaddix.com/csharp/aspnet-core/blazor/components-and-routing.md): A component is a .razor file with parameters, and the router picks one from the URL.
 - [Forms and Validation](https://wshaddix.com/csharp/aspnet-core/blazor/forms-and-validation.md): A form edits a model and shows the same kind of field errors the API returns.
 - [Blazor Authentication](https://wshaddix.com/csharp/aspnet-core/blazor/authentication.md): A Blazor app in the browser uses the cookie scheme. It does not store a JWT where script can read it.
@@ -361,6 +363,10 @@
 - [Alerting](https://wshaddix.com/devops/monitoring/alerting.md): Proactive notification of issues.
 - [Metrics](https://wshaddix.com/devops/monitoring/metrics.md): Measuring application and infrastructure health.
 - [Logging](https://wshaddix.com/devops/monitoring/logging.md): Capturing application behavior for debugging and monitoring.
+
+### Self-Hosting
+
+- [Self-Hosting](https://wshaddix.com/devops/self-hosting/overview.md): Run the app on a machine you control, and give the internet a way to reach it.
 - [Overview](https://wshaddix.com/devops/overview.md): DevOps bridges development and operations, focusing on automation, collaboration, and continuous delivery.
 
 ## Building a SaaS

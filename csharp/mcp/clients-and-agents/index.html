@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -182,6 +182,12 @@
 <!-- TODO: Expose the server's tools as functions on the chat client -->
 <h2 id="the-tool-loop">The tool loop</h2>
 <!-- TODO: The model requests a call, the client runs it, and the result is sent back to the model -->
+<h3 id="tracing-the-tool-loop">Tracing the tool loop</h3>
+<ul>
+<li>TODO: Start a span when the agent begins a turn, and add a child span for each tool call.</li>
+<li>TODO: Record the tool name, the duration, and whether the call succeeded. Leave argument values off the span when they hold tenant data.</li>
+<li>TODO: Keep the following model call on the same trace.</li>
+</ul>
 <h2 id="a-person-in-the-loop">A person in the loop</h2>
 <!-- TODO: Confirm a tool that writes, pays, or sends before the client runs it -->
 <h3 id="approval-queue">Approval queue</h3>
@@ -206,12 +212,33 @@
 <li>See <a href="../overview/">MCP servers</a></li>
 <li>See <a href="../hosting/">Hosting an MCP server</a></li>
 <li>See <a href="../authentication/">MCP authentication</a></li>
+<li>See <a href="../../aspnet-core/observability/overview/">Observability</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../tools-resources-and-prompts/">Tools, Resources, and Prompts</a></p>
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/blazor/ai-features/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">AI Features</span>
+            </div>
+            <p class="card-compact-description">A Blazor component that shows a model's answer. The prompt and the model key stay on the server.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/apis-for-agents/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">APIs for Agents</span>
+            </div>
+            <p class="card-compact-description">An HTTP API whose caller is a model choosing a tool.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/csharp/mcp/overview/" class="group card-compact no-link">
         <div class="card-compact-body">

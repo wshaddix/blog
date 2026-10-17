@@ -30,9 +30,15 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 ## Idempotency keys
 
+## APIs called by agents
+
+- TODO: Some commands are invoked by a model that picked a tool. Name the inputs, the errors, and whether a retry is safe.
+- TODO: Require an idempotency key on those writes, and return the first result when the same key comes back.
+
 ## Related Topics
 
 - See [ASP.NET Core: Web APIs](/csharp/aspnet-core/web-apis/overview)
+- See [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents)
 - See [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests)
 - See [Caching](/csharp/aspnet-core/web-apis/caching)
 - See [Pagination](/csharp/aspnet-core/web-apis/pagination)

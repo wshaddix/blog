@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845469237308">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845469237308" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845469237308" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -195,8 +195,14 @@
 <li>TODO: Keep file bytes in blob storage. Keep the blob name, content type, and owner on the tenant row.</li>
 <li>TODO: Use a conditional write so a retry does not replace an object another request already stored.</li>
 </ul>
+<h2 id="schemas-per-module">Schemas per module</h2>
+<ul>
+<li>TODO: Give each module its own schema and its own <code translate="no" v-pre>DbContext</code>.</li>
+<li>TODO: Keep a module&#x27;s queries inside its context. A join across those schemas belongs in a report.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
+<li>See <a href="../../../patterns/architecture-styles/modular-monolith/">Modular monolith</a></li>
 <li>See <a href="../../../csharp/entity-framework/getting-started/">Entity Framework</a></li>
 <li>See <a href="../../../csharp/entity-framework/performance/">Entity Framework performance</a></li>
 <li>See <a href="../../../csharp/entity-framework/concurrency/">Concurrency</a></li>
@@ -256,6 +262,16 @@
                 <span class="card-compact-title">High-Performance C#</span>
             </div>
             <p class="card-compact-description">Primitives you reach for when an ordinary allocation shows up on a hot path.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/architecture-styles/modular-monolith/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Modular Monolith</span>
+            </div>
+            <p class="card-compact-description">One deployable, divided into modules that own their data and their features.</p>
         </div>
     </a>
 </div>
