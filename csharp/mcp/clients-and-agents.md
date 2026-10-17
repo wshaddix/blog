@@ -32,6 +32,12 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 
 <!-- TODO: The model requests a call, the client runs it, and the result is sent back to the model -->
 
+### Tracing the tool loop
+
+- TODO: Start a span when the agent begins a turn, and add a child span for each tool call.
+- TODO: Record the tool name, the duration, and whether the call succeeded. Leave argument values off the span when they hold tenant data.
+- TODO: Keep the following model call on the same trace.
+
 ## A person in the loop
 
 <!-- TODO: Confirm a tool that writes, pays, or sends before the client runs it -->
@@ -60,6 +66,7 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 - See [MCP servers](/csharp/mcp/overview)
 - See [Hosting an MCP server](/csharp/mcp/hosting)
 - See [MCP authentication](/csharp/mcp/authentication)
+- See [Observability](/csharp/aspnet-core/observability/overview)
 
 ---
 

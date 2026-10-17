@@ -53,6 +53,12 @@ Observability and incident response:
 - [Metrics](/devops/monitoring/metrics) - Application and infrastructure metrics
 - [Alerting](/devops/monitoring/alerting) - Proactive incident detection
 
+### Self-Hosting
+
+A process on a machine you control:
+
+- [Self-Hosting](/devops/self-hosting/overview) - A home server, CGNAT, and a tunnel to a public name
+
 ## DevOps Principles
 
 1. **Automate everything** - Reduce manual steps, increase reliability

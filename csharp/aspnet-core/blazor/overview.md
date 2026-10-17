@@ -15,6 +15,7 @@ Blazor is the C# web UI. It talks to the API. It does not become a second place 
 - [Forms and validation](/csharp/aspnet-core/blazor/forms-and-validation) - Editing data and showing field errors.
 - [Authentication](/csharp/aspnet-core/blazor/authentication) - Cookies, AuthorizeView, and the token the browser must not hold.
 - [Calling the API](/csharp/aspnet-core/blazor/calling-the-api) - A typed client from a component.
+- [AI features](/csharp/aspnet-core/blazor/ai-features) - A component that shows a model's answer. The prompt stays on the server.
 - [JavaScript interop](/csharp/aspnet-core/blazor/javascript-interop) - Calling browser APIs from C#.
 
 ## Render modes

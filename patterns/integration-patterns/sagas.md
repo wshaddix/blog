@@ -32,6 +32,12 @@ A multi-step workflow that crosses service boundaries.
 - TODO: List the steps in the order they must commit. Compensation walks back along that list.
 - TODO: A step that cannot be undone has to sit where a later failure still has a way out.
 
+### Hold, then capture
+
+- TODO: Place a hold on the scarce thing first: a seat, a balance, or a card authorization.
+- TODO: Run the later steps while that hold stays open.
+- TODO: Capture after those steps have committed. Release the hold when a later step fails.
+
 ## Unknown outcome after a timeout
 
 - TODO: A timeout means the caller stopped waiting. It does not mean the step failed.
