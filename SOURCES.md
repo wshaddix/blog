@@ -159,7 +159,7 @@ Stubs from `docs: stub the October 15 and 16 content-gap topics`. Sources are th
 | [Rebase on shared branches](devops/version-control/git-recipes.md#rebase-on-shared-branches) | Rebase on shared branches | [Anton reply 2110619672034840698](https://x.com/i/status/2110619672034840698) | 2026-10-15 |
 | [Empty collections](csharp/language-basics/nullability.md#empty-collections) | Empty collections, not null | [Anton reply 2110616778842030309](https://x.com/i/status/2110616778842030309) | 2026-10-15 |
 
-## 2026-10-17
+## 2026-10-17 (`dab01c5`)
 
 Stubs from `docs: stub the October 17 content-gap topics`. Sources are the daily summary of posts from 2026-10-16 and Milan's newsletter from 2026-10-17. That summary cites a status id with a first name, not an X handle, so the links use `https://x.com/i/status/<id>`. The ASP.NET Core News issue and Milan's newsletter have no URL in the summary, so those sources are plain text.
 
