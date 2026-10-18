@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -193,6 +193,16 @@
 <ul>
 <li>TODO: A database where every tenant has a few rows hides the tenant that has millions.</li>
 <li>TODO: Seed one large tenant and assert the query shape, not only the small case.</li>
+</ul>
+<h2 id="large-id-lists">Large ID lists</h2>
+<ul>
+<li>TODO: A filter over thousands of ids becomes one enormous <code translate="no" v-pre>IN</code> list, or one query per id.</li>
+<li>TODO: Hand the ids to the database as a set it can join, in a single round trip.</li>
+</ul>
+<h2 id="savechanges-in-a-loop">SaveChanges in a loop</h2>
+<ul>
+<li>TODO: Saving on every iteration pays a transaction and a round trip per row.</li>
+<li>TODO: Stage the rows and save once, unless one row must commit before the next row starts.</li>
 </ul>
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>

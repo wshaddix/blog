@@ -26,6 +26,11 @@ A write that makes a cached read wrong.
 
 ## HybridCache
 
+### Local copies across servers
+
+- TODO: Each server keeps an in-process copy in front of the shared cache.
+- TODO: Removing or replacing the entry on one server leaves the other servers' copies in place until they expire.
+
 ### Setup with Redis as L2
 
 ### GetOrCreateAsync, tags, and stampede protection
@@ -41,6 +46,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Redis and caching](/databases/nosql/redis)
+- [Caching](/fundamentals/distributed-systems/caching)
 
 ---
 

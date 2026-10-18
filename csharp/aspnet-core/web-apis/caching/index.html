@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -182,6 +182,11 @@
 <!-- TODO: In-process, distributed, hybrid, output, and response: scope, consistency, and cost -->
 <h2 id="hybridcache">HybridCache</h2>
 <!-- TODO: One API over a local cache and a distributed cache -->
+<h3 id="local-copies-across-servers">Local copies across servers</h3>
+<ul>
+<li>TODO: Each server keeps an in-process copy in front of the shared cache.</li>
+<li>TODO: Removing or replacing the entry on one server leaves the other servers&#x27; copies in place until they expire.</li>
+</ul>
 <h3 id="setup-with-redis-as-l2">Setup with Redis as L2</h3>
 <!-- TODO -->
 <h3 id="getorcreateasync-tags-and-stampede-protection">GetOrCreateAsync, tags, and stampede protection</h3>
@@ -195,6 +200,7 @@
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../../../../databases/nosql/redis/">Redis and caching</a></li>
+<li><a href="../../../../fundamentals/distributed-systems/caching/">Caching</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../overview/">Web APIs</a></p>
@@ -208,6 +214,16 @@
                 <span class="card-compact-title">API Versioning</span>
             </div>
             <p class="card-compact-description">How a contract changes without breaking a client you already shipped.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/fundamentals/distributed-systems/caching/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Caching</span>
+            </div>
+            <p class="card-compact-description">A cache keeps a copy so you can skip the slower read, and then you have to live with that copy being old.</p>
         </div>
     </a>
 </div>

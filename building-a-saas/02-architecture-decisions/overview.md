@@ -32,6 +32,11 @@ The public API stays JSON over HTTP. gRPC is a decision only when an internal cl
 
 ## Dependency Injection
 
+## Decision records
+
+- TODO: A proposal from the team states the intent and the options. The record states the choice and what was turned down.
+- TODO: A check in the build fails when new code crosses that choice, so the record is not the only thing holding it.
+
 ## Key Principles
 
 1. **Simplicity first** - Don't add patterns until you need them
@@ -44,6 +49,7 @@ The public API stays JSON over HTTP. gRPC is a decision only when an internal cl
 - See [Modular monolith](/patterns/architecture-styles/modular-monolith)
 - See [Synchronous call chains](/patterns/integration-patterns/synchronous-call-chains)
 - See [Consistency](/fundamentals/distributed-systems/consistency)
+- See [Decision making](/career-development/team-operations/decision-making)
 - See [gRPC](/csharp/aspnet-core/web-apis/grpc)
 - See [SDLC: Architecture](/sdlc/architecture)
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -178,12 +178,18 @@
 <p>A second pass that lists risks is useful after the code exists, not instead of reading it.</p>
 <h2 id="evals-for-prompts">Evals for prompts</h2>
 <p>When a prompt is reused, keep a few cases and re-run them after you edit the prompt.</p>
+<h2 id="trying-to-break-the-feature">Trying to break the feature</h2>
+<ul>
+<li>TODO: After the happy path works, ask the agent for inputs that should fail: an empty body, a second submit, the wrong tenant, a call that gets cancelled.</li>
+<li>TODO: Reproduce each finding yourself. A suggestion is not a failing test until you can run it again.</li>
+</ul>
 <h2 id="example">Example</h2>
 <p>A worked example will go here. When an example produces more than about 30 lines of C#, that code will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../../sdlc/code-review/">Code review</a></li>
 <li><a href="../../csharp/testing/project-setup/">TUnit project setup</a></li>
+<li><a href="../../building-a-saas/10-testing-strategy/overview/">Building a SaaS: Testing Strategy</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../using-mcp/">Using MCP</a></p>
@@ -227,6 +233,16 @@
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/10-testing-strategy/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Tests give you confidence to ship. We'll build a comprehensive testing strategy.</p>
         </div>
     </a>
 </div>

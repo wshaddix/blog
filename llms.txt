@@ -61,6 +61,7 @@
 
 - [Overview](https://wshaddix.com/fundamentals/distributed-systems/overview.md): Work that spans more than one process, and the guarantees you give up when it does.
 - [Consistency](https://wshaddix.com/fundamentals/distributed-systems/consistency.md): Each operation picks how up to date the data has to be.
+- [Caching](https://wshaddix.com/fundamentals/distributed-systems/caching.md): A cache keeps a copy so you can skip the slower read, and then you have to live with that copy being old.
 - [Failure and Degradation](https://wshaddix.com/fundamentals/distributed-systems/failure-and-degradation.md): Plan for the failure you did not write a test for.
 - [Overview](https://wshaddix.com/fundamentals/overview.md): This section covers the foundational computer science concepts that every software engineer should understand. These concepts transcend any specific programming language and form the bedrock of software engineering expertise.
 
@@ -440,6 +441,7 @@
 
 ### Team Operations
 
+- [Decision Making](https://wshaddix.com/career-development/team-operations/decision-making.md): A technical choice can be proposed by someone who will not be the one to enforce it.
 - [Capacity Planning](https://wshaddix.com/career-development/team-operations/capacity-planning.md): Understanding and allocating team capacity for sustainable delivery.
 - [Training Curation](https://wshaddix.com/career-development/team-operations/training-curation.md): Curating learning resources to help your team grow.
 - [Skill Matrices](https://wshaddix.com/career-development/team-operations/skill-matrices.md): A skill matrix maps team capabilities to identify gaps and plan development.

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -177,6 +177,19 @@
 <!-- TODO: How EF tracks entity state -->
 <h2 id="savechanges">SaveChanges</h2>
 <!-- TODO: Persisting changes, transactions -->
+<h2 id="a-context-in-a-background-worker">A context in a background worker</h2>
+<ul>
+<li>TODO: A context tied to one request is gone when that request ends, and two threads cannot share it.</li>
+<li>TODO: The worker opens a scope for the job, resolves a new context inside that scope, and disposes the scope when the job ends.</li>
+</ul>
+<h2 id="practical-examples">Practical Examples</h2>
+<ul>
+<li>See <a href="../../../building-a-saas/08-background-jobs/overview/">Building a SaaS: Background Jobs</a> - A context in a background worker</li>
+</ul>
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li>See <a href="../../aspnet-core/web-apis/background-services/">Background services</a></li>
+</ul>
 <hr>
 <p><strong>Next:</strong> <a href="../querying/">Querying</a></p>
 <div id="retype-backlinks">
@@ -209,6 +222,16 @@
                 <span class="card-compact-title">Modular Monolith</span>
             </div>
             <p class="card-compact-description">One deployable, divided into modules that own their data and their features.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/08-background-jobs/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Not everything should happen in the request/response cycle. Background jobs handle async work.</p>
         </div>
     </a>
 </div>

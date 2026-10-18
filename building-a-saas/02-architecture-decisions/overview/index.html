@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -196,6 +196,11 @@
 <p>The public API stays JSON over HTTP. gRPC is a decision only when an internal client needs an HTTP/2 contract.</p>
 <h2 id="dependency-injection">Dependency Injection</h2>
 <!-- TODO: Service registration, lifetimes -->
+<h2 id="decision-records">Decision records</h2>
+<ul>
+<li>TODO: A proposal from the team states the intent and the options. The record states the choice and what was turned down.</li>
+<li>TODO: A check in the build fails when new code crosses that choice, so the record is not the only thing holding it.</li>
+</ul>
 <h2 id="key-principles">Key Principles</h2>
 <ol>
 <li><strong>Simplicity first</strong> - Don&#x27;t add patterns until you need them</li>
@@ -208,6 +213,7 @@
 <li>See <a href="../../../patterns/architecture-styles/modular-monolith/">Modular monolith</a></li>
 <li>See <a href="../../../patterns/integration-patterns/synchronous-call-chains/">Synchronous call chains</a></li>
 <li>See <a href="../../../fundamentals/distributed-systems/consistency/">Consistency</a></li>
+<li>See <a href="../../../career-development/team-operations/decision-making/">Decision making</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/grpc/">gRPC</a></li>
 <li>See <a href="../../../sdlc/architecture/">SDLC: Architecture</a></li>
 </ul>
@@ -243,6 +249,16 @@
                 <span class="card-compact-title">Consistency</span>
             </div>
             <p class="card-compact-description">Each operation picks how up to date the data has to be.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/career-development/team-operations/decision-making/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Decision Making</span>
+            </div>
+            <p class="card-compact-description">A technical choice can be proposed by someone who will not be the one to enforce it.</p>
         </div>
     </a>
 </div>

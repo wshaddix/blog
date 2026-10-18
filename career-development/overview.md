@@ -30,6 +30,7 @@ Running an effective engineering team:
 - [Skill Matrices](/career-development/team-operations/skill-matrices) - Tracking team capabilities
 - [Training Curation](/career-development/team-operations/training-curation) - Learning and development
 - [Capacity Planning](/career-development/team-operations/capacity-planning) - Resource allocation
+- [Decision Making](/career-development/team-operations/decision-making) - Proposals, records, and the checks that keep a decision
 
 ### Soft Skills
 

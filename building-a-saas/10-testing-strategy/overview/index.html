@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -201,6 +201,11 @@
 <li>TODO: Seed tenants of different sizes. One large tenant is the case that exposes a bad query.</li>
 <li>TODO: Make the seed repeatable so a failure is the query, not a random row count.</li>
 </ul>
+<h2 id="trying-to-break-the-feature">Trying to break the feature</h2>
+<ul>
+<li>TODO: Point an agent at one feature and ask for cases the happy path never runs: the wrong tenant, a double submit, a missing field.</li>
+<li>TODO: Keep the cases that reproduce. A suggestion you cannot run again is not part of the suite.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/testing/unit-testing/">C#: Testing</a> - TUnit, TUnit.Mocks, and API tests</li>
@@ -208,6 +213,7 @@
 <li>See <a href="../../../patterns/architecture-styles/architecture-tests/">Architecture tests</a></li>
 <li>See <a href="../../../csharp/testing/time-dependent-code/">Time-dependent code</a></li>
 <li>See <a href="../../../csharp/entity-framework/performance/">Entity Framework performance</a></li>
+<li>See <a href="../../../ai-assisted-development/verification/">Verification</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../11-deployment/overview/">Chapter 11: Deployment</a></p>
@@ -281,6 +287,16 @@
                 <span class="card-compact-title">Time-Dependent Code</span>
             </div>
             <p class="card-compact-description">Tests that depend on the clock should take a clock you control.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/verification/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Verification</span>
+            </div>
+            <p class="card-compact-description">Generated code is a draft. The same checks apply as if a new teammate wrote it.</p>
         </div>
     </a>
 </div>

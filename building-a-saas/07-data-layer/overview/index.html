@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845563784597">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845563784597" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845563784597" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -186,8 +186,23 @@
 <!-- TODO: When to use, when DbContext is enough -->
 <h2 id="performance">Performance</h2>
 <!-- TODO: N+1, tracking, projections, keyset pagination -->
+<h2 id="large-id-lists">Large ID lists</h2>
+<ul>
+<li>TODO: A bulk check or an export can pass thousands of ids into one query.</li>
+<li>TODO: Join to that set. Do not run one query per id.</li>
+</ul>
+<h2 id="savechanges-in-a-loop">SaveChanges in a loop</h2>
+<ul>
+<li>TODO: An import that saves every row commits once per row, or holds one transaction for the whole batch.</li>
+<li>TODO: Save at the end of the batch, and do not retry rows that already committed when one row fails.</li>
+</ul>
 <h2 id="hybridcache">HybridCache</h2>
 <!-- TODO: Tenant settings and plan lookups, keyed by tenant -->
+<h3 id="local-copies-across-servers">Local copies across servers</h3>
+<ul>
+<li>TODO: Each instance keeps a local copy of a tenant setting in front of the shared cache.</li>
+<li>TODO: After that setting changes, another instance can still serve its local copy until the copy expires.</li>
+</ul>
 <h2 id="audit-logging">Audit logging</h2>
 <!-- TODO: A record of changes for the tenant -->
 <h2 id="file-storage">File storage</h2>
@@ -207,6 +222,7 @@
 <li>See <a href="../../../csharp/entity-framework/performance/">Entity Framework performance</a></li>
 <li>See <a href="../../../csharp/entity-framework/concurrency/">Concurrency</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/caching/">Caching</a></li>
+<li>See <a href="../../../fundamentals/distributed-systems/caching/">Caching fundamentals</a></li>
 <li>See <a href="../../../databases/overview/">Databases</a></li>
 <li>See <a href="../../../devops/azure/blob-storage/">Blob Storage</a></li>
 </ul>
@@ -222,6 +238,16 @@
                 <span class="card-compact-title">Blob Storage</span>
             </div>
             <p class="card-compact-description">Object storage for files the database should not hold.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/fundamentals/distributed-systems/caching/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Caching</span>
+            </div>
+            <p class="card-compact-description">A cache keeps a copy so you can skip the slower read, and then you have to live with that copy being old.</p>
         </div>
     </a>
 </div>
