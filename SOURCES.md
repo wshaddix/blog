@@ -187,7 +187,7 @@ Stubs from `docs: stub the October 17 content-gap topics`. Sources are the daily
 | [Self-Hosting](devops/self-hosting/overview.md) | Exposing a home server, CGNAT, and tunnels | Milan's newsletter (email), Oct 17, 2026 | 2026-10-17 |
 | [AI Features](csharp/aspnet-core/blazor/ai-features.md) | AI features in Blazor | [News 2111248834340794801](https://x.com/i/status/2111248834340794801), newsletter "Promptless AI-First Blazor Apps" (email), Oct 16, 2026 | 2026-10-16 |
 
-## 2026-10-18
+## 2026-10-18 (`196a0cc`)
 
 Stubs from `docs: stub the October 18 content-gap topics`. Source is the daily summary of posts from 2026-10-17. That summary cites a status id with a first name, not an X handle, so the links use `https://x.com/i/status/<id>`.
 
