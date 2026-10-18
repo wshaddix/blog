@@ -64,6 +64,7 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - See [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents)
 - See [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests)
 - See [Caching](/csharp/aspnet-core/web-apis/caching)
+- See [Caching fundamentals](/fundamentals/distributed-systems/caching)
 - See [Pagination](/csharp/aspnet-core/web-apis/pagination)
 - See [Polling, server-sent events, and async request-reply](/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply)
 

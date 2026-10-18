@@ -52,12 +52,18 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 <!-- TODO: Compensation that fails, and a parked state someone has to resolve -->
 
+## A context in a background worker
+
+- TODO: A job has no HTTP request, so it has no request-scoped context.
+- TODO: Open a scope for that job, use a context from the scope, and dispose the scope before the next job starts.
+
 ## Related Topics
 
 - See [Azure Functions](/devops/azure/functions)
 - See [Fundamentals: Concurrency](/fundamentals/programming-concepts/concurrency)
 - See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
 - See [Background services](/csharp/aspnet-core/web-apis/background-services)
+- See [DbContext](/csharp/entity-framework/dbcontext)
 - See [Sagas](/patterns/integration-patterns/sagas)
 
 ---

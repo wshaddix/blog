@@ -53,6 +53,11 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 - TODO: Seed tenants of different sizes. One large tenant is the case that exposes a bad query.
 - TODO: Make the seed repeatable so a failure is the query, not a random row count.
 
+## Trying to break the feature
+
+- TODO: Point an agent at one feature and ask for cases the happy path never runs: the wrong tenant, a double submit, a missing field.
+- TODO: Keep the cases that reproduce. A suggestion you cannot run again is not part of the suite.
+
 ## Related Topics
 
 - See [C#: Testing](/csharp/testing/unit-testing) - TUnit, TUnit.Mocks, and API tests
@@ -60,6 +65,7 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 - See [Architecture tests](/patterns/architecture-styles/architecture-tests)
 - See [Time-dependent code](/csharp/testing/time-dependent-code)
 - See [Entity Framework performance](/csharp/entity-framework/performance)
+- See [Verification](/ai-assisted-development/verification)
 
 ---
 

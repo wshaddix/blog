@@ -17,6 +17,11 @@ Each operation picks how up to date the data has to be.
 - TODO: A feed, a count, or a cache can lag. Say how far behind is still acceptable.
 - TODO: The caller that just wrote may need to read its own write even when everyone else can lag.
 
+## Reading your own writes with replicas
+
+- TODO: The call that just committed can be sent next to a replica that does not have that write yet.
+- TODO: Read that follow-up from the primary, or from a replica that has applied the write this caller made.
+
 ## Chosen per operation
 
 - TODO: Do not pick one mode for the whole product. The payment and the activity list are different decisions.
@@ -35,4 +40,4 @@ Each operation picks how up to date the data has to be.
 
 ---
 
-**Next:** [Failure and Degradation](/fundamentals/distributed-systems/failure-and-degradation)
+**Next:** [Caching](/fundamentals/distributed-systems/caching)

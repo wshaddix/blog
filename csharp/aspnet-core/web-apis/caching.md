@@ -37,6 +37,11 @@ A write that makes a cached read wrong.
 
 <!-- TODO: One API over a local cache and a distributed cache -->
 
+### Local copies across servers
+
+- TODO: Each server keeps an in-process copy in front of the shared cache.
+- TODO: Removing or replacing the entry on one server leaves the other servers' copies in place until they expire.
+
 ### Setup with Redis as L2
 
 <!-- TODO -->
@@ -60,6 +65,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Redis and caching](/databases/nosql/redis)
+- [Caching](/fundamentals/distributed-systems/caching)
 
 ---
 

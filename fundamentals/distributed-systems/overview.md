@@ -10,6 +10,7 @@ Work that spans more than one process, and the guarantees you give up when it do
 ## In this section
 
 - [Consistency](/fundamentals/distributed-systems/consistency) - How fresh a read has to be, chosen per operation
+- [Caching](/fundamentals/distributed-systems/caching) - Eviction, hit rate, and how coarse a cached value is
 - [Failure and degradation](/fundamentals/distributed-systems/failure-and-degradation) - Blast radius, retries, and what still works
 
 ## What to decide first

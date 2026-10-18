@@ -33,4 +33,4 @@ Understanding and allocating team capacity for sustainable delivery.
 
 ---
 
-**Continue to:** [Soft Skills](/career-development/soft-skills/technical-writing)
+**Continue to:** [Decision Making](/career-development/team-operations/decision-making)
