@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -173,6 +173,12 @@
 <!-- TODO: DB commit ok, publish fails / publish ok, ack lost -->
 <h3 id="why-exactly-once-is-really-at-least-once-plus-dedup">Why &quot;exactly-once&quot; is really at-least-once plus dedup</h3>
 <!-- TODO: What you can actually promise -->
+<h2 id="when-you-can-skip-it">When you can skip it</h2>
+<ul>
+<li>TODO: Skip a separate outbox when the state change is the only write, and no other system has to learn that it happened.</li>
+<li>TODO: Skip it when a missed message is acceptable and a later successful write repairs the gap.</li>
+<li>TODO: Use the outbox when another system must observe the change, and a crash between the save and the send would drop that fact.</li>
+</ul>
 <h2 id="transactional-outbox">Transactional outbox</h2>
 <!-- TODO: Write the message in the same transaction as the state change -->
 <h3 id="outboxmessages-table-schema">OutboxMessages table schema</h3>
@@ -181,6 +187,11 @@
 <!-- TODO: Interceptor converting domain events -->
 <h3 id="dispatcher">Dispatcher</h3>
 <!-- TODO: BackgroundService vs Hangfire recurring job; batching and locking (UPDLOCK, READPAST) -->
+<h3 id="postgresql-claim-query">PostgreSQL claim query</h3>
+<ul>
+<li>TODO: Claim a batch by taking only rows that are still unpublished, and leave rows another worker has already claimed.</li>
+<li>TODO: On PostgreSQL the claim is one statement that locks the chosen rows and returns them. A second worker&#x27;s claim returns a different batch.</li>
+</ul>
 <h3 id="cleanup-and-retention">Cleanup and retention</h3>
 <!-- TODO: How long outbox rows stay -->
 <h2 id="idempotent-consumer">Idempotent consumer</h2>

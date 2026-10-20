@@ -10,10 +10,16 @@ Continuous Integration and Continuous Delivery automate the path from code to pr
 
 ## Pipeline Stages
 
+### Headless review
+
+- TODO: A pipeline stage can start an agent with no chat session and give it the diff for that change.
+- TODO: The stage publishes a review comment. Merging the change stays a separate decision.
+
 ## Best Practices
 
 ## Practical Examples
 
+- See [Building a SaaS: Project Setup](/building-a-saas/01-project-setup/overview) - An automated review step
 - See [Building a SaaS: Deployment](/building-a-saas/11-deployment/overview) - CI/CD in practice
 
 ---

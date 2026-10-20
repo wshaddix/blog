@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,12 @@
 <li><strong>Enterprise-ready:</strong> Used by countless businesses for production systems</li>
 <li><strong>Active development:</strong> Regular language updates with new features</li>
 </ul>
+<h2 id="when-net-is-the-right-runtime">When .NET is the right runtime</h2>
+<ul>
+<li>TODO: Choose .NET when the team already works in C#, the host runs the runtime, and the libraries the product needs are on NuGet.</li>
+<li>TODO: Choose it for a long-lived API or worker that will use the ASP.NET Core and Entity Framework stack this site documents.</li>
+<li>TODO: Write the choice down when the workload&#x27;s ecosystem, latency budget, or deployment target points at a different runtime. The product decision for this walkthrough is <a href="../../building-a-saas/02-architecture-decisions/overview/#choosing-the-stack">Choosing the stack</a>.</li>
+</ul>
 <h2 id="whats-covered">What&#x27;s Covered</h2>
 <h3 id="language-basics">Language Basics</h3>
 <p>The foundation - syntax, types, and core features:</p>
@@ -274,6 +280,16 @@
                 <span class="card-compact-title">Concurrency</span>
             </div>
             <p class="card-compact-description">Concurrency is managing multiple tasks that can be in progress at the same time. Parallelism is actually executing multiple tasks simultaneously.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/02-architecture-decisions/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Good architecture enables teams to move fast while maintaining quality. Here we make key decisions for our SaaS platform.</p>
         </div>
     </a>
 </div>

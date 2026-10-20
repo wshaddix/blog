@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -174,10 +174,40 @@
 <p>Secrets, generated output, and a long log with one relevant line.</p>
 <h2 id="instruction-files">Instruction files</h2>
 <p><code translate="no" v-pre>AGENTS.md</code>, editor rules, and skills. Standing rules for this repository.</p>
+<h3 id="folder-scoped-files">Folder-scoped files</h3>
+<ul>
+<li>TODO: Put the rules for one area in a file in that folder, loaded when the agent works there.</li>
+<li>TODO: Keep a rule about one project next to that project. The root file stays the list of rules that apply to every task.</li>
+</ul>
+<h3 id="a-short-root-file">A short root file</h3>
+<ul>
+<li>TODO: The root file names the rules that are true everywhere, and points at the folder files for the rest.</li>
+<li>TODO: Keep it short enough to read in one pass. Split it when it has grown into a manual.</li>
+</ul>
+<h2 id="skills">Skills</h2>
+<ul>
+<li>TODO: A prompt you paste on every similar task belongs in a skill: the steps and the constraints, written once and invoked by name.</li>
+<li>TODO: Leave a one-off request as a prompt. Promote it after the same steps have been worth repeating.</li>
+</ul>
 <h2 id="hooks">Hooks</h2>
 <ul>
 <li>TODO: A hook runs at a fixed moment, such as before a tool call or after a file write.</li>
 <li>TODO: Put a rule in a hook when it has to run every time, not only when the model remembers a file.</li>
+</ul>
+<h3 id="format-after-an-edit">Format after an edit</h3>
+<ul>
+<li>TODO: Run the formatter when a file write finishes, so the style rules are applied by the tool.</li>
+<li>TODO: Stop the step when the formatter cannot write the file, and hand that file back to a person.</li>
+</ul>
+<h3 id="test-gate-before-finishing">Test gate before finishing</h3>
+<ul>
+<li>TODO: Run the tests before the agent is allowed to treat the task as done.</li>
+<li>TODO: A failing run keeps the task open. The gate passes when the tests pass.</li>
+</ul>
+<h3 id="deny-edits-to-tests">Deny edits to tests</h3>
+<ul>
+<li>TODO: When the task is to make the current tests pass, block edits to those tests.</li>
+<li>TODO: Changing a test is a separate decision a person makes. The agent&#x27;s job on that task is to satisfy the tests as they stand.</li>
 </ul>
 <h2 id="subagents">Subagents</h2>
 <ul>
@@ -198,6 +228,7 @@
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../using-mcp/">Using MCP</a></li>
+<li><a href="../../building-a-saas/01-project-setup/overview/">Building a SaaS: Project Setup</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../verification/">Verification</a></p>
@@ -211,6 +242,16 @@
                 <span class="card-compact-title">AI-Assisted Development</span>
             </div>
             <p class="card-compact-description">How to use an assistant while you design, write, and review software. The assistant is a tool in the loop. You still own the change.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/01-project-setup/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">A well-organized project structure sets the foundation for maintainability and scalability.</p>
         </div>
     </a>
 </div>

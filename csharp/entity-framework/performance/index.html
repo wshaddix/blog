@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -181,6 +181,11 @@
 <!-- TODO: Logging SQL, profiling tools -->
 <h2 id="where-the-query-actually-runs">Where the query actually runs</h2>
 <!-- TODO: IQueryable vs IEnumerable boundary -->
+<h3 id="counting-round-trips">Counting round trips</h3>
+<ul>
+<li>TODO: Each time the code walks an <code translate="no" v-pre>IQueryable</code>, that walk is its own round trip. Walking the same query again pays again.</li>
+<li>TODO: Read the SQL log and count the trips before tuning the text of a single statement.</li>
+</ul>
 <h2 id="existence-checks-and-counting">Existence checks and counting</h2>
 <!-- TODO: Any translates to EXISTS, and counting pitfalls -->
 <h2 id="projections-versus-loading-entities">Projections versus loading entities</h2>
@@ -204,9 +209,16 @@
 <li>TODO: Saving on every iteration pays a transaction and a round trip per row.</li>
 <li>TODO: Stage the rows and save once, unless one row must commit before the next row starts.</li>
 </ul>
+<h2 id="streaming-versus-buffering">Streaming versus buffering</h2>
+<ul>
+<li>TODO: Materialize a query once when later code needs the same rows. Walking it a second time sends it a second time.</li>
+<li>TODO: A streaming reader stays open until the loop finishes. Release it before an await that does other I/O, such as sending a notification.</li>
+<li>TODO: Buffer a small result you still need after the connection returns to the pool. Stream when holding every row would cost more than the extra round trips.</li>
+</ul>
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
 <li>See <a href="../../../building-a-saas/07-data-layer/overview/">Building a SaaS: Data Layer</a> - Performance in practice</li>
+<li>See <a href="../../../building-a-saas/08-background-jobs/overview/">Building a SaaS: Background Jobs</a> - Notification jobs</li>
 <li>See <a href="../../../building-a-saas/10-testing-strategy/overview/">Building a SaaS: Testing Strategy</a> - Test data for tenants of different sizes</li>
 </ul>
 <hr>
@@ -261,6 +273,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">The data layer connects your domain model to the database. Done right, it's reliable and performant.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/08-background-jobs/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Not everything should happen in the request/response cycle. Background jobs handle async work.</p>
         </div>
     </a>
 </div>

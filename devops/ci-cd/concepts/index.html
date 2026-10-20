@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -175,10 +175,16 @@
 <!-- TODO: Automatic production deploys, feature flags -->
 <h2 id="pipeline-stages">Pipeline Stages</h2>
 <!-- TODO: Build, test, deploy, typical pipeline structure -->
+<h3 id="headless-review">Headless review</h3>
+<ul>
+<li>TODO: A pipeline stage can start an agent with no chat session and give it the diff for that change.</li>
+<li>TODO: The stage publishes a review comment. Merging the change stays a separate decision.</li>
+</ul>
 <h2 id="best-practices">Best Practices</h2>
 <!-- TODO: Fast feedback, idempotent deployments, rollback capability -->
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
+<li>See <a href="../../../building-a-saas/01-project-setup/overview/">Building a SaaS: Project Setup</a> - An automated review step</li>
 <li>See <a href="../../../building-a-saas/11-deployment/overview/">Building a SaaS: Deployment</a> - CI/CD in practice</li>
 </ul>
 <hr>
@@ -186,6 +192,16 @@
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/building-a-saas/01-project-setup/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">A well-organized project structure sets the foundation for maintainability and scalability.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/building-a-saas/11-deployment/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
@@ -203,6 +219,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">DevOps bridges development and operations, focusing on automation, collaboration, and continuous delivery.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/tools/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Tools</span>
+            </div>
+            <p class="card-compact-description">The categories of assistant you will meet. Product names change. The categories do not.</p>
         </div>
     </a>
 </div>

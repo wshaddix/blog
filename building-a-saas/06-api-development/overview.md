@@ -11,6 +11,8 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - Error handling
 - API versioning
 - OpenAPI documentation (built-in generator, Scalar or Swagger UI)
+- Rate limits per plan
+- An MCP endpoint for tenants
 
 ## API Design Principles
 
@@ -30,14 +32,26 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 ## Idempotency keys
 
+## Rate limits per plan
+
+- TODO: A free plan and a paid plan carry different limits. The partition includes the plan, along with the caller.
+- TODO: Document the limit, the window, and what the client does with a 429.
+
 ## APIs called by agents
 
 - TODO: Some commands are invoked by a model that picked a tool. Name the inputs, the errors, and whether a retry is safe.
 - TODO: Require an idempotency key on those writes, and return the first result when the same key comes back.
 
+## An MCP endpoint for tenants
+
+- TODO: A tenant-facing MCP endpoint is another API surface beside the HTTP API that agents call. It authenticates the caller and stays inside that tenant's data.
+- TODO: Apply the same idempotency rule on its writes that the HTTP API uses.
+
 ## Related Topics
 
 - See [ASP.NET Core: Web APIs](/csharp/aspnet-core/web-apis/overview)
+- See [Rate limiting](/csharp/aspnet-core/web-apis/rate-limiting)
+- See [MCP authentication](/csharp/mcp/authentication)
 - See [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents)
 - See [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests)
 - See [Caching](/csharp/aspnet-core/web-apis/caching)

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -172,6 +172,36 @@
 <p>A limit per user, per API key, or per IP. Pick the identity you actually have.</p>
 <h2 id="algorithms">Algorithms</h2>
 <p>Fixed window, sliding window, token bucket, and concurrency.</p>
+<h3 id="fixed-window">Fixed window</h3>
+<ul>
+<li>TODO: Count calls inside a window that opens on a clock boundary, such as the start of a minute.</li>
+<li>TODO: The counter returns to zero when the window ends, so traffic at the end of one window and the start of the next is counted apart.</li>
+</ul>
+<h3 id="sliding-window">Sliding window</h3>
+<ul>
+<li>TODO: Combine the current window with the unused portion of the previous window, weighted by how far the current window has moved.</li>
+<li>TODO: A burst that crosses the boundary still counts against the limit.</li>
+</ul>
+<h3 id="token-bucket">Token bucket</h3>
+<ul>
+<li>TODO: The bucket holds tokens and refills at a steady rate. A call spends a token.</li>
+<li>TODO: The bucket size is the burst you allow. The refill rate is the sustained rate.</li>
+</ul>
+<h3 id="concurrency">Concurrency</h3>
+<ul>
+<li>TODO: Count calls in flight. A slot frees when the call finishes, independent of the clock.</li>
+<li>TODO: Use it when the scarce resource is work happening at once, such as one expensive endpoint.</li>
+</ul>
+<h2 id="choosing-per-endpoint">Choosing per endpoint</h2>
+<ul>
+<li>TODO: Keep a global limit for the process, and give an expensive or sensitive endpoint its own policy.</li>
+<li>TODO: Name the partition that endpoint uses: user, API key, address, or plan. An anonymous route can partition only on what the request already carries.</li>
+</ul>
+<h2 id="queueing">Queueing</h2>
+<ul>
+<li>TODO: Queue a call that arrives over the limit until a slot frees, up to a maximum number of waiting calls and a maximum wait.</li>
+<li>TODO: Past that cap, reject the call with 429 and a Retry-After value the client can honor.</li>
+</ul>
 <h2 id="rejection">Rejection</h2>
 <p>A 429, a Retry-After header, and a body the client can read.</p>
 <h2 id="where-it-sits">Where it sits</h2>
@@ -183,6 +213,7 @@
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../../authorization/overview/">Authorization</a></li>
+<li><a href="../../../../building-a-saas/06-api-development/overview/">Building a SaaS: API Development</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../pagination/">Pagination</a></p>
@@ -206,6 +237,16 @@
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
         </div>
     </a>
 </div>

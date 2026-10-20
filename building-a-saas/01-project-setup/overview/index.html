@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,9 @@
 <li>CI pipeline foundation</li>
 <li>Directory.Build.props, central package management, and EditorConfig</li>
 <li>Aspire AppHost for local dependencies</li>
+<li>Target framework and upgrades</li>
+<li>Agent rules in the repo</li>
+<li>An automated review step</li>
 </ul>
 <h2 id="solution-structure">Solution Structure</h2>
 <!-- TODO: Multi-project solution, separation of concerns -->
@@ -193,10 +196,30 @@
 <!-- TODO: .editorconfig, analyzers, and dotnet format in CI -->
 <h2 id="aspire-apphost">Aspire AppHost</h2>
 <!-- TODO: SQL, Redis, API, worker, and the dashboard -->
+<h2 id="target-framework-and-upgrades">Target framework and upgrades</h2>
+<ul>
+<li>TODO: The solution targets the current LTS. Try a newer release candidate on a branch, and ship the framework the product has chosen.</li>
+<li>TODO: Write down what an upgrade re-tests before the target framework changes.</li>
+</ul>
+<h2 id="agent-rules-in-the-repo">Agent rules in the repo</h2>
+<ul>
+<li>TODO: Keep the rules the agent follows in the repository: a short root file, a file beside the code it governs, and hooks that run even when the model skips a file.</li>
+<li>TODO: A hook formats after an edit, runs the tests before the task is called done, and blocks edits to the tests when the task is to make those tests pass.</li>
+<li>TODO: A folder file holds the rules for that folder. The root file stays short enough that a person will still read it.</li>
+</ul>
+<h2 id="automated-review-step">Automated review step</h2>
+<ul>
+<li>TODO: Run the agent with no chat, from a git hook or from the pipeline, and give it the diff to review.</li>
+<li>TODO: The step comments on the change. Merging stays with the person who reviews it.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/language-basics/projects-and-solutions/">Projects and Solutions</a></li>
 <li>See <a href="../../../csharp/platform/aspire/">.NET Aspire</a></li>
+<li>See <a href="../../../csharp/advanced-features/modern-csharp/">Modern C#</a></li>
+<li>See <a href="../../../ai-assisted-development/context-and-instructions/">Context and instructions</a></li>
+<li>See <a href="../../../ai-assisted-development/tools/">Tools</a></li>
+<li>See <a href="../../../devops/ci-cd/concepts/">CI/CD concepts</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../02-architecture-decisions/overview/">Chapter 2: Architecture Decisions</a></p>
@@ -224,6 +247,36 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/devops/ci-cd/concepts/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">CI/CD Concepts</span>
+            </div>
+            <p class="card-compact-description">Continuous Integration and Continuous Delivery automate the path from code to production.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/context-and-instructions/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Context and Instructions</span>
+            </div>
+            <p class="card-compact-description">The model only knows what is in the window. You decide what that is.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/advanced-features/modern-csharp/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Modern C#</span>
+            </div>
+            <p class="card-compact-description">Language features you will see in current .NET code. Each one is small. Together they are the dialect this site uses.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/building-a-saas/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -240,6 +293,16 @@
                 <span class="card-compact-title">Recipes</span>
             </div>
             <p class="card-compact-description">Short Git sequences for everyday work.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/tools/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Tools</span>
+            </div>
+            <p class="card-compact-description">The categories of assistant you will meet. Product names change. The categories do not.</p>
         </div>
     </a>
 </div>

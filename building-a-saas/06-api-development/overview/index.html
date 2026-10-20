@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,8 @@
 <li>Error handling</li>
 <li>API versioning</li>
 <li>OpenAPI documentation (built-in generator, Scalar or Swagger UI)</li>
+<li>Rate limits per plan</li>
+<li>An MCP endpoint for tenants</li>
 </ul>
 <h2 id="api-design-principles">API Design Principles</h2>
 <!-- TODO: Resource naming, HTTP methods, status codes -->
@@ -195,14 +197,26 @@
 <!-- TODO: 202 Accepted and a status resource for work that outlives the request -->
 <h2 id="idempotency-keys">Idempotency keys</h2>
 <!-- TODO: An Idempotency-Key header so a retried POST returns the first result -->
+<h2 id="rate-limits-per-plan">Rate limits per plan</h2>
+<ul>
+<li>TODO: A free plan and a paid plan carry different limits. The partition includes the plan, along with the caller.</li>
+<li>TODO: Document the limit, the window, and what the client does with a 429.</li>
+</ul>
 <h2 id="apis-called-by-agents">APIs called by agents</h2>
 <ul>
 <li>TODO: Some commands are invoked by a model that picked a tool. Name the inputs, the errors, and whether a retry is safe.</li>
 <li>TODO: Require an idempotency key on those writes, and return the first result when the same key comes back.</li>
 </ul>
+<h2 id="an-mcp-endpoint-for-tenants">An MCP endpoint for tenants</h2>
+<ul>
+<li>TODO: A tenant-facing MCP endpoint is another API surface beside the HTTP API that agents call. It authenticates the caller and stays inside that tenant&#x27;s data.</li>
+<li>TODO: Apply the same idempotency rule on its writes that the HTTP API uses.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/overview/">ASP.NET Core: Web APIs</a></li>
+<li>See <a href="../../../csharp/aspnet-core/web-apis/rate-limiting/">Rate limiting</a></li>
+<li>See <a href="../../../csharp/mcp/authentication/">MCP authentication</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/apis-for-agents/">APIs for agents</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/idempotent-requests/">Idempotent requests</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/caching/">Caching</a></li>
@@ -256,6 +270,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/csharp/mcp/authentication/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">MCP Authentication</span>
+            </div>
+            <p class="card-compact-description">A local stdio server runs as the user. A remote HTTP server has to know who is calling.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/building-a-saas/05-multi-tenancy/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -282,6 +306,16 @@
                 <span class="card-compact-title">Polling, Server-Sent Events, and Async Request-Reply</span>
             </div>
             <p class="card-compact-description">Ways to deliver a result after the first request has returned.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/rate-limiting/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Rate Limiting</span>
+            </div>
+            <p class="card-compact-description">The built-in rate limiter slows a caller down before they crowd out everyone else.</p>
         </div>
     </a>
 </div>

@@ -28,6 +28,11 @@ Paste the compiler error or the test output. Do not restate the whole task.
 
 A definition of done, and a point where you take the keyboard back.
 
+## Checkpoints
+
+- TODO: A checkpoint is a snapshot of the agent session, so you can return the conversation and its edits to an earlier point in that session.
+- TODO: A git commit is the history of the repository. Restore a checkpoint to undo a wrong turn in the session. Commit when the change is one you mean to keep.
+
 ## Example
 
 A worked example will go here. When an example produces more than about 30 lines of C#, that code will live in a companion `.cs` file next to this page.

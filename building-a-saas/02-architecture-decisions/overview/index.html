@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -172,6 +172,8 @@
 <li>Layered architecture choices</li>
 <li>When to use which patterns</li>
 <li>Monolith vs microservices (spoiler: we start monolith)</li>
+<li>When a module leaves the monolith</li>
+<li>Choosing the stack</li>
 <li>CQRS and when it makes sense</li>
 <li>Dependency injection setup</li>
 </ul>
@@ -179,8 +181,18 @@
 <!-- TODO: Clean Architecture / Vertical Slices hybrid -->
 <h2 id="why-monolith-first">Why Monolith First?</h2>
 <!-- TODO: Premature optimization, splitting later -->
+<h2 id="choosing-the-stack">Choosing the stack</h2>
+<ul>
+<li>TODO: Pick .NET when the team will live in this language, the host runs it, and the libraries you need already exist for it.</li>
+<li>TODO: Record the workload that would move the choice to another runtime, and why this product stays on .NET.</li>
+</ul>
 <h2 id="modular-monolith">Modular monolith</h2>
 <!-- TODO: Modules that own their schema, with vertical slices inside each module -->
+<h2 id="when-a-module-leaves">When a module leaves</h2>
+<ul>
+<li>TODO: The first module to leave is the one whose contract and data can move without dragging the rest of the process along.</li>
+<li>TODO: Keep a module in-process while other modules still share its transaction or read its tables.</li>
+</ul>
 <h2 id="calls-between-modules">Calls between modules</h2>
 <ul>
 <li>TODO: A module calls another through its public contract, in process, or by publishing an event.</li>
@@ -210,6 +222,7 @@
 </ol>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
+<li>See <a href="../../../csharp/overview/">C# and .NET</a></li>
 <li>See <a href="../../../patterns/architecture-styles/modular-monolith/">Modular monolith</a></li>
 <li>See <a href="../../../patterns/integration-patterns/synchronous-call-chains/">Synchronous call chains</a></li>
 <li>See <a href="../../../fundamentals/distributed-systems/consistency/">Consistency</a></li>
@@ -299,6 +312,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">C# is a modern, object-oriented programming language developed by Microsoft. Combined with the .NET platform, it's one of the most versatile ecosystems for building applications.</p>
         </div>
     </a>
 </div>

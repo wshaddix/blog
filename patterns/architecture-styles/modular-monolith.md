@@ -34,6 +34,11 @@ One deployable, divided into modules that own their data and their features.
 
 ## Moving a module out later
 
+### The first module to extract
+
+- TODO: Extract the module whose public contract and owned data can move together, while the rest of the process keeps running.
+- TODO: Leave a module in-process while other modules still read its tables or share its transaction.
+
 ## Practical Examples
 
 - See [Building a SaaS: Architecture Decisions](/building-a-saas/02-architecture-decisions/overview) - The monolith, split into modules

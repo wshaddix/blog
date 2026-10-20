@@ -16,6 +16,11 @@ Avoiding common performance pitfalls.
 
 ## Where the query actually runs
 
+### Counting round trips
+
+- TODO: Each time the code walks an `IQueryable`, that walk is its own round trip. Walking the same query again pays again.
+- TODO: Read the SQL log and count the trips before tuning the text of a single statement.
+
 ## Existence checks and counting
 
 ## Projections versus loading entities
@@ -39,9 +44,16 @@ Avoiding common performance pitfalls.
 - TODO: Saving on every iteration pays a transaction and a round trip per row.
 - TODO: Stage the rows and save once, unless one row must commit before the next row starts.
 
+## Streaming versus buffering
+
+- TODO: Materialize a query once when later code needs the same rows. Walking it a second time sends it a second time.
+- TODO: A streaming reader stays open until the loop finishes. Release it before an await that does other I/O, such as sending a notification.
+- TODO: Buffer a small result you still need after the connection returns to the pool. Stream when holding every row would cost more than the extra round trips.
+
 ## Practical Examples
 
 - See [Building a SaaS: Data Layer](/building-a-saas/07-data-layer/overview) - Performance in practice
+- See [Building a SaaS: Background Jobs](/building-a-saas/08-background-jobs/overview) - Notification jobs
 - See [Building a SaaS: Testing Strategy](/building-a-saas/10-testing-strategy/overview) - Test data for tenants of different sizes
 
 ---

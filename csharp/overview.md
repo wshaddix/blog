@@ -11,6 +11,12 @@ C# is a modern, object-oriented programming language developed by Microsoft. Com
 - **Enterprise-ready:** Used by countless businesses for production systems
 - **Active development:** Regular language updates with new features
 
+## When .NET is the right runtime
+
+- TODO: Choose .NET when the team already works in C#, the host runs the runtime, and the libraries the product needs are on NuGet.
+- TODO: Choose it for a long-lived API or worker that will use the ASP.NET Core and Entity Framework stack this site documents.
+- TODO: Write the choice down when the workload's ecosystem, latency budget, or deployment target points at a different runtime. The product decision for this walkthrough is [Choosing the stack](/building-a-saas/02-architecture-decisions/overview#choosing-the-stack).
+
 ## What's Covered
 
 ### Language Basics

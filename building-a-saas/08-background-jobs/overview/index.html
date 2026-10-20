@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -184,6 +184,12 @@
 <li>Scheduled maintenance</li>
 <li>Webhook processing</li>
 </ul>
+<h3 id="notification-jobs">Notification jobs</h3>
+<ul>
+<li>TODO: A job that notifies many people reads a large set of rows, then waits on the mail or push provider.</li>
+<li>TODO: Count the queries that read that set, and walk the rows once.</li>
+<li>TODO: Release the database reader before the await that sends the notification, so a slow provider leaves the connection free.</li>
+</ul>
 <h2 id="job-processing-options">Job Processing Options</h2>
 <retype-table copy-text="| Option | Pros | Cons |
 |--------|------|------|
@@ -241,6 +247,7 @@
 <li>See <a href="../../../patterns/integration-patterns/outbox-and-idempotent-consumer/">Outbox and the idempotent consumer</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/background-services/">Background services</a></li>
 <li>See <a href="../../../csharp/entity-framework/dbcontext/">DbContext</a></li>
+<li>See <a href="../../../csharp/entity-framework/performance/">Entity Framework performance</a></li>
 <li>See <a href="../../../patterns/integration-patterns/sagas/">Sagas</a></li>
 </ul>
 <hr>
@@ -339,12 +346,12 @@
     </a>
 </div>
 <div class="card-compact-container">
-    <a href="/patterns/integration-patterns/overview/" class="group card-compact no-link">
+    <a href="/csharp/entity-framework/performance/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
-                <span class="card-compact-title">Overview</span>
+                <span class="card-compact-title">Performance</span>
             </div>
-            <p class="card-compact-description">This page is a catalog of names, not a lesson. Messaging shows up in practice in background services and in Building a SaaS: Background Jobs.</p>
+            <p class="card-compact-description">Avoiding common performance pitfalls.</p>
         </div>
     </a>
 </div>

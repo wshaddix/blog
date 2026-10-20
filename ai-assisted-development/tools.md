@@ -24,6 +24,11 @@ The same kind of loop in a terminal, useful for a repo-wide change.
 
 A pass over a pull request. A comment, not an approval.
 
+## Running an agent without a chat
+
+- TODO: A git hook or a pipeline job can start the agent with no one at the keyboard, and hand it the diff.
+- TODO: Limit that run to a review comment on the change. Committing, merging, and widening the task stay with a person.
+
 ## What to standardize
 
 One primary agent for a team, a written instruction file, and a rule for secrets.
@@ -35,6 +40,8 @@ A worked example will go here. When an example produces more than about 30 lines
 ## Related
 
 - [Techniques](/ai-assisted-development/techniques)
+- [CI/CD concepts](/devops/ci-cd/concepts)
+- [Building a SaaS: Project Setup](/building-a-saas/01-project-setup/overview)
 
 ---
 

@@ -16,10 +16,40 @@ Secrets, generated output, and a long log with one relevant line.
 
 `AGENTS.md`, editor rules, and skills. Standing rules for this repository.
 
+### Folder-scoped files
+
+- TODO: Put the rules for one area in a file in that folder, loaded when the agent works there.
+- TODO: Keep a rule about one project next to that project. The root file stays the list of rules that apply to every task.
+
+### A short root file
+
+- TODO: The root file names the rules that are true everywhere, and points at the folder files for the rest.
+- TODO: Keep it short enough to read in one pass. Split it when it has grown into a manual.
+
+## Skills
+
+- TODO: A prompt you paste on every similar task belongs in a skill: the steps and the constraints, written once and invoked by name.
+- TODO: Leave a one-off request as a prompt. Promote it after the same steps have been worth repeating.
+
 ## Hooks
 
 - TODO: A hook runs at a fixed moment, such as before a tool call or after a file write.
 - TODO: Put a rule in a hook when it has to run every time, not only when the model remembers a file.
+
+### Format after an edit
+
+- TODO: Run the formatter when a file write finishes, so the style rules are applied by the tool.
+- TODO: Stop the step when the formatter cannot write the file, and hand that file back to a person.
+
+### Test gate before finishing
+
+- TODO: Run the tests before the agent is allowed to treat the task as done.
+- TODO: A failing run keeps the task open. The gate passes when the tests pass.
+
+### Deny edits to tests
+
+- TODO: When the task is to make the current tests pass, block edits to those tests.
+- TODO: Changing a test is a separate decision a person makes. The agent's job on that task is to satisfy the tests as they stand.
 
 ## Subagents
 
@@ -46,6 +76,7 @@ A worked example will go here. When an example produces more than about 30 lines
 ## Related
 
 - [Using MCP](/ai-assisted-development/using-mcp)
+- [Building a SaaS: Project Setup](/building-a-saas/01-project-setup/overview)
 
 ---
 

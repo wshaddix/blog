@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845640692389">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813469459">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845640692389" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.845813469459" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845640692389" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813469459" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -172,6 +172,16 @@
 <p>The process identity is the user&#x27;s. Do not invent a second login.</p>
 <h2 id="remote-servers">Remote servers</h2>
 <p>A bearer token or OAuth, and what the server checks on each call.</p>
+<h3 id="entra-id">Entra ID</h3>
+<ul>
+<li>TODO: A remote MCP server can trust access tokens that Microsoft Entra ID issues for an API you register.</li>
+<li>TODO: The client asks for a token whose audience is that API. Accept the token when the audience matches this server.</li>
+</ul>
+<h3 id="token-checks">Token checks</h3>
+<ul>
+<li>TODO: On each call, check the issuer, the audience, the lifetime, and the signature. Cache the signing keys, and refresh them when a signature fails.</li>
+<li>TODO: Map the token to the tenant the tool may read. Refuse the call when that mapping is missing.</li>
+</ul>
 <h2 id="authorization">Authorization</h2>
 <p>A tool that reads one tenant&#x27;s data has to enforce that boundary.</p>
 <h2 id="secrets">Secrets</h2>
@@ -182,6 +192,7 @@
 <ul>
 <li><a href="../../aspnet-core/authentication/choosing-a-scheme/">Choosing a scheme</a></li>
 <li><a href="../../aspnet-core/authentication/jwt/">JWT</a></li>
+<li><a href="../../../building-a-saas/06-api-development/overview/">Building a SaaS: API Development</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../overview/">MCP Servers</a></p>
@@ -215,6 +226,16 @@
                 <span class="card-compact-title">MCP Servers</span>
             </div>
             <p class="card-compact-description">A Model Context Protocol server exposes tools, resources, and prompts to an AI client. In C# it is a hosted process, either on standard I/O or on HTTP.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
         </div>
     </a>
 </div>
