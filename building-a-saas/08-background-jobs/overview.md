@@ -24,6 +24,12 @@ Not everything should happen in the request/response cycle. Background jobs hand
 - Scheduled maintenance
 - Webhook processing
 
+### Notification jobs
+
+- TODO: A job that notifies many people reads a large set of rows, then waits on the mail or push provider.
+- TODO: Count the queries that read that set, and walk the rows once.
+- TODO: Release the database reader before the await that sends the notification, so a slow provider leaves the connection free.
+
 ## Job Processing Options
 
 | Option | Pros | Cons |
@@ -64,6 +70,7 @@ Not everything should happen in the request/response cycle. Background jobs hand
 - See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
 - See [Background services](/csharp/aspnet-core/web-apis/background-services)
 - See [DbContext](/csharp/entity-framework/dbcontext)
+- See [Entity Framework performance](/csharp/entity-framework/performance)
 - See [Sagas](/patterns/integration-patterns/sagas)
 
 ---

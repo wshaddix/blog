@@ -19,6 +19,12 @@ Saving state and sending a message are two writes, and either one can fail on it
 
 <!-- TODO: What you can actually promise -->
 
+## When you can skip it
+
+- TODO: Skip a separate outbox when the state change is the only write, and no other system has to learn that it happened.
+- TODO: Skip it when a missed message is acceptable and a later successful write repairs the gap.
+- TODO: Use the outbox when another system must observe the change, and a crash between the save and the send would drop that fact.
+
 ## Transactional outbox
 
 <!-- TODO: Write the message in the same transaction as the state change -->
@@ -34,6 +40,11 @@ Saving state and sending a message are two writes, and either one can fail on it
 ### Dispatcher
 
 <!-- TODO: BackgroundService vs Hangfire recurring job; batching and locking (UPDLOCK, READPAST) -->
+
+### PostgreSQL claim query
+
+- TODO: Claim a batch by taking only rows that are still unpublished, and leave rows another worker has already claimed.
+- TODO: On PostgreSQL the claim is one statement that locks the chosen rows and returns them. A second worker's claim returns a different batch.
 
 ### Cleanup and retention
 

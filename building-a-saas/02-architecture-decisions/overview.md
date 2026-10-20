@@ -12,6 +12,8 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 - Layered architecture choices
 - When to use which patterns
 - Monolith vs microservices (spoiler: we start monolith)
+- When a module leaves the monolith
+- Choosing the stack
 - CQRS and when it makes sense
 - Dependency injection setup
 
@@ -23,9 +25,19 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 
 <!-- TODO: Premature optimization, splitting later -->
 
+## Choosing the stack
+
+- TODO: Pick .NET when the team will live in this language, the host runs it, and the libraries you need already exist for it.
+- TODO: Record the workload that would move the choice to another runtime, and why this product stays on .NET.
+
 ## Modular monolith
 
 <!-- TODO: Modules that own their schema, with vertical slices inside each module -->
+
+## When a module leaves
+
+- TODO: The first module to leave is the one whose contract and data can move without dragging the rest of the process along.
+- TODO: Keep a module in-process while other modules still share its transaction or read its tables.
 
 ## Calls between modules
 
@@ -61,6 +73,7 @@ The public API stays JSON over HTTP. gRPC is a decision only when an internal cl
 
 ## Related Topics
 
+- See [C# and .NET](/csharp/overview)
 - See [Modular monolith](/patterns/architecture-styles/modular-monolith)
 - See [Synchronous call chains](/patterns/integration-patterns/synchronous-call-chains)
 - See [Consistency](/fundamentals/distributed-systems/consistency)

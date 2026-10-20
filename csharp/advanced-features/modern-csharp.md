@@ -41,6 +41,11 @@ Where the pattern-matching page goes deeper.
 
 <!-- TODO: What this site assumes, and what moved in later releases -->
 
+### .NET 11 RC2
+
+- TODO: A release candidate is a preview of the next runtime. Read what it changes, and keep the solution on the release you ship.
+- TODO: List which language and library changes from that candidate this site will adopt, and which ones wait for the final release.
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.
@@ -49,6 +54,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 - [Records](/csharp/advanced-features/records)
 - [Pattern matching](/csharp/advanced-features/pattern-matching)
+- [Building a SaaS: Project Setup](/building-a-saas/01-project-setup/overview)
 
 ---
 
