@@ -209,7 +209,7 @@ Stubs from `docs: stub the October 18 content-gap topics`. Source is the daily s
 | [Decision Making](career-development/team-operations/decision-making.md) | Delegating technical decisions: intent proposals, decision records, and automated guardrails | [Anton 2111396552887423407](https://x.com/i/status/2111396552887423407) | 2026-10-17 |
 | [Decision records](building-a-saas/02-architecture-decisions/overview.md#decision-records) | Decision records | [Anton 2111396552887423407](https://x.com/i/status/2111396552887423407) | 2026-10-17 |
 
-## 2026-10-19
+## 2026-10-19 (`d551145`)
 
 Stubs from `docs: stub the October 19 and 20 content-gap topics`. Sources are the daily summary of posts from 2026-10-18 and Stefan's newsletter from 2026-10-19. That summary cites a status id with a first name, not an X handle, so the links use `https://x.com/i/status/<id>`. The newsletter has no URL in the summary, so that source is plain text.
 
@@ -229,7 +229,7 @@ Stubs from `docs: stub the October 19 and 20 content-gap topics`. Sources are th
 | [When .NET is the right runtime](csharp/overview.md#when-net-is-the-right-runtime) | When .NET is the right runtime | [Anton 2111706343023198663](https://x.com/i/status/2111706343023198663) | 2026-10-18 |
 | [Choosing the stack](building-a-saas/02-architecture-decisions/overview.md#choosing-the-stack) | Choosing the stack | [Anton 2111706343023198663](https://x.com/i/status/2111706343023198663) | 2026-10-18 |
 
-## 2026-10-20
+## 2026-10-20 (`d551145`)
 
 Stubs from `docs: stub the October 19 and 20 content-gap topics`. Sources are the daily summary of posts from 2026-10-19 and Anton's newsletter from 2026-10-20. That summary cites a status id with a first name, not an X handle, so those links use `https://x.com/i/status/<id>`. Where the summary writes the handle `aspnetcore_news` next to the id, the link uses `https://x.com/aspnetcore_news/status/<id>`. The newsletter has no URL in the summary, so that source is plain text.
 
