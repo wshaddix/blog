@@ -39,6 +39,11 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 - TODO: The first module to leave is the one whose contract and data can move without dragging the rest of the process along.
 - TODO: Keep a module in-process while other modules still share its transaction or read its tables.
 
+### Strangling the module out
+
+- TODO: Send one slice of the module's calls to the new process and leave the rest on the path that already runs.
+- TODO: Widen the slice after the new path is the one callers use, and remove the old path when it has no traffic.
+
 ## Calls between modules
 
 - TODO: A module calls another through its public contract, in process, or by publishing an event.
@@ -75,6 +80,7 @@ The public API stays JSON over HTTP. gRPC is a decision only when an internal cl
 
 - See [C# and .NET](/csharp/overview)
 - See [Modular monolith](/patterns/architecture-styles/modular-monolith)
+- See [Distributed building blocks](/patterns/architecture-styles/distributed-building-blocks)
 - See [Synchronous call chains](/patterns/integration-patterns/synchronous-call-chains)
 - See [Consistency](/fundamentals/distributed-systems/consistency)
 - See [Decision making](/career-development/team-operations/decision-making)

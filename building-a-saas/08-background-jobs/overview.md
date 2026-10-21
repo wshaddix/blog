@@ -58,6 +58,11 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 <!-- TODO: Compensation that fails, and a parked state someone has to resolve -->
 
+## Workflows that wait
+
+- TODO: A trial end, a dunning sequence, and an approval are waits. Each one stores a deadline and the path to take when nobody answers in time.
+- TODO: The deadline is part of the workflow record, so a restart keeps it and runs the timeout path once.
+
 ## A context in a background worker
 
 - TODO: A job has no HTTP request, so it has no request-scoped context.
@@ -72,6 +77,7 @@ Not everything should happen in the request/response cycle. Background jobs hand
 - See [DbContext](/csharp/entity-framework/dbcontext)
 - See [Entity Framework performance](/csharp/entity-framework/performance)
 - See [Sagas](/patterns/integration-patterns/sagas)
+- See [Durable workflows](/patterns/integration-patterns/durable-workflows)
 
 ---
 

@@ -55,6 +55,10 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 <!-- TODO: An Idempotency-Key header so a retried POST returns the first result -->
 
+### Keys per tenant
+
+- TODO: Store the key with the tenant. A unique index on tenant plus key keeps one tenant's retry from sharing another tenant's outcome.
+
 ## Rate limits per plan
 
 - TODO: A free plan and a paid plan carry different limits. The partition includes the plan, along with the caller.
@@ -70,6 +74,12 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - TODO: A tenant-facing MCP endpoint is another API surface beside the HTTP API that agents call. It authenticates the caller and stays inside that tenant's data.
 - TODO: Apply the same idempotency rule on its writes that the HTTP API uses.
 
+## Outgoing webhooks for tenants
+
+- TODO: A tenant registers a callback URL and a secret, and receives events for that tenant only.
+- TODO: Sign the raw body with that subscriber's secret, and retry a delivery that failed until the attempt limit.
+- TODO: Refuse a callback URL that resolves to a private or internal address before the request is sent.
+
 ## Related Topics
 
 - See [ASP.NET Core: Web APIs](/csharp/aspnet-core/web-apis/overview)
@@ -77,6 +87,7 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - See [MCP authentication](/csharp/mcp/authentication)
 - See [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents)
 - See [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests)
+- See [Webhooks](/csharp/aspnet-core/web-apis/webhooks)
 - See [Caching](/csharp/aspnet-core/web-apis/caching)
 - See [Caching fundamentals](/fundamentals/distributed-systems/caching)
 - See [Pagination](/csharp/aspnet-core/web-apis/pagination)

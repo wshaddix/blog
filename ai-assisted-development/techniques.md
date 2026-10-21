@@ -29,6 +29,12 @@ Name the file, the type, and the convention. Do not make the model guess the arc
 
 Paste the compiler error or the test output. Do not restate the whole task.
 
+## Investigating a live failure
+
+- TODO: Scope the brief to one failure: the tenant, the route, and the time window.
+- TODO: Pass the trace id so the investigation starts from that trace.
+- TODO: Write what the trace and the logs show, and keep the suspected cause beside that evidence until the evidence supports it.
+
 ## Stop conditions
 
 A definition of done, and a point where you take the keyboard back.
@@ -47,6 +53,7 @@ A worked example will go here. When an example produces more than about 30 lines
 - [Prompting](/ai-assisted-development/prompting)
 - [Verification](/ai-assisted-development/verification)
 - [Testing strategy](/sdlc/testing-strategy)
+- [Observability](/csharp/aspnet-core/observability/overview)
 
 ---
 

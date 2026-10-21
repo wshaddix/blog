@@ -16,11 +16,13 @@ These are lessons. The long lists further down this section are catalogs of name
 - [Decorator](/patterns/coding-patterns/decorator) - The shape behind middleware and HTTP handlers
 - [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer) - One transaction for the state change and the message
 - [Sagas](/patterns/integration-patterns/sagas) - Multi-step workflows across services
+- [Durable workflows](/patterns/integration-patterns/durable-workflows) - A workflow that resumes after a crash and waits with a deadline
 - [Choreography and orchestration](/patterns/integration-patterns/choreography-vs-orchestration) - Who decides the next step
 - [Synchronous call chains](/patterns/integration-patterns/synchronous-call-chains) - A request that waits on the next module
 - [Modular monolith](/patterns/architecture-styles/modular-monolith) - One deployable, a schema and a `DbContext` per module, and how to find the boundaries
 - [Architecture tests](/patterns/architecture-styles/architecture-tests) - Fail the build when a boundary is crossed
 - [Event sourcing and change data capture](/patterns/architecture-styles/event-sourcing-and-cdc) - A stream of facts
+- [Distributed building blocks](/patterns/architecture-styles/distributed-building-blocks) - A gateway, discovery, a sidecar, a strangler, and the reason each would come back out
 
 ## What's Covered
 
@@ -48,6 +50,7 @@ Patterns for connecting systems:
 - [Messaging Patterns](/patterns/integration-patterns/overview) - Async communication
 - [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer) - State and the message commit together
 - [Sagas](/patterns/integration-patterns/sagas) - Multi-step workflows across services
+- [Durable workflows](/patterns/integration-patterns/durable-workflows) - A workflow that resumes after a crash and waits with a deadline
 - [Choreography and orchestration](/patterns/integration-patterns/choreography-vs-orchestration) - Who decides the next step
 - [Synchronous call chains](/patterns/integration-patterns/synchronous-call-chains) - A request that waits on the next module
 
@@ -57,6 +60,7 @@ Patterns for connecting systems:
 - [Modular monolith](/patterns/architecture-styles/modular-monolith) - Modules, slices, and data ownership
 - [Architecture tests](/patterns/architecture-styles/architecture-tests) - Enforcing boundaries
 - [Event sourcing and change data capture](/patterns/architecture-styles/event-sourcing-and-cdc) - A stream of facts
+- [Distributed building blocks](/patterns/architecture-styles/distributed-building-blocks) - A gateway, discovery, a sidecar, a strangler, and the reason each would come back out
 
 ### Refactoring Patterns
 
