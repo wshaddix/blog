@@ -65,6 +65,13 @@ Business rules stay on the server. Clients render and call.
 
 How to write down a decision and the option you did not take.
 
+## Decisions you can undo and ones you can't
+
+- TODO: A choice you can reverse, such as a cache, a queue, or a deploy layout, can be made quickly.
+- TODO: A choice that is costly to undo, such as the shape of stored data, a public contract, or a consistency promise, gets a slower decision.
+- TODO: Leave a seam so the next change replaces one part. The prototype and the later system do not have to share every choice.
+- TODO: Write the condition that would make you take the next step before you need it.
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

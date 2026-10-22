@@ -69,6 +69,12 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - TODO: Some commands are invoked by a model that picked a tool. Name the inputs, the errors, and whether a retry is safe.
 - TODO: Require an idempotency key on those writes, and return the first result when the same key comes back.
 
+### Scoping what an agent's key can touch
+
+- TODO: The credential an agent uses can read the rows the task named and write to the store the task named. The rest of the API stays closed.
+- TODO: The tenant and the date range are fixed on the task. A later turn cannot change them by asking.
+- TODO: A call outside that scope fails in the API, including when the model requested it.
+
 ## An MCP endpoint for tenants
 
 - TODO: A tenant-facing MCP endpoint is another API surface beside the HTTP API that agents call. It authenticates the caller and stays inside that tenant's data.

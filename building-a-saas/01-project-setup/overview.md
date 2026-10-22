@@ -63,6 +63,12 @@ A well-organized project structure sets the foundation for maintainability and s
 - TODO: A hook formats after an edit, runs the tests before the task is called done, and blocks edits to the tests when the task is to make those tests pass.
 - TODO: A folder file holds the rules for that folder. The root file stays short enough that a person will still read it.
 
+### Allowed and denied commands
+
+- TODO: The rules name the commands an agent may run without asking, and the commands that are refused.
+- TODO: Build and test are allowed. A push, production settings, and secret files are denied.
+- TODO: The deny is enforced by the tool. A sentence in the instruction file is not the only control.
+
 ## Automated review step
 
 - TODO: Run the agent with no chat, from a git hook or from the pipeline, and give it the diff to review.

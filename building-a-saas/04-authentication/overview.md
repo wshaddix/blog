@@ -64,6 +64,12 @@ Security is non-negotiable. We'll implement robust authentication that's also us
 
 <!-- TODO: Named permissions on the caller, enforced with a policy -->
 
+## Moving tenants to a new identity provider
+
+- TODO: Accept a token from the current provider and from the new one until every tenant has moved.
+- TODO: Record which provider a tenant uses, and send that tenant to the new provider on its turn.
+- TODO: Remove the old scheme after the last tenant has signed in with the new one.
+
 ## Related Topics
 
 - See [ASP.NET Core: Authentication](/csharp/aspnet-core/authentication/overview)

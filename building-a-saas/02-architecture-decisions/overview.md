@@ -69,6 +69,12 @@ The public API stays JSON over HTTP. gRPC is a decision only when an internal cl
 - TODO: A proposal from the team states the intent and the options. The record states the choice and what was turned down.
 - TODO: A check in the build fails when new code crosses that choice, so the record is not the only thing holding it.
 
+### Triggers for the next step
+
+- TODO: The record names the measurement that would change the decision, such as a latency figure or a number of tenants.
+- TODO: Write that trigger while the choice is still easy to revisit.
+- TODO: When the trigger is true, the record already says which part moves and which part stays.
+
 ## Key Principles
 
 1. **Simplicity first** - Don't add patterns until you need them

@@ -54,6 +54,12 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 <!-- TODO: The host stops, and in-flight work honors the token -->
 
+## One run across instances
+
+- TODO: A schedule that is registered on every instance will fire on every instance. Take one shared lock before the job body runs.
+- TODO: Hold the lock on a connection that stays open for the work. If that connection drops, another instance may take the lock while the first is still running, so the rest of the run has to be safe to repeat.
+- TODO: Record which occurrence finished. The lock does not remember that, and a later instance must not do the same occurrence again.
+
 ## When a saga needs a person
 
 <!-- TODO: Compensation that fails, and a parked state someone has to resolve -->

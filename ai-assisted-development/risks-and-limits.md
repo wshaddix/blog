@@ -29,6 +29,12 @@ Accepting a suggestion you cannot explain. The review page is the countermeasure
 
 What leaves the machine, and which product setting controls it.
 
+## Instructions hidden in data
+
+- TODO: A document, a ticket, or a tool result can contain a sentence that is written as an instruction.
+- TODO: That sentence does not widen the task, change the recipient, or add a tool.
+- TODO: When you review a run, look for a tool argument that was taken from that untrusted text.
+
 ## Example
 
 A worked example will go here. When an example produces more than about 30 lines of C#, that code will live in a companion `.cs` file next to this page.

@@ -33,6 +33,13 @@ Stopping the host stops the loop.
 
 <!-- TODO: Scheduled jobs with Quartz -->
 
+## More than one instance
+
+- TODO: A lock inside the process only covers that process. A second instance has its own lock and can start the same scheduled job.
+- TODO: Have every instance try one lock that lives outside the app, such as a PostgreSQL advisory lock. The instance that does not get the lock skips the run.
+- TODO: That lock lasts while its database connection holds it. A dropped connection lets another instance take the lock while work is still in flight.
+- TODO: Record the runs that finished. The lock does not, and a repeat of the same run has to be safe.
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

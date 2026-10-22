@@ -34,6 +34,12 @@ A pass over a pull request. A comment, not an approval.
 - TODO: A git hook or a pipeline job can start the agent with no one at the keyboard, and hand it the diff.
 - TODO: Limit that run to a review comment on the change. Committing, merging, and widening the task stay with a person.
 
+## Matching the model to the task
+
+- TODO: A mechanical edit uses a smaller, faster model. Ordinary changes use the model the team picked for that work. A hard problem uses the stronger model.
+- TODO: The strongest setting on every task is slow, and it tends to add structure the task did not ask for.
+- TODO: Write the pairing down, so a new session does not start on the strongest setting.
+
 ## What to standardize
 
 One primary agent for a team, a written instruction file, and a rule for secrets.

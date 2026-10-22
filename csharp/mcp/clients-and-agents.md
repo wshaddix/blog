@@ -52,6 +52,28 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 - TODO: Store the draft, who decided, when, and the tool call that followed.
 - TODO: Keep the record when the draft is rejected.
 
+## A gate in front of every tool
+
+The model may propose a tool call. The client decides whether that call is allowed.
+
+### Data is not instructions
+
+- TODO: A field on a row, a file, or a tool result is input. It does not add a rule for the run.
+- TODO: Text that says to ignore the task, or to send the data somewhere else, stays data.
+- TODO: Fix the limits when the run starts, such as the tenant and the date range, and keep those limits on a retry.
+
+### Run state outside the model
+
+- TODO: Store the run, its job id, and how far the work got, outside the model context, so a restart can resume from that record.
+- TODO: After a call times out, read the recorded outcome before calling the tool again.
+- TODO: Cap how long the run may last and how many times it may retry. A pending job is not done.
+
+### Proof before done
+
+- TODO: Done means the job succeeded and the expected output can be read. The model's last message is not that proof.
+- TODO: Check the account, the dates, and the format before telling the caller the result is ready.
+- TODO: Keep a check for the wrong account, for a restart in the middle, and for a job that succeeds without writing the output. Each check names the code that enforces it.
+
 ## More than one server
 
 <!-- TODO: Several MCP servers on one agent, and tool names that stay unique -->
