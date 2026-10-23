@@ -19,6 +19,12 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 
 <!-- TODO: Microsoft.Extensions.AI. The chat client is what the agent uses to talk to a model -->
 
+### A local model in development
+
+- TODO: In development the chat client calls a model running on the machine. In production the same client calls the hosted model.
+- TODO: The endpoint and the credential come from configuration. The agent code does not branch on which environment it is in.
+- TODO: Start that local model from the AppHost, as in [A local model as a dev resource](/building-a-saas/01-project-setup/overview#a-local-model-as-a-dev-resource).
+
 ### Typed results
 
 - TODO: Ask the model for a value that matches a type or a schema, not an open-ended paragraph.

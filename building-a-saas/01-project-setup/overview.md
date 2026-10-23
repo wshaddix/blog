@@ -52,6 +52,11 @@ A well-organized project structure sets the foundation for maintainability and s
 
 <!-- TODO: SQL, Redis, API, worker, and the dashboard -->
 
+### A local model as a dev resource
+
+- TODO: The AppHost starts a model on the developer machine and passes its address to the API, next to SQL and Redis.
+- TODO: The API reads that address from configuration. Production points the same setting at the hosted model, as in [A local model in development](/csharp/mcp/clients-and-agents#a-local-model-in-development).
+
 ## Target framework and upgrades
 
 - TODO: The solution targets the current LTS. Try a newer release candidate on a branch, and ship the framework the product has chosen.
@@ -73,6 +78,12 @@ A well-organized project structure sets the foundation for maintainability and s
 
 - TODO: Run the agent with no chat, from a git hook or from the pipeline, and give it the diff to review.
 - TODO: The step comments on the change. Merging stays with the person who reviews it.
+
+### A check that can block a commit
+
+- TODO: The hook can fail the commit, not only comment later on a pull request.
+- TODO: A secret in the diff stops the commit. A check that did not run stops it as well. A clean commit still waits for a person before it merges.
+- TODO: The hook is [Blocking a commit](/ai-assisted-development/tools#blocking-a-commit), and the secret scan is [Before it reaches the repo](/ai-assisted-development/risks-and-limits#before-it-reaches-the-repo).
 
 ## Related Topics
 

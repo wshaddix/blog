@@ -34,6 +34,12 @@ A pass over a pull request. A comment, not an approval.
 - TODO: A git hook or a pipeline job can start the agent with no one at the keyboard, and hand it the diff.
 - TODO: Limit that run to a review comment on the change. Committing, merging, and widening the task stay with a person.
 
+### Blocking a commit
+
+- TODO: The same hook can refuse the commit. A finding stops it, and so does a check that did not finish.
+- TODO: The agent reports what it found. It does not amend the commit or skip the hook.
+- TODO: A person fixes the change and commits again. Scanning for a secret is [Before it reaches the repo](/ai-assisted-development/risks-and-limits#before-it-reaches-the-repo). Wiring the hook into the product repo is [A check that can block a commit](/building-a-saas/01-project-setup/overview#a-check-that-can-block-a-commit).
+
 ## Matching the model to the task
 
 - TODO: A mechanical edit uses a smaller, faster model. Ordinary changes use the model the team picked for that work. A hard problem uses the stronger model.

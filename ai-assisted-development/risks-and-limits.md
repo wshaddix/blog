@@ -13,6 +13,12 @@ The failure modes that show up in a team that uses assistants every day.
 
 A prompt, a log, and a pasted config file are copies of the secret.
 
+### Before it reaches the repo
+
+- TODO: Scan the staged diff for a key, a connection string, or a token before the commit is stored.
+- TODO: A match blocks the commit. A scan that does not finish blocks it too. A skipped check is not a pass.
+- TODO: The hook that applies this rule is [Blocking a commit](/ai-assisted-development/tools#blocking-a-commit).
+
 ## Licenses and provenance
 
 Generated code can resemble code the model was trained on. You still publish it under your license.

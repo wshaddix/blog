@@ -69,6 +69,12 @@ The data layer connects your domain model to the database. Done right, it's reli
 - TODO: Give each module its own schema and its own `DbContext`.
 - TODO: Keep a module's queries inside its context. A join across those schemas belongs in a report.
 
+### A connection string per module
+
+- TODO: Point each module's `DbContext` at its own connection string and its own database login.
+- TODO: Grant that login the module's schema only, so the database enforces the boundary in [A login per module](/patterns/architecture-styles/modular-monolith#a-login-per-module).
+- TODO: A module that opens another module's connection string can see tables it does not own. Do not share the string.
+
 ## Read replicas
 
 - TODO: A read that is allowed to lag can use a replica. A follow-up read of a write this caller just made follows [Reading your own writes with replicas](/fundamentals/distributed-systems/consistency#reading-your-own-writes-with-replicas).

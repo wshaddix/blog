@@ -80,6 +80,12 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - TODO: A tenant-facing MCP endpoint is another API surface beside the HTTP API that agents call. It authenticates the caller and stays inside that tenant's data.
 - TODO: Apply the same idempotency rule on its writes that the HTTP API uses.
 
+### Hosted agent services as callers
+
+- TODO: A tenant may connect a hosted agent service to this endpoint. That service is a caller, held to the same tenant boundary as a person using the API.
+- TODO: Register the service you expect. A token from an unknown service is rejected.
+- TODO: Host the endpoint so a remote service can call it, as in [Called by a hosted agent service](/csharp/mcp/hosting#called-by-a-hosted-agent-service).
+
 ## Outgoing webhooks for tenants
 
 - TODO: A tenant registers a callback URL and a secret, and receives events for that tenant only.

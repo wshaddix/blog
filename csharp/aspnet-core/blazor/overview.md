@@ -12,6 +12,7 @@ Blazor is the C# web UI. It talks to the API. It does not become a second place 
 ## In this section
 
 - [Components and routing](/csharp/aspnet-core/blazor/components-and-routing) - Components, parameters, and the router.
+- [Data grids](/csharp/aspnet-core/blazor/data-grids) - A grid that shows one page of rows from the API.
 - [Forms and validation](/csharp/aspnet-core/blazor/forms-and-validation) - Editing data and showing field errors.
 - [Authentication](/csharp/aspnet-core/blazor/authentication) - Cookies, AuthorizeView, and the token the browser must not hold.
 - [Calling the API](/csharp/aspnet-core/blazor/calling-the-api) - A typed client from a component.
