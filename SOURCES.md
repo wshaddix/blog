@@ -307,3 +307,21 @@ Oct 22, 2026 digest (Oct 21 posts). Stubs from `docs: stub the October 22 conten
 | [Moving tenants to a new identity provider](building-a-saas/04-authentication/overview.md#moving-tenants-to-a-new-identity-provider) | Moving tenants to a new identity provider | [aspnetcore_news 2112929170837647749](https://x.com/aspnetcore_news/status/2112929170837647749) | 2026-10-21 |
 | [Services in other languages](csharp/platform/aspire.md#services-in-other-languages) | Non-.NET services in the Aspire app model | [aspnetcore_news 2113060771919782218](https://x.com/aspnetcore_news/status/2113060771919782218) | 2026-10-21 |
 | [A local multi-node cluster](csharp/platform/aspire.md#a-local-multi-node-cluster) | A local multi-node cluster under Aspire | [aspnetcore_news 2112908013937848402](https://x.com/aspnetcore_news/status/2112908013937848402) | 2026-10-21 |
+
+## 2026-10-23 (`9c214a4`)
+
+Oct 23, 2026 digest (Oct 22 posts). Stubs from `docs: stub the October 23 content-gap topics`. The digest cites a status id and names the handle next to it, so the links use `https://x.com/<handle>/status/<id>`.
+
+| Stub | Topic | Source URL(s) | Source date |
+| --- | --- | --- | --- |
+| [A login per module](patterns/architecture-styles/modular-monolith.md#a-login-per-module) | A database login per module, so permissions enforce the module boundary | [mjovanovictech 2113156153769152953](https://x.com/mjovanovictech/status/2113156153769152953) | 2026-10-22 |
+| [A connection string per module](building-a-saas/07-data-layer/overview.md#a-connection-string-per-module) | A connection string and database login per module | [mjovanovictech 2113156153769152953](https://x.com/mjovanovictech/status/2113156153769152953) | 2026-10-22 |
+| [Blocking a commit](ai-assisted-development/tools.md#blocking-a-commit) | An agent check that blocks a commit when it fails | [TheCodeMan__ 2113208366487032309](https://x.com/TheCodeMan__/status/2113208366487032309) | 2026-10-22 |
+| [Before it reaches the repo](ai-assisted-development/risks-and-limits.md#before-it-reaches-the-repo) | Block a secret before the commit is stored | [TheCodeMan__ 2113208366487032309](https://x.com/TheCodeMan__/status/2113208366487032309) | 2026-10-22 |
+| [A check that can block a commit](building-a-saas/01-project-setup/overview.md#a-check-that-can-block-a-commit) | An automated review step that can block a commit | [TheCodeMan__ 2113208366487032309](https://x.com/TheCodeMan__/status/2113208366487032309) | 2026-10-22 |
+| [A local model in development](csharp/mcp/clients-and-agents.md#a-local-model-in-development) | A local model in development and a hosted model in production | [aspnetcore_news 2113155738486898758](https://x.com/aspnetcore_news/status/2113155738486898758) | 2026-10-22 |
+| [A local model as a dev resource](building-a-saas/01-project-setup/overview.md#a-local-model-as-a-dev-resource) | A local model started by the Aspire AppHost | [aspnetcore_news 2113155738486898758](https://x.com/aspnetcore_news/status/2113155738486898758) | 2026-10-22 |
+| [Data Grids](csharp/aspnet-core/blazor/data-grids.md) | A Blazor data grid for one page of rows | [aspnetcore_news 2113346413048266939](https://x.com/aspnetcore_news/status/2113346413048266939) | 2026-10-22 |
+| [The cross-tenant admin list](building-a-saas/05-multi-tenancy/overview.md#the-cross-tenant-admin-list) | A cross-tenant admin list paged with a keyset cursor | [aspnetcore_news 2113346413048266939](https://x.com/aspnetcore_news/status/2113346413048266939) | 2026-10-22 |
+| [Called by a hosted agent service](csharp/mcp/hosting.md#called-by-a-hosted-agent-service) | An MCP server called by a hosted agent service | [aspnetcore_news 2113423167825817862](https://x.com/aspnetcore_news/status/2113423167825817862) | 2026-10-22 |
+| [Hosted agent services as callers](building-a-saas/06-api-development/overview.md#hosted-agent-services-as-callers) | Hosted agent services as callers of a tenant MCP endpoint | [aspnetcore_news 2113423167825817862](https://x.com/aspnetcore_news/status/2113423167825817862) | 2026-10-22 |
