@@ -325,3 +325,18 @@ Oct 23, 2026 digest (Oct 22 posts). Stubs from `docs: stub the October 23 conten
 | [The cross-tenant admin list](building-a-saas/05-multi-tenancy/overview.md#the-cross-tenant-admin-list) | A cross-tenant admin list paged with a keyset cursor | [aspnetcore_news 2113346413048266939](https://x.com/aspnetcore_news/status/2113346413048266939) | 2026-10-22 |
 | [Called by a hosted agent service](csharp/mcp/hosting.md#called-by-a-hosted-agent-service) | An MCP server called by a hosted agent service | [aspnetcore_news 2113423167825817862](https://x.com/aspnetcore_news/status/2113423167825817862) | 2026-10-22 |
 | [Hosted agent services as callers](building-a-saas/06-api-development/overview.md#hosted-agent-services-as-callers) | Hosted agent services as callers of a tenant MCP endpoint | [aspnetcore_news 2113423167825817862](https://x.com/aspnetcore_news/status/2113423167825817862) | 2026-10-22 |
+
+## 2026-10-24 (`5667a92`)
+
+Oct 24, 2026 digest (Oct 23 posts and the newsletter issue received Oct 24). Stubs from `docs: stub the October 24 content-gap topics`. X links use `https://x.com/<handle>/status/<id>`; the newsletter link is the issue's public article URL.
+
+| Stub | Topic | Source URL(s) | Source date |
+| --- | --- | --- | --- |
+| [Conditional Requests](csharp/aspnet-core/web-apis/conditional-requests.md) | ETag and If-Match so a stale save fails | [aspnetcore_news 2113785547298644299](https://x.com/aspnetcore_news/status/2113785547298644299) | 2026-10-23 |
+| [Conditional updates](building-a-saas/06-api-development/overview.md#conditional-updates) | Conditional updates to tenant settings | [aspnetcore_news 2113785547298644299](https://x.com/aspnetcore_news/status/2113785547298644299) | 2026-10-23 |
+| [A version number per user](csharp/aspnet-core/authentication/jwt.md#a-version-number-per-user) | Revoking access tokens with a per-user version claim | [Milan newsletter 2026-10-24](https://milanjovanovic.tech/blog/revoke-jwt-before-it-expires-token-version) | 2026-10-24 |
+| [A token version per user](building-a-saas/04-authentication/overview.md#a-token-version-per-user) | A token version per user on tenant removal or role change | [Milan newsletter 2026-10-24](https://milanjovanovic.tech/blog/revoke-jwt-before-it-expires-token-version) | 2026-10-24 |
+| [Two inserts that both pass a check](databases/relational/transactions-and-isolation.md#two-inserts-that-both-pass-a-check) | Two inserts that both pass the same check | [mjovanovictech 2113518540456112465](https://x.com/mjovanovictech/status/2113518540456112465) | 2026-10-23 |
+| [Two invites for the last seat](building-a-saas/09-billing-integration/overview.md#two-invites-for-the-last-seat) | Concurrent invites racing for the last seat | [mjovanovictech 2113518540456112465](https://x.com/mjovanovictech/status/2113518540456112465) | 2026-10-23 |
+| [Large request bodies](csharp/aspnet-core/web-apis/routing-and-binding.md#large-request-bodies) | Streaming a large JSON request body | [aspnetcore_news 2113653934803857666](https://x.com/aspnetcore_news/status/2113653934803857666) | 2026-10-23 |
+| [Bulk imports](building-a-saas/06-api-development/overview.md#bulk-imports) | Streaming a tenant bulk import | [aspnetcore_news 2113653934803857666](https://x.com/aspnetcore_news/status/2113653934803857666) | 2026-10-23 |
