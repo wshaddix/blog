@@ -45,6 +45,13 @@ An Authorization header. Nothing else.
 - TODO: Keep that lifetime short, and revoke the refresh token on logout.
 - TODO: Reject an access token early only when the API checks a denylist on each request.
 
+### A version number per user
+
+- TODO: Store a version number on the user, and copy it into a claim when a token is issued.
+- TODO: Raise the number on logout everywhere, a password change, or a role change. Every older token now fails.
+- TODO: The check is one lookup per request. Cache it briefly, and decide how many seconds of delay you accept.
+- TODO: A version per user ends all of that user's sessions at once. A denylist of token ids ends one.
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

@@ -59,6 +59,11 @@ Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscr
 
 <!-- TODO: Lost updates on seat counts and plan changes -->
 
+### Two invites for the last seat
+
+- TODO: Two admins invite a member at the same moment. Each sees one free seat, and each inserts a membership.
+- TODO: Bump a version on the subscription row with every new membership, so the second save fails and retries. See [Two inserts that both pass a check](/databases/relational/transactions-and-isolation#two-inserts-that-both-pass-a-check).
+
 ## When compensation fails
 
 <!-- TODO: A billing workflow whose undo fails, and a state that waits for a person -->

@@ -15,6 +15,8 @@ How two saves of the same row avoid a lost update.
 
 <!-- TODO: rowversion and concurrency tokens, handling DbUpdateConcurrencyException, returning 409/412 with ETags -->
 
+- TODO: Over HTTP, the token travels as an ETag. See [Conditional requests](/csharp/aspnet-core/web-apis/conditional-requests).
+
 ## Pessimistic concurrency
 
 <!-- TODO: SQL Server lock hints, and when a lock is justified -->

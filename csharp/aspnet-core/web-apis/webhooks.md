@@ -40,4 +40,4 @@ An HTTP callback the app receives, or sends, when something has already happened
 
 ---
 
-**Next:** [Minimal APIs and Controllers](/csharp/aspnet-core/web-apis/minimal-apis-and-controllers)
+**Next:** [Conditional Requests](/csharp/aspnet-core/web-apis/conditional-requests)

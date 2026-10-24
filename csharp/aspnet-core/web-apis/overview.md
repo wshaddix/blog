@@ -11,6 +11,7 @@ HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sam
 
 - [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests) - An Idempotency-Key so a retried POST runs once.
 - [Webhooks](/csharp/aspnet-core/web-apis/webhooks) - Signatures on the raw body, a secret per subscriber, and deliveries to a tenant URL.
+- [Conditional requests](/csharp/aspnet-core/web-apis/conditional-requests) - An ETag and If-Match so a stale save fails.
 - [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents) - An HTTP API whose caller is a model.
 - [Minimal APIs and controllers](/csharp/aspnet-core/web-apis/minimal-apis-and-controllers) - Both styles, and how to choose.
 - [Routing and model binding](/csharp/aspnet-core/web-apis/routing-and-binding) - Routes, parameters, and binding.

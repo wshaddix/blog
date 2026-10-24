@@ -51,6 +51,11 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 <!-- TODO: 202 Accepted and a status resource for work that outlives the request -->
 
+## Conditional updates
+
+- TODO: Two admins of one tenant open the same settings page. The second save must not erase the first.
+- TODO: The settings endpoint returns an ETag and requires `If-Match` on save. A stale save gets 412, and the page reloads the current values. See [Conditional requests](/csharp/aspnet-core/web-apis/conditional-requests).
+
 ## Idempotency keys
 
 <!-- TODO: An Idempotency-Key header so a retried POST returns the first result -->
@@ -58,6 +63,11 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 ### Keys per tenant
 
 - TODO: Store the key with the tenant. A unique index on tenant plus key keeps one tenant's retry from sharing another tenant's outcome.
+
+## Bulk imports
+
+- TODO: A tenant uploads thousands of records in one request. Stream the items and save them in batches instead of binding one array. See [Large request bodies](/csharp/aspnet-core/web-apis/routing-and-binding#large-request-bodies).
+- TODO: The size limit can follow the tenant's plan.
 
 ## Rate limits per plan
 
