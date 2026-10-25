@@ -11,6 +11,10 @@ Automation built into GitHub for CI/CD workflows.
 
 <!-- TODO: YAML structure, triggers, jobs, steps -->
 
+### Cancelling an older deploy
+
+- TODO: A concurrency group cancels the older in-progress deploy when a newer run for that group starts.
+
 ## Common Triggers
 
 <!-- TODO: push, pull_request, schedule, workflow_dispatch -->

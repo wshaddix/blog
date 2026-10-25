@@ -17,6 +17,7 @@ This guide provides a comprehensive overview of the engineering leadership ladde
 | Level | Core Question You Answer | Primary Focus |
 |-------|--------------------------|---------------|
 | [Individual Contributor](/career-development/career-ladder/individual-contributor) | "How do I build this well?" | Craft, code quality, technical execution |
+| [Software Architect](/career-development/career-ladder/architect) | "How should this system be shaped?" | Shared design, foundations, and trade-offs |
 | [Manager](/career-development/career-ladder/manager) | "How do we deliver this?" | Team execution, people development |
 | [Director](/career-development/career-ladder/director) | "What should we build and why?" | Cross-team strategy, organizational health |
 | [VP](/career-development/career-ladder/vp) | "How does engineering drive business success?" | Function-wide strategy, business outcomes |

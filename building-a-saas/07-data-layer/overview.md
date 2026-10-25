@@ -36,6 +36,10 @@ The data layer connects your domain model to the database. Done right, it's reli
 
 <!-- TODO: N+1, tracking, projections, keyset pagination -->
 
+### Latest activity per project
+
+- TODO: The dashboard query that returns the newest item for each parent row is served by the column order in [Equality columns then the sort](/databases/relational/indexes-and-query-plans#equality-columns-then-the-sort).
+
 ## Large ID lists
 
 - TODO: A bulk check or an export can pass thousands of ids into one query.

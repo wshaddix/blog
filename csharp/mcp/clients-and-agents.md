@@ -30,6 +30,10 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 - TODO: Ask the model for a value that matches a type or a schema, not an open-ended paragraph.
 - TODO: Reject a payload that does not match, then retry or fail the turn on purpose.
 
+### Changing the model without changing the feature
+
+- TODO: Keep the model behind `IChatClient` and configuration, keep tools, rules, and review screens independent of the provider, and run the same evals against the replacement before switching.
+
 ## Tools the model can call
 
 <!-- TODO: Expose the server's tools as functions on the chat client -->
