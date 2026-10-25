@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -196,6 +196,13 @@
 <p>Business rules stay on the server. Clients render and call.</p>
 <h2 id="trade-offs">Trade-offs</h2>
 <p>How to write down a decision and the option you did not take.</p>
+<h2 id="decisions-you-can-undo-and-ones-you-cant">Decisions you can undo and ones you can&#x27;t</h2>
+<ul>
+<li>TODO: A choice you can reverse, such as a cache, a queue, or a deploy layout, can be made quickly.</li>
+<li>TODO: A choice that is costly to undo, such as the shape of stored data, a public contract, or a consistency promise, gets a slower decision.</li>
+<li>TODO: Leave a seam so the next change replaces one part. The prototype and the later system do not have to share every choice.</li>
+<li>TODO: Write the condition that would make you take the next step before you need it.</li>
+</ul>
 <h2 id="code-example">Code example</h2>
 <p>A short C# sample will go here. A sample longer than about 30 lines will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>
 <h2 id="related">Related</h2>

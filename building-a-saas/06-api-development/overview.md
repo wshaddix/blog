@@ -30,7 +30,21 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 ## Async request-reply
 
+## Conditional updates
+
+- TODO: Two admins of one tenant open the same settings page. The second save must not erase the first.
+- TODO: The settings endpoint returns an ETag and requires `If-Match` on save. A stale save gets 412, and the page reloads the current values. See [Conditional requests](/csharp/aspnet-core/web-apis/conditional-requests).
+
 ## Idempotency keys
+
+### Keys per tenant
+
+- TODO: Store the key with the tenant. A unique index on tenant plus key keeps one tenant's retry from sharing another tenant's outcome.
+
+## Bulk imports
+
+- TODO: A tenant uploads thousands of records in one request. Stream the items and save them in batches instead of binding one array. See [Large request bodies](/csharp/aspnet-core/web-apis/routing-and-binding#large-request-bodies).
+- TODO: The size limit can follow the tenant's plan.
 
 ## Rate limits per plan
 
@@ -42,10 +56,28 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - TODO: Some commands are invoked by a model that picked a tool. Name the inputs, the errors, and whether a retry is safe.
 - TODO: Require an idempotency key on those writes, and return the first result when the same key comes back.
 
+### Scoping what an agent's key can touch
+
+- TODO: The credential an agent uses can read the rows the task named and write to the store the task named. The rest of the API stays closed.
+- TODO: The tenant and the date range are fixed on the task. A later turn cannot change them by asking.
+- TODO: A call outside that scope fails in the API, including when the model requested it.
+
 ## An MCP endpoint for tenants
 
 - TODO: A tenant-facing MCP endpoint is another API surface beside the HTTP API that agents call. It authenticates the caller and stays inside that tenant's data.
 - TODO: Apply the same idempotency rule on its writes that the HTTP API uses.
+
+### Hosted agent services as callers
+
+- TODO: A tenant may connect a hosted agent service to this endpoint. That service is a caller, held to the same tenant boundary as a person using the API.
+- TODO: Register the service you expect. A token from an unknown service is rejected.
+- TODO: Host the endpoint so a remote service can call it, as in [Called by a hosted agent service](/csharp/mcp/hosting#called-by-a-hosted-agent-service).
+
+## Outgoing webhooks for tenants
+
+- TODO: A tenant registers a callback URL and a secret, and receives events for that tenant only.
+- TODO: Sign the raw body with that subscriber's secret, and retry a delivery that failed until the attempt limit.
+- TODO: Refuse a callback URL that resolves to a private or internal address before the request is sent.
 
 ## Related Topics
 
@@ -54,6 +86,7 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - See [MCP authentication](/csharp/mcp/authentication)
 - See [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents)
 - See [Idempotent requests](/csharp/aspnet-core/web-apis/idempotent-requests)
+- See [Webhooks](/csharp/aspnet-core/web-apis/webhooks)
 - See [Caching](/csharp/aspnet-core/web-apis/caching)
 - See [Caching fundamentals](/fundamentals/distributed-systems/caching)
 - See [Pagination](/csharp/aspnet-core/web-apis/pagination)

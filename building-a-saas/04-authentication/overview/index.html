@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -198,6 +198,11 @@
 <li>TODO: Logout revokes the refresh token and clears the cookie.</li>
 <li>TODO: The access token stays valid until it expires. Keep that lifetime short, and check a denylist when a token has to die early.</li>
 </ul>
+<h3 id="a-token-version-per-user">A token version per user</h3>
+<ul>
+<li>TODO: Keep a version number on the user row and put it in the access token.</li>
+<li>TODO: Removing a user from a tenant or changing their role raises it, so the old token stops working before it expires. See <a href="../../../csharp/aspnet-core/authentication/jwt/#a-version-number-per-user">A version number per user</a>.</li>
+</ul>
 <h2 id="refresh-tokens">Refresh Tokens</h2>
 <!-- TODO: Why, implementation, rotation -->
 <h2 id="security-considerations">Security Considerations</h2>
@@ -208,6 +213,12 @@
 <!-- TODO: Expiry that tests can control -->
 <h2 id="permission-based-authorization">Permission-based authorization</h2>
 <!-- TODO: Named permissions on the caller, enforced with a policy -->
+<h2 id="moving-tenants-to-a-new-identity-provider">Moving tenants to a new identity provider</h2>
+<ul>
+<li>TODO: Accept a token from the current provider and from the new one until every tenant has moved.</li>
+<li>TODO: Record which provider a tenant uses, and send that tenant to the new provider on its turn.</li>
+<li>TODO: Remove the old scheme after the last tenant has signed in with the new one.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/aspnet-core/authentication/overview/">ASP.NET Core: Authentication</a></li>

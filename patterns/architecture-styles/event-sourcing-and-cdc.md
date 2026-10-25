@@ -18,4 +18,4 @@ Two ways a change becomes a stream of facts.
 
 ---
 
-**Next:** [Chapter 3: Domain Modeling](/building-a-saas/03-domain-modeling/overview)
+**Next:** [Distributed Building Blocks](/patterns/architecture-styles/distributed-building-blocks)

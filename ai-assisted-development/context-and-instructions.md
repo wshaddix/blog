@@ -61,6 +61,12 @@ Secrets, generated output, and a long log with one relevant line.
 - TODO: A command is a named instruction a person invokes.
 - TODO: Use one when the steps are the same each time and do not belong in the standing rules.
 
+## What the agent may run
+
+- TODO: Allow the commands the task needs, such as build and test, so a person does not confirm each one.
+- TODO: Refuse a push, a change to production configuration, and any file that holds a secret.
+- TODO: A sentence in an instruction file asks for that limit. The tool's deny list is what stops the command.
+
 ## Drift
 
 An instruction file that contradicts the code will be followed unpredictably. Update the file or delete the rule.

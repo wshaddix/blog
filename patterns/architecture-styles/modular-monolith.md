@@ -22,6 +22,12 @@ One deployable, divided into modules that own their data and their features.
 - TODO: Register one `DbContext` for the module. Its model contains that module's entities.
 - TODO: A handler takes the context for its own module.
 
+### A login per module
+
+- TODO: Give that context its own database login, granted only the module's schema.
+- TODO: A statement that reads or writes another module's tables fails in the database, which holds the boundary when application code does not.
+- TODO: Keep that login's connection string with the module. The string another module uses is described in [A connection string per module](/building-a-saas/07-data-layer/overview#a-connection-string-per-module).
+
 ## Finding boundaries
 
 - TODO: List the changes that should ship together. The tables and features on that list are a candidate module.

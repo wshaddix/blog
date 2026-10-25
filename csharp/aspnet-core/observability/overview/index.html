@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -182,6 +182,11 @@
 <!-- TODO -->
 <h3 id="a-slow-200">A slow 200</h3>
 <!-- TODO: Find the time in a trace when the status code is success -->
+<h3 id="sampling">Sampling</h3>
+<ul>
+<li>TODO: Head sampling keeps or drops a trace when it starts. Tail sampling decides after the trace finishes, so a failed or slow trace can be kept while ordinary ones are dropped.</li>
+<li>TODO: Keep enough failing traces to investigate, and drop enough of the rest that the exporter can keep up.</li>
+</ul>
 <h2 id="correlation">Correlation</h2>
 <p>A trace id on the request, the log, and the downstream call.</p>
 <h2 id="what-to-measure">What to measure</h2>
@@ -279,6 +284,16 @@
                 <span class="card-compact-title">Synchronous Call Chains</span>
             </div>
             <p class="card-compact-description">A request that waits on another module, which waits on another, stacks latency and failure.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/techniques/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Techniques</span>
+            </div>
+            <p class="card-compact-description">Ways of working that make an assistant useful on a real change.</p>
         </div>
     </a>
 </div>

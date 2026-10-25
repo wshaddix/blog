@@ -33,6 +33,11 @@ Security is non-negotiable. We'll implement robust authentication that's also us
 - TODO: Logout revokes the refresh token and clears the cookie.
 - TODO: The access token stays valid until it expires. Keep that lifetime short, and check a denylist when a token has to die early.
 
+### A token version per user
+
+- TODO: Keep a version number on the user row and put it in the access token.
+- TODO: Removing a user from a tenant or changing their role raises it, so the old token stops working before it expires. See [A version number per user](/csharp/aspnet-core/authentication/jwt#a-version-number-per-user).
+
 ## Refresh Tokens
 
 ## Security Considerations
@@ -42,6 +47,12 @@ Security is non-negotiable. We'll implement robust authentication that's also us
 ## Token expiry and the clock
 
 ## Permission-based authorization
+
+## Moving tenants to a new identity provider
+
+- TODO: Accept a token from the current provider and from the new one until every tenant has moved.
+- TODO: Record which provider a tenant uses, and send that tenant to the new provider on its turn.
+- TODO: Remove the old scheme after the last tenant has signed in with the new one.
 
 ## Related Topics
 

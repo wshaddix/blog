@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -171,6 +171,23 @@
 <!-- TODO: SQL, Redis, API, worker, and the dashboard -->
 <h2 id="in-the-saas-app">In the SaaS app</h2>
 <!-- TODO: Chapter 1 solution layout and the AppHost project -->
+<h2 id="beyond-the-apphost">Beyond the AppHost</h2>
+<ul>
+<li>TODO: The dashboard can be published with native AOT when that tool needs a short startup and a small output.</li>
+<li>TODO: A test UI resource in the app model gives a page that drives the system under test from the same dashboard as the other resources.</li>
+</ul>
+<h3 id="services-in-other-languages">Services in other languages</h3>
+<ul>
+<li>TODO: A service that is not a .NET project can still be a resource in the AppHost. Point it at the directory and the command that starts the process.</li>
+<li>TODO: The dashboard lists that process with the .NET projects. A .NET project receives its address by referencing the resource.</li>
+<li>TODO: The other resources wait until its endpoint is ready, the same way they wait for a .NET project.</li>
+</ul>
+<h3 id="a-local-multi-node-cluster">A local multi-node cluster</h3>
+<ul>
+<li>TODO: Start several copies of one service and let them form a cluster on the machine. Each copy is its own process with its own endpoint.</li>
+<li>TODO: They find each other through a discovery resource the AppHost starts first, such as Redis. The AppHost injects that connection into each copy.</li>
+<li>TODO: The dashboard shows logs, health, and membership for every node, so a local cluster can be debugged without a hand-written seed list.</li>
+</ul>
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
 <li>See <a href="../../../building-a-saas/01-project-setup/overview/">Building a SaaS: Project Setup</a></li>
@@ -179,6 +196,7 @@
 <ul>
 <li>See <a href="../generic-host/">Generic Host</a></li>
 <li>See <a href="../../language-basics/projects-and-solutions/">Projects and Solutions</a></li>
+<li>See <a href="../publishing/">Publishing</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../dependency-injection/">Dependency Injection</a></p>

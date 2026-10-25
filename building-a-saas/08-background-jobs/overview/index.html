@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -233,8 +233,19 @@
 <!-- TODO: Publish domain events through an outbox -->
 <h2 id="shutdown-and-cancellation">Shutdown and cancellation</h2>
 <!-- TODO: The host stops, and in-flight work honors the token -->
+<h2 id="one-run-across-instances">One run across instances</h2>
+<ul>
+<li>TODO: A schedule that is registered on every instance will fire on every instance. Take one shared lock before the job body runs.</li>
+<li>TODO: Hold the lock on a connection that stays open for the work. If that connection drops, another instance may take the lock while the first is still running, so the rest of the run has to be safe to repeat.</li>
+<li>TODO: Record which occurrence finished. The lock does not remember that, and a later instance must not do the same occurrence again.</li>
+</ul>
 <h2 id="when-a-saga-needs-a-person">When a saga needs a person</h2>
 <!-- TODO: Compensation that fails, and a parked state someone has to resolve -->
+<h2 id="workflows-that-wait">Workflows that wait</h2>
+<ul>
+<li>TODO: A trial end, a dunning sequence, and an approval are waits. Each one stores a deadline and the path to take when nobody answers in time.</li>
+<li>TODO: The deadline is part of the workflow record, so a restart keeps it and runs the timeout path once.</li>
+</ul>
 <h2 id="a-context-in-a-background-worker">A context in a background worker</h2>
 <ul>
 <li>TODO: A job has no HTTP request, so it has no request-scoped context.</li>
@@ -249,6 +260,7 @@
 <li>See <a href="../../../csharp/entity-framework/dbcontext/">DbContext</a></li>
 <li>See <a href="../../../csharp/entity-framework/performance/">Entity Framework performance</a></li>
 <li>See <a href="../../../patterns/integration-patterns/sagas/">Sagas</a></li>
+<li>See <a href="../../../patterns/integration-patterns/durable-workflows/">Durable workflows</a></li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../../09-billing-integration/overview/">Chapter 9: Billing Integration</a></p>
@@ -276,16 +288,6 @@
     </a>
 </div>
 <div class="card-compact-container">
-    <a href="/csharp/advanced-features/cancellation/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Cancellation</span>
-            </div>
-            <p class="card-compact-description">Cooperative cancellation, and a limit on how much work runs at once.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
     <a href="/patterns/integration-patterns/choreography-vs-orchestration/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -302,6 +304,16 @@
                 <span class="card-compact-title">DbContext</span>
             </div>
             <p class="card-compact-description">The central class for database interaction in EF Core.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/integration-patterns/durable-workflows/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Durable Workflows</span>
+            </div>
+            <p class="card-compact-description">A workflow that stores its place so another process can continue it after a crash.</p>
         </div>
     </a>
 </div>

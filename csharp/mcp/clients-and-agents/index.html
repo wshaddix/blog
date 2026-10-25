@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -173,10 +173,20 @@
 <!-- TODO: A local process, or a remote server with the authentication that server requires -->
 <h2 id="ichatclient">IChatClient</h2>
 <!-- TODO: Microsoft.Extensions.AI. The chat client is what the agent uses to talk to a model -->
+<h3 id="a-local-model-in-development">A local model in development</h3>
+<ul>
+<li>TODO: In development the chat client calls a model running on the machine. In production the same client calls the hosted model.</li>
+<li>TODO: The endpoint and the credential come from configuration. The agent code does not branch on which environment it is in.</li>
+<li>TODO: Start that local model from the AppHost, as in <a href="../../../building-a-saas/01-project-setup/overview/#a-local-model-as-a-dev-resource">A local model as a dev resource</a>.</li>
+</ul>
 <h3 id="typed-results">Typed results</h3>
 <ul>
 <li>TODO: Ask the model for a value that matches a type or a schema, not an open-ended paragraph.</li>
 <li>TODO: Reject a payload that does not match, then retry or fail the turn on purpose.</li>
+</ul>
+<h3 id="changing-the-model-without-changing-the-feature">Changing the model without changing the feature</h3>
+<ul>
+<li>TODO: Keep the model behind <code translate="no" v-pre>IChatClient</code> and configuration, keep tools, rules, and review screens independent of the provider, and run the same evals against the replacement before switching.</li>
 </ul>
 <h2 id="tools-the-model-can-call">Tools the model can call</h2>
 <!-- TODO: Expose the server's tools as functions on the chat client -->
@@ -199,6 +209,26 @@
 <ul>
 <li>TODO: Store the draft, who decided, when, and the tool call that followed.</li>
 <li>TODO: Keep the record when the draft is rejected.</li>
+</ul>
+<h2 id="a-gate-in-front-of-every-tool">A gate in front of every tool</h2>
+<p>The model may propose a tool call. The client decides whether that call is allowed.</p>
+<h3 id="data-is-not-instructions">Data is not instructions</h3>
+<ul>
+<li>TODO: A field on a row, a file, or a tool result is input. It does not add a rule for the run.</li>
+<li>TODO: Text that says to ignore the task, or to send the data somewhere else, stays data.</li>
+<li>TODO: Fix the limits when the run starts, such as the tenant and the date range, and keep those limits on a retry.</li>
+</ul>
+<h3 id="run-state-outside-the-model">Run state outside the model</h3>
+<ul>
+<li>TODO: Store the run, its job id, and how far the work got, outside the model context, so a restart can resume from that record.</li>
+<li>TODO: After a call times out, read the recorded outcome before calling the tool again.</li>
+<li>TODO: Cap how long the run may last and how many times it may retry. A pending job is not done.</li>
+</ul>
+<h3 id="proof-before-done">Proof before done</h3>
+<ul>
+<li>TODO: Done means the job succeeded and the expected output can be read. The model&#x27;s last message is not that proof.</li>
+<li>TODO: Check the account, the dates, and the format before telling the caller the result is ready.</li>
+<li>TODO: Keep a check for the wrong account, for a restart in the middle, and for a job that succeeds without writing the output. Each check names the code that enforces it.</li>
 </ul>
 <h2 id="more-than-one-server">More than one server</h2>
 <!-- TODO: Several MCP servers on one agent, and tool names that stay unique -->
@@ -246,6 +276,26 @@
                 <span class="card-compact-title">MCP Servers</span>
             </div>
             <p class="card-compact-description">A Model Context Protocol server exposes tools, resources, and prompts to an AI client. In C# it is a hosted process, either on standard I/O or on HTTP.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/01-project-setup/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">A well-organized project structure sets the foundation for maintainability and scalability.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/10-testing-strategy/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Tests give you confidence to ship. We'll build a comprehensive testing strategy.</p>
         </div>
     </a>
 </div>

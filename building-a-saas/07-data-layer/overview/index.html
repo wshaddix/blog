@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -186,6 +186,10 @@
 <!-- TODO: When to use, when DbContext is enough -->
 <h2 id="performance">Performance</h2>
 <!-- TODO: N+1, tracking, projections, keyset pagination -->
+<h3 id="latest-activity-per-project">Latest activity per project</h3>
+<ul>
+<li>TODO: The dashboard query that returns the newest item for each parent row is served by the column order in <a href="../../../databases/relational/indexes-and-query-plans/#equality-columns-then-the-sort">Equality columns then the sort</a>.</li>
+</ul>
 <h2 id="large-id-lists">Large ID lists</h2>
 <ul>
 <li>TODO: A bulk check or an export can pass thousands of ids into one query.</li>
@@ -215,6 +219,17 @@
 <li>TODO: Give each module its own schema and its own <code translate="no" v-pre>DbContext</code>.</li>
 <li>TODO: Keep a module&#x27;s queries inside its context. A join across those schemas belongs in a report.</li>
 </ul>
+<h3 id="a-connection-string-per-module">A connection string per module</h3>
+<ul>
+<li>TODO: Point each module&#x27;s <code translate="no" v-pre>DbContext</code> at its own connection string and its own database login.</li>
+<li>TODO: Grant that login the module&#x27;s schema only, so the database enforces the boundary in <a href="../../../patterns/architecture-styles/modular-monolith/#a-login-per-module">A login per module</a>.</li>
+<li>TODO: A module that opens another module&#x27;s connection string can see tables it does not own. Do not share the string.</li>
+</ul>
+<h2 id="read-replicas">Read replicas</h2>
+<ul>
+<li>TODO: A read that is allowed to lag can use a replica. A follow-up read of a write this caller just made follows <a href="../../../fundamentals/distributed-systems/consistency/#reading-your-own-writes-with-replicas">Reading your own writes with replicas</a>.</li>
+<li>TODO: Send that follow-up to the primary, or to a replica that has applied the write.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../patterns/architecture-styles/modular-monolith/">Modular monolith</a></li>
@@ -224,6 +239,8 @@
 <li>See <a href="../../../csharp/aspnet-core/web-apis/caching/">Caching</a></li>
 <li>See <a href="../../../fundamentals/distributed-systems/caching/">Caching fundamentals</a></li>
 <li>See <a href="../../../databases/overview/">Databases</a></li>
+<li>See <a href="../../../fundamentals/distributed-systems/consistency/">Consistency</a></li>
+<li>See <a href="../../../patterns/architecture-styles/distributed-building-blocks/">Distributed building blocks</a></li>
 <li>See <a href="../../../devops/azure/blob-storage/">Blob Storage</a></li>
 </ul>
 <hr>
@@ -262,6 +279,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/patterns/architecture-styles/distributed-building-blocks/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Distributed Building Blocks</span>
+            </div>
+            <p class="card-compact-description">Parts a split system often adds, and the condition that would make each one leave again.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/patterns/architecture-styles/event-sourcing-and-cdc/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -278,16 +305,6 @@
                 <span class="card-compact-title">Getting Started</span>
             </div>
             <p class="card-compact-description">Entity Framework Core is Microsoft's recommended ORM for .NET applications.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/csharp/advanced-features/high-performance-csharp/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">High-Performance C#</span>
-            </div>
-            <p class="card-compact-description">Primitives you reach for when an ordinary allocation shows up on a hot path.</p>
         </div>
     </a>
 </div>

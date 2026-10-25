@@ -13,6 +13,10 @@ Getting code to production reliably and repeatedly.
 
 ## CI/CD Pipeline
 
+### Checking the release after it lands
+
+- TODO: After the deploy, follow [After the deploy is triggered](/devops/ci-cd/concepts#after-the-deploy-is-triggered) and confirm the running app with [Health Checks](/building-a-saas/12-monitoring-operations/overview#health-checks).
+
 ## Containerization
 
 ## Azure Deployment

@@ -23,6 +23,11 @@ Your job isn't done when code ships. Observability keeps your SaaS running smoot
 
 ## OpenTelemetry
 
+### Sampling
+
+- TODO: Keep traces for failures and slow requests. Drop a share of the ordinary traces so exporting them stays within the pipeline's capacity.
+- TODO: Head sampling chooses at the start. Tail sampling chooses after the trace ends, which is what lets a failure stay in the sample.
+
 ## Sensitive data in logs
 
 ## Degraded modes

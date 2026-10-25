@@ -28,6 +28,11 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 - TODO: The first module to leave is the one whose contract and data can move without dragging the rest of the process along.
 - TODO: Keep a module in-process while other modules still share its transaction or read its tables.
 
+### Strangling the module out
+
+- TODO: Send one slice of the module's calls to the new process and leave the rest on the path that already runs.
+- TODO: Widen the slice after the new path is the one callers use, and remove the old path when it has no traffic.
+
 ## Calls between modules
 
 - TODO: A module calls another through its public contract, in process, or by publishing an event.
@@ -49,6 +54,12 @@ The public API stays JSON over HTTP. gRPC is a decision only when an internal cl
 - TODO: A proposal from the team states the intent and the options. The record states the choice and what was turned down.
 - TODO: A check in the build fails when new code crosses that choice, so the record is not the only thing holding it.
 
+### Triggers for the next step
+
+- TODO: The record names the measurement that would change the decision, such as a latency figure or a number of tenants.
+- TODO: Write that trigger while the choice is still easy to revisit.
+- TODO: When the trigger is true, the record already says which part moves and which part stays.
+
 ## Key Principles
 
 1. **Simplicity first** - Don't add patterns until you need them
@@ -60,6 +71,7 @@ The public API stays JSON over HTTP. gRPC is a decision only when an internal cl
 
 - See [C# and .NET](/csharp/overview)
 - See [Modular monolith](/patterns/architecture-styles/modular-monolith)
+- See [Distributed building blocks](/patterns/architecture-styles/distributed-building-blocks)
 - See [Synchronous call chains](/patterns/integration-patterns/synchronous-call-chains)
 - See [Consistency](/fundamentals/distributed-systems/consistency)
 - See [Decision making](/career-development/team-operations/decision-making)

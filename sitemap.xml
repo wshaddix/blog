@@ -2,1021 +2,1045 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wshaddix.com/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/blog/</loc>
   </url>
   <url>
     <loc>https://wshaddix.com/getting-started/learning-path/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/getting-started/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/fundamentals/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/ai-assisted-development/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/ai-assisted-development/verification/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/ai-assisted-development/using-mcp/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/getting-started/prerequisites/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/getting-started/workstation-setup/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/ai-assisted-development/tools/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/ai-assisted-development/techniques/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/ai-assisted-development/context-and-instructions/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/ai-assisted-development/using-mcp/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/ai-assisted-development/risks-and-limits/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/getting-started/prerequisites/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/getting-started/workstation-setup/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/ai-assisted-development/context-and-instructions/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/ai-assisted-development/terms/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/ai-assisted-development/prompting/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/fundamentals/programming-concepts/oop-principles/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/language-basics/collections/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/fundamentals/data-structures/arrays/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/fundamentals/algorithms/big-o-notation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/data-structures/trees-graphs/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/data-structures/hash-tables/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/algorithms/recursion/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/algorithms/searching/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/programming-concepts/functional-concepts/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/programming-concepts/concurrency/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/programming-concepts/error-handling/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/fundamentals/networking/http/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/security/authentication-and-authorization/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/fundamentals/distributed-systems/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/fundamentals/distributed-systems/consistency/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/fundamentals/distributed-systems/caching/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/language-basics/projects-and-solutions/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/data-structures/trees-graphs/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/advanced-features/linq/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/data-structures/hash-tables/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/fundamentals/data-structures/stacks-queues/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/algorithms/recursion/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/fundamentals/data-structures/linked-lists/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/algorithms/searching/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/fundamentals/algorithms/sorting/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/fundamentals/programming-concepts/memory-and-gc/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/programming-concepts/functional-concepts/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/fundamentals/security/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/programming-concepts/concurrency/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/fundamentals/distributed-systems/failure-and-degradation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/programming-concepts/error-handling/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/language-basics/getting-started/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/security/authentication-and-authorization/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/language-basics/types/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/fundamentals/distributed-systems/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/fundamentals/distributed-systems/caching/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/language-basics/projects-and-solutions/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/advanced-features/linq/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/platform/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/fundamentals/data-structures/stacks-queues/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/fundamentals/data-structures/linked-lists/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/fundamentals/programming-concepts/memory-and-gc/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/fundamentals/security/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/fundamentals/distributed-systems/failure-and-degradation/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/language-basics/getting-started/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/language-basics/types/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/platform/http-clients/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/language-basics/control-flow/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/language-basics/methods/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/language-basics/classes/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/advanced-features/generics/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/advanced-features/async/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/advanced-features/cancellation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/advanced-features/records/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/advanced-features/high-performance-csharp/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/advanced-features/modern-csharp/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/entity-framework/getting-started/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/entity-framework/querying/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/databases/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/building-a-saas/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/language-basics/nullability/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/language-basics/exceptions/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/language-basics/delegates-and-lambdas/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/language-basics/disposal/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/language-basics/files-streams-and-json/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/language-basics/dates-and-culture/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/advanced-features/pattern-matching/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/advanced-features/attributes/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/platform/generic-host/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/platform/aspire/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/platform/dependency-injection/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/platform/configuration-and-options/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/platform/logging/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/platform/publishing/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/entity-framework/getting-started/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/entity-framework/dbcontext/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/entity-framework/querying/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/entity-framework/performance/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/console/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/databases/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/console/command-line/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/devops/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/entity-framework/modeling/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/building-a-saas/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/entity-framework/change-tracking/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/language-basics/nullability/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/entity-framework/migrations/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/language-basics/exceptions/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/entity-framework/transactions/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/language-basics/delegates-and-lambdas/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/language-basics/disposal/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/language-basics/files-streams-and-json/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/language-basics/dates-and-culture/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/advanced-features/pattern-matching/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/advanced-features/attributes/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/platform/aspire/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/platform/dependency-injection/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/platform/configuration-and-options/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/platform/logging/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/platform/publishing/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/entity-framework/concurrency/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/entity-framework/testing/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/console/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/console/command-line/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/entity-framework/modeling/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/entity-framework/change-tracking/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/entity-framework/migrations/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/entity-framework/transactions/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/blog/2026-goals/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/entity-framework/seeding/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/entity-framework/raw-sql/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/clients/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/sdlc/architecture/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/sdlc/testing-strategy/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/sdlc/code-review/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/testing/project-setup/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/sdlc/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/sdlc/requirements-and-stories/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/clients/xaml/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/clients/http-and-auth/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/winui/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/uno/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/mcp/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/mcp/clients-and-agents/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/sdlc/debugging/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/clients/mvvm/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/clients/navigation-and-storage/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/clients/accessibility/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/winui/packaging/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/winui/authentication/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/uno/authentication/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/mcp/hosting/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/mcp/authentication/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/security/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/testing/unit-testing/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/winui/lifecycle-and-windowing/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/uno/project-structure/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/uno/platform-specific-code/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/uno/publishing/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/mcp/tools-resources-and-prompts/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/security/secrets/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/security/sensitive-data-in-logs/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/security/data-protection/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/testing/mocking/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/testing/time-dependent-code/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/testing/integration-testing/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/career-development/career-ladder/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/idempotent-requests/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/background-services/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/aspnet-core/authentication/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/choosing-a-scheme/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/winui/lifecycle-and-windowing/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/security/transport-and-headers/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/uno/project-structure/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/testing/webapplicationfactory/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/uno/platform-specific-code/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/testing/testcontainers/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/uno/publishing/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/testing/bunit/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/mcp/tools-resources-and-prompts/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/databases/relational/sql-fundamentals/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/security/secrets/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/databases/relational/database-design/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/security/sensitive-data-in-logs/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/databases/relational/indexes-and-query-plans/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/security/data-protection/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/mocking/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/time-dependent-code/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/integration-testing/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/databases/relational/transactions-and-isolation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/career-development/career-ladder/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/idempotent-requests/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/background-services/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/choosing-a-scheme/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/security/transport-and-headers/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/webapplicationfactory/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/testcontainers/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/bunit/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/databases/relational/sql-fundamentals/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/databases/relational/database-design/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/databases/relational/indexes-and-query-plans/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/databases/data-modeling/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/coding-patterns/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/tool-references/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/apis-for-agents/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/databases/nosql/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/databases/nosql/redis/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/coding-patterns/decorator/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/architecture-styles/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/architecture-styles/modular-monolith/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/patterns/architecture-styles/architecture-tests/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/architecture-styles/distributed-building-blocks/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/patterns/architecture-styles/event-sourcing-and-cdc/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/tool-references/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/patterns/integration-patterns/outbox-and-idempotent-consumer/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/apis-for-agents/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/patterns/integration-patterns/synchronous-call-chains/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/webhooks/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/minimal-apis-and-controllers/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/validation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/error-handling/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/openapi/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/cors/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/rate-limiting/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/pagination/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/grpc/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/signalr/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/caching/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/cookies/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/jwt/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authorization/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/conditional-requests/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/aspnet-core/observability/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/aspnet-core/blazor/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/building-a-saas/07-data-layer/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/databases/nosql/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/tool-references/azure-cli/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/databases/nosql/redis/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/routing-and-binding/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/coding-patterns/decorator/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/versioning/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/architecture-styles/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/identity/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/architecture-styles/architecture-tests/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/refresh-tokens/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/architecture-styles/event-sourcing-and-cdc/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/openid-connect/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/integration-patterns/outbox-and-idempotent-consumer/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/modern-auth/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/middleware/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/application-patterns/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/application-patterns/repository/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/application-patterns/cqrs/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/integration-patterns/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/integration-patterns/sagas/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/patterns/integration-patterns/choreography-vs-orchestration/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/version-control/git-installation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/version-control/branching-and-pull-requests/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/building-a-saas/01-project-setup/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/building-a-saas/02-architecture-decisions/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/building-a-saas/03-domain-modeling/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/integration-patterns/synchronous-call-chains/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/building-a-saas/06-api-development/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/building-a-saas/07-data-layer/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/minimal-apis-and-controllers/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/routing-and-binding/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/validation/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/error-handling/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/openapi/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/cors/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/rate-limiting/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/pagination/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/grpc/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/signalr/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/caching/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/cookies/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/jwt/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authorization/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/patterns/integration-patterns/sagas/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/patterns/integration-patterns/choreography-vs-orchestration/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/building-a-saas/01-project-setup/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/building-a-saas/02-architecture-decisions/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/building-a-saas/08-background-jobs/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/tool-references/docker/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/tool-references/azure-cli/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/tool-references/dotnet-cli/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/web-apis/versioning/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authorization/permissions/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/identity/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/authorization/resource-based/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/refresh-tokens/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/hosting/kestrel-and-https/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/openid-connect/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/observability/health-checks/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authentication/modern-auth/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/ai-features/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/middleware/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/components-and-routing/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/data-grids/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/forms-and-validation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/application-patterns/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/authentication/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/application-patterns/repository/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/calling-the-api/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/application-patterns/cqrs/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/csharp/testing/reqnroll/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/integration-patterns/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/patterns/refactoring-patterns/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/patterns/integration-patterns/durable-workflows/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/devops/version-control/git-configuration/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/devops/version-control/git-installation/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/devops/version-control/git-recipes/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/devops/version-control/branching-and-pull-requests/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
-    <loc>https://wshaddix.com/devops/ci-cd/concepts/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/containerization/docker-fundamentals/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/azure/blob-storage/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/azure/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/monitoring/logging/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/building-a-saas/04-authentication/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/building-a-saas/10-testing-strategy/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/javascript-interop/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/version-control/git-aliases/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/version-control/conventional-commits/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/ci-cd/azure-devops/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/ci-cd/github-actions/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/containerization/best-practices/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/containerization/docker-compose/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/azure/functions/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/azure/app-service/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/monitoring/alerting/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/devops/self-hosting/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/building-a-saas/05-multi-tenancy/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <loc>https://wshaddix.com/building-a-saas/03-domain-modeling/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/building-a-saas/09-billing-integration/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/tool-references/docker/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/tool-references/dotnet-cli/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authorization/permissions/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/authorization/resource-based/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/hosting/kestrel-and-https/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/observability/health-checks/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/ai-features/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/components-and-routing/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/authentication/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/calling-the-api/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/reqnroll/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/patterns/refactoring-patterns/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/version-control/git-configuration/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/version-control/git-recipes/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/ci-cd/concepts/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/containerization/docker-fundamentals/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/azure/blob-storage/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/azure/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/monitoring/logging/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/building-a-saas/04-authentication/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/building-a-saas/10-testing-strategy/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/forms-and-validation/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/aspnet-core/blazor/javascript-interop/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/version-control/git-aliases/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/version-control/conventional-commits/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/ci-cd/azure-devops/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/ci-cd/github-actions/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/containerization/best-practices/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/containerization/docker-compose/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/azure/functions/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/azure/app-service/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/monitoring/alerting/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/devops/self-hosting/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/building-a-saas/05-multi-tenancy/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/building-a-saas/12-monitoring-operations/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/devops/azure/azure-sql/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/devops/monitoring/metrics/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/building-a-saas/11-deployment/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/testing/reqnroll/step-definitions/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/testing/reqnroll/hooks-and-context/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/csharp/testing/reqnroll/living-documentation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/databases/relational/sql-server/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
-  </url>
-  <url>
-    <loc>https://wshaddix.com/career-development/career-ladder/director/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/team-operations/decision-making/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/reqnroll/step-definitions/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/reqnroll/hooks-and-context/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/csharp/testing/reqnroll/living-documentation/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/databases/relational/sql-server/overview/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/career-development/career-ladder/architect/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
+  </url>
+  <url>
+    <loc>https://wshaddix.com/career-development/career-ladder/director/</loc>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/csharp/testing/reqnroll/feature-files/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/career-ladder/individual-contributor/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/career-ladder/manager/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/career-ladder/vp/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/people-management/team-building/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/people-management/performance-reviews/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/people-management/hiring/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/people-management/feedback/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/people-management/one-on-ones/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/team-operations/skill-matrices/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/soft-skills/stakeholder-management/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/coding-patterns/creational-patterns/abstract-factory-pattern/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/coding-patterns/creational-patterns/builder-pattern/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/coding-patterns/creational-patterns/factory-method-pattern/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/coding-patterns/creational-patterns/prototype-pattern/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/coding-patterns/creational-patterns/singleton-pattern/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/coding-patterns/structural-patterns/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/patterns/coding-patterns/behavioral-patterns/overview/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/team-operations/capacity-planning/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/team-operations/training-curation/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/soft-skills/presentations/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
   <url>
     <loc>https://wshaddix.com/career-development/soft-skills/technical-writing/</loc>
-    <lastmod>2026-10-20T12:14:23Z</lastmod>
+    <lastmod>2026-10-25T12:18:28Z</lastmod>
   </url>
 </urlset>

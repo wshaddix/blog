@@ -24,6 +24,19 @@ A browser that must call a JWT API talks to its own app, and the app holds the t
 
 The API validates a JWT. The web app can be a client of that API or the issuer of the cookie.
 
+### Picking the scheme per request
+
+- TODO: Register a cookie scheme for each way a caller can be signed in. A policy scheme reads the request and forwards it to the scheme whose cookie is present.
+- TODO: One request uses one of those schemes. The default scheme is the policy that chooses.
+- TODO: An endpoint names the scheme it accepts. While both are in use, it can name both.
+
+### Two identity providers during a migration
+
+- TODO: Keep the old provider's scheme beside the new one while callers still sign in with the old provider.
+- TODO: After the token is validated, a claim selects which scheme stores the sign-in.
+- TODO: Signing out clears every scheme the browser might hold, including the OpenID Connect scheme.
+- TODO: A new application starts with one default scheme. Two schemes cover the time when both providers are still in use.
+
 ## Key strength
 
 - TODO: A bearer-token scheme depends on the key that signs the token. Pick a scheme whose key you can store outside the repo and rotate.

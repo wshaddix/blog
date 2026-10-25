@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -193,6 +193,11 @@
 <li>TODO: The first module to leave is the one whose contract and data can move without dragging the rest of the process along.</li>
 <li>TODO: Keep a module in-process while other modules still share its transaction or read its tables.</li>
 </ul>
+<h3 id="strangling-the-module-out">Strangling the module out</h3>
+<ul>
+<li>TODO: Send one slice of the module&#x27;s calls to the new process and leave the rest on the path that already runs.</li>
+<li>TODO: Widen the slice after the new path is the one callers use, and remove the old path when it has no traffic.</li>
+</ul>
 <h2 id="calls-between-modules">Calls between modules</h2>
 <ul>
 <li>TODO: A module calls another through its public contract, in process, or by publishing an event.</li>
@@ -213,6 +218,12 @@
 <li>TODO: A proposal from the team states the intent and the options. The record states the choice and what was turned down.</li>
 <li>TODO: A check in the build fails when new code crosses that choice, so the record is not the only thing holding it.</li>
 </ul>
+<h3 id="triggers-for-the-next-step">Triggers for the next step</h3>
+<ul>
+<li>TODO: The record names the measurement that would change the decision, such as a latency figure or a number of tenants.</li>
+<li>TODO: Write that trigger while the choice is still easy to revisit.</li>
+<li>TODO: When the trigger is true, the record already says which part moves and which part stays.</li>
+</ul>
 <h2 id="key-principles">Key Principles</h2>
 <ol>
 <li><strong>Simplicity first</strong> - Don&#x27;t add patterns until you need them</li>
@@ -224,6 +235,7 @@
 <ul>
 <li>See <a href="../../../csharp/overview/">C# and .NET</a></li>
 <li>See <a href="../../../patterns/architecture-styles/modular-monolith/">Modular monolith</a></li>
+<li>See <a href="../../../patterns/architecture-styles/distributed-building-blocks/">Distributed building blocks</a></li>
 <li>See <a href="../../../patterns/integration-patterns/synchronous-call-chains/">Synchronous call chains</a></li>
 <li>See <a href="../../../fundamentals/distributed-systems/consistency/">Consistency</a></li>
 <li>See <a href="../../../career-development/team-operations/decision-making/">Decision making</a></li>
@@ -276,6 +288,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/patterns/architecture-styles/distributed-building-blocks/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Distributed Building Blocks</span>
+            </div>
+            <p class="card-compact-description">Parts a split system often adds, and the condition that would make each one leave again.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/csharp/aspnet-core/web-apis/grpc/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -322,16 +344,6 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">C# is a modern, object-oriented programming language developed by Microsoft. Combined with the .NET platform, it's one of the most versatile ecosystems for building applications.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/fundamentals/distributed-systems/overview/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Overview</span>
-            </div>
-            <p class="card-compact-description">Work that spans more than one process, and the guarantees you give up when it does.</p>
         </div>
     </a>
 </div>

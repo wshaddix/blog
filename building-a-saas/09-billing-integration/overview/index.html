@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -236,6 +236,11 @@
 <!-- TODO: Stripe client and email provider: timeouts, retries, and idempotency keys -->
 <h2 id="concurrency-for-seats-and-plan-changes">Concurrency for seats and plan changes</h2>
 <!-- TODO: Lost updates on seat counts and plan changes -->
+<h3 id="two-invites-for-the-last-seat">Two invites for the last seat</h3>
+<ul>
+<li>TODO: Two admins invite a member at the same moment. Each sees one free seat, and each inserts a membership.</li>
+<li>TODO: Bump a version on the subscription row with every new membership, so the second save fails and retries. See <a href="../../../databases/relational/transactions-and-isolation/#two-inserts-that-both-pass-a-check">Two inserts that both pass a check</a>.</li>
+</ul>
 <h2 id="when-compensation-fails">When compensation fails</h2>
 <!-- TODO: A billing workflow whose undo fails, and a state that waits for a person -->
 <h2 id="related-topics">Related Topics</h2>
@@ -267,6 +272,16 @@
                 <span class="card-compact-title">Concurrency</span>
             </div>
             <p class="card-compact-description">How two saves of the same row avoid a lost update.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/integration-patterns/durable-workflows/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Durable Workflows</span>
+            </div>
+            <p class="card-compact-description">A workflow that stores its place so another process can continue it after a crash.</p>
         </div>
     </a>
 </div>
@@ -327,6 +342,16 @@
                 <span class="card-compact-title">Time-Dependent Code</span>
             </div>
             <p class="card-compact-description">Tests that depend on the clock should take a clock you control.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/webhooks/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Webhooks</span>
+            </div>
+            <p class="card-compact-description">An HTTP callback the app receives, or sends, when something has already happened.</p>
         </div>
     </a>
 </div>

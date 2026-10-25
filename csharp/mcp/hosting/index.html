@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -178,12 +178,20 @@
 <p>Startup, shutdown, and a server that outlives one request.</p>
 <h2 id="testing">Testing</h2>
 <p>A TUnit test that boots the server and calls a tool.</p>
+<h2 id="called-by-a-hosted-agent-service">Called by a hosted agent service</h2>
+<ul>
+<li>TODO: A hosted agent service is a remote client of the HTTP server. It is not a stdio process this host starts.</li>
+<li>TODO: Accept a token from a service this server has registered. Reject a caller it does not know.</li>
+<li>TODO: That service can run only the tools this server published, and each argument still has to pass the server&#x27;s own checks.</li>
+<li>TODO: When the product is multi-tenant, bind the caller to one tenant. See <a href="../../../building-a-saas/06-api-development/overview/#hosted-agent-services-as-callers">Hosted agent services as callers</a>.</li>
+</ul>
 <h2 id="code-example">Code example</h2>
 <p>A short C# sample will go here. A sample longer than about 30 lines will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../../platform/generic-host/">Generic host</a></li>
 <li><a href="../../testing/project-setup/">TUnit project setup</a></li>
+<li><a href="../../../building-a-saas/06-api-development/overview/">Building a SaaS: API Development</a> - A tenant MCP endpoint called by a hosted agent service</li>
 </ul>
 <hr>
 <p><strong>Next:</strong> <a href="../authentication/">MCP Authentication</a></p>
@@ -217,6 +225,16 @@
                 <span class="card-compact-title">MCP Servers</span>
             </div>
             <p class="card-compact-description">A Model Context Protocol server exposes tools, resources, and prompts to an AI client. In C# it is a hosted process, either on standard I/O or on HTTP.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
         </div>
     </a>
 </div>

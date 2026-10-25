@@ -30,4 +30,4 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ---
 
-**Next:** [Forms and Validation](/csharp/aspnet-core/blazor/forms-and-validation)
+**Next:** [Data Grids](/csharp/aspnet-core/blazor/data-grids)

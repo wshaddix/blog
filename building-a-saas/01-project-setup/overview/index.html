@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -196,6 +196,11 @@
 <!-- TODO: .editorconfig, analyzers, and dotnet format in CI -->
 <h2 id="aspire-apphost">Aspire AppHost</h2>
 <!-- TODO: SQL, Redis, API, worker, and the dashboard -->
+<h3 id="a-local-model-as-a-dev-resource">A local model as a dev resource</h3>
+<ul>
+<li>TODO: The AppHost starts a model on the developer machine and passes its address to the API, next to SQL and Redis.</li>
+<li>TODO: The API reads that address from configuration. Production points the same setting at the hosted model, as in <a href="../../../csharp/mcp/clients-and-agents/#a-local-model-in-development">A local model in development</a>.</li>
+</ul>
 <h2 id="target-framework-and-upgrades">Target framework and upgrades</h2>
 <ul>
 <li>TODO: The solution targets the current LTS. Try a newer release candidate on a branch, and ship the framework the product has chosen.</li>
@@ -207,10 +212,22 @@
 <li>TODO: A hook formats after an edit, runs the tests before the task is called done, and blocks edits to the tests when the task is to make those tests pass.</li>
 <li>TODO: A folder file holds the rules for that folder. The root file stays short enough that a person will still read it.</li>
 </ul>
+<h3 id="allowed-and-denied-commands">Allowed and denied commands</h3>
+<ul>
+<li>TODO: The rules name the commands an agent may run without asking, and the commands that are refused.</li>
+<li>TODO: Build and test are allowed. A push, production settings, and secret files are denied.</li>
+<li>TODO: The deny is enforced by the tool. A sentence in the instruction file is not the only control.</li>
+</ul>
 <h2 id="automated-review-step">Automated review step</h2>
 <ul>
 <li>TODO: Run the agent with no chat, from a git hook or from the pipeline, and give it the diff to review.</li>
 <li>TODO: The step comments on the change. Merging stays with the person who reviews it.</li>
+</ul>
+<h3 id="a-check-that-can-block-a-commit">A check that can block a commit</h3>
+<ul>
+<li>TODO: The hook can fail the commit, not only comment later on a pull request.</li>
+<li>TODO: A secret in the diff stops the commit. A check that did not run stops it as well. A clean commit still waits for a person before it merges.</li>
+<li>TODO: The hook is <a href="../../../ai-assisted-development/tools/#blocking-a-commit">Blocking a commit</a>, and the secret scan is <a href="../../../ai-assisted-development/risks-and-limits/#before-it-reaches-the-repo">Before it reaches the repo</a>.</li>
 </ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
@@ -263,6 +280,16 @@
                 <span class="card-compact-title">Context and Instructions</span>
             </div>
             <p class="card-compact-description">The model only knows what is in the window. You decide what that is.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/mcp/clients-and-agents/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">MCP Clients and Agents</span>
+            </div>
+            <p class="card-compact-description">An MCP client calls a server. An agent uses that client when a model asks for a tool.</p>
         </div>
     </a>
 </div>

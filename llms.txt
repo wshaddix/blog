@@ -133,6 +133,8 @@
 - [Web APIs](https://wshaddix.com/csharp/aspnet-core/web-apis/overview.md): HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sample.
 - [APIs for Agents](https://wshaddix.com/csharp/aspnet-core/web-apis/apis-for-agents.md): An HTTP API whose caller is a model choosing a tool.
 - [Idempotent Requests](https://wshaddix.com/csharp/aspnet-core/web-apis/idempotent-requests.md): A client that retries a POST needs the server to recognize the same attempt.
+- [Webhooks](https://wshaddix.com/csharp/aspnet-core/web-apis/webhooks.md): An HTTP callback the app receives, or sends, when something has already happened.
+- [Conditional Requests](https://wshaddix.com/csharp/aspnet-core/web-apis/conditional-requests.md): Two clients edit the same resource. The second save should fail instead of erasing the first.
 - [Minimal APIs and Controllers](https://wshaddix.com/csharp/aspnet-core/web-apis/minimal-apis-and-controllers.md): ASP.NET Core has two ways to declare an endpoint. Pick one per project and stay with it unless a feature forces the other.
 - [Routing and Model Binding](https://wshaddix.com/csharp/aspnet-core/web-apis/routing-and-binding.md): How a request URL and body become arguments on a handler.
 - [Validation](https://wshaddix.com/csharp/aspnet-core/web-apis/validation.md): Reject a request that cannot succeed before any state changes.
@@ -183,6 +185,7 @@
 - [Blazor](https://wshaddix.com/csharp/aspnet-core/blazor/overview.md): Blazor is the C# web UI. It talks to the API. It does not become a second place where business rules live.
 - [AI Features](https://wshaddix.com/csharp/aspnet-core/blazor/ai-features.md): A Blazor component that shows a model's answer. The prompt and the model key stay on the server.
 - [Components and Routing](https://wshaddix.com/csharp/aspnet-core/blazor/components-and-routing.md): A component is a .razor file with parameters, and the router picks one from the URL.
+- [Data Grids](https://wshaddix.com/csharp/aspnet-core/blazor/data-grids.md): A grid shows one page of rows. The API chooses which page, and the component renders it.
 - [Forms and Validation](https://wshaddix.com/csharp/aspnet-core/blazor/forms-and-validation.md): A form edits a model and shows the same kind of field errors the API returns.
 - [Blazor Authentication](https://wshaddix.com/csharp/aspnet-core/blazor/authentication.md): A Blazor app in the browser uses the cookie scheme. It does not store a JWT where script can read it.
 - [Calling the API from Blazor](https://wshaddix.com/csharp/aspnet-core/blazor/calling-the-api.md): Components call a typed client. They do not build URLs by hand.
@@ -299,6 +302,7 @@
 - [Modular Monolith](https://wshaddix.com/patterns/architecture-styles/modular-monolith.md): One deployable, divided into modules that own their data and their features.
 - [Architecture Tests](https://wshaddix.com/patterns/architecture-styles/architecture-tests.md): Tests that fail when code reaches across a boundary you meant to keep.
 - [Event Sourcing and Change Data Capture](https://wshaddix.com/patterns/architecture-styles/event-sourcing-and-cdc.md): Two ways a change becomes a stream of facts.
+- [Distributed Building Blocks](https://wshaddix.com/patterns/architecture-styles/distributed-building-blocks.md): Parts a split system often adds, and the condition that would make each one leave again.
 
 ### Application Patterns
 
@@ -311,6 +315,7 @@
 - [Overview](https://wshaddix.com/patterns/integration-patterns/overview.md): This page is a catalog of names, not a lesson. Messaging shows up in practice in background services and in Building a SaaS: Background Jobs.
 - [Outbox and the Idempotent Consumer](https://wshaddix.com/patterns/integration-patterns/outbox-and-idempotent-consumer.md): Saving state and sending a message are two writes, and either one can fail on its own.
 - [Sagas](https://wshaddix.com/patterns/integration-patterns/sagas.md): A multi-step workflow that crosses service boundaries.
+- [Durable Workflows](https://wshaddix.com/patterns/integration-patterns/durable-workflows.md): A workflow that stores its place so another process can continue it after a crash.
 - [Choreography and Orchestration](https://wshaddix.com/patterns/integration-patterns/choreography-vs-orchestration.md): Who decides the next step when a workflow is split across components.
 - [Synchronous Call Chains](https://wshaddix.com/patterns/integration-patterns/synchronous-call-chains.md): A request that waits on another module, which waits on another, stacks latency and failure.
 
@@ -427,6 +432,7 @@
 
 - [Engineering Leadership Career Path](https://wshaddix.com/career-development/career-ladder/index.md): This guide provides a comprehensive overview of the engineering leadership ladder, from Individual Contributor through VP of Engineering. Each role has its own detailed page with responsibilities, skills, and transition guidance.
 - [Individual Contributor](https://wshaddix.com/career-development/career-ladder/individual-contributor.md): As an Individual Contributor (IC), you are the technical foundation of the engineering organization. Your primary focus is on craft, code quality, and technical execution.
+- [Software Architect](https://wshaddix.com/career-development/career-ladder/architect.md): The architect owns the design that more than one team builds on.
 - [Manager of Software Engineering](https://wshaddix.com/career-development/career-ladder/manager.md): As a Manager, you shift from individual technical contribution to team enablement. Your primary focus is on team execution and people development. You
 - [Director of Software Engineering](https://wshaddix.com/career-development/career-ladder/director.md): As a Director, you shift from managing a single team to owning a domain across multiple teams. Your primary focus is on cross-team strategy and organizational health.
 - [VP of Engineering](https://wshaddix.com/career-development/career-ladder/vp.md): As a VP, you own the entire engineering function or a major division. Your primary focus is on function-wide strategy and business outcomes. You answer the

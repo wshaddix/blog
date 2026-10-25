@@ -28,11 +28,18 @@ We'll use **shared database with row-level filtering** - good balance for most S
 
 ## Contextual options
 
+## The cross-tenant admin list
+
+- TODO: An operator lists tenants across the product. The query is not limited to one tenant, and a tenant user does not get this page.
+- TODO: Show one page of rows. The API returns the next page with a keyset cursor. See [Keyset pagination](/building-a-saas/06-api-development/overview#keyset-pagination).
+- TODO: Render that page with the grid in [Data grids](/csharp/aspnet-core/blazor/data-grids).
+
 ## Related Topics
 
 - See [Databases: Data Modeling](/databases/data-modeling/overview)
 - See [Entity Framework: Querying](/csharp/entity-framework/querying)
 - See [Configuration and options](/csharp/platform/configuration-and-options)
+- See [Data grids](/csharp/aspnet-core/blazor/data-grids)
 
 ---
 

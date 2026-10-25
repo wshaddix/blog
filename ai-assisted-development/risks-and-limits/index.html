@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -170,6 +170,12 @@
 <p><em>This page is an outline. The sections will be filled in over time, including a C# sample where the topic has one.</em></p>
 <h2 id="secrets">Secrets</h2>
 <p>A prompt, a log, and a pasted config file are copies of the secret.</p>
+<h3 id="before-it-reaches-the-repo">Before it reaches the repo</h3>
+<ul>
+<li>TODO: Scan the staged diff for a key, a connection string, or a token before the commit is stored.</li>
+<li>TODO: A match blocks the commit. A scan that does not finish blocks it too. A skipped check is not a pass.</li>
+<li>TODO: The hook that applies this rule is <a href="../tools/#blocking-a-commit">Blocking a commit</a>.</li>
+</ul>
 <h2 id="licenses-and-provenance">Licenses and provenance</h2>
 <p>Generated code can resemble code the model was trained on. You still publish it under your license.</p>
 <h2 id="confident-errors">Confident errors</h2>
@@ -178,6 +184,12 @@
 <p>Accepting a suggestion you cannot explain. The review page is the countermeasure.</p>
 <h2 id="privacy">Privacy</h2>
 <p>What leaves the machine, and which product setting controls it.</p>
+<h2 id="instructions-hidden-in-data">Instructions hidden in data</h2>
+<ul>
+<li>TODO: A document, a ticket, or a tool result can contain a sentence that is written as an instruction.</li>
+<li>TODO: That sentence does not widen the task, change the recipient, or add a tool.</li>
+<li>TODO: When you review a run, look for a tool argument that was taken from that untrusted text.</li>
+</ul>
 <h2 id="example">Example</h2>
 <p>A worked example will go here. When an example produces more than about 30 lines of C#, that code will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>
 <h2 id="related">Related</h2>
@@ -197,6 +209,26 @@
                 <span class="card-compact-title">AI-Assisted Development</span>
             </div>
             <p class="card-compact-description">How to use an assistant while you design, write, and review software. The assistant is a tool in the loop. You still own the change.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/01-project-setup/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">A well-organized project structure sets the foundation for maintainability and scalability.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/tools/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Tools</span>
+            </div>
+            <p class="card-compact-description">The categories of assistant you will meet. Product names change. The categories do not.</p>
         </div>
     </a>
 </div>

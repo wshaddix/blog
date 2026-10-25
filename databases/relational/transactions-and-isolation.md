@@ -16,6 +16,12 @@ Read committed, snapshot, and serializable. What each one prevents.
 
 Dirty reads, non-repeatable reads, and phantoms.
 
+### Two inserts that both pass a check
+
+- TODO: Two transactions each read "no overlap", and each inserts its own row. No row was updated twice, so a row version catches nothing.
+- TODO: Make the save fail for the second one: a unique or exclusion constraint, an update to a shared parent row that carries a version, or serializable isolation.
+- TODO: Pick the constraint when the rule fits one. Pick the parent row when the rule is a count.
+
 ## Deadlocks
 
 Two transactions waiting on each other, and how the engine picks a victim.

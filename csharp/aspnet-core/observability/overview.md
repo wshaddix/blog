@@ -22,6 +22,11 @@ One pipeline for all three, and an exporter per environment.
 
 ### A slow 200
 
+### Sampling
+
+- TODO: Head sampling keeps or drops a trace when it starts. Tail sampling decides after the trace finishes, so a failed or slow trace can be kept while ordinary ones are dropped.
+- TODO: Keep enough failing traces to investigate, and drop enough of the rest that the exporter can keep up.
+
 ## Correlation
 
 A trace id on the request, the log, and the downstream call.

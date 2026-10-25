@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -195,8 +195,22 @@
 <!-- TODO: List endpoints use a keyset cursor -->
 <h2 id="async-request-reply">Async request-reply</h2>
 <!-- TODO: 202 Accepted and a status resource for work that outlives the request -->
+<h2 id="conditional-updates">Conditional updates</h2>
+<ul>
+<li>TODO: Two admins of one tenant open the same settings page. The second save must not erase the first.</li>
+<li>TODO: The settings endpoint returns an ETag and requires <code translate="no" v-pre>If-Match</code> on save. A stale save gets 412, and the page reloads the current values. See <a href="../../../csharp/aspnet-core/web-apis/conditional-requests/">Conditional requests</a>.</li>
+</ul>
 <h2 id="idempotency-keys">Idempotency keys</h2>
 <!-- TODO: An Idempotency-Key header so a retried POST returns the first result -->
+<h3 id="keys-per-tenant">Keys per tenant</h3>
+<ul>
+<li>TODO: Store the key with the tenant. A unique index on tenant plus key keeps one tenant&#x27;s retry from sharing another tenant&#x27;s outcome.</li>
+</ul>
+<h2 id="bulk-imports">Bulk imports</h2>
+<ul>
+<li>TODO: A tenant uploads thousands of records in one request. Stream the items and save them in batches instead of binding one array. See <a href="../../../csharp/aspnet-core/web-apis/routing-and-binding/#large-request-bodies">Large request bodies</a>.</li>
+<li>TODO: The size limit can follow the tenant&#x27;s plan.</li>
+</ul>
 <h2 id="rate-limits-per-plan">Rate limits per plan</h2>
 <ul>
 <li>TODO: A free plan and a paid plan carry different limits. The partition includes the plan, along with the caller.</li>
@@ -207,10 +221,28 @@
 <li>TODO: Some commands are invoked by a model that picked a tool. Name the inputs, the errors, and whether a retry is safe.</li>
 <li>TODO: Require an idempotency key on those writes, and return the first result when the same key comes back.</li>
 </ul>
+<h3 id="scoping-what-an-agents-key-can-touch">Scoping what an agent&#x27;s key can touch</h3>
+<ul>
+<li>TODO: The credential an agent uses can read the rows the task named and write to the store the task named. The rest of the API stays closed.</li>
+<li>TODO: The tenant and the date range are fixed on the task. A later turn cannot change them by asking.</li>
+<li>TODO: A call outside that scope fails in the API, including when the model requested it.</li>
+</ul>
 <h2 id="an-mcp-endpoint-for-tenants">An MCP endpoint for tenants</h2>
 <ul>
 <li>TODO: A tenant-facing MCP endpoint is another API surface beside the HTTP API that agents call. It authenticates the caller and stays inside that tenant&#x27;s data.</li>
 <li>TODO: Apply the same idempotency rule on its writes that the HTTP API uses.</li>
+</ul>
+<h3 id="hosted-agent-services-as-callers">Hosted agent services as callers</h3>
+<ul>
+<li>TODO: A tenant may connect a hosted agent service to this endpoint. That service is a caller, held to the same tenant boundary as a person using the API.</li>
+<li>TODO: Register the service you expect. A token from an unknown service is rejected.</li>
+<li>TODO: Host the endpoint so a remote service can call it, as in <a href="../../../csharp/mcp/hosting/#called-by-a-hosted-agent-service">Called by a hosted agent service</a>.</li>
+</ul>
+<h2 id="outgoing-webhooks-for-tenants">Outgoing webhooks for tenants</h2>
+<ul>
+<li>TODO: A tenant registers a callback URL and a secret, and receives events for that tenant only.</li>
+<li>TODO: Sign the raw body with that subscriber&#x27;s secret, and retry a delivery that failed until the attempt limit.</li>
+<li>TODO: Refuse a callback URL that resolves to a private or internal address before the request is sent.</li>
 </ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
@@ -219,6 +251,7 @@
 <li>See <a href="../../../csharp/mcp/authentication/">MCP authentication</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/apis-for-agents/">APIs for agents</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/idempotent-requests/">Idempotent requests</a></li>
+<li>See <a href="../../../csharp/aspnet-core/web-apis/webhooks/">Webhooks</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/caching/">Caching</a></li>
 <li>See <a href="../../../fundamentals/distributed-systems/caching/">Caching fundamentals</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/pagination/">Pagination</a></li>
@@ -229,16 +262,6 @@
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
-<div class="card-compact-container">
-    <a href="/csharp/aspnet-core/blazor/ai-features/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">AI Features</span>
-            </div>
-            <p class="card-compact-description">A Blazor component that shows a model's answer. The prompt and the model key stay on the server.</p>
-        </div>
-    </a>
-</div>
 <div class="card-compact-container">
     <a href="/csharp/aspnet-core/web-apis/apis-for-agents/" class="group card-compact no-link">
         <div class="card-compact-body">
@@ -256,6 +279,26 @@
                 <span class="card-compact-title">Caching</span>
             </div>
             <p class="card-compact-description">A cache keeps a copy so you can skip the slower read, and then you have to live with that copy being old.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/conditional-requests/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Conditional Requests</span>
+            </div>
+            <p class="card-compact-description">Two clients edit the same resource. The second save should fail instead of erasing the first.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/mcp/hosting/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Hosting an MCP Server</span>
+            </div>
+            <p class="card-compact-description">The same server can run as a local stdio process or as an HTTP endpoint.</p>
         </div>
     </a>
 </div>
@@ -326,6 +369,16 @@
                 <span class="card-compact-title">Web APIs</span>
             </div>
             <p class="card-compact-description">HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sample.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/webhooks/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Webhooks</span>
+            </div>
+            <p class="card-compact-description">An HTTP callback the app receives, or sends, when something has already happened.</p>
         </div>
     </a>
 </div>

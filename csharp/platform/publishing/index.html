@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845813681457">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.845813681457" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.845813681457" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,21 @@
 <p>Win-x64, linux-x64, and the other RIDs.</p>
 <h2 id="trimming-and-aot">Trimming and AOT</h2>
 <p>What native compilation demands of your code. Relevant to console tools and Uno.</p>
+<h3 id="aot-versus-jit">AOT versus JIT</h3>
+<ul>
+<li>TODO: JIT compiles methods as they run and can use the full runtime, including reflection and generated code.</li>
+<li>TODO: AOT compiles ahead of publish. Startup is shorter and the output is native code, and the publish takes longer.</li>
+</ul>
+<h3 id="workloads-that-suit-aot">Workloads that suit AOT</h3>
+<ul>
+<li>TODO: Short-lived tools, CLI apps, and small services that care about startup time and a smaller deployable are a strong fit for AOT.</li>
+<li>TODO: A long-running API that depends on runtime code generation or plugins is a strong fit for JIT.</li>
+</ul>
+<h3 id="what-breaks-under-trimming">What breaks under trimming</h3>
+<ul>
+<li>TODO: Trimming removes code it cannot see is used. Reflection, serializers that bind by name, and types loaded from a string are the usual losses.</li>
+<li>TODO: A trim warning names a member that may be missing when the process runs. Preserve it when a real runtime path needs it.</li>
+</ul>
 <h2 id="configuration-at-publish-time">Configuration at publish time</h2>
 <p>What is baked in, and what is still read from the environment.</p>
 <h2 id="code-example">Code example</h2>
@@ -189,6 +204,16 @@
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/csharp/platform/aspire/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">.NET Aspire</span>
+            </div>
+            <p class="card-compact-description">Orchestrate the local dependencies of a multi-project app.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/csharp/platform/http-clients/" class="group card-compact no-link">
         <div class="card-compact-body">

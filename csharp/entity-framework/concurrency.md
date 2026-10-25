@@ -6,6 +6,8 @@ How two saves of the same row avoid a lost update.
 
 ## Optimistic concurrency
 
+- TODO: Over HTTP, the token travels as an ETag. See [Conditional requests](/csharp/aspnet-core/web-apis/conditional-requests).
+
 ## Pessimistic concurrency
 
 ## Atomic updates with ExecuteUpdate

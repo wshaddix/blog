@@ -43,6 +43,10 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 - TODO: Point an agent at one feature and ask for cases the happy path never runs: the wrong tenant, a double submit, a missing field.
 - TODO: Keep the cases that reproduce. A suggestion you cannot run again is not part of the suite.
 
+## Evals against a second model
+
+- TODO: Run the same evals against the replacement before switching, as in [Changing the model without changing the feature](/csharp/mcp/clients-and-agents#changing-the-model-without-changing-the-feature), and keep the checks in [Verification](/ai-assisted-development/verification).
+
 ## Related Topics
 
 - See [C#: Testing](/csharp/testing/unit-testing) - TUnit, TUnit.Mocks, and API tests

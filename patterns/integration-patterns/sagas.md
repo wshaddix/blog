@@ -36,8 +36,9 @@ A multi-step workflow that crosses service boundaries.
 ## Related Topics
 
 - See [Outbox and the Idempotent Consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
+- See [Durable workflows](/patterns/integration-patterns/durable-workflows)
 - See [Choreography and Orchestration](/patterns/integration-patterns/choreography-vs-orchestration)
 
 ---
 
-**Next:** [Choreography and Orchestration](/patterns/integration-patterns/choreography-vs-orchestration)
+**Next:** [Durable Workflows](/patterns/integration-patterns/durable-workflows)

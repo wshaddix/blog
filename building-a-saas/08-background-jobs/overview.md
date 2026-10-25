@@ -41,7 +41,18 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 ## Shutdown and cancellation
 
+## One run across instances
+
+- TODO: A schedule that is registered on every instance will fire on every instance. Take one shared lock before the job body runs.
+- TODO: Hold the lock on a connection that stays open for the work. If that connection drops, another instance may take the lock while the first is still running, so the rest of the run has to be safe to repeat.
+- TODO: Record which occurrence finished. The lock does not remember that, and a later instance must not do the same occurrence again.
+
 ## When a saga needs a person
+
+## Workflows that wait
+
+- TODO: A trial end, a dunning sequence, and an approval are waits. Each one stores a deadline and the path to take when nobody answers in time.
+- TODO: The deadline is part of the workflow record, so a restart keeps it and runs the timeout path once.
 
 ## A context in a background worker
 
@@ -57,6 +68,7 @@ Not everything should happen in the request/response cycle. Background jobs hand
 - See [DbContext](/csharp/entity-framework/dbcontext)
 - See [Entity Framework performance](/csharp/entity-framework/performance)
 - See [Sagas](/patterns/integration-patterns/sagas)
+- See [Durable workflows](/patterns/integration-patterns/durable-workflows)
 
 ---
 

@@ -20,6 +20,10 @@ Seeks, scans, lookups, and the estimate versus the actual row count.
 
 The columns you filter, join, and sort on.
 
+### Equality columns then the sort
+
+Put equality columns first and the sort column after them; an index that leads with an unrelated column still shows a sort operator, and the extra index costs writes and storage.
+
 ## When not to add one
 
 Write cost, unused indexes, and a query that needs a rewrite instead.
