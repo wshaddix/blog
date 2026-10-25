@@ -340,3 +340,18 @@ Oct 24, 2026 digest (Oct 23 posts and the newsletter issue received Oct 24). Stu
 | [Two invites for the last seat](building-a-saas/09-billing-integration/overview.md#two-invites-for-the-last-seat) | Concurrent invites racing for the last seat | [mjovanovictech 2113518540456112465](https://x.com/mjovanovictech/status/2113518540456112465) | 2026-10-23 |
 | [Large request bodies](csharp/aspnet-core/web-apis/routing-and-binding.md#large-request-bodies) | Streaming a large JSON request body | [aspnetcore_news 2113653934803857666](https://x.com/aspnetcore_news/status/2113653934803857666) | 2026-10-23 |
 | [Bulk imports](building-a-saas/06-api-development/overview.md#bulk-imports) | Streaming a tenant bulk import | [aspnetcore_news 2113653934803857666](https://x.com/aspnetcore_news/status/2113653934803857666) | 2026-10-23 |
+
+## 2026-10-25 (`ce1d97c`)
+
+Oct 25, 2026 digest (Oct 24 posts). Stubs from `docs: stub the October 25 content-gap topics`. The digest cites a status id and names the handle next to it, so the links use `https://x.com/<handle>/status/<id>`.
+
+| Stub | Topic | Source URL(s) | Source date |
+| --- | --- | --- | --- |
+| [Equality columns then the sort](databases/relational/indexes-and-query-plans.md#equality-columns-then-the-sort) | Composite index column order when a query filters and sorts | [mjovanovictech 2113880929068269653](https://x.com/mjovanovictech/status/2113880929068269653) | 2026-10-24 |
+| [Latest activity per project](building-a-saas/07-data-layer/overview.md#latest-activity-per-project) | Dashboard query for the newest item per parent row | [mjovanovictech 2113880929068269653](https://x.com/mjovanovictech/status/2113880929068269653) | 2026-10-24 |
+| [After the deploy is triggered](devops/ci-cd/concepts.md#after-the-deploy-is-triggered) | One deploy request, a bounded status loop, and a check of the running app | [mjovanovictech 2113957933977329706](https://x.com/mjovanovictech/status/2113957933977329706) | 2026-10-24 |
+| [Cancelling an older deploy](devops/ci-cd/github-actions.md#cancelling-an-older-deploy) | Concurrency group that cancels an older in-progress deploy | [mjovanovictech 2113957933977329706](https://x.com/mjovanovictech/status/2113957933977329706) | 2026-10-24 |
+| [Checking the release after it lands](building-a-saas/11-deployment/overview.md#checking-the-release-after-it-lands) | Verify the release after it lands | [mjovanovictech 2113957933977329706](https://x.com/mjovanovictech/status/2113957933977329706) | 2026-10-24 |
+| [Changing the model without changing the feature](csharp/mcp/clients-and-agents.md#changing-the-model-without-changing-the-feature) | Keep the feature on IChatClient while the model changes | [RaulJuncoV 2113975825859330526](https://x.com/RaulJuncoV/status/2113975825859330526) | 2026-10-24 |
+| [Evals against a second model](building-a-saas/10-testing-strategy/overview.md#evals-against-a-second-model) | Run the same evals against a replacement model | [RaulJuncoV 2113975825859330526](https://x.com/RaulJuncoV/status/2113975825859330526) | 2026-10-24 |
+| [Software Architect](career-development/career-ladder/architect.md) | Software architect role on the career ladder | [AntonMartyniuk 2113880517007253650](https://x.com/AntonMartyniuk/status/2113880517007253650) | 2026-10-24 |
