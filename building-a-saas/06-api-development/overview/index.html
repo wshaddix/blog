@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -185,6 +185,10 @@
 <!-- TODO: FluentValidation, model validation -->
 <h2 id="error-handling">Error Handling</h2>
 <!-- TODO: Problem Details, global exception handling -->
+<h2 id="request-timeouts">Request timeouts</h2>
+<ul>
+<li>TODO: Bound how long one request may run, and pass that limit into the work. See <a href="../../../csharp/advanced-features/cancellation/#request-timeouts">Request timeouts</a>.</li>
+</ul>
 <h2 id="api-versioning">API Versioning</h2>
 <!-- TODO: URL vs header versioning -->
 <h2 id="documentation">Documentation</h2>
@@ -215,6 +219,10 @@
 <ul>
 <li>TODO: A free plan and a paid plan carry different limits. The partition includes the plan, along with the caller.</li>
 <li>TODO: Document the limit, the window, and what the client does with a 429.</li>
+</ul>
+<h3 id="counters-shared-across-instances">Counters shared across instances</h3>
+<ul>
+<li>TODO: Every instance reads and updates the same counters for a plan. See <a href="../../../csharp/aspnet-core/web-apis/rate-limiting/#more-than-one-instance">More than one instance</a>.</li>
 </ul>
 <h2 id="apis-called-by-agents">APIs called by agents</h2>
 <ul>
@@ -247,6 +255,7 @@
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/overview/">ASP.NET Core: Web APIs</a></li>
+<li>See <a href="../../../csharp/advanced-features/cancellation/">Cancellation</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/rate-limiting/">Rate limiting</a></li>
 <li>See <a href="../../../csharp/mcp/authentication/">MCP authentication</a></li>
 <li>See <a href="../../../csharp/aspnet-core/web-apis/apis-for-agents/">APIs for agents</a></li>
@@ -279,6 +288,16 @@
                 <span class="card-compact-title">Caching</span>
             </div>
             <p class="card-compact-description">A cache keeps a copy so you can skip the slower read, and then you have to live with that copy being old.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/advanced-features/cancellation/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Cancellation</span>
+            </div>
+            <p class="card-compact-description">Cooperative cancellation, and a limit on how much work runs at once.</p>
         </div>
     </a>
 </div>
@@ -339,16 +358,6 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Polling, Server-Sent Events, and Async Request-Reply</span>
-            </div>
-            <p class="card-compact-description">Ways to deliver a result after the first request has returned.</p>
         </div>
     </a>
 </div>

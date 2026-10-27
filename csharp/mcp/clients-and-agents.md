@@ -23,6 +23,10 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 
 - TODO: Keep the model behind `IChatClient` and configuration, keep tools, rules, and review screens independent of the provider, and run the same evals against the replacement before switching.
 
+### Reusing answers to similar questions
+
+- TODO: Reuse an earlier model answer for a similar question. See [Reusing model answers](/building-a-saas/07-data-layer/overview#reusing-model-answers).
+
 ## Tools the model can call
 
 ## The tool loop

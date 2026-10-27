@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -170,6 +170,10 @@
 <p><em>This page is an outline. The sections will be filled in over time, including a C# sample where the topic has one.</em></p>
 <h2 id="framework-dependent-and-self-contained">Framework-dependent and self-contained</h2>
 <p>Who has to install the runtime.</p>
+<h3 id="who-patches-the-runtime">Who patches the runtime</h3>
+<ul>
+<li>TODO: Who ships a runtime security fix for a framework-dependent deploy and for a self-contained deploy. See <a href="../../../building-a-saas/11-deployment/overview/#rebuilding-for-runtime-patches">Rebuilding for runtime patches</a>.</li>
+</ul>
 <h2 id="single-file">Single file</h2>
 <p>One executable, and what is still unpacked beside it.</p>
 <h2 id="runtime-identifier">Runtime identifier</h2>
@@ -221,6 +225,16 @@
                 <span class="card-compact-title">HTTP Clients</span>
             </div>
             <p class="card-compact-description">One way to call HTTP from a console app, an API, Blazor, WinUI, Uno, and an MCP server.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/11-deployment/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Getting code to production reliably and repeatedly.</p>
         </div>
     </a>
 </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -169,12 +169,18 @@
 <p>Cooperative cancellation, and a limit on how much work runs at once.</p>
 <h2 id="cancellation-1">Cancellation</h2>
 <!-- TODO: CancellationToken, linking tokens, and honoring the token through the call stack -->
+<h3 id="request-timeouts">Request timeouts</h3>
+<!-- TODO: A request timeout and the token the work receives. See [Request timeouts](/building-a-saas/06-api-development/overview#request-timeouts). -->
+<h3 id="work-that-must-not-be-cancelled">Work that must not be cancelled</h3>
+<!-- TODO: Work that still runs after the client disconnects. See [A charge that outlives the request](/building-a-saas/09-billing-integration/overview#a-charge-that-outlives-the-request). -->
 <h2 id="bounded-concurrency">Bounded concurrency</h2>
 <!-- TODO: A cap on parallel work -->
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
 <li>See <a href="../../../building-a-saas/08-background-jobs/overview/">Building a SaaS: Background Jobs</a> - Shutdown</li>
+<li>See <a href="../../../building-a-saas/06-api-development/overview/#request-timeouts">Building a SaaS: API Development</a> - Request timeouts</li>
 <li>See <a href="../../../building-a-saas/09-billing-integration/overview/">Building a SaaS: Billing Integration</a> - Refunds</li>
+<li>See <a href="../../../building-a-saas/09-billing-integration/overview/#a-charge-that-outlives-the-request">Building a SaaS: Billing Integration</a> - A charge that outlives the request</li>
 </ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
@@ -193,6 +199,26 @@
                 <span class="card-compact-title">Async/Await</span>
             </div>
             <p class="card-compact-description">Write asynchronous code that reads like synchronous code.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/09-billing-integration/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscription billing.</p>
         </div>
     </a>
 </div>

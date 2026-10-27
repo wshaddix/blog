@@ -54,6 +54,10 @@ A global limiter and an override on one endpoint.
 
 Limit the identity, not only the address, once a token is present.
 
+## More than one instance
+
+The same limit applies on every instance that serves the API. See [Counters shared across instances](/building-a-saas/06-api-development/overview#counters-shared-across-instances).
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

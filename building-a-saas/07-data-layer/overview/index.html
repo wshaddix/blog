@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -207,6 +207,14 @@
 <li>TODO: Each instance keeps a local copy of a tenant setting in front of the shared cache.</li>
 <li>TODO: After that setting changes, another instance can still serve its local copy until the copy expires.</li>
 </ul>
+<h3 id="reusing-model-answers">Reusing model answers</h3>
+<ul>
+<li>TODO: A repeated question can reuse a stored model answer. See <a href="../../../csharp/mcp/clients-and-agents/#reusing-answers-to-similar-questions">Reusing answers to similar questions</a>.</li>
+</ul>
+<h3 id="not-found-results">Not-found results</h3>
+<ul>
+<li>TODO: A lookup that finds nothing can be stored as an entry. See <a href="../../../csharp/aspnet-core/web-apis/caching/#empty-results">Empty results</a>.</li>
+</ul>
 <h2 id="audit-logging">Audit logging</h2>
 <!-- TODO: A record of changes for the tenant -->
 <h2 id="file-storage">File storage</h2>
@@ -255,6 +263,16 @@
                 <span class="card-compact-title">Blob Storage</span>
             </div>
             <p class="card-compact-description">Object storage for files the database should not hold.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/caching/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Caching</span>
+            </div>
+            <p class="card-compact-description">Cache a response when the bytes do not depend on a side effect.</p>
         </div>
     </a>
 </div>
@@ -309,6 +327,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/csharp/mcp/clients-and-agents/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">MCP Clients and Agents</span>
+            </div>
+            <p class="card-compact-description">An MCP client calls a server. An agent uses that client when a model asks for a tool.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/patterns/architecture-styles/modular-monolith/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -335,26 +363,6 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/databases/overview/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Overview</span>
-            </div>
-            <p class="card-compact-description">Databases are the backbone of most applications. Understanding how to design, query, and optimize databases is essential for any software engineer.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/databases/relational/sql-server/overview/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Overview</span>
-            </div>
-            <p class="card-compact-description">Microsoft's enterprise relational database system.</p>
         </div>
     </a>
 </div>

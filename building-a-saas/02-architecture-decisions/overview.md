@@ -60,6 +60,10 @@ The public API stays JSON over HTTP. gRPC is a decision only when an internal cl
 - TODO: Write that trigger while the choice is still easy to revisit.
 - TODO: When the trigger is true, the record already says which part moves and which part stays.
 
+## A production-readiness review
+
+- TODO: Review a design against what production will require before the build starts. See [Reviewing a design for production](/sdlc/architecture#reviewing-a-design-for-production).
+
 ## Key Principles
 
 1. **Simplicity first** - Don't add patterns until you need them

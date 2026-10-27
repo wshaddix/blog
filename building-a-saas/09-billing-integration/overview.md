@@ -38,6 +38,10 @@ Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscr
 
 ## Resilient outbound calls
 
+### A charge that outlives the request
+
+- TODO: A charge keeps its own lifetime, past the request that started it. See [Work that must not be cancelled](/csharp/advanced-features/cancellation#work-that-must-not-be-cancelled).
+
 ## Concurrency for seats and plan changes
 
 ### Two invites for the last seat
@@ -50,6 +54,7 @@ Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscr
 ## Related Topics
 
 - See [Concurrency](/csharp/entity-framework/concurrency)
+- See [Cancellation](/csharp/advanced-features/cancellation)
 - See [HTTP clients](/csharp/platform/http-clients)
 - See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)
 - See [Sagas](/patterns/integration-patterns/sagas)

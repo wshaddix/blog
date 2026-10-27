@@ -16,6 +16,10 @@ The domain model is the heart of your application - getting it right is crucial.
 
 ## Value Objects
 
+### Fixed after construction
+
+- TODO: A value object stays as it was built. See [Immutability](/csharp/advanced-features/records#immutability).
+
 ## Aggregates
 
 ## Our Domain Model

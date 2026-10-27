@@ -16,6 +16,10 @@ Read and write without loading the whole payload into a string.
 
 Serialize, deserialize, and source-generated contracts.
 
+## Binary formats
+
+Compact binary encodings, including CBOR, beside JSON.
+
 ## Options
 
 Property names, nulls, and a serializer option you set once.

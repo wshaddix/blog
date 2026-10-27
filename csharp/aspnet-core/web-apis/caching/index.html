@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -180,6 +180,12 @@
 <!-- TODO: Fix the query first. See [Entity Framework performance](/csharp/entity-framework/performance). -->
 <h2 id="cache-options">Cache options</h2>
 <!-- TODO: In-process, distributed, hybrid, output, and response: scope, consistency, and cost -->
+<h2 id="in-process-and-distributed-caches">In-process and distributed caches</h2>
+<p>An in-process cache stays on one server. A distributed cache is shared. See <a href="../../../../building-a-saas/07-data-layer/overview/#hybridcache">HybridCache</a>.</p>
+<h3 id="size-limits">Size limits</h3>
+<p>A cap on how much the in-process cache may hold.</p>
+<h3 id="mutable-cached-objects">Mutable cached objects</h3>
+<p>A cached object that the caller can still change.</p>
 <h2 id="hybridcache">HybridCache</h2>
 <!-- TODO: One API over a local cache and a distributed cache -->
 <h3 id="local-copies-across-servers">Local copies across servers</h3>
@@ -187,6 +193,8 @@
 <li>TODO: Each server keeps an in-process copy in front of the shared cache.</li>
 <li>TODO: Removing or replacing the entry on one server leaves the other servers&#x27; copies in place until they expire.</li>
 </ul>
+<h3 id="empty-results">Empty results</h3>
+<p>A stored not-found is a cache entry. See <a href="../../../../building-a-saas/07-data-layer/overview/#not-found-results">Not-found results</a>.</p>
 <h3 id="setup-with-redis-as-l2">Setup with Redis as L2</h3>
 <!-- TODO -->
 <h3 id="getorcreateasync-tags-and-stampede-protection">GetOrCreateAsync, tags, and stampede protection</h3>

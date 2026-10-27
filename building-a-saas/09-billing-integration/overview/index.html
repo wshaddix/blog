@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846245924746">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846245924746" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846245924746" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -234,6 +234,10 @@
 <!-- TODO: Meter product usage for usage-based prices -->
 <h2 id="resilient-outbound-calls">Resilient outbound calls</h2>
 <!-- TODO: Stripe client and email provider: timeouts, retries, and idempotency keys -->
+<h3 id="a-charge-that-outlives-the-request">A charge that outlives the request</h3>
+<ul>
+<li>TODO: A charge keeps its own lifetime, past the request that started it. See <a href="../../../csharp/advanced-features/cancellation/#work-that-must-not-be-cancelled">Work that must not be cancelled</a>.</li>
+</ul>
 <h2 id="concurrency-for-seats-and-plan-changes">Concurrency for seats and plan changes</h2>
 <!-- TODO: Lost updates on seat counts and plan changes -->
 <h3 id="two-invites-for-the-last-seat">Two invites for the last seat</h3>
@@ -246,6 +250,7 @@
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/entity-framework/concurrency/">Concurrency</a></li>
+<li>See <a href="../../../csharp/advanced-features/cancellation/">Cancellation</a></li>
 <li>See <a href="../../../csharp/platform/http-clients/">HTTP clients</a></li>
 <li>See <a href="../../../patterns/integration-patterns/outbox-and-idempotent-consumer/">Outbox and the idempotent consumer</a></li>
 <li>See <a href="../../../patterns/integration-patterns/sagas/">Sagas</a></li>
