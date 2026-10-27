@@ -31,6 +31,10 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 <!-- TODO: Problem Details, global exception handling -->
 
+## Request timeouts
+
+- TODO: Bound how long one request may run, and pass that limit into the work. See [Request timeouts](/csharp/advanced-features/cancellation#request-timeouts).
+
 ## API Versioning
 
 <!-- TODO: URL vs header versioning -->
@@ -74,6 +78,10 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - TODO: A free plan and a paid plan carry different limits. The partition includes the plan, along with the caller.
 - TODO: Document the limit, the window, and what the client does with a 429.
 
+### Counters shared across instances
+
+- TODO: Every instance reads and updates the same counters for a plan. See [More than one instance](/csharp/aspnet-core/web-apis/rate-limiting#more-than-one-instance).
+
 ## APIs called by agents
 
 - TODO: Some commands are invoked by a model that picked a tool. Name the inputs, the errors, and whether a retry is safe.
@@ -105,6 +113,7 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 ## Related Topics
 
 - See [ASP.NET Core: Web APIs](/csharp/aspnet-core/web-apis/overview)
+- See [Cancellation](/csharp/advanced-features/cancellation)
 - See [Rate limiting](/csharp/aspnet-core/web-apis/rate-limiting)
 - See [MCP authentication](/csharp/mcp/authentication)
 - See [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents)

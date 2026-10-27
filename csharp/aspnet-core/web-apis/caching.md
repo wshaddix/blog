@@ -33,6 +33,18 @@ A write that makes a cached read wrong.
 
 <!-- TODO: In-process, distributed, hybrid, output, and response: scope, consistency, and cost -->
 
+## In-process and distributed caches
+
+An in-process cache stays on one server. A distributed cache is shared. See [HybridCache](/building-a-saas/07-data-layer/overview#hybridcache).
+
+### Size limits
+
+A cap on how much the in-process cache may hold.
+
+### Mutable cached objects
+
+A cached object that the caller can still change.
+
 ## HybridCache
 
 <!-- TODO: One API over a local cache and a distributed cache -->
@@ -41,6 +53,10 @@ A write that makes a cached read wrong.
 
 - TODO: Each server keeps an in-process copy in front of the shared cache.
 - TODO: Removing or replacing the entry on one server leaves the other servers' copies in place until they expire.
+
+### Empty results
+
+A stored not-found is a cache entry. See [Not-found results](/building-a-saas/07-data-layer/overview#not-found-results).
 
 ### Setup with Redis as L2
 

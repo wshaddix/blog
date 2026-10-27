@@ -17,6 +17,14 @@ Plan for the failure you did not write a test for.
 - TODO: Retry a call only when repeating it is safe, or when an idempotency key makes the repeat the same attempt.
 - TODO: Add jitter, and stop when the deadline is gone. A timeout is not proof the work failed.
 
+### Retries at every layer
+
+- TODO: Name the one layer that retries a call. See [One retry owner per job](/building-a-saas/08-background-jobs/overview#one-retry-owner-per-job).
+
+### Retry budget
+
+- TODO: Cap the retries one piece of work may spend. See [One retry owner per job](/building-a-saas/08-background-jobs/overview#one-retry-owner-per-job).
+
 ## Degradation
 
 - TODO: Decide the feature you turn off so the rest keeps working.

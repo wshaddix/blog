@@ -28,6 +28,10 @@ Getting code to production reliably and repeatedly.
 
 <!-- TODO: Dockerfile, multi-stage builds -->
 
+### Rebuilding for runtime patches
+
+- TODO: A runtime security fix for a self-contained image is a new build. See [Who patches the runtime](/csharp/platform/publishing#who-patches-the-runtime).
+
 ## Azure Deployment
 
 <!-- TODO: App Service, slots, configuration -->
@@ -46,6 +50,7 @@ Getting code to production reliably and repeatedly.
 
 ## Related Topics
 
+- See [Publishing](/csharp/platform/publishing)
 - See [DevOps: CI/CD](/devops/ci-cd/concepts)
 - See [DevOps: Containerization](/devops/containerization/docker-fundamentals)
 - See [DevOps: Azure](/devops/azure/overview)

@@ -46,6 +46,10 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 <!-- TODO: Retries, dead letter, alerting -->
 
+### One retry owner per job
+
+- TODO: One layer owns the retries for a job. See [Retries at every layer](/fundamentals/distributed-systems/failure-and-degradation#retries-at-every-layer) and [Retry budget](/fundamentals/distributed-systems/failure-and-degradation#retry-budget).
+
 ## Reliable messaging
 
 <!-- TODO: Publish domain events through an outbox -->
@@ -76,6 +80,7 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 ## Related Topics
 
+- See [Failure and degradation](/fundamentals/distributed-systems/failure-and-degradation)
 - See [Azure Functions](/devops/azure/functions)
 - See [Fundamentals: Concurrency](/fundamentals/programming-concepts/concurrency)
 - See [Outbox and the idempotent consumer](/patterns/integration-patterns/outbox-and-idempotent-consumer)

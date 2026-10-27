@@ -72,6 +72,10 @@ How to write down a decision and the option you did not take.
 - TODO: Leave a seam so the next change replaces one part. The prototype and the later system do not have to share every choice.
 - TODO: Write the condition that would make you take the next step before you need it.
 
+## Reviewing a design for production
+
+- TODO: Walk a design for what production will demand of it. See [A production-readiness review](/building-a-saas/02-architecture-decisions/overview#a-production-readiness-review).
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

@@ -13,6 +13,10 @@ How a project becomes a program you can run on another machine.
 
 Who has to install the runtime.
 
+### Who patches the runtime
+
+- TODO: Who ships a runtime security fix for a framework-dependent deploy and for a self-contained deploy. See [Rebuilding for runtime patches](/building-a-saas/11-deployment/overview#rebuilding-for-runtime-patches).
+
 ## Single file
 
 One executable, and what is still unpacked beside it.

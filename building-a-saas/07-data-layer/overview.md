@@ -59,6 +59,14 @@ The data layer connects your domain model to the database. Done right, it's reli
 - TODO: Each instance keeps a local copy of a tenant setting in front of the shared cache.
 - TODO: After that setting changes, another instance can still serve its local copy until the copy expires.
 
+### Reusing model answers
+
+- TODO: A repeated question can reuse a stored model answer. See [Reusing answers to similar questions](/csharp/mcp/clients-and-agents#reusing-answers-to-similar-questions).
+
+### Not-found results
+
+- TODO: A lookup that finds nothing can be stored as an entry. See [Empty results](/csharp/aspnet-core/web-apis/caching#empty-results).
+
 ## Audit logging
 
 <!-- TODO: A record of changes for the tenant -->

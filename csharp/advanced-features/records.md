@@ -11,6 +11,10 @@ Immutable data types with value semantics.
 
 <!-- TODO: Immutability, value equality, with expressions -->
 
+## Immutability
+
+<!-- TODO: private set, init, and readonly or get-only. See [Fixed after construction](/building-a-saas/03-domain-modeling/overview#fixed-after-construction). -->
+
 ## Record Classes vs Record Structs
 
 <!-- TODO: When to use which -->
@@ -31,6 +35,7 @@ Immutable data types with value semantics.
 
 - See [Fundamentals: Functional Concepts](/fundamentals/programming-concepts/functional-concepts) - Immutability
 - See [Building a SaaS: Domain Modeling](/building-a-saas/03-domain-modeling/overview) - Records in practice
+- See [Building a SaaS: Domain Modeling](/building-a-saas/03-domain-modeling/overview#fixed-after-construction) - Fixed after construction
 
 ---
 
