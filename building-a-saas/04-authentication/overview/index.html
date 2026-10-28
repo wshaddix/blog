@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846505200914">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846505200914" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -213,6 +213,10 @@
 <!-- TODO: Expiry that tests can control -->
 <h2 id="permission-based-authorization">Permission-based authorization</h2>
 <!-- TODO: Named permissions on the caller, enforced with a policy -->
+<h2 id="reviewing-authorization-changes">Reviewing authorization changes</h2>
+<ul>
+<li>TODO: A change to who can do what gets a second reviewer, even when the diff is small. See <a href="../../../sdlc/code-review/#changes-that-need-a-second-reviewer">Changes that need a second reviewer</a>.</li>
+</ul>
 <h2 id="moving-tenants-to-a-new-identity-provider">Moving tenants to a new identity provider</h2>
 <ul>
 <li>TODO: Accept a token from the current provider and from the new one until every tenant has moved.</li>
@@ -259,6 +263,16 @@
                 <span class="card-compact-title">Choosing a Scheme</span>
             </div>
             <p class="card-compact-description">The caller decides the scheme. A browser, a service, a Windows app, and a phone do not hold credentials the same way.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/sdlc/code-review/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Code Review</span>
+            </div>
+            <p class="card-compact-description">How a change gets read before it merges.</p>
         </div>
     </a>
 </div>

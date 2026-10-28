@@ -43,6 +43,10 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 ## Reliable messaging
 
+### Indexing unsent messages
+
+- TODO: Index the outbox rows that are still unsent, and leave the sent rows out of that index. See [Filtered indexes](/databases/relational/indexes-and-query-plans#filtered-indexes).
+
 ## Shutdown and cancellation
 
 ## One run across instances
@@ -57,6 +61,10 @@ Not everything should happen in the request/response cycle. Background jobs hand
 
 - TODO: A trial end, a dunning sequence, and an approval are waits. Each one stores a deadline and the path to take when nobody answers in time.
 - TODO: The deadline is part of the workflow record, so a restart keeps it and runs the timeout path once.
+
+### A workflow as one method
+
+- TODO: Write one of those waits as a single workflow method instead of a chain of jobs. See [Durable execution in .NET](/patterns/integration-patterns/durable-workflows#durable-execution-in-net).
 
 ## A context in a background worker
 

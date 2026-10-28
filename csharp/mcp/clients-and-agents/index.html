@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846505200914">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846505200914" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -192,6 +192,13 @@
 <ul>
 <li>TODO: Reuse an earlier model answer for a similar question. See <a href="../../../building-a-saas/07-data-layer/overview/#reusing-model-answers">Reusing model answers</a>.</li>
 </ul>
+<h3 id="the-smallest-model-that-passes">The smallest model that passes</h3>
+<ul>
+<li>TODO: Write the evals first. A model passes when it meets that set.</li>
+<li>TODO: Start with a small model and step up to a larger one only when the evals fail.</li>
+<li>TODO: Compare the cost and the latency of one call, along with the quality.</li>
+<li>TODO: Run that comparison again when the model or the prompt changes. See <a href="../../../building-a-saas/10-testing-strategy/overview/#trying-smaller-models">Trying smaller models</a>.</li>
+</ul>
 <h2 id="tools-the-model-can-call">Tools the model can call</h2>
 <!-- TODO: Expose the server's tools as functions on the chat client -->
 <h2 id="the-tool-loop">The tool loop</h2>
@@ -201,6 +208,15 @@
 <li>TODO: Start a span when the agent begins a turn, and add a child span for each tool call.</li>
 <li>TODO: Record the tool name, the duration, and whether the call succeeded. Leave argument values off the span when they hold tenant data.</li>
 <li>TODO: Keep the following model call on the same trace.</li>
+</ul>
+<h3 id="a-cap-on-round-trips">A cap on round trips</h3>
+<ul>
+<li>TODO: Each round trip is another model call, so it costs latency and tokens.</li>
+<li>TODO: The default cap is 40, including the first call. It is high so a task that needs several tool calls can finish.</li>
+<li>TODO: Set the number from a successful run of the real flow, a little above how many calls that run made.</li>
+<li>TODO: On the last allowed round trip the tools are left off the request, and the caller gets that final answer instead of another tool request.</li>
+<li>TODO: Log when a turn reaches the cap. Hitting it is a sign the prompt or the tools are confusing the model.</li>
+<li>TODO: Count those calls on the request. See <a href="../../../building-a-saas/12-monitoring-operations/overview/#model-calls-per-request">Model calls per request</a>.</li>
 </ul>
 <h2 id="a-person-in-the-loop">A person in the loop</h2>
 <!-- TODO: Confirm a tool that writes, pays, or sends before the client runs it -->
@@ -310,6 +326,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">Tests give you confidence to ship. We'll build a comprehensive testing strategy.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/12-monitoring-operations/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Your job isn't done when code ships. Observability keeps your SaaS running smoothly.</p>
         </div>
     </a>
 </div>

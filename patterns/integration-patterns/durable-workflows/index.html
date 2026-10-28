@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846418908684">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846505200914">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846418908684" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846505200914" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846418908684" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -186,6 +186,19 @@
 <ul>
 <li>TODO: A signal can arrive before the workflow has reached the wait for it.</li>
 <li>TODO: Keep that event until the wait begins, then apply it once.</li>
+</ul>
+<h2 id="durable-execution-in-net">Durable execution in .NET</h2>
+<ul>
+<li>TODO: Write the workflow as one method when the steps share a wait, instead of a chain of separate jobs. See <a href="../../../building-a-saas/08-background-jobs/overview/#a-workflow-as-one-method">A workflow as one method</a>.</li>
+<li>TODO: Put side effects in activities. The orchestration method only decides the order, so a replay can run it again safely.</li>
+<li>TODO: A durable timer stores the wake time with the workflow and survives a restart.</li>
+<li>TODO: An external event is a signal from outside the process that resumes a workflow waiting on it.</li>
+<li>TODO: Compensation undoes a step that already finished when a later step fails.</li>
+<li>TODO: A plain background job is enough when the work does not wait, replay, or resume after a crash.</li>
+</ul>
+<h3 id="testing-against-a-local-emulator">Testing against a local emulator</h3>
+<ul>
+<li>TODO: Run the workflow against a local emulator. The test starts the host, delivers the event, and reads the recorded outcome, with no cloud account.</li>
 </ul>
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
