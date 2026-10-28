@@ -385,3 +385,22 @@ Oct 27, 2026 digest (Oct 25 and Oct 26 posts, plus the newsletter received Oct 2
 | [Binary formats](csharp/language-basics/files-streams-and-json.md#binary-formats) | Binary encodings, including CBOR | [aspnetcore_news 2114920283542794356](https://x.com/aspnetcore_news/status/2114920283542794356) | 2026-10-26 |
 | [Reviewing a design for production](sdlc/architecture.md#reviewing-a-design-for-production) | A production-readiness review of a design | [RaulJuncoV 2114700580023321067](https://x.com/RaulJuncoV/status/2114700580023321067) | 2026-10-26 |
 | [A production-readiness review](building-a-saas/02-architecture-decisions/overview.md#a-production-readiness-review) | Review a design against what production will require | [RaulJuncoV 2114700580023321067](https://x.com/RaulJuncoV/status/2114700580023321067) | 2026-10-26 |
+
+## 2026-10-28 (`9c35613`)
+
+Oct 28, 2026 digest (Oct 27 posts, plus the newsletter received Oct 28). Stubs from `docs: stub the October 28 content-gap topics`. X links use `https://x.com/<handle>/status/<id>`. The newsletter link is the issue's public article URL.
+
+| Stub | Topic | Source URL(s) | Source date |
+| --- | --- | --- | --- |
+| [A cap on round trips](csharp/mcp/clients-and-agents.md#a-cap-on-round-trips) | A cap on tool-loop round trips in one turn | [TheCodeMan__ 2115069836334153945](https://x.com/TheCodeMan__/status/2115069836334153945) | 2026-10-27 |
+| [Model calls per request](building-a-saas/12-monitoring-operations/overview.md#model-calls-per-request) | Model calls counted per request | [TheCodeMan__ 2115069836334153945](https://x.com/TheCodeMan__/status/2115069836334153945) | 2026-10-27 |
+| [Durable execution in .NET](patterns/integration-patterns/durable-workflows.md#durable-execution-in-net) | A .NET workflow written as one method | [TheCodeMan newsletter 2026-10-28](https://thecodeman.net/posts/durable-execution-in-dotnet-with-durable-task-sdk) | 2026-10-28 |
+| [Testing against a local emulator](patterns/integration-patterns/durable-workflows.md#testing-against-a-local-emulator) | Testing a durable workflow against a local emulator | [TheCodeMan newsletter 2026-10-28](https://thecodeman.net/posts/durable-execution-in-dotnet-with-durable-task-sdk) | 2026-10-28 |
+| [A workflow as one method](building-a-saas/08-background-jobs/overview.md#a-workflow-as-one-method) | A wait written as one workflow method | [TheCodeMan newsletter 2026-10-28](https://thecodeman.net/posts/durable-execution-in-dotnet-with-durable-task-sdk) | 2026-10-28 |
+| [Filtered indexes](databases/relational/indexes-and-query-plans.md#filtered-indexes) | An index filtered to a small slice of rows | [mjovanovictech 2114987215608496413](https://x.com/mjovanovictech/status/2114987215608496413) | 2026-10-27 |
+| [Indexing unsent messages](building-a-saas/08-background-jobs/overview.md#indexing-unsent-messages) | An index of outbox rows that are still unsent | [mjovanovictech 2114987215608496413](https://x.com/mjovanovictech/status/2114987215608496413) | 2026-10-27 |
+| [Changes that need a second reviewer](sdlc/code-review.md#changes-that-need-a-second-reviewer) | A second reviewer for high-risk areas | [mjovanovictech 2115092668887773309](https://x.com/mjovanovictech/status/2115092668887773309) | 2026-10-27 |
+| [Reviewing authorization changes](building-a-saas/04-authentication/overview.md#reviewing-authorization-changes) | A second reviewer for authorization changes | [mjovanovictech 2115092668887773309](https://x.com/mjovanovictech/status/2115092668887773309) | 2026-10-27 |
+| [The smallest model that passes](csharp/mcp/clients-and-agents.md#the-smallest-model-that-passes) | The smallest model that passes the evals | [AntonMartyniuk 2114982429601497387](https://x.com/AntonMartyniuk/status/2114982429601497387) | 2026-10-27 |
+| [Trying smaller models](building-a-saas/10-testing-strategy/overview.md#trying-smaller-models) | Trying a smaller model against the same evals | [AntonMartyniuk 2114982429601497387](https://x.com/AntonMartyniuk/status/2114982429601497387) | 2026-10-27 |
+| [Skills that move between tools](ai-assisted-development/context-and-instructions.md#skills-that-move-between-tools) | Skills stored as plain files so they move between tools | [mjovanovictech 2115158095181623792](https://x.com/mjovanovictech/status/2115158095181623792) | 2026-10-27 |
