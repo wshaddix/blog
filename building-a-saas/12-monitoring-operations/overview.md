@@ -24,6 +24,11 @@ Your job isn't done when code ships. Observability keeps your SaaS running smoot
 
 <!-- TODO: Key metrics, custom metrics, dashboards -->
 
+### Model calls per request
+
+- TODO: Record how many model calls one request makes, including every pass of a tool loop. See [A cap on round trips](/csharp/mcp/clients-and-agents#a-cap-on-round-trips).
+- TODO: Treat a request that reaches the cap as its own metric.
+
 ## Alerting
 
 <!-- TODO: What to alert on, alert fatigue -->

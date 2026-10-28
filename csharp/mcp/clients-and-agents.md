@@ -38,6 +38,13 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 
 - TODO: Reuse an earlier model answer for a similar question. See [Reusing model answers](/building-a-saas/07-data-layer/overview#reusing-model-answers).
 
+### The smallest model that passes
+
+- TODO: Write the evals first. A model passes when it meets that set.
+- TODO: Start with a small model and step up to a larger one only when the evals fail.
+- TODO: Compare the cost and the latency of one call, along with the quality.
+- TODO: Run that comparison again when the model or the prompt changes. See [Trying smaller models](/building-a-saas/10-testing-strategy/overview#trying-smaller-models).
+
 ## Tools the model can call
 
 <!-- TODO: Expose the server's tools as functions on the chat client -->
@@ -51,6 +58,15 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 - TODO: Start a span when the agent begins a turn, and add a child span for each tool call.
 - TODO: Record the tool name, the duration, and whether the call succeeded. Leave argument values off the span when they hold tenant data.
 - TODO: Keep the following model call on the same trace.
+
+### A cap on round trips
+
+- TODO: Each round trip is another model call, so it costs latency and tokens.
+- TODO: The default cap is 40, including the first call. It is high so a task that needs several tool calls can finish.
+- TODO: Set the number from a successful run of the real flow, a little above how many calls that run made.
+- TODO: On the last allowed round trip the tools are left off the request, and the caller gets that final answer instead of another tool request.
+- TODO: Log when a turn reaches the cap. Hitting it is a sign the prompt or the tools are confusing the model.
+- TODO: Count those calls on the request. See [Model calls per request](/building-a-saas/12-monitoring-operations/overview#model-calls-per-request).
 
 ## A person in the loop
 

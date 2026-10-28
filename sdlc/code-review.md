@@ -29,6 +29,14 @@ AI-written changes get the same review as any other change.
 
 A comment that names the problem and the outcome you want.
 
+## Changes that need a second reviewer
+
+- TODO: Judge the risk by the area the change touches, not by the size of the diff.
+- TODO: Authorization, billing, migrations, and secrets get a second reviewer.
+- TODO: Route those paths with a code-owners file so the request reaches the right person.
+- TODO: Let an agent flag a diff that touches one of those areas.
+- TODO: Keep the list of areas short so a second review stays rare. See [Reviewing authorization changes](/building-a-saas/04-authentication/overview#reviewing-authorization-changes).
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

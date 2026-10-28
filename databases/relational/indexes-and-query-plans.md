@@ -33,6 +33,14 @@ Put equality columns first and the sort column after them; an index that leads w
 
 Write cost, unused indexes, and a query that needs a rewrite instead.
 
+## Filtered indexes
+
+- TODO: A filter is a predicate on the index, so only the rows that match are stored in it.
+- TODO: Add one when that predicate matches a small slice of the table. If the indexed set is close to the whole table, skip it.
+- TODO: The query has to imply the same predicate, or the plan will not use the index.
+- TODO: When most rows match, the index is nearly as large as a full one and the gain disappears.
+- TODO: In Entity Framework Core, set the predicate with `HasFilter` on the index in the model. See [Indexing unsent messages](/building-a-saas/08-background-jobs/overview#indexing-unsent-messages).
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

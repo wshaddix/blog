@@ -62,6 +62,10 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 
 - TODO: Run the same evals against the replacement before switching, as in [Changing the model without changing the feature](/csharp/mcp/clients-and-agents#changing-the-model-without-changing-the-feature), and keep the checks in [Verification](/ai-assisted-development/verification).
 
+### Trying smaller models
+
+- TODO: Try a smaller model against those same evals and keep it when it passes. See [The smallest model that passes](/csharp/mcp/clients-and-agents#the-smallest-model-that-passes).
+
 ## Related Topics
 
 - See [C#: Testing](/csharp/testing/unit-testing) - TUnit, TUnit.Mocks, and API tests

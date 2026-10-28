@@ -69,6 +69,10 @@ Security is non-negotiable. We'll implement robust authentication that's also us
 
 <!-- TODO: Named permissions on the caller, enforced with a policy -->
 
+## Reviewing authorization changes
+
+- TODO: A change to who can do what gets a second reviewer, even when the diff is small. See [Changes that need a second reviewer](/sdlc/code-review#changes-that-need-a-second-reviewer).
+
 ## Moving tenants to a new identity provider
 
 - TODO: Accept a token from the current provider and from the new one until every tenant has moved.
