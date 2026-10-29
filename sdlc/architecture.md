@@ -76,6 +76,18 @@ How to write down a decision and the option you did not take.
 
 - TODO: Walk a design for what production will demand of it. See [A production-readiness review](/building-a-saas/02-architecture-decisions/overview#a-production-readiness-review).
 
+## Diagrams that match the code
+
+- TODO: A diagram drawn by hand goes stale when the projects move and the picture does not.
+
+### Having an agent draw it
+
+- TODO: Build the diagram from project references and from the contracts each module exposes.
+- TODO: Store it as Mermaid in the repository, where a pull request can show the change, or draw it on a board through that board's MCP server.
+- TODO: The agent proposes the picture. Compare it with the architecture tests before you accept it. See [Architecture tests](/patterns/architecture-styles/architecture-tests).
+- TODO: Draw it again when a pull request changes which modules depend on which.
+- TODO: Writing the board is a permissions choice. Decide who may publish, and who may only propose. See [Regenerating the diagram](/building-a-saas/02-architecture-decisions/overview#regenerating-the-diagram).
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

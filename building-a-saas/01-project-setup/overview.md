@@ -62,6 +62,11 @@ A well-organized project structure sets the foundation for maintainability and s
 - TODO: The solution targets the current LTS. Try a newer release candidate on a branch, and ship the framework the product has chosen.
 - TODO: Write down what an upgrade re-tests before the target framework changes.
 
+### When the target loses support
+
+- TODO: Plan the move off a target framework before its support window closes, and confirm the date on Microsoft's support policy page before you schedule the work.
+- TODO: Follow the upgrade order in [Support windows and end of support](/csharp/platform/publishing#support-windows-and-end-of-support), including a fresh publish of every self-contained deploy.
+
 ## Agent rules in the repo
 
 - TODO: Keep the rules the agent follows in the repository: a short root file, a file beside the code it governs, and hooks that run even when the model skips a file.
