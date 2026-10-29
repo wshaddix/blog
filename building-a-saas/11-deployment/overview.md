@@ -35,6 +35,11 @@ Getting code to production reliably and repeatedly.
 | Blue-Green | Instant switch | Medium |
 | Canary | Gradual traffic shift | Low |
 
+### A VPS instead of Azure
+
+- TODO: Host the app on a rented machine when Azure App Service is not the target. See [A rented VPS](/devops/self-hosting/overview#a-rented-vps).
+- TODO: Keep staging and production on different machines, with secrets split by environment. See [Staging and production on separate machines](/devops/self-hosting/overview#staging-and-production-on-separate-machines).
+
 ## Related Topics
 
 - See [Publishing](/csharp/platform/publishing)

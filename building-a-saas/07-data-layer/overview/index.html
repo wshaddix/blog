@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846505200914">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846505200914" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -190,6 +190,10 @@
 <ul>
 <li>TODO: The dashboard query that returns the newest item for each parent row is served by the column order in <a href="../../../databases/relational/indexes-and-query-plans/#equality-columns-then-the-sort">Equality columns then the sort</a>.</li>
 </ul>
+<h3 id="narrow-locks">Narrow locks</h3>
+<ul>
+<li>TODO: Lock the row or the key this operation changes, so unrelated work does not wait. See <a href="../../../fundamentals/programming-concepts/concurrency/#lock-granularity">Lock granularity</a> and <a href="../../../csharp/entity-framework/concurrency/">Concurrency</a>.</li>
+</ul>
 <h2 id="large-id-lists">Large ID lists</h2>
 <ul>
 <li>TODO: A bulk check or an export can pass thousands of ids into one query.</li>
@@ -221,6 +225,10 @@
 <ul>
 <li>TODO: Keep file bytes in blob storage. Keep the blob name, content type, and owner on the tenant row.</li>
 <li>TODO: Use a conditional write so a retry does not replace an object another request already stored.</li>
+</ul>
+<h3 id="files-an-agent-reads">Files an agent reads</h3>
+<ul>
+<li>TODO: Give the agent the blob name and the metadata, and read the bytes on a later call only when the turn needs them. See <a href="../../../csharp/mcp/clients-and-agents/#return-a-reference-not-the-bytes">Return a reference, not the bytes</a>.</li>
 </ul>
 <h2 id="schemas-per-module">Schemas per module</h2>
 <ul>
@@ -257,16 +265,6 @@
     <h2>See also</h2>
 <div class="card-compact-group">
 <div class="card-compact-container">
-    <a href="/devops/azure/blob-storage/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Blob Storage</span>
-            </div>
-            <p class="card-compact-description">Object storage for files the database should not hold.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
     <a href="/csharp/aspnet-core/web-apis/caching/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -293,6 +291,16 @@
                 <span class="card-compact-title">Collections</span>
             </div>
             <p class="card-compact-description">Storing and organizing groups of objects.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/fundamentals/programming-concepts/concurrency/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Concurrency</span>
+            </div>
+            <p class="card-compact-description">Concurrency is managing multiple tasks that can be in progress at the same time. Parallelism is actually executing multiple tasks simultaneously.</p>
         </div>
     </a>
 </div>

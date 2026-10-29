@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846505200914">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846505200914" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -201,6 +201,14 @@
 </ul>
 <h2 id="tools-the-model-can-call">Tools the model can call</h2>
 <!-- TODO: Expose the server's tools as functions on the chat client -->
+<h3 id="return-a-reference-not-the-bytes">Return a reference, not the bytes</h3>
+<ul>
+<li>TODO: A tool that returns a whole row places every column in the model context, whether the question needed that column or not.</li>
+<li>TODO: Images and other binaries spend the context window and the token budget on content the model does not read as text.</li>
+<li>TODO: Return an identifier and a little metadata, and offer a second tool that fetches the content when the turn needs it.</li>
+<li>TODO: If an image does have to come back, shrink it to a thumbnail first.</li>
+<li>TODO: Log how large each tool result is. See <a href="../../../building-a-saas/07-data-layer/overview/#files-an-agent-reads">Files an agent reads</a>.</li>
+</ul>
 <h2 id="the-tool-loop">The tool loop</h2>
 <!-- TODO: The model requests a call, the client runs it, and the result is sent back to the model -->
 <h3 id="tracing-the-tool-loop">Tracing the tool loop</h3>

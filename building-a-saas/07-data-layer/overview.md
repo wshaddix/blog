@@ -25,6 +25,10 @@ The data layer connects your domain model to the database. Done right, it's reli
 
 - TODO: The dashboard query that returns the newest item for each parent row is served by the column order in [Equality columns then the sort](/databases/relational/indexes-and-query-plans#equality-columns-then-the-sort).
 
+### Narrow locks
+
+- TODO: Lock the row or the key this operation changes, so unrelated work does not wait. See [Lock granularity](/fundamentals/programming-concepts/concurrency#lock-granularity) and [Concurrency](/csharp/entity-framework/concurrency).
+
 ## Large ID lists
 
 - TODO: A bulk check or an export can pass thousands of ids into one query.
@@ -56,6 +60,10 @@ The data layer connects your domain model to the database. Done right, it's reli
 
 - TODO: Keep file bytes in blob storage. Keep the blob name, content type, and owner on the tenant row.
 - TODO: Use a conditional write so a retry does not replace an object another request already stored.
+
+### Files an agent reads
+
+- TODO: Give the agent the blob name and the metadata, and read the bytes on a later call only when the turn needs them. See [Return a reference, not the bytes](/csharp/mcp/clients-and-agents#return-a-reference-not-the-bytes).
 
 ## Schemas per module
 

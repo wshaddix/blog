@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846505200914">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846505200914" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -299,6 +299,14 @@
 </table>
 </div>
 </retype-table>
+<h3 id="lock-granularity">Lock granularity</h3>
+<ul>
+<li>TODO: A lock that covers unrelated work makes every caller wait, even when they do not touch the same data.</li>
+<li>TODO: Give each key its own lock so an update to one key does not block an update to another.</li>
+<li>TODO: Finer locks have a cost. Take them in a fixed order when one operation needs several keys, or two callers can deadlock.</li>
+<li>TODO: In C#, compare one lock for the whole set with a <code translate="no" v-pre>SemaphoreSlim</code> held per key.</li>
+<li>TODO: Measure throughput for both arrangements on the real workload before you keep the finer locks. See <a href="../../../building-a-saas/07-data-layer/overview/#narrow-locks">Narrow locks</a>.</li>
+</ul>
 <h2 id="best-practices">Best Practices</h2>
 <ol>
 <li><strong>Prefer async/await over manual threading</strong> for I/O-bound work</li>
@@ -374,6 +382,16 @@
                 <span class="card-compact-title">Functional Concepts</span>
             </div>
             <p class="card-compact-description">Functional programming (FP) treats computation as the evaluation of mathematical functions, emphasizing immutability and avoiding side effects.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/07-data-layer/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The data layer connects your domain model to the database. Done right, it's reliable and performant.</p>
         </div>
     </a>
 </div>

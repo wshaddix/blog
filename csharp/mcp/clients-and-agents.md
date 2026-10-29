@@ -36,6 +36,14 @@ An MCP client calls a server. An agent uses that client when a model asks for a 
 
 ## Tools the model can call
 
+### Return a reference, not the bytes
+
+- TODO: A tool that returns a whole row places every column in the model context, whether the question needed that column or not.
+- TODO: Images and other binaries spend the context window and the token budget on content the model does not read as text.
+- TODO: Return an identifier and a little metadata, and offer a second tool that fetches the content when the turn needs it.
+- TODO: If an image does have to come back, shrink it to a thumbnail first.
+- TODO: Log how large each tool result is. See [Files an agent reads](/building-a-saas/07-data-layer/overview#files-an-agent-reads).
+
 ## The tool loop
 
 ### Tracing the tool loop

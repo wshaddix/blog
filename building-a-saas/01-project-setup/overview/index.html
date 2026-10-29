@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846505200914">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846505200914" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846505200914" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -206,6 +206,11 @@
 <li>TODO: The solution targets the current LTS. Try a newer release candidate on a branch, and ship the framework the product has chosen.</li>
 <li>TODO: Write down what an upgrade re-tests before the target framework changes.</li>
 </ul>
+<h3 id="when-the-target-loses-support">When the target loses support</h3>
+<ul>
+<li>TODO: Plan the move off a target framework before its support window closes, and confirm the date on Microsoft&#x27;s support policy page before you schedule the work.</li>
+<li>TODO: Follow the upgrade order in <a href="../../../csharp/platform/publishing/#support-windows-and-end-of-support">Support windows and end of support</a>, including a fresh publish of every self-contained deploy.</li>
+</ul>
 <h2 id="agent-rules-in-the-repo">Agent rules in the repo</h2>
 <ul>
 <li>TODO: Keep the rules the agent follows in the repository: a short root file, a file beside the code it governs, and hooks that run even when the model skips a file.</li>
@@ -310,6 +315,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/platform/publishing/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Publishing</span>
+            </div>
+            <p class="card-compact-description">How a project becomes a program you can run on another machine.</p>
         </div>
     </a>
 </div>

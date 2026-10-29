@@ -14,6 +14,10 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 
 ## Our Architecture
 
+### Regenerating the diagram
+
+- TODO: When a change moves a module boundary, generate the diagram again from the code. See [Having an agent draw it](/sdlc/architecture#having-an-agent-draw-it).
+
 ## Why Monolith First?
 
 ## Choosing the stack

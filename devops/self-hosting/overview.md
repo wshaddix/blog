@@ -18,6 +18,17 @@ Run the app on a machine you control, and give the internet a way to reach it.
 - TODO: Visitors use that public name, and the traffic comes back down the tunnel to the app.
 - TODO: Put authentication on the public name. The tunnel is the path, and access is a separate decision.
 
+## A rented VPS
+
+- TODO: A rented virtual server is a machine you administer. Patch the operating system, restrict the firewall, keep backups, and serve the site over TLS.
+- TODO: Put a reverse proxy in front, and run one container for each app behind it.
+- TODO: A self-hosted dashboard can build and deploy those containers. Dokploy is one option. See [A VPS instead of Azure](/building-a-saas/11-deployment/overview#a-vps-instead-of-azure).
+
+### Staging and production on separate machines
+
+- TODO: Run each environment on its own machine. Staging and production do not share a host.
+- TODO: Store secrets for each environment separately, and run a restore drill so a backup is known to work.
+
 ## Practical Examples
 
 - See [Building a SaaS: Deployment](/building-a-saas/11-deployment/overview) - The hosted path for this kind of app

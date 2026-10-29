@@ -85,6 +85,14 @@ Threads keep responding to each other but make no progress (like two people in a
 | Monitor | Lock + wait/signal capability |
 | Barrier | Synchronize multiple threads at a point |
 
+### Lock granularity
+
+- TODO: A lock that covers unrelated work makes every caller wait, even when they do not touch the same data.
+- TODO: Give each key its own lock so an update to one key does not block an update to another.
+- TODO: Finer locks have a cost. Take them in a fixed order when one operation needs several keys, or two callers can deadlock.
+- TODO: In C#, compare one lock for the whole set with a `SemaphoreSlim` held per key.
+- TODO: Measure throughput for both arrangements on the real workload before you keep the finer locks. See [Narrow locks](/building-a-saas/07-data-layer/overview#narrow-locks).
+
 ## Best Practices
 
 1. **Prefer async/await over manual threading** for I/O-bound work
