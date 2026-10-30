@@ -46,6 +46,15 @@ Where the pattern-matching page goes deeper.
 - TODO: A release candidate is a preview of the next runtime. Read what it changes, and keep the solution on the release you ship.
 - TODO: List which language and library changes from that candidate this site will adopt, and which ones wait for the final release.
 
+### Async handled by the runtime
+
+The compiler builds a state machine for an async method today. A later runtime may take that work on itself.
+
+- TODO: Describe what that compiler-generated state machine does for an async method on the releases this site ships.
+- TODO: Describe what changes when the runtime owns that machinery. Check the wording against the official .NET 11 release notes before this section is written.
+- TODO: List the measurements to take on the same workload before the change and after it.
+- TODO: List which call sites still need an edit, and which ones keep compiling as they are. See [What an upgrade gives for free](/building-a-saas/01-project-setup/overview#what-an-upgrade-gives-for-free).
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

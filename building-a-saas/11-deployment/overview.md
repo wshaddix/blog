@@ -53,6 +53,13 @@ Getting code to production reliably and repeatedly.
 - TODO: Host the app on a rented machine when Azure App Service is not the target. See [A rented VPS](/devops/self-hosting/overview#a-rented-vps).
 - TODO: Keep staging and production on different machines, with secrets split by environment. See [Staging and production on separate machines](/devops/self-hosting/overview#staging-and-production-on-separate-machines).
 
+### Why not Kubernetes yet
+
+One host is enough until restarts, capacity, or a rolling deploy force a cluster.
+
+- TODO: Keep the current host, including a rented machine, until those signs show up. See [Kubernetes](/devops/containerization/kubernetes).
+- TODO: A cluster still needs the health checks, the shutdown handling, and a process that can lose its memory and continue.
+
 ## Related Topics
 
 - See [Publishing](/csharp/platform/publishing)

@@ -29,4 +29,4 @@ Building production-ready containers.
 
 ---
 
-**Continue to:** [Azure](/devops/azure/overview)
+**Next:** [Kubernetes](/devops/containerization/kubernetes)

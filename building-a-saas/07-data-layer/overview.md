@@ -44,6 +44,13 @@ The data layer connects your domain model to the database. Done right, it's reli
 
 - TODO: Lock the row or the key this operation changes, so unrelated work does not wait. See [Lock granularity](/fundamentals/programming-concepts/concurrency#lock-granularity) and [Concurrency](/csharp/entity-framework/concurrency).
 
+### Fan-out and the connection pool
+
+A fan-out that opens one database call per item can take every connection the pool has.
+
+- TODO: Cap how many of those calls run together so other requests can still borrow a connection.
+- TODO: Size the cap from the pool, and cancel the rest of the fan-out when one call fails. See [Starting too many at once](/fundamentals/programming-concepts/concurrency#starting-too-many-at-once).
+
 ## Large ID lists
 
 - TODO: A bulk check or an export can pass thousands of ids into one query.

@@ -21,6 +21,15 @@ One action, a clear description, and a result the model can quote.
 
 A tool that can write or send is a different risk from a tool that can read.
 
+### Asking for more access mid-task
+
+Begin with the smallest scope that can do the work, and widen it only when the task cannot continue.
+
+- TODO: Start from that smallest scope, and add a permission only when the current one cannot finish the step.
+- TODO: Describe how the server tells the client it needs a further permission.
+- TODO: Say what the client should do when it can show that request, and what it should do when it cannot.
+- TODO: Show the person the exact access being asked for, and write down every grant. See [Granting more scope later](/building-a-saas/06-api-development/overview#granting-more-scope-later).
+
 ## When to build one
 
 A task you repeat, against a system that already has an API.

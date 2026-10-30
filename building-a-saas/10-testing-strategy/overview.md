@@ -32,6 +32,13 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
 
 <!-- TODO: Domain logic, services, TUnit setup. See [TUnit project setup](/csharp/testing/project-setup). -->
 
+### Bug fixes start with a failing test
+
+A bug fix arrives with a test that already failed on the code it replaces.
+
+- TODO: Take the reproduction you ran, turn it into a test, and see that test fail before editing the production code.
+- TODO: A test added in the same edit as the fix is not evidence until that failure has been seen. See [A reproduction you checked yourself](/ai-assisted-development/verification#a-reproduction-you-checked-yourself).
+
 ## Integration Tests
 
 <!-- TODO: WebApplicationFactory, database tests -->

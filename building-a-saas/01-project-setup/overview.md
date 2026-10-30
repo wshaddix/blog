@@ -67,6 +67,13 @@ A well-organized project structure sets the foundation for maintainability and s
 - TODO: Plan the move off a target framework before its support window closes, and confirm the date on Microsoft's support policy page before you schedule the work.
 - TODO: Follow the upgrade order in [Support windows and end of support](/csharp/platform/publishing#support-windows-and-end-of-support), including a fresh publish of every self-contained deploy.
 
+### What an upgrade gives for free
+
+Some runtime changes arrive with the new target framework, with no edit to the methods that await.
+
+- TODO: Measure the async paths this API already has, move the target, and measure them again.
+- TODO: Confirm in the .NET 11 release notes whether the runtime now owns the async state machine, and leave the handlers alone when it does. See [Async handled by the runtime](/csharp/advanced-features/modern-csharp#async-handled-by-the-runtime).
+
 ## Agent rules in the repo
 
 - TODO: Keep the rules the agent follows in the repository: a short root file, a file beside the code it governs, and hooks that run even when the model skips a file.

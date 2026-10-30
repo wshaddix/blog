@@ -423,3 +423,22 @@ Oct 29, 2026 digest (Oct 28 posts). Stubs from `docs: stub the October 29 conten
 | [Diagrams that match the code](sdlc/architecture.md#diagrams-that-match-the-code) | Diagrams generated from the code so they do not drift | [TheCodeMan__ 2115353167017726098](https://x.com/TheCodeMan__/status/2115353167017726098) | 2026-10-28 |
 | [Having an agent draw it](sdlc/architecture.md#having-an-agent-draw-it) | An agent proposes a diagram from project references and module contracts | [TheCodeMan__ 2115353167017726098](https://x.com/TheCodeMan__/status/2115353167017726098) | 2026-10-28 |
 | [Regenerating the diagram](building-a-saas/02-architecture-decisions/overview.md#regenerating-the-diagram) | Regenerate the architecture diagram when a module boundary changes | [TheCodeMan__ 2115353167017726098](https://x.com/TheCodeMan__/status/2115353167017726098) | 2026-10-28 |
+
+## 2026-10-30
+
+Oct 30, 2026 digest (Oct 29 posts). Stubs from `docs: stub the October 30 content-gap topics`. X links use `https://x.com/<handle>/status/<id>`.
+
+| Stub | Topic | Source URL(s) | Source date |
+| --- | --- | --- | --- |
+| [Starting too many at once](fundamentals/programming-concepts/concurrency.md#starting-too-many-at-once) | A cap on how many tasks run together | [mjovanovictech 2115714255408222682](https://x.com/mjovanovictech/status/2115714255408222682) | 2026-10-29 |
+| [Fan-out and the connection pool](building-a-saas/07-data-layer/overview.md#fan-out-and-the-connection-pool) | A fan-out that stays inside the connection pool | [mjovanovictech 2115714255408222682](https://x.com/mjovanovictech/status/2115714255408222682) | 2026-10-29 |
+| [GraphQL](csharp/aspnet-core/web-apis/graphql.md) | Client-shaped queries, batched lookups, and cost limits | [AntonMartyniuk 2115714745156137392](https://x.com/AntonMartyniuk/status/2115714745156137392) | 2026-10-29 |
+| [Why not GraphQL](building-a-saas/06-api-development/overview.md#why-not-graphql) | Stay with resource endpoints for this API | [AntonMartyniuk 2115714745156137392](https://x.com/AntonMartyniuk/status/2115714745156137392) | 2026-10-29 |
+| [Async handled by the runtime](csharp/advanced-features/modern-csharp.md#async-handled-by-the-runtime) | A runtime-owned async state machine in .NET 11 | [AntonMartyniuk 2115709807847993801](https://x.com/AntonMartyniuk/status/2115709807847993801) | 2026-10-29 |
+| [What an upgrade gives for free](building-a-saas/01-project-setup/overview.md#what-an-upgrade-gives-for-free) | An upgrade that changes async without rewriting handlers | [AntonMartyniuk 2115709807847993801](https://x.com/AntonMartyniuk/status/2115709807847993801) | 2026-10-29 |
+| [Kubernetes](devops/containerization/kubernetes.md) | Probes, restarting pods, and resource limits for a .NET process | [AntonMartyniuk 2115704748691046678](https://x.com/AntonMartyniuk/status/2115704748691046678) | 2026-10-29 |
+| [Why not Kubernetes yet](building-a-saas/11-deployment/overview.md#why-not-kubernetes-yet) | Stay on one host until a cluster is needed | [AntonMartyniuk 2115704748691046678](https://x.com/AntonMartyniuk/status/2115704748691046678) | 2026-10-29 |
+| [A reproduction you checked yourself](ai-assisted-development/verification.md#a-reproduction-you-checked-yourself) | A failing reproduction written before the fix | [mjovanovictech 2115746465511362615](https://x.com/mjovanovictech/status/2115746465511362615) | 2026-10-29 |
+| [Bug fixes start with a failing test](building-a-saas/10-testing-strategy/overview.md#bug-fixes-start-with-a-failing-test) | A bug fix that starts from a test you saw fail | [mjovanovictech 2115746465511362615](https://x.com/mjovanovictech/status/2115746465511362615) | 2026-10-29 |
+| [Asking for more access mid-task](ai-assisted-development/using-mcp.md#asking-for-more-access-mid-task) | A server that asks for a further permission during a task | [mjovanovictech 2115884880991072681](https://x.com/mjovanovictech/status/2115884880991072681) | 2026-10-29 |
+| [Granting more scope later](building-a-saas/06-api-development/overview.md#granting-more-scope-later) | Widen an agent key only when a later step needs it | [mjovanovictech 2115884880991072681](https://x.com/mjovanovictech/status/2115884880991072681) | 2026-10-29 |
