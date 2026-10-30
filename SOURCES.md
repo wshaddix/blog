@@ -424,7 +424,7 @@ Oct 29, 2026 digest (Oct 28 posts). Stubs from `docs: stub the October 29 conten
 | [Having an agent draw it](sdlc/architecture.md#having-an-agent-draw-it) | An agent proposes a diagram from project references and module contracts | [TheCodeMan__ 2115353167017726098](https://x.com/TheCodeMan__/status/2115353167017726098) | 2026-10-28 |
 | [Regenerating the diagram](building-a-saas/02-architecture-decisions/overview.md#regenerating-the-diagram) | Regenerate the architecture diagram when a module boundary changes | [TheCodeMan__ 2115353167017726098](https://x.com/TheCodeMan__/status/2115353167017726098) | 2026-10-28 |
 
-## 2026-10-30
+## 2026-10-30 (`b273db3`)
 
 Oct 30, 2026 digest (Oct 29 posts). Stubs from `docs: stub the October 30 content-gap topics`. X links use `https://x.com/<handle>/status/<id>`.
 
