@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,16 @@
 <p>A value object stored in the owner&#x27;s table.</p>
 <h2 id="conversions">Conversions</h2>
 <p>An enum, a strongly typed id, and a value the database stores as a primitive.</p>
+<h3 id="text-number-or-lookup-table">Text, number, or lookup table</h3>
+<p>A status is read by people in queries and tickets, so the stored form has to carry its meaning.</p>
+<ul>
+<li>TODO: Show what a bare integer hides from someone looking at the row without the application.</li>
+<li>TODO: Store an enum as its name through a value conversion, so the column reads as text.</li>
+<li>TODO: Hold the allowed values in a lookup table and point each row at one with a foreign key.</li>
+<li>TODO: Add a CHECK constraint so a write outside that set fails in the database.</li>
+<li>TODO: Cover renaming a value, and retiring one that older rows still reference.</li>
+<li>TODO: Compare storage and index cost for an integer, a short string, and a foreign key. See <a href="../../../building-a-saas/07-data-layer/overview/#status-values-a-person-can-read">Status values a person can read</a>.</li>
+</ul>
 <h2 id="fluent-api-and-annotations">Fluent API and annotations</h2>
 <p>Which one this site prefers, and why.</p>
 <h2 id="code-example">Code example</h2>
@@ -197,6 +207,16 @@
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/07-data-layer/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The data layer connects your domain model to the database. Done right, it's reliable and performant.</p>
         </div>
     </a>
 </div>

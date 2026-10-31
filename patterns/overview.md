@@ -16,6 +16,7 @@ These are lessons. The long lists further down this section are catalogs of name
 - [Synchronous call chains](/patterns/integration-patterns/synchronous-call-chains) - A request that waits on the next module
 - [Modular monolith](/patterns/architecture-styles/modular-monolith) - One deployable, a schema and a `DbContext` per module, and how to find the boundaries
 - [Architecture tests](/patterns/architecture-styles/architecture-tests) - Fail the build when a boundary is crossed
+- [Refactoring under test](/patterns/refactoring-patterns/refactoring-under-test) - Pin what the code does now, then change it in small steps
 - [Event sourcing and change data capture](/patterns/architecture-styles/event-sourcing-and-cdc) - A stream of facts
 - [Distributed building blocks](/patterns/architecture-styles/distributed-building-blocks) - A gateway, discovery, a sidecar, a strangler, and the reason each would come back out
 
@@ -63,6 +64,7 @@ Techniques for improving existing code:
 
 - [Code Smells](/patterns/refactoring-patterns/overview) - Recognizing problems
 - [Refactoring Techniques](/patterns/refactoring-patterns/overview) - Safe transformations
+- [Refactoring under test](/patterns/refactoring-patterns/refactoring-under-test) - Pin what the code does now, then change it in small steps
 
 ## How to Use This Section
 

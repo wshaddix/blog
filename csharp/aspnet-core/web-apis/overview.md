@@ -10,6 +10,7 @@ HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sam
 - [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents) - An HTTP API whose caller is a model.
 - [Minimal APIs and controllers](/csharp/aspnet-core/web-apis/minimal-apis-and-controllers) - Both styles, and how to choose.
 - [Routing and model binding](/csharp/aspnet-core/web-apis/routing-and-binding) - Routes, parameters, and binding.
+- [JSON serialization](/csharp/aspnet-core/web-apis/json-serialization) - How request and response bodies are read and written.
 - [Validation](/csharp/aspnet-core/web-apis/validation) - Reject a bad request before the handler runs.
 - [Error handling](/csharp/aspnet-core/web-apis/error-handling) - Problem Details and a global handler.
 - [OpenAPI](/csharp/aspnet-core/web-apis/openapi) - A description of the API that clients can read.
@@ -18,6 +19,7 @@ HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sam
 - [Pagination](/csharp/aspnet-core/web-apis/pagination) - Paging, filtering, and sorting.
 - [Background services](/csharp/aspnet-core/web-apis/background-services) - Work that outlives the request.
 - [gRPC](/csharp/aspnet-core/web-apis/grpc) - Contract-first calls on HTTP/2.
+- [GraphQL](/csharp/aspnet-core/web-apis/graphql) - A query the client shapes, with loaders and a cost limit.
 - [SignalR](/csharp/aspnet-core/web-apis/signalr) - Realtime messages to web, WinUI, and Uno clients.
 - [Polling, server-sent events, and async request-reply](/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply) - When one request should not stay open.
 - [Versioning](/csharp/aspnet-core/web-apis/versioning) - How a contract changes without breaking callers.

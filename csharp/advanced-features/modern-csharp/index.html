@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -188,6 +188,14 @@
 <ul>
 <li>TODO: A release candidate is a preview of the next runtime. Read what it changes, and keep the solution on the release you ship.</li>
 <li>TODO: List which language and library changes from that candidate this site will adopt, and which ones wait for the final release.</li>
+</ul>
+<h3 id="async-handled-by-the-runtime">Async handled by the runtime</h3>
+<p>The compiler builds a state machine for an async method today. A later runtime may take that work on itself.</p>
+<ul>
+<li>TODO: Describe what that compiler-generated state machine does for an async method on the releases this site ships.</li>
+<li>TODO: Describe what changes when the runtime owns that machinery. Check the wording against the official .NET 11 release notes before this section is written.</li>
+<li>TODO: List the measurements to take on the same workload before the change and after it.</li>
+<li>TODO: List which call sites still need an edit, and which ones keep compiling as they are. See <a href="../../../building-a-saas/01-project-setup/overview/#what-an-upgrade-gives-for-free">What an upgrade gives for free</a>.</li>
 </ul>
 <h2 id="code-example">Code example</h2>
 <p>A short C# sample will go here. A sample longer than about 30 lines will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>

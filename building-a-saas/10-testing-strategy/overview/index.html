@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -188,6 +188,18 @@
 </doc-codeblock></div>
 <h2 id="unit-tests">Unit Tests</h2>
 <!-- TODO: Domain logic, services, TUnit setup. See [TUnit project setup](/csharp/testing/project-setup). -->
+<h3 id="bug-fixes-start-with-a-failing-test">Bug fixes start with a failing test</h3>
+<p>A bug fix arrives with a test that already failed on the code it replaces.</p>
+<ul>
+<li>TODO: Take the reproduction you ran, turn it into a test, and see that test fail before editing the production code.</li>
+<li>TODO: A test added in the same edit as the fix is not evidence until that failure has been seen. See <a href="../../../ai-assisted-development/verification/#a-reproduction-you-checked-yourself">A reproduction you checked yourself</a>.</li>
+</ul>
+<h3 id="pinning-behavior-before-a-refactor">Pinning behavior before a refactor</h3>
+<p>A refactor of domain logic starts from tests that record what the code does today.</p>
+<ul>
+<li>TODO: Capture the current output, then change the structure in small steps that leave those tests green.</li>
+<li>TODO: Remove a test that locked in a bug this change is meant to fix. See <a href="../../../patterns/refactoring-patterns/refactoring-under-test/">Refactoring under test</a>.</li>
+</ul>
 <h2 id="integration-tests">Integration Tests</h2>
 <!-- TODO: WebApplicationFactory, database tests -->
 <h2 id="testing-multi-tenancy">Testing Multi-Tenancy</h2>
@@ -285,6 +297,16 @@
                 <span class="card-compact-title">Performance</span>
             </div>
             <p class="card-compact-description">Avoiding common performance pitfalls.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/refactoring-patterns/refactoring-under-test/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Refactoring Under Test</span>
+            </div>
+            <p class="card-compact-description">Change the shape of code that already runs by recording what it does before you move it.</p>
         </div>
     </a>
 </div>

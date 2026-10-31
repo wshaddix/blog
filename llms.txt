@@ -136,6 +136,7 @@
 - [Webhooks](https://wshaddix.com/csharp/aspnet-core/web-apis/webhooks.md): An HTTP callback the app receives, or sends, when something has already happened.
 - [Conditional Requests](https://wshaddix.com/csharp/aspnet-core/web-apis/conditional-requests.md): Two clients edit the same resource. The second save should fail instead of erasing the first.
 - [Minimal APIs and Controllers](https://wshaddix.com/csharp/aspnet-core/web-apis/minimal-apis-and-controllers.md): ASP.NET Core has two ways to declare an endpoint. Pick one per project and stay with it unless a feature forces the other.
+- [JSON Serialization](https://wshaddix.com/csharp/aspnet-core/web-apis/json-serialization.md): How an ASP.NET Core API turns a request body into an object and an object into a response.
 - [Routing and Model Binding](https://wshaddix.com/csharp/aspnet-core/web-apis/routing-and-binding.md): How a request URL and body become arguments on a handler.
 - [Validation](https://wshaddix.com/csharp/aspnet-core/web-apis/validation.md): Reject a request that cannot succeed before any state changes.
 - [Error Handling](https://wshaddix.com/csharp/aspnet-core/web-apis/error-handling.md): One error shape for the whole API, so every client parses failures the same way.
@@ -145,6 +146,7 @@
 - [Pagination, Filtering, and Sorting](https://wshaddix.com/csharp/aspnet-core/web-apis/pagination.md): List endpoints return a page, not a table.
 - [Background Services](https://wshaddix.com/csharp/aspnet-core/web-apis/background-services.md): Work that must finish even though the HTTP request already returned.
 - [gRPC](https://wshaddix.com/csharp/aspnet-core/web-apis/grpc.md): A contract-first RPC API that runs on HTTP/2.
+- [GraphQL](https://wshaddix.com/csharp/aspnet-core/web-apis/graphql.md): An API where the caller names the fields it wants, and the server resolves each one.
 - [SignalR](https://wshaddix.com/csharp/aspnet-core/web-apis/signalr.md): A persistent connection so the server can push a message to a Blazor, WinUI, or Uno client.
 - [Polling, Server-Sent Events, and Async Request-Reply](https://wshaddix.com/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply.md): Ways to deliver a result after the first request has returned.
 - [API Versioning](https://wshaddix.com/csharp/aspnet-core/web-apis/versioning.md): How a contract changes without breaking a client you already shipped.
@@ -322,6 +324,7 @@
 ### Refactoring Patterns
 
 - [Overview](https://wshaddix.com/patterns/refactoring-patterns/overview.md): Below is a bullet list of refactoring patterns from Martin Fowler's book Refactoring: Improving the Design of Existing Code (2nd Edition). Each pattern includes its name and a brief description of its purpose.
+- [Refactoring Under Test](https://wshaddix.com/patterns/refactoring-patterns/refactoring-under-test.md): Change the shape of code that already runs by recording what it does before you move it.
 - [Overview](https://wshaddix.com/patterns/overview.md): Patterns are proven solutions to common problems. Understanding them helps you write better code and communicate with other engineers.
 
 ## SDLC
@@ -352,6 +355,7 @@
 
 ### Containerization
 
+- [Kubernetes](https://wshaddix.com/devops/containerization/kubernetes.md): A cluster that places containers, restarts them, and gives them a stable name.
 - [Best Practices](https://wshaddix.com/devops/containerization/best-practices.md): Building production-ready containers.
 - [Docker Compose](https://wshaddix.com/devops/containerization/docker-compose.md): Define and run multi-container applications.
 - [Docker Fundamentals](https://wshaddix.com/devops/containerization/docker-fundamentals.md): Containers package applications with their dependencies for consistent deployment.

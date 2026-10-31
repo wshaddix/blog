@@ -46,6 +46,13 @@ A well-organized project structure sets the foundation for maintainability and s
 - TODO: Plan the move off a target framework before its support window closes, and confirm the date on Microsoft's support policy page before you schedule the work.
 - TODO: Follow the upgrade order in [Support windows and end of support](/csharp/platform/publishing#support-windows-and-end-of-support), including a fresh publish of every self-contained deploy.
 
+### What an upgrade gives for free
+
+Some runtime changes arrive with the new target framework, with no edit to the methods that await.
+
+- TODO: Measure the async paths this API already has, move the target, and measure them again.
+- TODO: Confirm in the .NET 11 release notes whether the runtime now owns the async state machine, and leave the handlers alone when it does. See [Async handled by the runtime](/csharp/advanced-features/modern-csharp#async-handled-by-the-runtime).
+
 ## Agent rules in the repo
 
 - TODO: Keep the rules the agent follows in the repository: a short root file, a file beside the code it governs, and hooks that run even when the model skips a file.
@@ -68,6 +75,20 @@ A well-organized project structure sets the foundation for maintainability and s
 - TODO: The hook can fail the commit, not only comment later on a pull request.
 - TODO: A secret in the diff stops the commit. A check that did not run stops it as well. A clean commit still waits for a person before it merges.
 - TODO: The hook is [Blocking a commit](/ai-assisted-development/tools#blocking-a-commit), and the secret scan is [Before it reaches the repo](/ai-assisted-development/risks-and-limits#before-it-reaches-the-repo).
+
+### One script for local and hosted checks
+
+The checks a developer runs before a commit are the same script the pipeline runs.
+
+- TODO: Call that script from the hook and from the hosted job, and skip the hosted job when this commit already passed.
+- TODO: Post the local result on the pull request, and still run the suite on a nightly hosted job. See [Running the checks on your own machine](/devops/ci-cd/concepts#running-the-checks-on-your-own-machine).
+
+### A summary that ranks risk
+
+The review step can open with a summary that sorts the diff by risk.
+
+- TODO: Group auth, data, and config changes ahead of renames, and compare that summary to the diff.
+- TODO: Keep a person on the paths that are always reviewed by hand. See [A description that points at the risk](/devops/version-control/branching-and-pull-requests#a-description-that-points-at-the-risk).
 
 ## Related Topics
 

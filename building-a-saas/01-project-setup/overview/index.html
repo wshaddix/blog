@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -211,6 +211,12 @@
 <li>TODO: Plan the move off a target framework before its support window closes, and confirm the date on Microsoft&#x27;s support policy page before you schedule the work.</li>
 <li>TODO: Follow the upgrade order in <a href="../../../csharp/platform/publishing/#support-windows-and-end-of-support">Support windows and end of support</a>, including a fresh publish of every self-contained deploy.</li>
 </ul>
+<h3 id="what-an-upgrade-gives-for-free">What an upgrade gives for free</h3>
+<p>Some runtime changes arrive with the new target framework, with no edit to the methods that await.</p>
+<ul>
+<li>TODO: Measure the async paths this API already has, move the target, and measure them again.</li>
+<li>TODO: Confirm in the .NET 11 release notes whether the runtime now owns the async state machine, and leave the handlers alone when it does. See <a href="../../../csharp/advanced-features/modern-csharp/#async-handled-by-the-runtime">Async handled by the runtime</a>.</li>
+</ul>
 <h2 id="agent-rules-in-the-repo">Agent rules in the repo</h2>
 <ul>
 <li>TODO: Keep the rules the agent follows in the repository: a short root file, a file beside the code it governs, and hooks that run even when the model skips a file.</li>
@@ -233,6 +239,18 @@
 <li>TODO: The hook can fail the commit, not only comment later on a pull request.</li>
 <li>TODO: A secret in the diff stops the commit. A check that did not run stops it as well. A clean commit still waits for a person before it merges.</li>
 <li>TODO: The hook is <a href="../../../ai-assisted-development/tools/#blocking-a-commit">Blocking a commit</a>, and the secret scan is <a href="../../../ai-assisted-development/risks-and-limits/#before-it-reaches-the-repo">Before it reaches the repo</a>.</li>
+</ul>
+<h3 id="one-script-for-local-and-hosted-checks">One script for local and hosted checks</h3>
+<p>The checks a developer runs before a commit are the same script the pipeline runs.</p>
+<ul>
+<li>TODO: Call that script from the hook and from the hosted job, and skip the hosted job when this commit already passed.</li>
+<li>TODO: Post the local result on the pull request, and still run the suite on a nightly hosted job. See <a href="../../../devops/ci-cd/concepts/#running-the-checks-on-your-own-machine">Running the checks on your own machine</a>.</li>
+</ul>
+<h3 id="a-summary-that-ranks-risk">A summary that ranks risk</h3>
+<p>The review step can open with a summary that sorts the diff by risk.</p>
+<ul>
+<li>TODO: Group auth, data, and config changes ahead of renames, and compare that summary to the diff.</li>
+<li>TODO: Keep a person on the paths that are always reviewed by hand. See <a href="../../../devops/version-control/branching-and-pull-requests/#a-description-that-points-at-the-risk">A description that points at the risk</a>.</li>
 </ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>

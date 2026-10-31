@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -174,6 +174,14 @@
 <p>One action, a clear description, and a result the model can quote.</p>
 <h2 id="permissions">Permissions</h2>
 <p>A tool that can write or send is a different risk from a tool that can read.</p>
+<h3 id="asking-for-more-access-mid-task">Asking for more access mid-task</h3>
+<p>Begin with the smallest scope that can do the work, and widen it only when the task cannot continue.</p>
+<ul>
+<li>TODO: Start from that smallest scope, and add a permission only when the current one cannot finish the step.</li>
+<li>TODO: Describe how the server tells the client it needs a further permission.</li>
+<li>TODO: Say what the client should do when it can show that request, and what it should do when it cannot.</li>
+<li>TODO: Show the person the exact access being asked for, and write down every grant. See <a href="../../building-a-saas/06-api-development/overview/#granting-more-scope-later">Granting more scope later</a>.</li>
+</ul>
 <h2 id="when-to-build-one">When to build one</h2>
 <p>A task you repeat, against a system that already has an API.</p>
 <h2 id="example">Example</h2>
@@ -236,6 +244,16 @@
                 <span class="card-compact-title">MCP Servers</span>
             </div>
             <p class="card-compact-description">A Model Context Protocol server exposes tools, resources, and prompts to an AI client. In C# it is a hosted process, either on standard I/O or on HTTP.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
         </div>
     </a>
 </div>

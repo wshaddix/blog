@@ -29,6 +29,7 @@ Packaging applications for consistent deployment:
 - [Docker Fundamentals](/devops/containerization/docker-fundamentals) - Containers and images
 - [Docker Compose](/devops/containerization/docker-compose) - Multi-container applications
 - [Container Best Practices](/devops/containerization/best-practices) - Production-ready containers
+- [Kubernetes](/devops/containerization/kubernetes) - Scheduling, probes, and resource limits for a .NET process
 
 ### Azure
 

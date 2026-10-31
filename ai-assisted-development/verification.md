@@ -12,6 +12,14 @@ Every file. Look for extra changes you did not ask for.
 
 The project's tests, on TUnit. A green run is the minimum.
 
+### A reproduction you checked yourself
+
+A test written in the same pass as the fix can pass because it shares the fix's assumption.
+
+- TODO: Write the reproduction before anyone changes the code, and run it so the failure is visible.
+- TODO: Change the code only after that failure is the one you meant, then run the same test and watch it pass.
+- TODO: Leave the test in the suite so the bug cannot return quietly. See [Bug fixes start with a failing test](/building-a-saas/10-testing-strategy/overview#bug-fixes-start-with-a-failing-test).
+
 ## Behavior
 
 Exercise the path a user hits when the change is visible.

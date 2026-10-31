@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -181,6 +181,18 @@
 </ul>
 <h2 id="api-design-principles">API Design Principles</h2>
 <!-- TODO: Resource naming, HTTP methods, status codes -->
+<h3 id="why-not-graphql">Why not GraphQL</h3>
+<p>This API is a set of resource endpoints. A query the client shapes is a later decision.</p>
+<ul>
+<li>TODO: The screens we ship are covered by those endpoints. A second contract would have to be versioned and authorized on its own.</li>
+<li>TODO: Nested fields would need batched lookups and a cost limit before they were safe to expose. See <a href="../../../csharp/aspnet-core/web-apis/graphql/">GraphQL</a>.</li>
+</ul>
+<h3 id="one-set-of-json-options">One set of JSON options</h3>
+<p>Every endpoint should serialize with the same JSON options.</p>
+<ul>
+<li>TODO: Set naming, nulls, and converters once, and keep a second code path from building its own copy.</li>
+<li>TODO: Measure before replacing the serializer the framework already uses. See <a href="../../../csharp/aspnet-core/web-apis/json-serialization/#configuring-options-once">Configuring options once</a>.</li>
+</ul>
 <h2 id="validation">Validation</h2>
 <!-- TODO: FluentValidation, model validation -->
 <h2 id="error-handling">Error Handling</h2>
@@ -234,6 +246,12 @@
 <li>TODO: The credential an agent uses can read the rows the task named and write to the store the task named. The rest of the API stays closed.</li>
 <li>TODO: The tenant and the date range are fixed on the task. A later turn cannot change them by asking.</li>
 <li>TODO: A call outside that scope fails in the API, including when the model requested it.</li>
+</ul>
+<h3 id="granting-more-scope-later">Granting more scope later</h3>
+<p>The key starts narrow. A later step can ask for a further permission when the first grant is not enough.</p>
+<ul>
+<li>TODO: Keep the first grant to the task as it was written. Ask for more only when that scope cannot do the next step.</li>
+<li>TODO: The person sees the extra scope before it is added, and the grant is recorded. See <a href="../../../ai-assisted-development/using-mcp/#asking-for-more-access-mid-task">Asking for more access mid-task</a>.</li>
 </ul>
 <h2 id="an-mcp-endpoint-for-tenants">An MCP endpoint for tenants</h2>
 <ul>
@@ -372,22 +390,22 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/ai-assisted-development/using-mcp/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Using MCP</span>
+            </div>
+            <p class="card-compact-description">MCP lets an assistant call a tool on a server: read a ticket, query a database, or hit an API. Building the server is covered under C#.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/csharp/aspnet-core/web-apis/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Web APIs</span>
             </div>
             <p class="card-compact-description">HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sample.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/csharp/aspnet-core/web-apis/webhooks/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Webhooks</span>
-            </div>
-            <p class="card-compact-description">An HTTP callback the app receives, or sends, when something has already happened.</p>
         </div>
     </a>
 </div>

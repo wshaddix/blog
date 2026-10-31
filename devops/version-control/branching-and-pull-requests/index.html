@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -174,6 +174,14 @@
 <p>Conventional commits, and a history someone can bisect.</p>
 <h2 id="the-pull-request">The pull request</h2>
 <p>Description, linked issue, and the checks that must pass.</p>
+<h3 id="a-description-that-points-at-the-risk">A description that points at the risk</h3>
+<p>A description can sort the diff by how much damage each part can do, so review time starts there.</p>
+<ul>
+<li>TODO: Ask the agent to group the change by risk, putting auth, data, and config ahead of renames and formatting.</li>
+<li>TODO: Compare that summary to the diff before treating it as the map of the change.</li>
+<li>TODO: Name the paths that still need a person, including when the summary calls them safe.</li>
+<li>TODO: Say what the summary is not evidence for, such as a claim that a sensitive file was untouched. See <a href="../../../building-a-saas/01-project-setup/overview/#a-summary-that-ranks-risk">A summary that ranks risk</a>.</li>
+</ul>
 <h2 id="review-and-merge">Review and merge</h2>
 <p>Who approves, how conflicts are resolved, and when to squash.</p>
 <h2 id="rebase-on-shared-branches">Rebase on shared branches</h2>
@@ -216,6 +224,16 @@
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/01-project-setup/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">A well-organized project structure sets the foundation for maintainability and scalability.</p>
         </div>
     </a>
 </div>

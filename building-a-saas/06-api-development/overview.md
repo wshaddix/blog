@@ -16,6 +16,20 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 
 ## API Design Principles
 
+### Why not GraphQL
+
+This API is a set of resource endpoints. A query the client shapes is a later decision.
+
+- TODO: The screens we ship are covered by those endpoints. A second contract would have to be versioned and authorized on its own.
+- TODO: Nested fields would need batched lookups and a cost limit before they were safe to expose. See [GraphQL](/csharp/aspnet-core/web-apis/graphql).
+
+### One set of JSON options
+
+Every endpoint should serialize with the same JSON options.
+
+- TODO: Set naming, nulls, and converters once, and keep a second code path from building its own copy.
+- TODO: Measure before replacing the serializer the framework already uses. See [Configuring options once](/csharp/aspnet-core/web-apis/json-serialization#configuring-options-once).
+
 ## Validation
 
 ## Error Handling
@@ -69,6 +83,13 @@ Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are
 - TODO: The credential an agent uses can read the rows the task named and write to the store the task named. The rest of the API stays closed.
 - TODO: The tenant and the date range are fixed on the task. A later turn cannot change them by asking.
 - TODO: A call outside that scope fails in the API, including when the model requested it.
+
+### Granting more scope later
+
+The key starts narrow. A later step can ask for a further permission when the first grant is not enough.
+
+- TODO: Keep the first grant to the task as it was written. Ask for more only when that scope cannot do the next step.
+- TODO: The person sees the extra scope before it is added, and the grant is recorded. See [Asking for more access mid-task](/ai-assisted-development/using-mcp#asking-for-more-access-mid-task).
 
 ## An MCP endpoint for tenants
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -180,6 +180,12 @@
 <!-- TODO: Configuration, connection strings -->
 <h2 id="entity-configurations">Entity Configurations</h2>
 <!-- TODO: Fluent API, relationships, indexes -->
+<h3 id="status-values-a-person-can-read">Status values a person can read</h3>
+<p>A status stored on an entity should be readable in a query without a decoder.</p>
+<ul>
+<li>TODO: Prefer a name, a string conversion, or a lookup row over a bare integer for a status a person will read.</li>
+<li>TODO: Guard the allowed set, and plan how a renamed or retired value is migrated. See <a href="../../../csharp/entity-framework/modeling/#text-number-or-lookup-table">Text, number, or lookup table</a>.</li>
+</ul>
 <h2 id="migrations">Migrations</h2>
 <!-- TODO: Creating, applying, CI/CD integration -->
 <h2 id="repository-pattern">Repository Pattern?</h2>
@@ -193,6 +199,12 @@
 <h3 id="narrow-locks">Narrow locks</h3>
 <ul>
 <li>TODO: Lock the row or the key this operation changes, so unrelated work does not wait. See <a href="../../../fundamentals/programming-concepts/concurrency/#lock-granularity">Lock granularity</a> and <a href="../../../csharp/entity-framework/concurrency/">Concurrency</a>.</li>
+</ul>
+<h3 id="fan-out-and-the-connection-pool">Fan-out and the connection pool</h3>
+<p>A fan-out that opens one database call per item can take every connection the pool has.</p>
+<ul>
+<li>TODO: Cap how many of those calls run together so other requests can still borrow a connection.</li>
+<li>TODO: Size the cap from the pool, and cancel the rest of the fan-out when one call fails. See <a href="../../../fundamentals/programming-concepts/concurrency/#starting-too-many-at-once">Starting too many at once</a>.</li>
 </ul>
 <h2 id="large-id-lists">Large ID lists</h2>
 <ul>

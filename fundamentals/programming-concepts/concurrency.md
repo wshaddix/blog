@@ -74,6 +74,16 @@ A thread never gets resources it needs because other threads keep taking them.
 
 Threads keep responding to each other but make no progress (like two people in a hallway both stepping aside repeatedly).
 
+### Starting too many at once
+
+Awaiting every item at once can use up a shared resource before the work finishes.
+
+- TODO: Contrast waiting on the whole set with a limit on how many items run together.
+- TODO: Say which limit is reached first: connections from a pool, open sockets, or a rate limit on the service being called.
+- TODO: Show three ways to set that limit: a `SemaphoreSlim`, `Parallel.ForEachAsync` with a maximum degree of parallelism, and a fixed set of workers reading from a channel.
+- TODO: Explain how to pick the number for the workload in front of you.
+- TODO: Describe what happens to the remaining work, including cancellation, when one task throws. See [Fan-out and the connection pool](/building-a-saas/07-data-layer/overview#fan-out-and-the-connection-pool).
+
 ## Synchronization Primitives
 
 | Primitive | Use Case |

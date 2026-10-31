@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846591029279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846591029279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846591029279" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -192,6 +192,12 @@
 <!-- TODO: App Service, slots, configuration -->
 <h2 id="database-migrations">Database Migrations</h2>
 <!-- TODO: Safe migration strategies -->
+<h3 id="expand-then-contract">Expand, then contract</h3>
+<p>A migration that ships with one release has to leave the previous version able to run.</p>
+<ul>
+<li>TODO: Add the new column beside the old one, backfill, switch readers, and drop the old column only in a later release.</li>
+<li>TODO: Keep each of those steps in its own migration. See <a href="../../../csharp/entity-framework/migrations/#changing-a-column-without-downtime">Changing a column without downtime</a>.</li>
+</ul>
 <h2 id="deployment-strategies">Deployment Strategies</h2>
 <retype-table copy-text="| Strategy | Description | Risk |
 |----------|-------------|------|
@@ -232,6 +238,12 @@
 <li>TODO: Host the app on a rented machine when Azure App Service is not the target. See <a href="../../../devops/self-hosting/overview/#a-rented-vps">A rented VPS</a>.</li>
 <li>TODO: Keep staging and production on different machines, with secrets split by environment. See <a href="../../../devops/self-hosting/overview/#staging-and-production-on-separate-machines">Staging and production on separate machines</a>.</li>
 </ul>
+<h3 id="why-not-kubernetes-yet">Why not Kubernetes yet</h3>
+<p>One host is enough until restarts, capacity, or a rolling deploy force a cluster.</p>
+<ul>
+<li>TODO: Keep the current host, including a rented machine, until those signs show up. See <a href="../../../devops/containerization/kubernetes/">Kubernetes</a>.</li>
+<li>TODO: A cluster still needs the health checks, the shutdown handling, and a process that can lose its memory and continue.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../../../csharp/platform/publishing/">Publishing</a></li>
@@ -261,6 +273,26 @@
                 <span class="card-compact-title">Docker Fundamentals</span>
             </div>
             <p class="card-compact-description">Containers package applications with their dependencies for consistent deployment.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/devops/containerization/kubernetes/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Kubernetes</span>
+            </div>
+            <p class="card-compact-description">A cluster that places containers, restarts them, and gives them a stable name.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/entity-framework/migrations/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Migrations</span>
+            </div>
+            <p class="card-compact-description">Evolving your database schema over time.</p>
         </div>
     </a>
 </div>
