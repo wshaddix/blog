@@ -24,6 +24,13 @@ The data layer connects your domain model to the database. Done right, it's reli
 
 <!-- TODO: Fluent API, relationships, indexes -->
 
+### Status values a person can read
+
+A status stored on an entity should be readable in a query without a decoder.
+
+- TODO: Prefer a name, a string conversion, or a lookup row over a bare integer for a status a person will read.
+- TODO: Guard the allowed set, and plan how a renamed or retired value is migrated. See [Text, number, or lookup table](/csharp/entity-framework/modeling#text-number-or-lookup-table).
+
 ## Migrations
 
 <!-- TODO: Creating, applying, CI/CD integration -->

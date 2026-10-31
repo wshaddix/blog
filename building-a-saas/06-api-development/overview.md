@@ -30,6 +30,13 @@ This API is a set of resource endpoints. A query the client shapes is a later de
 - TODO: The screens we ship are covered by those endpoints. A second contract would have to be versioned and authorized on its own.
 - TODO: Nested fields would need batched lookups and a cost limit before they were safe to expose. See [GraphQL](/csharp/aspnet-core/web-apis/graphql).
 
+### One set of JSON options
+
+Every endpoint should serialize with the same JSON options.
+
+- TODO: Set naming, nulls, and converters once, and keep a second code path from building its own copy.
+- TODO: Measure before replacing the serializer the framework already uses. See [Configuring options once](/csharp/aspnet-core/web-apis/json-serialization#configuring-options-once).
+
 ## Validation
 
 <!-- TODO: FluentValidation, model validation -->

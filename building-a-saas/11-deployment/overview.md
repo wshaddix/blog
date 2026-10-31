@@ -40,6 +40,13 @@ Getting code to production reliably and repeatedly.
 
 <!-- TODO: Safe migration strategies -->
 
+### Expand, then contract
+
+A migration that ships with one release has to leave the previous version able to run.
+
+- TODO: Add the new column beside the old one, backfill, switch readers, and drop the old column only in a later release.
+- TODO: Keep each of those steps in its own migration. See [Changing a column without downtime](/csharp/entity-framework/migrations#changing-a-column-without-downtime).
+
 ## Deployment Strategies
 
 | Strategy | Description | Risk |

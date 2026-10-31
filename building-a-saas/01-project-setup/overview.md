@@ -97,6 +97,20 @@ Some runtime changes arrive with the new target framework, with no edit to the m
 - TODO: A secret in the diff stops the commit. A check that did not run stops it as well. A clean commit still waits for a person before it merges.
 - TODO: The hook is [Blocking a commit](/ai-assisted-development/tools#blocking-a-commit), and the secret scan is [Before it reaches the repo](/ai-assisted-development/risks-and-limits#before-it-reaches-the-repo).
 
+### One script for local and hosted checks
+
+The checks a developer runs before a commit are the same script the pipeline runs.
+
+- TODO: Call that script from the hook and from the hosted job, and skip the hosted job when this commit already passed.
+- TODO: Post the local result on the pull request, and still run the suite on a nightly hosted job. See [Running the checks on your own machine](/devops/ci-cd/concepts#running-the-checks-on-your-own-machine).
+
+### A summary that ranks risk
+
+The review step can open with a summary that sorts the diff by risk.
+
+- TODO: Group auth, data, and config changes ahead of renames, and compare that summary to the diff.
+- TODO: Keep a person on the paths that are always reviewed by hand. See [A description that points at the risk](/devops/version-control/branching-and-pull-requests#a-description-that-points-at-the-risk).
+
 ## Related Topics
 
 - See [Projects and Solutions](/csharp/language-basics/projects-and-solutions)

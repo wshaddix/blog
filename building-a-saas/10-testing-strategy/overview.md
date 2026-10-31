@@ -39,6 +39,13 @@ A bug fix arrives with a test that already failed on the code it replaces.
 - TODO: Take the reproduction you ran, turn it into a test, and see that test fail before editing the production code.
 - TODO: A test added in the same edit as the fix is not evidence until that failure has been seen. See [A reproduction you checked yourself](/ai-assisted-development/verification#a-reproduction-you-checked-yourself).
 
+### Pinning behavior before a refactor
+
+A refactor of domain logic starts from tests that record what the code does today.
+
+- TODO: Capture the current output, then change the structure in small steps that leave those tests green.
+- TODO: Remove a test that locked in a bug this change is meant to fix. See [Refactoring under test](/patterns/refactoring-patterns/refactoring-under-test).
+
 ## Integration Tests
 
 <!-- TODO: WebApplicationFactory, database tests -->

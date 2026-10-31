@@ -21,6 +21,15 @@ Conventional commits, and a history someone can bisect.
 
 Description, linked issue, and the checks that must pass.
 
+### A description that points at the risk
+
+A description can sort the diff by how much damage each part can do, so review time starts there.
+
+- TODO: Ask the agent to group the change by risk, putting auth, data, and config ahead of renames and formatting.
+- TODO: Compare that summary to the diff before treating it as the map of the change.
+- TODO: Name the paths that still need a person, including when the summary calls them safe.
+- TODO: Say what the summary is not evidence for, such as a claim that a sensitive file was untouched. See [A summary that ranks risk](/building-a-saas/01-project-setup/overview#a-summary-that-ranks-risk).
+
 ## Review and merge
 
 Who approves, how conflicts are resolved, and when to squash.

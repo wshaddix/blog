@@ -15,6 +15,7 @@ HTTP APIs on ASP.NET Core. Each child page is an outline that will grow a C# sam
 - [APIs for agents](/csharp/aspnet-core/web-apis/apis-for-agents) - An HTTP API whose caller is a model.
 - [Minimal APIs and controllers](/csharp/aspnet-core/web-apis/minimal-apis-and-controllers) - Both styles, and how to choose.
 - [Routing and model binding](/csharp/aspnet-core/web-apis/routing-and-binding) - Routes, parameters, and binding.
+- [JSON serialization](/csharp/aspnet-core/web-apis/json-serialization) - How request and response bodies are read and written.
 - [Validation](/csharp/aspnet-core/web-apis/validation) - Reject a bad request before the handler runs.
 - [Error handling](/csharp/aspnet-core/web-apis/error-handling) - Problem Details and a global handler.
 - [OpenAPI](/csharp/aspnet-core/web-apis/openapi) - A description of the API that clients can read.
