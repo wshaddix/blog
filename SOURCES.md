@@ -443,7 +443,7 @@ Oct 30, 2026 digest (Oct 29 posts). Stubs from `docs: stub the October 30 conten
 | [Asking for more access mid-task](ai-assisted-development/using-mcp.md#asking-for-more-access-mid-task) | A server that asks for a further permission during a task | [mjovanovictech 2115884880991072681](https://x.com/mjovanovictech/status/2115884880991072681) | 2026-10-29 |
 | [Granting more scope later](building-a-saas/06-api-development/overview.md#granting-more-scope-later) | Widen an agent key only when a later step needs it | [mjovanovictech 2115884880991072681](https://x.com/mjovanovictech/status/2115884880991072681) | 2026-10-29 |
 
-## 2026-10-31
+## 2026-10-31 (`f85505f`)
 
 Oct 31, 2026 digest (Oct 30 posts, plus the newsletter received Oct 31). Stubs from `docs: stub the October 31 content-gap topics`. X links use `https://x.com/<handle>/status/<id>`. Newsletter and article links are the public URLs from the gap report.
 
