@@ -43,6 +43,17 @@ A refactor of domain logic starts from tests that record what the code does toda
 
 ## Testing Multi-Tenancy
 
+### Two tenants in every fixture
+
+Isolation shows up only when the fixture holds two tenants that could be mistaken for each other.
+
+- TODO: Call data access with a tenant argument. A helper that omits it is a failing test, not a convenience.
+- TODO: Include the paths a global filter skips: `IgnoreQueryFilters`, raw SQL, Dapper, a reporting view, and a background job.
+- TODO: Cover cache keys, a search or vector index, a blob path, an export, and a log field in the same fixture.
+- TODO: Assert the tenant predicate is part of the index query, ahead of ranking.
+- TODO: Seed two tenants with similar rows. Sign in as tenant A, request tenant B's ids on every endpoint, and expect 404.
+- TODO: When an agent wrote the query, fail the review if the tenant check is missing. See [Paths that skip the filter](/building-a-saas/05-multi-tenancy/overview#paths-that-skip-the-filter) and [Retrieval across tenants](/ai-assisted-development/risks-and-limits#retrieval-across-tenants).
+
 ## Architecture tests
 
 ## Time-dependent tests

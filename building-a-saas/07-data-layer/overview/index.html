@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -190,6 +190,16 @@
 <!-- TODO: Creating, applying, CI/CD integration -->
 <h2 id="repository-pattern">Repository Pattern?</h2>
 <!-- TODO: When to use, when DbContext is enough -->
+<h3 id="what-a-wrapper-would-have-to-enforce">What a wrapper would have to enforce</h3>
+<p>A repository in this product has to enforce a rule that the context will not enforce on its own.</p>
+<ul>
+<li>TODO: <code translate="no" v-pre>DbSet&lt;T&gt;</code> already behaves as the collection, and <code translate="no" v-pre>DbContext</code> already behaves as the unit of work.</li>
+<li>TODO: Get, Add, Update, and Delete that only forward into EF do not draw a boundary around the aggregate.</li>
+<li>TODO: The costs are an <code translate="no" v-pre>IQueryable</code> that leaks or gets wrapped again, includes and projections that disappear, and one more interface to mock.</li>
+<li>TODO: Keep the wrapper when every call applies tenant scope, soft delete, aggregate loading, or a named query.</li>
+<li>TODO: Make it specific to one aggregate. A single generic repository for every type still has no rule.</li>
+<li>TODO: If the rule cannot be named, use the context directly. See <a href="../../../patterns/application-patterns/repository/#a-generic-repository-over-ef-core">A generic repository over EF Core</a>.</li>
+</ul>
 <h2 id="performance">Performance</h2>
 <!-- TODO: N+1, tracking, projections, keyset pagination -->
 <h3 id="latest-activity-per-project">Latest activity per project</h3>
@@ -317,16 +327,6 @@
     </a>
 </div>
 <div class="card-compact-container">
-    <a href="/patterns/architecture-styles/distributed-building-blocks/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Distributed Building Blocks</span>
-            </div>
-            <p class="card-compact-description">Parts a split system often adds, and the condition that would make each one leave again.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
     <a href="/patterns/architecture-styles/event-sourcing-and-cdc/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -363,6 +363,16 @@
                 <span class="card-compact-title">Modular Monolith</span>
             </div>
             <p class="card-compact-description">One deployable, divided into modules that own their data and their features.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/02-architecture-decisions/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Good architecture enables teams to move fast while maintaining quality. Here we make key decisions for our SaaS platform.</p>
         </div>
     </a>
 </div>

@@ -65,6 +65,17 @@ Some runtime changes arrive with the new target framework, with no edit to the m
 - TODO: Build and test are allowed. A push, production settings, and secret files are denied.
 - TODO: The deny is enforced by the tool. A sentence in the instruction file is not the only control.
 
+### A handoff file
+
+The repo keeps a short handoff beside the plan, so the next session can start without the chat.
+
+- TODO: Name the edits, the checks and how they were run, the questions still open, and who takes the next step.
+- TODO: Include each decision and the reason for it, and name the condition that would reopen work that was set aside.
+- TODO: Store the file in the repo next to the plan.
+- TODO: The next session compares the file with the code and with the git log before editing, and updates the one that drifted.
+- TODO: Link to diffs and test runs, and leave the retelling out.
+- TODO: A person who returns a week later should be able to resume from the same file. See [Handing off to the next session](/ai-assisted-development/techniques#handing-off-to-the-next-session).
+
 ## Automated review step
 
 - TODO: Run the agent with no chat, from a git hook or from the pipeline, and give it the diff to review.

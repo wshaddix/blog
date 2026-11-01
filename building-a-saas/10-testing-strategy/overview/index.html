@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -204,6 +204,16 @@
 <!-- TODO: WebApplicationFactory, database tests -->
 <h2 id="testing-multi-tenancy">Testing Multi-Tenancy</h2>
 <!-- TODO: Ensuring tenant isolation in tests -->
+<h3 id="two-tenants-in-every-fixture">Two tenants in every fixture</h3>
+<p>Isolation shows up only when the fixture holds two tenants that could be mistaken for each other.</p>
+<ul>
+<li>TODO: Call data access with a tenant argument. A helper that omits it is a failing test, not a convenience.</li>
+<li>TODO: Include the paths a global filter skips: <code translate="no" v-pre>IgnoreQueryFilters</code>, raw SQL, Dapper, a reporting view, and a background job.</li>
+<li>TODO: Cover cache keys, a search or vector index, a blob path, an export, and a log field in the same fixture.</li>
+<li>TODO: Assert the tenant predicate is part of the index query, ahead of ranking.</li>
+<li>TODO: Seed two tenants with similar rows. Sign in as tenant A, request tenant B&#x27;s ids on every endpoint, and expect 404.</li>
+<li>TODO: When an agent wrote the query, fail the review if the tenant check is missing. See <a href="../../05-multi-tenancy/overview/#paths-that-skip-the-filter">Paths that skip the filter</a> and <a href="../../../ai-assisted-development/risks-and-limits/#retrieval-across-tenants">Retrieval across tenants</a>.</li>
+</ul>
 <h2 id="architecture-tests">Architecture tests</h2>
 <!-- TODO: Fail the build when a project reference crosses a boundary -->
 <h2 id="time-dependent-tests">Time-dependent tests</h2>
@@ -271,6 +281,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/building-a-saas/05-multi-tenancy/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Multi-tenancy allows one application to serve many customers with isolated data.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/building-a-saas/09-billing-integration/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -307,6 +327,16 @@
                 <span class="card-compact-title">Refactoring Under Test</span>
             </div>
             <p class="card-compact-description">Change the shape of code that already runs by recording what it does before you move it.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/risks-and-limits/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Risks and Limits</span>
+            </div>
+            <p class="card-compact-description">The failure modes that show up in a team that uses assistants every day.</p>
         </div>
     </a>
 </div>

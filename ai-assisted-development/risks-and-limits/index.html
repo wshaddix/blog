@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -190,6 +190,16 @@
 <li>TODO: That sentence does not widen the task, change the recipient, or add a tool.</li>
 <li>TODO: When you review a run, look for a tool argument that was taken from that untrusted text.</li>
 </ul>
+<h2 id="retrieval-across-tenants">Retrieval across tenants</h2>
+<p>A retrieval step can surface another tenant&#x27;s rows after the database filter did its job.</p>
+<ul>
+<li>TODO: Data access takes a tenant argument. Leave it off and the method fails to compile, which closes a helper that would hand back every tenant&#x27;s rows.</li>
+<li>TODO: Review the escapes a global filter leaves open: <code translate="no" v-pre>IgnoreQueryFilters</code>, raw SQL, Dapper, reporting views, and jobs that run outside a request.</li>
+<li>TODO: Apply the same tenant check to cache keys, search and vector indexes, blob paths, exports, and log and trace attributes.</li>
+<li>TODO: Keep the tenant filter inside the index query. Ranking a mixed set and discarding other tenants in application code is the leak.</li>
+<li>TODO: Practice on staging that holds two look-alike tenants. Signed in as one, a request for the other&#x27;s ids comes back 404. See <a href="../../building-a-saas/10-testing-strategy/overview/#two-tenants-in-every-fixture">Two tenants in every fixture</a>.</li>
+<li>TODO: When the query was written by an agent, the tenant predicate is the first thing the review reads. See <a href="../../building-a-saas/05-multi-tenancy/overview/#paths-that-skip-the-filter">Paths that skip the filter</a>.</li>
+</ul>
 <h2 id="example">Example</h2>
 <p>A worked example will go here. When an example produces more than about 30 lines of C#, that code will live in a companion <code translate="no" v-pre>.cs</code> file next to this page.</p>
 <h2 id="related">Related</h2>
@@ -219,6 +229,26 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">A well-organized project structure sets the foundation for maintainability and scalability.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/05-multi-tenancy/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Multi-tenancy allows one application to serve many customers with isolated data.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/10-testing-strategy/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Tests give you confidence to ship. We'll build a comprehensive testing strategy.</p>
         </div>
     </a>
 </div>

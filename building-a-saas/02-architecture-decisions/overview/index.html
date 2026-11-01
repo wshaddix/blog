@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -215,6 +215,16 @@
 <h2 id="patterns-well-use">Patterns We&#x27;ll Use</h2>
 <!-- TODO: Repository, CQRS-lite, MediatR decision -->
 <p>The public API stays JSON over HTTP. gRPC is a decision only when an internal client needs an HTTP/2 contract.</p>
+<h3 id="cqrs-without-a-second-store">CQRS without a second store</h3>
+<p>Commands and queries can have different handlers here and still read and write the same tables.</p>
+<ul>
+<li>TODO: Choose the handler split in code. Storage stays one database until a later measurement says otherwise.</li>
+<li>TODO: Serve reads with <code translate="no" v-pre>AsNoTracking</code>, projections, views, or raw SQL on those tables.</li>
+<li>TODO: Serve writes as aggregates through the tracked context.</li>
+<li>TODO: Open a separate read store when reads slow the writes down, when a query is really a search, or when a report must keep rows the operational store will drop.</li>
+<li>TODO: Before adding that store, plan for lag, a projector to operate, a way to rebuild it, and a second schema to migrate.</li>
+<li>TODO: Put a read replica in between. See <a href="../../07-data-layer/overview/#read-replicas">Read replicas</a> and <a href="../../../patterns/application-patterns/cqrs/#one-database-two-models">One database, two models</a>.</li>
+</ul>
 <h2 id="dependency-injection">Dependency Injection</h2>
 <!-- TODO: Service registration, lifetimes -->
 <h2 id="decision-records">Decision records</h2>
@@ -286,6 +296,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/patterns/application-patterns/cqrs/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">CQRS</span>
+            </div>
+            <p class="card-compact-description">Separate the model that changes state from the model that reads it, when those two models want different shapes.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/career-development/team-operations/decision-making/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -352,16 +372,6 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">C# is a modern, object-oriented programming language developed by Microsoft. Combined with the .NET platform, it's one of the most versatile ecosystems for building applications.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/patterns/architecture-styles/overview/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Overview</span>
-            </div>
-            <p class="card-compact-description">How a codebase is sliced, and how those slices are kept from leaking.</p>
         </div>
     </a>
 </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -209,6 +209,16 @@
 <!-- TODO: Output cache on read endpoints -->
 <h2 id="keyset-pagination">Keyset pagination</h2>
 <!-- TODO: List endpoints use a keyset cursor -->
+<h2 id="usage-summaries">Usage summaries</h2>
+<p>A dashboard that wants daily activity counts for one tenant should receive those counts.</p>
+<ul>
+<li>TODO: Watch for a screen that pages the activity list only to count it or chart it.</li>
+<li>TODO: Add a summary for that tenant: a date range, a bucket of a day or a week, and the count in each bucket.</li>
+<li>TODO: Limit the query to the tenant and the range before the rows are grouped.</li>
+<li>TODO: Group in EF Core on a date part, and inspect the SQL EF sends.</li>
+<li>TODO: Store a closed day&#x27;s count. Recompute the bucket that is still open.</li>
+<li>TODO: Bound how wide the range may be and how many buckets come back, and flag the response when it was truncated. See <a href="../../../csharp/aspnet-core/web-apis/pagination/#totals-instead-of-rows">Totals instead of rows</a>.</li>
+</ul>
 <h2 id="async-request-reply">Async request-reply</h2>
 <!-- TODO: 202 Accepted and a status resource for work that outlives the request -->
 <h2 id="conditional-updates">Conditional updates</h2>
@@ -290,16 +300,6 @@
     <h2>See also</h2>
 <div class="card-compact-group">
 <div class="card-compact-container">
-    <a href="/csharp/aspnet-core/web-apis/apis-for-agents/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">APIs for Agents</span>
-            </div>
-            <p class="card-compact-description">An HTTP API whose caller is a model choosing a tool.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
     <a href="/fundamentals/distributed-systems/caching/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -376,6 +376,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">This is the capstone of everything documented on this site. We'll build a complete, production-ready SaaS application from scratch, applying all the concepts you've learned.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/pagination/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Pagination, Filtering, and Sorting</span>
+            </div>
+            <p class="card-compact-description">List endpoints return a page, not a table.</p>
         </div>
     </a>
 </div>

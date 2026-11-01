@@ -26,6 +26,17 @@ A status stored on an entity should be readable in a query without a decoder.
 
 ## Repository Pattern?
 
+### What a wrapper would have to enforce
+
+A repository in this product has to enforce a rule that the context will not enforce on its own.
+
+- TODO: `DbSet<T>` already behaves as the collection, and `DbContext` already behaves as the unit of work.
+- TODO: Get, Add, Update, and Delete that only forward into EF do not draw a boundary around the aggregate.
+- TODO: The costs are an `IQueryable` that leaks or gets wrapped again, includes and projections that disappear, and one more interface to mock.
+- TODO: Keep the wrapper when every call applies tenant scope, soft delete, aggregate loading, or a named query.
+- TODO: Make it specific to one aggregate. A single generic repository for every type still has no rule.
+- TODO: If the rule cannot be named, use the context directly. See [A generic repository over EF Core](/patterns/application-patterns/repository#a-generic-repository-over-ef-core).
+
 ## Performance
 
 ### Latest activity per project

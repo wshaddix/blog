@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -173,6 +173,17 @@
 <li>TODO: After someone else has pulled it, merge to take new commits from the base.</li>
 <li>TODO: A force-push after that rebase rewrites commits other people already have.</li>
 </ul>
+<h2 id="finding-commits-that-seem-lost">Finding commits that seem lost</h2>
+<p>A commit missing from the branch you are looking at is often still in the local repository.</p>
+<ul>
+<li>TODO: Start with how it went missing: committed on a different branch, made on a detached HEAD, or stored under a name you did not expect.</li>
+<li>TODO: Use <code translate="no" v-pre>git worktree list</code> and <code translate="no" v-pre>git branch -a --contains</code> to see which branch or worktree still has the commits.</li>
+<li>TODO: After a reset or a removed worktree, read <code translate="no" v-pre>git reflog</code>, including the reflog for that branch.</li>
+<li>TODO: Run <code translate="no" v-pre>git fsck --lost-found</code> when no branch and no reflog still points at the commit.</li>
+<li>TODO: Before <code translate="no" v-pre>git worktree remove</code>, confirm the branch is pushed and that <code translate="no" v-pre>git log origin/branch..branch</code> shows no unpushed commits.</li>
+<li>TODO: The reflog&#x27;s expiry is the window you have to recover the commit, before garbage collection drops it.</li>
+<li>TODO: Keep a short checklist an agent runs before it deletes a worktree. See <a href="../../../ai-assisted-development/techniques/#before-removing-a-worktree">Before removing a worktree</a>.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
 <li>See <a href="../branching-and-pull-requests/">Branching and pull requests</a></li>
@@ -210,6 +221,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">Quick reference guides for common tools. These are cheat sheets, not tutorials.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/techniques/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Techniques</span>
+            </div>
+            <p class="card-compact-description">Ways of working that make an assistant useful on a real change.</p>
         </div>
     </a>
 </div>

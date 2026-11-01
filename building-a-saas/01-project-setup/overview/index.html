@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846764366671">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846764366671" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846764366671" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -229,6 +229,16 @@
 <li>TODO: Build and test are allowed. A push, production settings, and secret files are denied.</li>
 <li>TODO: The deny is enforced by the tool. A sentence in the instruction file is not the only control.</li>
 </ul>
+<h3 id="a-handoff-file">A handoff file</h3>
+<p>The repo keeps a short handoff beside the plan, so the next session can start without the chat.</p>
+<ul>
+<li>TODO: Name the edits, the checks and how they were run, the questions still open, and who takes the next step.</li>
+<li>TODO: Include each decision and the reason for it, and name the condition that would reopen work that was set aside.</li>
+<li>TODO: Store the file in the repo next to the plan.</li>
+<li>TODO: The next session compares the file with the code and with the git log before editing, and updates the one that drifted.</li>
+<li>TODO: Link to diffs and test runs, and leave the retelling out.</li>
+<li>TODO: A person who returns a week later should be able to resume from the same file. See <a href="../../../ai-assisted-development/techniques/#handing-off-to-the-next-session">Handing off to the next session</a>.</li>
+</ul>
 <h2 id="automated-review-step">Automated review step</h2>
 <ul>
 <li>TODO: Run the agent with no chat, from a git hook or from the pipeline, and give it the diff to review.</li>
@@ -353,6 +363,16 @@
                 <span class="card-compact-title">Recipes</span>
             </div>
             <p class="card-compact-description">Short Git sequences for everyday work.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/ai-assisted-development/techniques/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Techniques</span>
+            </div>
+            <p class="card-compact-description">Ways of working that make an assistant useful on a real change.</p>
         </div>
     </a>
 </div>
