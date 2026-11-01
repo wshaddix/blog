@@ -64,6 +64,17 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 
 The public API stays JSON over HTTP. gRPC is a decision only when an internal client needs an HTTP/2 contract.
 
+### CQRS without a second store
+
+Commands and queries can have different handlers here and still read and write the same tables.
+
+- TODO: Choose the handler split in code. Storage stays one database until a later measurement says otherwise.
+- TODO: Serve reads with `AsNoTracking`, projections, views, or raw SQL on those tables.
+- TODO: Serve writes as aggregates through the tracked context.
+- TODO: Open a separate read store when reads slow the writes down, when a query is really a search, or when a report must keep rows the operational store will drop.
+- TODO: Before adding that store, plan for lag, a projector to operate, a way to rebuild it, and a second schema to migrate.
+- TODO: Put a read replica in between. See [Read replicas](/building-a-saas/07-data-layer/overview#read-replicas) and [One database, two models](/patterns/application-patterns/cqrs#one-database-two-models).
+
 ## Dependency Injection
 
 <!-- TODO: Service registration, lifetimes -->

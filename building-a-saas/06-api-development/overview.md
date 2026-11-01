@@ -65,6 +65,17 @@ Every endpoint should serialize with the same JSON options.
 
 <!-- TODO: List endpoints use a keyset cursor -->
 
+## Usage summaries
+
+A dashboard that wants daily activity counts for one tenant should receive those counts.
+
+- TODO: Watch for a screen that pages the activity list only to count it or chart it.
+- TODO: Add a summary for that tenant: a date range, a bucket of a day or a week, and the count in each bucket.
+- TODO: Limit the query to the tenant and the range before the rows are grouped.
+- TODO: Group in EF Core on a date part, and inspect the SQL EF sends.
+- TODO: Store a closed day's count. Recompute the bucket that is still open.
+- TODO: Bound how wide the range may be and how many buckets come back, and flag the response when it was truncated. See [Totals instead of rows](/csharp/aspnet-core/web-apis/pagination#totals-instead-of-rows).
+
 ## Async request-reply
 
 <!-- TODO: 202 Accepted and a status resource for work that outlives the request -->

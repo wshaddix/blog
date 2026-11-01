@@ -41,6 +41,17 @@ What leaves the machine, and which product setting controls it.
 - TODO: That sentence does not widen the task, change the recipient, or add a tool.
 - TODO: When you review a run, look for a tool argument that was taken from that untrusted text.
 
+## Retrieval across tenants
+
+A retrieval step can surface another tenant's rows after the database filter did its job.
+
+- TODO: Data access takes a tenant argument. Leave it off and the method fails to compile, which closes a helper that would hand back every tenant's rows.
+- TODO: Review the escapes a global filter leaves open: `IgnoreQueryFilters`, raw SQL, Dapper, reporting views, and jobs that run outside a request.
+- TODO: Apply the same tenant check to cache keys, search and vector indexes, blob paths, exports, and log and trace attributes.
+- TODO: Keep the tenant filter inside the index query. Ranking a mixed set and discarding other tenants in application code is the leak.
+- TODO: Practice on staging that holds two look-alike tenants. Signed in as one, a request for the other's ids comes back 404. See [Two tenants in every fixture](/building-a-saas/10-testing-strategy/overview#two-tenants-in-every-fixture).
+- TODO: When the query was written by an agent, the tenant predicate is the first thing the review reads. See [Paths that skip the filter](/building-a-saas/05-multi-tenancy/overview#paths-that-skip-the-filter).
+
 ## Example
 
 A worked example will go here. When an example produces more than about 30 lines of C#, that code will live in a companion `.cs` file next to this page.

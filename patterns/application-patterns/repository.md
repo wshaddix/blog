@@ -21,6 +21,17 @@ The ORM, so a domain service does not take a `DbContext` it can use for anything
 
 A query the caller has to compose. That caller should be in the data project.
 
+## A generic repository over EF Core
+
+A generic type that only forwards calls to EF Core is an extra interface in front of the one you already have.
+
+- TODO: Remember what `DbSet<T>` and `DbContext` already are: a repository, and a unit of work.
+- TODO: On a pass-through `IRepository<T>`, Get, Add, Update, and Delete each forward one call to EF and then stop.
+- TODO: That wrapper either lets `IQueryable` leak out or wraps it again, drops includes and projections, and gives tests another interface to mock.
+- TODO: A repository earns the extra type when it enforces a rule: tenant scope, soft delete, how an aggregate is loaded, or a named query.
+- TODO: Write that type for one aggregate. One generic repository for every entity does not name a rule.
+- TODO: The decision test is to name the rule. With no rule to name, call the context. How this product applies that test is [What a wrapper would have to enforce](/building-a-saas/07-data-layer/overview#what-a-wrapper-would-have-to-enforce).
+
 ## Unit of work
 
 One context, one `SaveChanges`, one transaction. A custom unit of work when a use case spans two contexts.
