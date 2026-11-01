@@ -461,3 +461,23 @@ Oct 31, 2026 digest (Oct 30 posts, plus the newsletter received Oct 31). Stubs f
 | [One set of JSON options](building-a-saas/06-api-development/overview.md#one-set-of-json-options) | One JSON options object for every endpoint | [aspnetcore_news 2116322264794746962](https://x.com/aspnetcore_news/status/2116322264794746962), [ASP.NET Core News 2026-10-30](https://us7.campaign-archive.com/?u=66fdd2122e968863d381a26e1&id=091874ed37) | 2026-10-30 |
 | [A description that points at the risk](devops/version-control/branching-and-pull-requests.md#a-description-that-points-at-the-risk) | A pull request description grouped by risk | [mjovanovictech 2116212543744061939](https://x.com/mjovanovictech/status/2116212543744061939) | 2026-10-30 |
 | [A summary that ranks risk](building-a-saas/01-project-setup/overview.md#a-summary-that-ranks-risk) | A review summary that ranks the diff by risk | [mjovanovictech 2116212543744061939](https://x.com/mjovanovictech/status/2116212543744061939) | 2026-10-30 |
+
+## 2026-11-01 (`0f15dac`)
+
+Nov 1, 2026 digest (Oct 31 posts). Stubs from `docs: stub the November 1 content-gap topics`. X links use `https://x.com/<handle>/status/<id>`.
+
+| Stub | Topic | Source URL(s) | Source date |
+| --- | --- | --- | --- |
+| [Paths that skip the filter](building-a-saas/05-multi-tenancy/overview.md#paths-that-skip-the-filter) | Paths that return another tenant's rows | [RaulJuncoV 2116513365355012105](https://x.com/RaulJuncoV/status/2116513365355012105) | 2026-10-31 |
+| [Retrieval across tenants](ai-assisted-development/risks-and-limits.md#retrieval-across-tenants) | Retrieval that can mix tenants | [RaulJuncoV 2116513365355012105](https://x.com/RaulJuncoV/status/2116513365355012105) | 2026-10-31 |
+| [Two tenants in every fixture](building-a-saas/10-testing-strategy/overview.md#two-tenants-in-every-fixture) | Fixtures with two look-alike tenants | [RaulJuncoV 2116513365355012105](https://x.com/RaulJuncoV/status/2116513365355012105) | 2026-10-31 |
+| [A generic repository over EF Core](patterns/application-patterns/repository.md#a-generic-repository-over-ef-core) | A generic repository that only forwards to EF Core | [mjovanovictech 2116474260482826447](https://x.com/mjovanovictech/status/2116474260482826447) | 2026-10-31 |
+| [What a wrapper would have to enforce](building-a-saas/07-data-layer/overview.md#what-a-wrapper-would-have-to-enforce) | A repository wrapper that has to enforce a rule | [mjovanovictech 2116474260482826447](https://x.com/mjovanovictech/status/2116474260482826447) | 2026-10-31 |
+| [One database, two models](patterns/application-patterns/cqrs.md#one-database-two-models) | CQRS handlers on one database | [mjovanovictech 2116528367839105321](https://x.com/mjovanovictech/status/2116528367839105321) | 2026-10-31 |
+| [CQRS without a second store](building-a-saas/02-architecture-decisions/overview.md#cqrs-without-a-second-store) | Command and query handlers without a second store | [mjovanovictech 2116528367839105321](https://x.com/mjovanovictech/status/2116528367839105321) | 2026-10-31 |
+| [Totals instead of rows](csharp/aspnet-core/web-apis/pagination.md#totals-instead-of-rows) | A summary endpoint instead of paging every row | [mjovanovictech 2116579203000696879](https://x.com/mjovanovictech/status/2116579203000696879) | 2026-10-31 |
+| [Usage summaries](building-a-saas/06-api-development/overview.md#usage-summaries) | Daily activity counts per tenant | [mjovanovictech 2116579203000696879](https://x.com/mjovanovictech/status/2116579203000696879) | 2026-10-31 |
+| [Handing off to the next session](ai-assisted-development/techniques.md#handing-off-to-the-next-session) | A note the next session can check against the repo | [mjovanovictech 2116509750523273625](https://x.com/mjovanovictech/status/2116509750523273625) | 2026-10-31 |
+| [A handoff file](building-a-saas/01-project-setup/overview.md#a-handoff-file) | A handoff file kept next to the plan | [mjovanovictech 2116509750523273625](https://x.com/mjovanovictech/status/2116509750523273625) | 2026-10-31 |
+| [Finding commits that seem lost](devops/version-control/git-recipes.md#finding-commits-that-seem-lost) | Recovering commits after a reset or a removed worktree | [AntonMartyniuk 2116432266297524482](https://x.com/AntonMartyniuk/status/2116432266297524482) | 2026-10-31 |
+| [Before removing a worktree](ai-assisted-development/techniques.md#before-removing-a-worktree) | A checklist before deleting a worktree | [AntonMartyniuk 2116432266297524482](https://x.com/AntonMartyniuk/status/2116432266297524482) | 2026-10-31 |
