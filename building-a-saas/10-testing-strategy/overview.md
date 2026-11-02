@@ -46,6 +46,30 @@ A refactor of domain logic starts from tests that record what the code does toda
 - TODO: Capture the current output, then change the structure in small steps that leave those tests green.
 - TODO: Remove a test that locked in a bug this change is meant to fix. See [Refactoring under test](/patterns/refactoring-patterns/refactoring-under-test).
 
+### A nested pricing rule
+
+A price that depends on several checks often hides the real rule under the last `else`.
+
+- TODO: Find the rule at the deepest indent, where every `else` returns a default price.
+- TODO: Return early for the exits first: a missing input, an inactive plan, and a quantity that does not meet the threshold.
+- TODO: Keep every branch. The edit removes the nesting, so the depth drops and the branch count stays.
+- TODO: Pin each exit with a test before the code that handles that exit moves.
+- TODO: When the early returns are still a pile of conditions, name the decision as a predicate or a specification.
+- TODO: Trace every path from the first line to the last, and check that a reader can follow it from top to bottom.
+- TODO: The move, written as a refactoring step, is [Flattening nested conditionals](/patterns/refactoring-patterns/refactoring-under-test#flattening-nested-conditionals).
+
+### Names from the domain
+
+A unit test in this product is named for the business rule it guards.
+
+- TODO: Put the rule in the name. A name that describes the assertion machinery hides which rule failed.
+- TODO: `Fails_the_greater_than_check` is the weak form of a seat limit. `Refuses_a_member_past_the_seat_limit` is the rule.
+- TODO: When the test fails, the name alone should identify the rule.
+- TODO: Keep one class per behavior and one case per boundary, grouped by the rule.
+- TODO: Treat the names as the notes the next person or the next agent uses to edit the code.
+- TODO: A review check: a product person can read the test list and recognize the rules.
+- TODO: How to name the method is [Names that state the rule](/csharp/testing/unit-testing#names-that-state-the-rule).
+
 ## Integration Tests
 
 <!-- TODO: WebApplicationFactory, database tests -->

@@ -13,6 +13,18 @@ The model only knows what is in the window. You decide what that is.
 
 The file under edit, the test, and the type it calls. Not the whole repository.
 
+### Code the agent can't see
+
+An agent edits the files in the workspace. A contract that lives in another repository is filled in by guesswork.
+
+- TODO: Treat one repository or many as a decision about sharing code, and choose deployment separately.
+- TODO: In one repository, the contract change, the producer, and the consumers land in one pull request, and the cross-service integration tests run on a developer machine.
+- TODO: Pay for that with a pipeline that builds only what changed, code owners on each folder, and a clone and build that stay a reasonable size.
+- TODO: Keep a separate pipeline and a separate version for each service.
+- TODO: An agent edits only what the workspace contains. A contract it cannot open becomes a guess.
+- TODO: Split when the teams are separate, the release cadences differ, or an access boundary means some people must not see the other code.
+- TODO: The repository decision is [One repo or many](/devops/version-control/one-repo-or-many). After a module leaves the process, the same choice is [Staying in one repo after a module leaves](/building-a-saas/02-architecture-decisions/overview#staying-in-one-repo-after-a-module-leaves).
+
 ## What to exclude
 
 Secrets, generated output, and a long log with one relevant line.
