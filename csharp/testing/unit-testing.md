@@ -39,6 +39,18 @@ Assertions are asynchronous. An `Assert.That` that is not awaited does not run.
 
 The method name says the behavior: `Applies_the_discount`. The class name says the type under test.
 
+### Names that state the rule
+
+The name is the rule the test protects.
+
+- TODO: Name the rule. Leave the mechanics of the failure out of the name.
+- TODO: `Compares_the_seat_count` says which check ran. `Stops_at_the_seat_limit` says the rule a tenant is not allowed to break.
+- TODO: A failing name, read on its own, should say which rule broke.
+- TODO: Group the tests by the rule. One class holds one behavior, and each case is one boundary of that rule.
+- TODO: The names are the notes the next editor reads, whether that editor is a person or an agent.
+- TODO: In review, ask whether a product person could read the list of names and recognize the rules.
+- TODO: The same names, taken from this product's language, are [Names from the domain](/building-a-saas/10-testing-strategy/overview#names-from-the-domain).
+
 ## What stays out
 
 A unit test does not open a connection or boot the web host. Those are the integration pages.

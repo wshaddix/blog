@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846940544622">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846940544622" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -202,6 +202,17 @@
 <li>TODO: Send one slice of the module&#x27;s calls to the new process and leave the rest on the path that already runs.</li>
 <li>TODO: Widen the slice after the new path is the one callers use, and remove the old path when it has no traffic.</li>
 </ul>
+<h3 id="staying-in-one-repo-after-a-module-leaves">Staying in one repo after a module leaves</h3>
+<p>A module can run in its own process and still share the repository with the code that calls it.</p>
+<ul>
+<li>TODO: Decide the repository separately from deployment. Leaving the process does not require a new repository on its own.</li>
+<li>TODO: Keep the contract, the producer, and the consumers in one pull request, and run the cross-service integration tests on a developer machine.</li>
+<li>TODO: Limit the cost: the pipeline builds only what changed, each folder has code owners, and clone time and build time stay acceptable.</li>
+<li>TODO: Give the service that left its own pipeline and its own version.</li>
+<li>TODO: An agent can edit a contract only when that contract is in the workspace. A contract that is missing is a guess. See <a href="../../../ai-assisted-development/context-and-instructions/#code-the-agent-cant-see">Code the agent can&#x27;t see</a>.</li>
+<li>TODO: Move the module to its own repository when a separate team owns it, it releases on a different cadence, or access rules require a boundary.</li>
+<li>TODO: The same choice, written as a version-control decision, is <a href="../../../devops/version-control/one-repo-or-many/">One repo or many</a>.</li>
+</ul>
 <h2 id="calls-between-modules">Calls between modules</h2>
 <ul>
 <li>TODO: A module calls another through its public contract, in process, or by publishing an event.</li>
@@ -296,22 +307,22 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/ai-assisted-development/context-and-instructions/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Context and Instructions</span>
+            </div>
+            <p class="card-compact-description">The model only knows what is in the window. You decide what that is.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/patterns/application-patterns/cqrs/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">CQRS</span>
             </div>
             <p class="card-compact-description">Separate the model that changes state from the model that reads it, when those two models want different shapes.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/career-development/team-operations/decision-making/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Decision Making</span>
-            </div>
-            <p class="card-compact-description">A technical choice can be proposed by someone who will not be the one to enforce it.</p>
         </div>
     </a>
 </div>

@@ -23,6 +23,18 @@ Getting code to production reliably and repeatedly.
 
 - TODO: A runtime security fix for a self-contained image is a new build. See [Who patches the runtime](/csharp/platform/publishing#who-patches-the-runtime).
 
+### Bundled runtime binaries
+
+An agent feature that embeds a runtime adds that runtime's binary to the image.
+
+- TODO: The app starts the runtime as a local process and talks to it over a local channel. The runtime runs the model and the tool loop, and calls back for tools and permissions.
+- TODO: Development points the same feature at a model on the machine. Production points it at a hosted provider, with the key and the endpoint coming from configuration.
+- TODO: Read the runtime's default settings and disable anything this product did not turn on.
+- TODO: Register only this product's tools. A read-only tool can run without a prompt. A write waits for a person.
+- TODO: Stream events to the UI, and put a cap on the round trips in one turn.
+- TODO: Pull the runtime binary during the image build. On a build agent that cannot fetch it, use a mirror or a path where the binary is already installed. Count the binary in the image size.
+- TODO: Skip the extra runtime when `IChatClient` already covers the feature. See [An embedded agent runtime](/csharp/mcp/clients-and-agents#an-embedded-agent-runtime).
+
 ## Azure Deployment
 
 ## Database Migrations

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846940544622">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.846940544622" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -170,6 +170,17 @@
 <p><em>This page is an outline. The sections will be filled in over time, including a C# sample where the topic has one.</em></p>
 <h2 id="what-to-include">What to include</h2>
 <p>The file under edit, the test, and the type it calls. Not the whole repository.</p>
+<h3 id="code-the-agent-cant-see">Code the agent can&#x27;t see</h3>
+<p>An agent edits the files in the workspace. A contract that lives in another repository is filled in by guesswork.</p>
+<ul>
+<li>TODO: Treat one repository or many as a decision about sharing code, and choose deployment separately.</li>
+<li>TODO: In one repository, the contract change, the producer, and the consumers land in one pull request, and the cross-service integration tests run on a developer machine.</li>
+<li>TODO: Pay for that with a pipeline that builds only what changed, code owners on each folder, and a clone and build that stay a reasonable size.</li>
+<li>TODO: Keep a separate pipeline and a separate version for each service.</li>
+<li>TODO: An agent edits only what the workspace contains. A contract it cannot open becomes a guess.</li>
+<li>TODO: Split when the teams are separate, the release cadences differ, or an access boundary means some people must not see the other code.</li>
+<li>TODO: The repository decision is <a href="../../devops/version-control/one-repo-or-many/">One repo or many</a>. After a module leaves the process, the same choice is <a href="../../building-a-saas/02-architecture-decisions/overview/#staying-in-one-repo-after-a-module-leaves">Staying in one repo after a module leaves</a>.</li>
+</ul>
 <h2 id="what-to-exclude">What to exclude</h2>
 <p>Secrets, generated output, and a long log with one relevant line.</p>
 <h2 id="instruction-files">Instruction files</h2>
@@ -259,12 +270,32 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/devops/version-control/one-repo-or-many/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">One Repo or Many</span>
+            </div>
+            <p class="card-compact-description">One repository or a repository per service is a choice about how code is shared.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/building-a-saas/01-project-setup/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">A well-organized project structure sets the foundation for maintainability and scalability.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/02-architecture-decisions/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Good architecture enables teams to move fast while maintaining quality. Here we make key decisions for our SaaS platform.</p>
         </div>
     </a>
 </div>

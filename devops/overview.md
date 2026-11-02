@@ -13,6 +13,7 @@ Source code management and collaboration:
 - [Git Configuration](/devops/version-control/git-configuration) - Customizing your workflow
 - [Git Recipes](/devops/version-control/git-recipes) - Common tasks and solutions
 - [Conventional Commits](/devops/version-control/conventional-commits) - Standardized commit messages
+- [One Repo or Many](/devops/version-control/one-repo-or-many) - Sharing a repository, or a repository per service
 
 ### CI/CD
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846940544622">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846940544622" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -190,6 +190,17 @@
 <ul>
 <li>TODO: Move one rule into its own type or method, and leave the others until the suite is green again.</li>
 <li>TODO: Repeat until a rule can change without reading the ones beside it.</li>
+</ul>
+<h2 id="flattening-nested-conditionals">Flattening nested conditionals</h2>
+<p>A stack of conditions hides the last branch at the deepest indent, and each <code translate="no" v-pre>else</code> only hands back a default.</p>
+<ul>
+<li>TODO: Start the edit at the deepest indent, where every <code translate="no" v-pre>else</code> returns a default.</li>
+<li>TODO: Turn the exits into early returns before moving anything else: missing input, an inactive state, and a threshold that was not met.</li>
+<li>TODO: Leave the number of branches as it is. The change is that they sit one after another, so the depth drops.</li>
+<li>TODO: Pin every exit with a test before the code for that exit moves.</li>
+<li>TODO: When the flat form is still hard to follow, give the decision a name as a predicate or a specification.</li>
+<li>TODO: Read each path from the top of the method to the bottom, and confirm a reader can trace it without jumping back into a nest.</li>
+<li>TODO: A pricing rule with this shape is <a href="../../../building-a-saas/10-testing-strategy/overview/#a-nested-pricing-rule">A nested pricing rule</a>.</li>
 </ul>
 <h2 id="tests-that-pinned-a-bug">Tests that pinned a bug</h2>
 <p>A characterization test can demand a bug you sat down to remove.</p>

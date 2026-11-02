@@ -37,6 +37,18 @@ Good architecture enables teams to move fast while maintaining quality. Here we 
 - TODO: Send one slice of the module's calls to the new process and leave the rest on the path that already runs.
 - TODO: Widen the slice after the new path is the one callers use, and remove the old path when it has no traffic.
 
+### Staying in one repo after a module leaves
+
+A module can run in its own process and still share the repository with the code that calls it.
+
+- TODO: Decide the repository separately from deployment. Leaving the process does not require a new repository on its own.
+- TODO: Keep the contract, the producer, and the consumers in one pull request, and run the cross-service integration tests on a developer machine.
+- TODO: Limit the cost: the pipeline builds only what changed, each folder has code owners, and clone time and build time stay acceptable.
+- TODO: Give the service that left its own pipeline and its own version.
+- TODO: An agent can edit a contract only when that contract is in the workspace. A contract that is missing is a guess. See [Code the agent can't see](/ai-assisted-development/context-and-instructions#code-the-agent-cant-see).
+- TODO: Move the module to its own repository when a separate team owns it, it releases on a different cadence, or access rules require a boundary.
+- TODO: The same choice, written as a version-control decision, is [One repo or many](/devops/version-control/one-repo-or-many).
+
 ## Calls between modules
 
 - TODO: A module calls another through its public contract, in process, or by publishing an event.

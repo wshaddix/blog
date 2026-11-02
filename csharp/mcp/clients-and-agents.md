@@ -97,6 +97,19 @@ The model may propose a tool call. The client decides whether that call is allow
 
 ## More than one server
 
+## An embedded agent runtime
+
+The application starts a runtime process and lets that process run the model and the tool loop.
+
+- TODO: The app starts the runtime over a local channel. The runtime calls back when it needs a tool or a permission.
+- TODO: The feature takes a key and an endpoint from configuration. Development points the endpoint at a model on the machine. Production points it at a hosted provider. The feature code stays the same.
+- TODO: Read the settings the runtime turns on by default, and turn off every one this product did not choose.
+- TODO: Register only the tools this product owns. A read-only tool may run on its own. A tool that writes waits for a person.
+- TODO: Stream the runtime's events to the UI, and cap how many round trips one turn may take.
+- TODO: The image build pulls the runtime binary. A build that cannot fetch it uses a mirror or a copy already on the machine, and the binary counts toward the image size.
+- TODO: Stay with a plain `IChatClient` when the feature is one model call and does not need the runtime's loop.
+- TODO: What that binary does to the image is [Bundled runtime binaries](/building-a-saas/11-deployment/overview#bundled-runtime-binaries).
+
 ## Practical Examples
 
 - See [Using MCP](/ai-assisted-development/using-mcp) - An assistant calling a server

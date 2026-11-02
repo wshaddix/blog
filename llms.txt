@@ -340,6 +340,7 @@
 
 ### Version Control
 
+- [One Repo or Many](https://wshaddix.com/devops/version-control/one-repo-or-many.md): One repository or a repository per service is a choice about how code is shared.
 - [Installation](https://wshaddix.com/devops/version-control/git-installation.md): Coming Soon
 - [Configuration](https://wshaddix.com/devops/version-control/git-configuration.md)
 - [Aliases](https://wshaddix.com/devops/version-control/git-aliases.md)

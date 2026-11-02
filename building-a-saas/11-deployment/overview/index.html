@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846940544622">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846940544622" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -188,6 +188,17 @@
 <ul>
 <li>TODO: A runtime security fix for a self-contained image is a new build. See <a href="../../../csharp/platform/publishing/#who-patches-the-runtime">Who patches the runtime</a>.</li>
 </ul>
+<h3 id="bundled-runtime-binaries">Bundled runtime binaries</h3>
+<p>An agent feature that embeds a runtime adds that runtime&#x27;s binary to the image.</p>
+<ul>
+<li>TODO: The app starts the runtime as a local process and talks to it over a local channel. The runtime runs the model and the tool loop, and calls back for tools and permissions.</li>
+<li>TODO: Development points the same feature at a model on the machine. Production points it at a hosted provider, with the key and the endpoint coming from configuration.</li>
+<li>TODO: Read the runtime&#x27;s default settings and disable anything this product did not turn on.</li>
+<li>TODO: Register only this product&#x27;s tools. A read-only tool can run without a prompt. A write waits for a person.</li>
+<li>TODO: Stream events to the UI, and put a cap on the round trips in one turn.</li>
+<li>TODO: Pull the runtime binary during the image build. On a build agent that cannot fetch it, use a mirror or a path where the binary is already installed. Count the binary in the image size.</li>
+<li>TODO: Skip the extra runtime when <code translate="no" v-pre>IChatClient</code> already covers the feature. See <a href="../../../csharp/mcp/clients-and-agents/#an-embedded-agent-runtime">An embedded agent runtime</a>.</li>
+</ul>
 <h2 id="azure-deployment">Azure Deployment</h2>
 <!-- TODO: App Service, slots, configuration -->
 <h2 id="database-migrations">Database Migrations</h2>
@@ -283,6 +294,16 @@
                 <span class="card-compact-title">Kubernetes</span>
             </div>
             <p class="card-compact-description">A cluster that places containers, restarts them, and gives them a stable name.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/mcp/clients-and-agents/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">MCP Clients and Agents</span>
+            </div>
+            <p class="card-compact-description">An MCP client calls a server. An agent uses that client when a model asks for a tool.</p>
         </div>
     </a>
 </div>

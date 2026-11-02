@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846940544622">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846940544622" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -200,6 +200,28 @@
 <li>TODO: Capture the current output, then change the structure in small steps that leave those tests green.</li>
 <li>TODO: Remove a test that locked in a bug this change is meant to fix. See <a href="../../../patterns/refactoring-patterns/refactoring-under-test/">Refactoring under test</a>.</li>
 </ul>
+<h3 id="a-nested-pricing-rule">A nested pricing rule</h3>
+<p>A price that depends on several checks often hides the real rule under the last <code translate="no" v-pre>else</code>.</p>
+<ul>
+<li>TODO: Find the rule at the deepest indent, where every <code translate="no" v-pre>else</code> returns a default price.</li>
+<li>TODO: Return early for the exits first: a missing input, an inactive plan, and a quantity that does not meet the threshold.</li>
+<li>TODO: Keep every branch. The edit removes the nesting, so the depth drops and the branch count stays.</li>
+<li>TODO: Pin each exit with a test before the code that handles that exit moves.</li>
+<li>TODO: When the early returns are still a pile of conditions, name the decision as a predicate or a specification.</li>
+<li>TODO: Trace every path from the first line to the last, and check that a reader can follow it from top to bottom.</li>
+<li>TODO: The move, written as a refactoring step, is <a href="../../../patterns/refactoring-patterns/refactoring-under-test/#flattening-nested-conditionals">Flattening nested conditionals</a>.</li>
+</ul>
+<h3 id="names-from-the-domain">Names from the domain</h3>
+<p>A unit test in this product is named for the business rule it guards.</p>
+<ul>
+<li>TODO: Put the rule in the name. A name that describes the assertion machinery hides which rule failed.</li>
+<li>TODO: <code translate="no" v-pre>Fails_the_greater_than_check</code> is the weak form of a seat limit. <code translate="no" v-pre>Refuses_a_member_past_the_seat_limit</code> is the rule.</li>
+<li>TODO: When the test fails, the name alone should identify the rule.</li>
+<li>TODO: Keep one class per behavior and one case per boundary, grouped by the rule.</li>
+<li>TODO: Treat the names as the notes the next person or the next agent uses to edit the code.</li>
+<li>TODO: A review check: a product person can read the test list and recognize the rules.</li>
+<li>TODO: How to name the method is <a href="../../../csharp/testing/unit-testing/#names-that-state-the-rule">Names that state the rule</a>.</li>
+</ul>
 <h2 id="integration-tests">Integration Tests</h2>
 <!-- TODO: WebApplicationFactory, database tests -->
 <h2 id="testing-multi-tenancy">Testing Multi-Tenancy</h2>
@@ -321,16 +343,6 @@
     </a>
 </div>
 <div class="card-compact-container">
-    <a href="/patterns/refactoring-patterns/refactoring-under-test/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Refactoring Under Test</span>
-            </div>
-            <p class="card-compact-description">Change the shape of code that already runs by recording what it does before you move it.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
     <a href="/ai-assisted-development/risks-and-limits/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -357,6 +369,16 @@
                 <span class="card-compact-title">Time-Dependent Code</span>
             </div>
             <p class="card-compact-description">Tests that depend on the clock should take a clock you control.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/testing/unit-testing/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Unit Testing</span>
+            </div>
+            <p class="card-compact-description">A unit test checks one behavior of one type. Collaborators are replaced so the test does not touch a database, the network, or the clock. The runner is TUnit.</p>
         </div>
     </a>
 </div>

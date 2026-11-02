@@ -30,6 +30,18 @@ Nested conditions hide a single rule inside the rest, so one change means reread
 - TODO: Move one rule into its own type or method, and leave the others until the suite is green again.
 - TODO: Repeat until a rule can change without reading the ones beside it.
 
+## Flattening nested conditionals
+
+A stack of conditions hides the last branch at the deepest indent, and each `else` only hands back a default.
+
+- TODO: Start the edit at the deepest indent, where every `else` returns a default.
+- TODO: Turn the exits into early returns before moving anything else: missing input, an inactive state, and a threshold that was not met.
+- TODO: Leave the number of branches as it is. The change is that they sit one after another, so the depth drops.
+- TODO: Pin every exit with a test before the code for that exit moves.
+- TODO: When the flat form is still hard to follow, give the decision a name as a predicate or a specification.
+- TODO: Read each path from the top of the method to the bottom, and confirm a reader can trace it without jumping back into a nest.
+- TODO: A pricing rule with this shape is [A nested pricing rule](/building-a-saas/10-testing-strategy/overview#a-nested-pricing-rule).
+
 ## Tests that pinned a bug
 
 A characterization test can demand a bug you sat down to remove.

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846854284235">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.846940544622">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,12 +40,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.846854284235" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.846940544622" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846854284235" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.846854284235" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.846940544622" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=4.6.0.846940544622" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -193,6 +193,17 @@
 <p><code translate="no" v-pre>[Before(Test)]</code> and <code translate="no" v-pre>[After(Test)]</code> run around each test. Class, assembly, and session hooks exist for more expensive setup. Prefer a fresh object inside the test when setup is cheap.</p>
 <h2 id="names">Names</h2>
 <p>The method name says the behavior: <code translate="no" v-pre>Applies_the_discount</code>. The class name says the type under test.</p>
+<h3 id="names-that-state-the-rule">Names that state the rule</h3>
+<p>The name is the rule the test protects.</p>
+<ul>
+<li>TODO: Name the rule. Leave the mechanics of the failure out of the name.</li>
+<li>TODO: <code translate="no" v-pre>Compares_the_seat_count</code> says which check ran. <code translate="no" v-pre>Stops_at_the_seat_limit</code> says the rule a tenant is not allowed to break.</li>
+<li>TODO: A failing name, read on its own, should say which rule broke.</li>
+<li>TODO: Group the tests by the rule. One class holds one behavior, and each case is one boundary of that rule.</li>
+<li>TODO: The names are the notes the next editor reads, whether that editor is a person or an agent.</li>
+<li>TODO: In review, ask whether a product person could read the list of names and recognize the rules.</li>
+<li>TODO: The same names, taken from this product&#x27;s language, are <a href="../../../building-a-saas/10-testing-strategy/overview/#names-from-the-domain">Names from the domain</a>.</li>
+</ul>
 <h2 id="what-stays-out">What stays out</h2>
 <p>A unit test does not open a connection or boot the web host. Those are the integration pages.</p>
 <h2 id="code-example">Code example</h2>
