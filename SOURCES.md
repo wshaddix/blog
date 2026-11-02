@@ -481,3 +481,19 @@ Nov 1, 2026 digest (Oct 31 posts). Stubs from `docs: stub the November 1 content
 | [A handoff file](building-a-saas/01-project-setup/overview.md#a-handoff-file) | A handoff file kept next to the plan | [mjovanovictech 2116509750523273625](https://x.com/mjovanovictech/status/2116509750523273625) | 2026-10-31 |
 | [Finding commits that seem lost](devops/version-control/git-recipes.md#finding-commits-that-seem-lost) | Recovering commits after a reset or a removed worktree | [AntonMartyniuk 2116432266297524482](https://x.com/AntonMartyniuk/status/2116432266297524482) | 2026-10-31 |
 | [Before removing a worktree](ai-assisted-development/techniques.md#before-removing-a-worktree) | A checklist before deleting a worktree | [AntonMartyniuk 2116432266297524482](https://x.com/AntonMartyniuk/status/2116432266297524482) | 2026-10-31 |
+
+## 2026-11-02 (`b9a3297`)
+
+Nov 2, 2026 digest (Nov 1 posts, plus the article received Nov 2). Stubs from `docs: stub the November 2 content-gap topics`. X links use `https://x.com/<handle>/status/<id>`. The article link is the public URL from the gap report.
+
+| Stub | Topic | Source URL(s) | Source date |
+| --- | --- | --- | --- |
+| [Flattening nested conditionals](patterns/refactoring-patterns/refactoring-under-test.md#flattening-nested-conditionals) | Flatten a nest of conditionals into early returns | [mjovanovictech 2116872135989694875](https://x.com/mjovanovictech/status/2116872135989694875) | 2026-11-01 |
+| [A nested pricing rule](building-a-saas/10-testing-strategy/overview.md#a-nested-pricing-rule) | A nested pricing rule flattened under test | [mjovanovictech 2116872135989694875](https://x.com/mjovanovictech/status/2116872135989694875) | 2026-11-01 |
+| [One Repo or Many](devops/version-control/one-repo-or-many.md) | One repository or a repository per service | [AntonMartyniuk 2116848029290406334](https://x.com/AntonMartyniuk/status/2116848029290406334) | 2026-11-01 |
+| [Code the agent can't see](ai-assisted-development/context-and-instructions.md#code-the-agent-cant-see) | Contracts outside the agent workspace | [AntonMartyniuk 2116848029290406334](https://x.com/AntonMartyniuk/status/2116848029290406334) | 2026-11-01 |
+| [Staying in one repo after a module leaves](building-a-saas/02-architecture-decisions/overview.md#staying-in-one-repo-after-a-module-leaves) | A module that leaves the process and stays in the repository | [AntonMartyniuk 2116848029290406334](https://x.com/AntonMartyniuk/status/2116848029290406334) | 2026-11-01 |
+| [An embedded agent runtime](csharp/mcp/clients-and-agents.md#an-embedded-agent-runtime) | An embedded runtime for the model and tool loop | [thecodeman.net 2026-11-02](https://thecodeman.net/posts/github-copilot-sdk-csharp-bring-your-own-model) | 2026-11-02 |
+| [Bundled runtime binaries](building-a-saas/11-deployment/overview.md#bundled-runtime-binaries) | The runtime binary in the image build | [thecodeman.net 2026-11-02](https://thecodeman.net/posts/github-copilot-sdk-csharp-bring-your-own-model) | 2026-11-02 |
+| [Names that state the rule](csharp/testing/unit-testing.md#names-that-state-the-rule) | Test names that state the protected rule | [mjovanovictech 2116839416693940571](https://x.com/mjovanovictech/status/2116839416693940571) | 2026-11-01 |
+| [Names from the domain](building-a-saas/10-testing-strategy/overview.md#names-from-the-domain) | Unit test names taken from the domain rule | [mjovanovictech 2116839416693940571](https://x.com/mjovanovictech/status/2116839416693940571) | 2026-11-01 |
