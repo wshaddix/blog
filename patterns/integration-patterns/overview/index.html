@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847381550846">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847381550846" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847381550846" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847381550846" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -194,10 +194,10 @@
 <li><strong>Competing Consumers</strong>: Allows multiple consumers to process messages from a single queue concurrently, improving throughput and scalability.</li>
 <li><strong>Content Enricher</strong>: Adds missing data to a message by retrieving it from an external source, ensuring the message contains all required information.</li>
 <li><strong>Content Filter</strong>: Removes unnecessary or sensitive data from a message, reducing its size and simplifying downstream processing.</li>
-<li><strong>Content-Based Router</strong>: Routes a message to different youre a destination based on its content, enabling dynamic message routing.</li>
+<li><strong>Content-Based Router</strong>: Routes a message to a different destination based on its content, enabling dynamic message routing.</li>
 <li><strong>Control Bus</strong>: Uses a dedicated channel to send control messages that manage or monitor the messaging system, ensuring operational control.</li>
 <li><strong>Correlation Identifier</strong>: Assigns a unique ID to a message to track related messages across multiple channels or systems, enabling message correlation.</li>
-<li><strong>Databank Channel</strong>: Stores messages in a database-like channel for later retrieval, supporting asynchronous or delayed processing.</li>
+<li><strong>Datatype Channel</strong>: Uses a separate channel for each data type so that every message on a channel has the same type, letting the receiver know how to process it.</li>
 <li><strong>Dead Letter Channel</strong>: Sends undeliverable or unprocessed messages to a special channel for error handling or manual inspection.</li>
 <li><strong>Document Message</strong>: Represents a document (data) without specific processing instructions, allowing flexible handling by the receiver.</li>
 <li><strong>Durable Subscriber</strong>: Ensures a subscriber receives all messages, even those sent while disconnected, by storing them until delivery.</li>
@@ -223,7 +223,7 @@
 <li><strong>Message Translator</strong>: Converts a message’s format or structure to match the receiver’s requirements, enabling interoperability.</li>
 <li><strong>Messaging Bridge</strong>: Connects two different messaging systems, allowing messages to flow between disparate platforms.</li>
 <li><strong>Messaging Gateway</strong>: Encapsulates messaging system access within an application, simplifying interaction with the messaging infrastructure.</li>
-<li><strong>Normaliser</strong>: Transforms messages of different formats into a common format, simplifying downstream processing.</li>
+<li><strong>Normalizer</strong>: Transforms messages of different formats into a common format, simplifying downstream processing.</li>
 <li><strong>Pipes and Filters</strong>: Breaks down message processing into a series of independent filter components connected by pipes, enabling modular processing.</li>
 <li><strong>Point-to-Point Channel</strong>: Delivers a message to a single receiver, ensuring direct and exclusive communication.</li>
 <li><strong>Polling Consumer</strong>: Periodically checks a channel for new messages, enabling message retrieval in systems without event-driven support.</li>

@@ -466,11 +466,11 @@
 
 ## Tool References
 
-- [DotNetUp](https://wshaddix.com/tool-references/dotnetup.md): DotNetUp is a tool manager for the .Net SDK and Runtime that gives a consistent experience across Windows, MacOS and Linux for .Net developers.
+- [DotNetUp](https://wshaddix.com/tool-references/dotnetup.md): DotNetUp is a tool manager for the .NET SDK and Runtime that gives a consistent experience across Windows, macOS and Linux for .NET developers.
 - [Azure CLI](https://wshaddix.com/tool-references/azure-cli.md): Quick reference for common Azure CLI commands.
 - [Docker CLI](https://wshaddix.com/tool-references/docker.md): Quick reference for common Docker commands.
 - [Overview](https://wshaddix.com/tool-references/overview.md): Quick reference guides for common tools. These are cheat sheets, not tutorials.
-- [.Net CLI](https://wshaddix.com/tool-references/dotnet-cli.md)
+- [.NET CLI](https://wshaddix.com/tool-references/dotnet-cli.md)
 
 ## Blog
 
