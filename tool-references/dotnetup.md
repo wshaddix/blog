@@ -3,9 +3,9 @@ Title: DotNetUp
 Order: 5
 ---
 
-DotNetUp is a tool manager for the .Net SDK and Runtime that gives a consistent experience across Windows, MacOS and Linux for .Net developers. 
+DotNetUp is a tool manager for the .NET SDK and Runtime that gives a consistent experience across Windows, macOS and Linux for .NET developers. 
 
-Once installed, all of the .Net SDK versions can be found at the following location
+Once installed, all of the .NET SDK versions can be found at the following location
 
 +++ Linux
 
@@ -13,7 +13,7 @@ Once installed, all of the .Net SDK versions can be found at the following locat
 ~/.local/share/dotnetup
 ```
 
-+++ MacOS
++++ macOS
 
 ```bash
 "$HOME/Library/Application Support/dotnetup"
@@ -39,7 +39,7 @@ Official documentation can be found at: https://learn.microsoft.com/en-us/dotnet
 curl -fsSL https://aka.ms/dotnetup/get-dotnetup.sh | bash
 ```
 
-+++ MacOS
++++ macOS
 
 ```bash
 curl -fsSL https://aka.ms/dotnetup/get-dotnetup.sh | zsh
@@ -69,19 +69,19 @@ Now close your terminal and start a new session and `dotnet` along with `dotnetu
 
 ### One Time Initialization
 
-The first time you run `dotnetup` you need to inialize your environment
+The first time you run `dotnetup` you need to initialize your environment
 
 ```bash
 dotnetup init
 ```
 
-### List what .Net SDKs are installed
+### List what .NET SDKs are installed
 
 ```bash
 dotnetup list
 ```
 
-### Update installed versions of the .Net SDKs
+### Update installed versions of the .NET SDKs
 
 Each month when service & security updates come out you can keep your workstation up to date easily.
 
@@ -151,7 +151,7 @@ Then delete the dotnetup data directory. This directory contains the default ins
 rm -rf ~/.local/share/dotnetup
 ```
 
-+++ MacOS
++++ macOS
 
 ```bash
 rm -rf "$HOME/Library/Application Support/dotnetup"

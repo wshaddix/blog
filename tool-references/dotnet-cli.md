@@ -1,4 +1,4 @@
 ---
-title: .Net CLI
+title: .NET CLI
 icon: 
 ---
