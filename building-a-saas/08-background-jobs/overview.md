@@ -30,6 +30,17 @@ Not everything should happen in the request/response cycle. Background jobs hand
 - TODO: Count the queries that read that set, and walk the rows once.
 - TODO: Release the database reader before the await that sends the notification, so a slow provider leaves the connection free.
 
+### One job per channel
+
+- TODO: One job that sends email, SMS, and push will retry all three when one of them fails.
+- TODO: Fan out so each channel is its own job.
+- TODO: Store a delivery record per channel. A retry skips a channel that already succeeded.
+- TODO: Keep a dead letter per channel, and alert on that channel.
+
+## Work queued for a user
+
+- TODO: Store who enqueued the job and what they were allowed to do. Check again at execution, and skip the action when the permission is gone. See [Acting on a user's behalf later](/csharp/aspnet-core/web-apis/background-services#acting-on-a-users-behalf-later).
+
 ## Job Processing Options
 
 | Option | Pros | Cons |
@@ -38,13 +49,21 @@ Not everything should happen in the request/response cycle. Background jobs hand
 | Hangfire | Full-featured, dashboard | Additional complexity |
 | Azure Functions | Serverless, scalable | Cold starts, deployment |
 
+### A broker instead of a table
+
+- TODO: Move off a database-table queue when a lightweight broker gives you a durable stream without that load on the application database. See [An external job queue](/csharp/aspnet-core/web-apis/background-services#an-external-job-queue).
+
 ## Implementation
 
 <!-- TODO: Job creation, scheduling, monitoring -->
 
 ## Error Handling
 
-<!-- TODO: Retries, dead letter, alerting -->
+<!-- TODO: Retries, dead letter -->
+
+### Alerting on how long work has waited
+
+- TODO: Alert when the oldest queued job is older than the wait you promised. Length is not that signal. See [Age of the oldest item](/devops/monitoring/alerting#age-of-the-oldest-item).
 
 ### One retry owner per job
 
@@ -53,6 +72,10 @@ Not everything should happen in the request/response cycle. Background jobs hand
 ## Reliable messaging
 
 <!-- TODO: Publish domain events through an outbox -->
+
+### How the outbox leaves the database
+
+- TODO: Several workers can poll the outbox, or one process can read the database log. Order per aggregate and at-least-once delivery stay either way. See [Relaying: polling workers vs log-based](/patterns/integration-patterns/outbox-and-idempotent-consumer#relaying-polling-workers-vs-log-based).
 
 ### Indexing unsent messages
 

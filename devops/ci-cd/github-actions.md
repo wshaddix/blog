@@ -35,6 +35,18 @@ Automation built into GitHub for CI/CD workflows.
 
 <!-- TODO: Composite actions, workflow reuse -->
 
+## Pinning actions
+
+- TODO: A tag can move. A workflow that names a tag runs whatever commit that tag points at on the day the job starts.
+- TODO: Pin the action to a commit. When you move the pin, review the diff between the two commits.
+- TODO: An action may call further actions. Pinning the outer action does not pin the ones it calls.
+- TODO: How the release workflow for this product is pinned is [Pinning the workflow](/building-a-saas/11-deployment/overview#pinning-the-workflow).
+
+## A scheduled link check
+
+- TODO: On a schedule, request the pages of the site and fail the job when an internal link does not resolve.
+- TODO: A weekly run catches a link that broke after the pull request that added it had already passed.
+
 ---
 
 **Next:** [Azure DevOps](/devops/ci-cd/azure-devops)

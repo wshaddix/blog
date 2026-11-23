@@ -28,7 +28,9 @@ The suite can run on a developer machine before the commit is pushed, which chan
 
 ## Continuous Deployment
 
-<!-- TODO: Automatic production deploys, feature flags -->
+<!-- TODO: Automatic production deploys -->
+
+Turning a feature on without another deploy is [Feature flags](/devops/ci-cd/feature-flags).
 
 ## Pipeline Stages
 

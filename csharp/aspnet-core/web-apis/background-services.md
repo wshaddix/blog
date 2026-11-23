@@ -25,6 +25,19 @@ A restart loses in-memory work. Know when that is acceptable.
 
 When the work has to survive a deploy. Hangfire and Functions stay in the SaaS chapter.
 
+## An external job queue
+
+- TODO: A table of jobs is enough while one database can drain it.
+- TODO: A lightweight broker earns its place when you need a durable stream and competing consumers without putting that load on the application database.
+- TODO: NATS JetStream is one such broker. The cost is operating it, not only referencing it. See [A broker instead of a table](/building-a-saas/08-background-jobs/overview#a-broker-instead-of-a-table).
+
+## Acting on a user's behalf later
+
+- TODO: When the work is queued, store who asked and what they were allowed to do at that moment.
+- TODO: Check again when the job runs. A permission removed after enqueue means the job does not perform the action.
+- TODO: If the check cannot be made, do not perform the action.
+- TODO: How this product stores that decision is [Work queued for a user](/building-a-saas/08-background-jobs/overview#work-queued-for-a-user).
+
 ## Cancellation
 
 Stopping the host stops the loop.

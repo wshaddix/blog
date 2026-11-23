@@ -16,6 +16,7 @@ How to use an assistant while you design, write, and review software. The assist
 - [Techniques](/ai-assisted-development/techniques) - How to structure a task so the assistant can finish it.
 - [Prompting](/ai-assisted-development/prompting) - Instructions, constraints, and examples.
 - [Context and instructions](/ai-assisted-development/context-and-instructions) - What the model can see, and the files that shape it.
+- [Agent skills](/ai-assisted-development/agent-skills) - A named procedure, including one that ships inside a package.
 - [Verification](/ai-assisted-development/verification) - Tests, diffs, and the review you still do.
 - [Using MCP](/ai-assisted-development/using-mcp) - Tools an assistant can call.
 - [Risks and limits](/ai-assisted-development/risks-and-limits) - Secrets, licenses, and confident nonsense.

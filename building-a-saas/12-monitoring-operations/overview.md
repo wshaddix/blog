@@ -24,14 +24,24 @@ Your job isn't done when code ships. Observability keeps your SaaS running smoot
 
 <!-- TODO: Key metrics, custom metrics, dashboards -->
 
+### Debugging a slow request from the browser
+
+- TODO: Read the named timings on the slow response before opening a trace.
+- TODO: What the header contains, and what it must not, is [Server-Timing](/csharp/aspnet-core/observability/server-timing).
+
 ### Model calls per request
 
 - TODO: Record how many model calls one request makes, including every pass of a tool loop. See [A cap on round trips](/csharp/mcp/clients-and-agents#a-cap-on-round-trips).
 - TODO: Treat a request that reaches the cap as its own metric.
+- TODO: A call whose answer was checked, and one whose answer was rejected, are both part of that count. See [Checking a model's answer](/building-a-saas/06-api-development/overview#checking-a-models-answer).
 
 ## Alerting
 
 <!-- TODO: What to alert on, alert fatigue -->
+
+### Queue age
+
+- TODO: Page when the oldest item has waited longer than you promised, not when the queue is merely long. See [Age of the oldest item](/devops/monitoring/alerting#age-of-the-oldest-item).
 
 ## Incident Response
 

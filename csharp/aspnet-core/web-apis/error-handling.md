@@ -17,6 +17,10 @@ RFC 9457, `type`, `title`, `status`, and `detail`.
 
 A domain error mapped to a status code.
 
+- TODO: Represent the failures the domain has already named as a union, and map each case to a status code.
+- TODO: A failure the union does not contain is an unknown failure, handled in the next section.
+- TODO: The domain side of that union is [Result-style errors](/building-a-saas/03-domain-modeling/overview#result-style-errors) and [Unions on hot paths](/csharp/advanced-features/modern-csharp#unions-on-hot-paths).
+
 ## Unknown failures
 
 A global handler, a log, and a body that does not leak internals.

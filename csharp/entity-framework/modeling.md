@@ -21,6 +21,19 @@ One-to-many and many-to-many. Required and optional.
 
 A value object stored in the owner's table.
 
+## Private setters and backing fields
+
+- TODO: Give EF a constructor it can call. A private constructor is enough when the public one is what enforces the rules.
+- TODO: Map a navigation to the field that stores it when the property is not one EF should assign.
+- TODO: Store a value object as a complex property or as an owned type, and stay with that choice.
+- TODO: Domain events are not columns. Ignore them on the model.
+- TODO: Save the aggregate and load it back in a test, then compare the instance that returns. The subscription in this product is [The subscription aggregate](/building-a-saas/07-data-layer/overview#the-subscription-aggregate).
+
+## Collections behind a read-only view
+
+- TODO: Expose the children as a read-only view. Keep the list that can change private.
+- TODO: Point the EF mapping at that field, so a child is added only through the method that protects the invariant.
+
 ## Conversions
 
 An enum, a strongly typed id, and a value the database stores as a primitive.

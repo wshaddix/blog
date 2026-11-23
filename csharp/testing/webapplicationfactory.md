@@ -39,6 +39,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ## Related
 
+- [Playwright for .NET](/csharp/testing/playwright)
 - [Integration testing](/csharp/testing/integration-testing)
 - [Testcontainers](/csharp/testing/testcontainers)
 - [Health checks](/csharp/aspnet-core/observability/health-checks)

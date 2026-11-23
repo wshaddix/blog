@@ -23,6 +23,14 @@ Blazor is the C# web UI. It talks to the API. It does not become a second place 
 
 Static, interactive server, WebAssembly, and auto. What runs where.
 
+## Prerendering and persisted state
+
+- TODO: A prerendered component loads its data, then loads it again when the interactive circuit starts.
+- TODO: Persist the first result and reuse it, so the second pass does not fetch.
+- TODO: Do not persist a secret, and do not persist a list large enough to bloat the page.
+- TODO: Cover both passes with bUnit. See [bUnit](/csharp/testing/bunit).
+- TODO: The same double load on a long-running request is [Loading the same data twice](/building-a-saas/06-api-development/overview#loading-the-same-data-twice).
+
 ## The host
 
 A Blazor app is an ASP.NET Core app with a component model.

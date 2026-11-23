@@ -13,6 +13,12 @@ One way to call HTTP from a console app, an API, Blazor, WinUI, Uno, and an MCP 
 
 Why a shared `new HttpClient()` is the wrong default.
 
+### Why not new HttpClient per call
+
+- TODO: A client built for one call opens sockets the process does not return in time.
+- TODO: A client that lives for the whole process can keep a DNS answer after the address has changed. The factory is what retires that handler.
+- TODO: Create the client through the factory. A `new HttpClient()` inside a request is the case this section rules out.
+
 ## Typed clients
 
 A class that wraps one downstream API.

@@ -37,6 +37,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 
 ## Related
 
+- [File uploads](/csharp/aspnet-core/web-apis/file-uploads)
 - [Validation](/csharp/aspnet-core/web-apis/validation)
 
 ---

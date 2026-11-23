@@ -36,6 +36,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Transport and headers](/csharp/security/transport-and-headers)
+- [Security checklist](/csharp/aspnet-core/hosting/security-checklist)
 - [Azure App Service](/devops/azure/app-service)
 
 ---

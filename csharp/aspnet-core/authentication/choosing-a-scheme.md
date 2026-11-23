@@ -42,6 +42,12 @@ The API validates a JWT. The web app can be a client of that API or the issuer o
 - TODO: Signing out clears every scheme the browser might hold, including the OpenID Connect scheme.
 - TODO: A new application starts with one default scheme. Two schemes cover the time when both providers are still in use.
 
+## A local identity provider
+
+- TODO: The local AppHost can start an identity provider and pass the API that provider's address.
+- TODO: The app uses OpenID Connect against the local provider the same way it will against the hosted one.
+- TODO: Open.IdentityServer is one provider that AppHost can run for this. The scheme stays a decision on this page. The host wiring is [.NET Aspire](/csharp/platform/aspire).
+
 ## Key strength
 
 - TODO: A bearer-token scheme depends on the key that signs the token. Pick a scheme whose key you can store outside the repo and rotate.

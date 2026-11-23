@@ -33,6 +33,11 @@ We'll use **shared database with row-level filtering** - good balance for most S
 
 <!-- TODO: Global query filters, TenantId on entities -->
 
+## Row-level security as a second guard
+
+- TODO: The query filter is the first guard. A database policy is the second, for the paths that never hit the filter.
+- TODO: How to write that policy on SQL Server and on Postgres is [Row-level security](/databases/relational/row-level-security).
+
 ## EF Core Implementation
 
 <!-- TODO: ITenantProvider, SaveChanges override -->
@@ -58,8 +63,14 @@ A global query filter covers only the queries that actually run through it.
 - TODO: Show one page of rows. The API returns the next page with a keyset cursor. See [Keyset pagination](/building-a-saas/06-api-development/overview#keyset-pagination).
 - TODO: Render that page with the grid in [Data grids](/csharp/aspnet-core/blazor/data-grids).
 
+## Closing checklist
+
+- TODO: Walk [Security checklist](/csharp/aspnet-core/hosting/security-checklist) for tenant data together with the sign-in items in [Chapter 4](/building-a-saas/04-authentication/overview#closing-checklist).
+- TODO: Include the database policy, not only the query filter. See [Row-level security as a second guard](#row-level-security-as-a-second-guard).
+
 ## Related Topics
 
+- See [Row-level security](/databases/relational/row-level-security)
 - See [Databases: Data Modeling](/databases/data-modeling/overview)
 - See [Entity Framework: Querying](/csharp/entity-framework/querying)
 - See [Configuration and options](/csharp/platform/configuration-and-options)

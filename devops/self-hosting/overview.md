@@ -32,7 +32,22 @@ Run the app on a machine you control, and give the internet a way to reach it.
 ### Staging and production on separate machines
 
 - TODO: Run each environment on its own machine. Staging and production do not share a host.
-- TODO: Store secrets for each environment separately, and run a restore drill so a backup is known to work.
+- TODO: Store secrets for each environment separately, and run a restore drill so a backup is known to work. See [Restore drills](#restore-drills).
+
+## Database on the app server
+
+- TODO: Keeping the database on the application machine removes a network hop, and one failure takes the app and the data together.
+- TODO: The two processes share CPU, memory, and disk. Size the machine for both, not for the app alone.
+
+## Backups off the box
+
+- TODO: On a schedule, dump the database to object storage. Keep a retention window, and encrypt the dump.
+- TODO: Alert when an expected dump does not arrive.
+
+## Restore drills
+
+- TODO: On a schedule, restore a dump into an empty database and record how long it took.
+- TODO: A dump you have not restored is an untested file.
 
 ## Practical Examples
 

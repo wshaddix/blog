@@ -25,6 +25,11 @@ Use SQLite when you need a relational engine and the SQL is ordinary. Use [Testc
 
 TUnit runs tests in parallel. Give each test its own database, or mark the class `[NotInParallel]` when the tests share one.
 
+## Assert what was saved
+
+- TODO: After a call returns success, query the database for the row the call claimed to write.
+- TODO: Assert that row. A 2xx on its own does not show that the write landed.
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

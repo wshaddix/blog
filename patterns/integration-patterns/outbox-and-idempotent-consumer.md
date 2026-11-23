@@ -50,6 +50,14 @@ Saving state and sending a message are two writes, and either one can fail on it
 
 <!-- TODO: How long outbox rows stay -->
 
+## Relaying: polling workers vs log-based
+
+- TODO: The relay keeps order for one aggregate, and it delivers at least once.
+- TODO: Several pollers can run at once. A claim takes a row for one of them, so two workers do not send the same message.
+- TODO: Reading the database change log skips the poll. That reader is another process to operate.
+- TODO: Pick the poll or the log from the throughput you need and from who can run the extra process.
+- TODO: The log side is [Reading the log as a relay](/patterns/architecture-styles/event-sourcing-and-cdc#reading-the-log-as-a-relay). How this product relays is [How the outbox leaves the database](/building-a-saas/08-background-jobs/overview#how-the-outbox-leaves-the-database).
+
 ## Idempotent consumer
 
 <!-- TODO: Handle a message that arrives more than once -->
@@ -83,6 +91,7 @@ Saving state and sending a message are two writes, and either one can fail on it
 
 - See [Chapter 3: Domain Modeling](/building-a-saas/03-domain-modeling/overview) - Domain events
 - See [Background Services](/csharp/aspnet-core/web-apis/background-services)
+- See [Message brokers](/patterns/integration-patterns/message-brokers)
 - See [Sagas](/patterns/integration-patterns/sagas)
 
 ---
