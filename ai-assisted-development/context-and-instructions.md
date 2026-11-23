@@ -42,6 +42,7 @@ Secrets, generated output, and a long log with one relevant line.
 
 - TODO: A prompt you paste on every similar task belongs in a skill: the steps and the constraints, written once and invoked by name.
 - TODO: Leave a one-off request as a prompt. Promote it after the same steps have been worth repeating.
+- TODO: A skill can also ship inside a package. How that folder is laid out, and when to trust it, is [Agent skills](/ai-assisted-development/agent-skills).
 
 ### Skills that move between tools
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -180,14 +180,22 @@
 <p>Where the pattern-matching page goes deeper.</p>
 <h2 id="unions-and-closed-hierarchies">Unions and closed hierarchies</h2>
 <!-- TODO: A closed set of cases the compiler can check -->
+<h3 id="unions-on-hot-paths">Unions on hot paths</h3>
+<ul>
+<li>TODO: A union can stand in for a result type, or for a library that boxes every case.</li>
+<li>TODO: Measure a value-type case against a reference case with BenchmarkDotNet before a union sits on a hot path. Allocations are the signal that a case was boxed.</li>
+<li>TODO: Keep a closed record hierarchy when the cases are large, or when callers already share that type.</li>
+<li>TODO: The language feature arrives with the framework bump in <a href="../../../building-a-saas/01-project-setup/overview/#moving-from-10-to-11">Moving from 10 to 11</a>. Mapping the cases onto HTTP status codes is <a href="../../aspnet-core/web-apis/error-handling/#known-failures">Known failures</a>.</li>
+</ul>
 <h2 id="result-style-errors">Result-style errors</h2>
 <!-- TODO: Success and failure as data, using a closed hierarchy -->
 <h2 id="net-8-10-and-11">.NET 8, 10, and 11</h2>
 <!-- TODO: What this site assumes, and what moved in later releases -->
-<h3 id="net-11-rc2">.NET 11 RC2</h3>
+<h3 id="net-11">.NET 11</h3>
 <ul>
-<li>TODO: A release candidate is a preview of the next runtime. Read what it changes, and keep the solution on the release you ship.</li>
-<li>TODO: List which language and library changes from that candidate this site will adopt, and which ones wait for the final release.</li>
+<li>TODO: This is a release the site can target once the product chooses it. Read the release notes, and keep the solution on the version it ships.</li>
+<li>TODO: List which language and library changes from this release the site adopts, and which ones it leaves.</li>
+<li>TODO: The checklist for moving a solution from 10 to 11 is <a href="../../../building-a-saas/01-project-setup/overview/#moving-from-10-to-11">Moving from 10 to 11</a>. What the authentication stack changed is <a href="../../aspnet-core/authentication/overview/#what-changed-in-net-11">What changed in .NET 11</a>.</li>
 </ul>
 <h3 id="async-handled-by-the-runtime">Async handled by the runtime</h3>
 <p>The compiler builds a state machine for an async method today. A later runtime may take that work on itself.</p>
@@ -221,6 +229,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/error-handling/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Error Handling</span>
+            </div>
+            <p class="card-compact-description">One error shape for the whole API, so every client parses failures the same way.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/csharp/advanced-features/high-performance-csharp/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -237,6 +255,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">A well-organized project structure sets the foundation for maintainability and scalability.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/03-domain-modeling/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The domain model is the heart of your application - getting it right is crucial.</p>
         </div>
     </a>
 </div>

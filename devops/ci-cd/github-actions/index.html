@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -183,6 +183,18 @@
 <!-- TODO: Storing credentials, environment variables -->
 <h2 id="reusable-workflows">Reusable Workflows</h2>
 <!-- TODO: Composite actions, workflow reuse -->
+<h2 id="pinning-actions">Pinning actions</h2>
+<ul>
+<li>TODO: A tag can move. A workflow that names a tag runs whatever commit that tag points at on the day the job starts.</li>
+<li>TODO: Pin the action to a commit. When you move the pin, review the diff between the two commits.</li>
+<li>TODO: An action may call further actions. Pinning the outer action does not pin the ones it calls.</li>
+<li>TODO: How the release workflow for this product is pinned is <a href="../../../building-a-saas/11-deployment/overview/#pinning-the-workflow">Pinning the workflow</a>.</li>
+</ul>
+<h2 id="a-scheduled-link-check">A scheduled link check</h2>
+<ul>
+<li>TODO: On a schedule, request the pages of the site and fail the job when an internal link does not resolve.</li>
+<li>TODO: A weekly run catches a link that broke after the pull request that added it had already passed.</li>
+</ul>
 <hr>
 <p><strong>Next:</strong> <a href="../azure-devops/">Azure DevOps</a></p>
 <div id="retype-backlinks">
@@ -199,12 +211,42 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/devops/ci-cd/feature-flags/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Feature Flags</span>
+            </div>
+            <p class="card-compact-description">Putting a build on the host and letting callers use a feature are two decisions.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/11-deployment/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Getting code to production reliably and repeatedly.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/devops/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">DevOps bridges development and operations, focusing on automation, collaboration, and continuous delivery.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/hosting/security-checklist/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Security Checklist</span>
+            </div>
+            <p class="card-compact-description">Each category on the current top-ten risk list points at the page on this site that covers it.</p>
         </div>
     </a>
 </div>

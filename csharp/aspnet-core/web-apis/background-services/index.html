@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -176,6 +176,19 @@
 <p>A restart loses in-memory work. Know when that is acceptable.</p>
 <h2 id="a-real-queue">A real queue</h2>
 <p>When the work has to survive a deploy. Hangfire and Functions stay in the SaaS chapter.</p>
+<h2 id="an-external-job-queue">An external job queue</h2>
+<ul>
+<li>TODO: A table of jobs is enough while one database can drain it.</li>
+<li>TODO: A lightweight broker earns its place when you need a durable stream and competing consumers without putting that load on the application database.</li>
+<li>TODO: NATS JetStream is one such broker. The cost is operating it, not only referencing it. See <a href="../../../../building-a-saas/08-background-jobs/overview/#a-broker-instead-of-a-table">A broker instead of a table</a>.</li>
+</ul>
+<h2 id="acting-on-a-users-behalf-later">Acting on a user&#x27;s behalf later</h2>
+<ul>
+<li>TODO: When the work is queued, store who asked and what they were allowed to do at that moment.</li>
+<li>TODO: Check again when the job runs. A permission removed after enqueue means the job does not perform the action.</li>
+<li>TODO: If the check cannot be made, do not perform the action.</li>
+<li>TODO: How this product stores that decision is <a href="../../../../building-a-saas/08-background-jobs/overview/#work-queued-for-a-user">Work queued for a user</a>.</li>
+</ul>
 <h2 id="cancellation">Cancellation</h2>
 <p>Stopping the host stops the loop.</p>
 <h2 id="quartz">Quartz</h2>
@@ -199,6 +212,16 @@
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/csharp/advanced-features/async/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Async/Await</span>
+            </div>
+            <p class="card-compact-description">Write asynchronous code that reads like synchronous code.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/csharp/advanced-features/cancellation/" class="group card-compact no-link">
         <div class="card-compact-body">
@@ -226,6 +249,16 @@
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/patterns/integration-patterns/message-brokers/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Message Brokers</span>
+            </div>
+            <p class="card-compact-description">A broker carries a message from a publisher to a consumer. A transport library is the client you put in front of the broker.</p>
         </div>
     </a>
 </div>
@@ -266,6 +299,16 @@
                 <span class="card-compact-title">Pagination, Filtering, and Sorting</span>
             </div>
             <p class="card-compact-description">List endpoints return a page, not a table.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/authorization/permissions/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Permission-Based Authorization</span>
+            </div>
+            <p class="card-compact-description">A permission names one action the caller may perform.</p>
         </div>
     </a>
 </div>

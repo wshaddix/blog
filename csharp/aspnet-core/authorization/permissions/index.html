@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -181,6 +181,12 @@
 <!-- TODO: Require the policy in endpoint metadata. The handler remains the place that enforces it -->
 <h2 id="one-row">One row</h2>
 <!-- TODO: The permission allows the action. Resource-based authorization decides whether this entity is in scope -->
+<h2 id="cached-decisions-and-revocation">Cached decisions and revocation</h2>
+<ul>
+<li>TODO: Decide how old an allow or a deny is allowed to be before it is wrong.</li>
+<li>TODO: Drop the cached decision on every instance when a permission changes, or read the store on each request when that lag is not acceptable.</li>
+<li>TODO: Work that runs after the request has ended is <a href="../../web-apis/background-services/#acting-on-a-users-behalf-later">Acting on a user&#x27;s behalf later</a>. The product side is <a href="../../../../building-a-saas/04-authentication/overview/#cached-authorization-decisions">Cached authorization decisions</a>.</li>
+</ul>
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
 <li>See <a href="../../../../building-a-saas/04-authentication/overview/">Building a SaaS: Authentication</a> - Permission checks beside sign-in</li>
@@ -213,6 +219,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">Security is non-negotiable. We'll implement robust authentication that's also user-friendly.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/hosting/security-checklist/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Security Checklist</span>
+            </div>
+            <p class="card-compact-description">Each category on the current top-ten risk list points at the page on this site that covers it.</p>
         </div>
     </a>
 </div>

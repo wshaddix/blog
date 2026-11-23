@@ -61,6 +61,9 @@ A module can run in its own process and still share the repository with the code
 
 ## Patterns We'll Use
 
+- TODO: Start with a repository only where it enforces a rule, and with a lighter CQRS split that still uses one database.
+- TODO: Whether a mediator library is worth taking, including when its license changes, is [Mediator libraries and licensing](/patterns/application-patterns/cqrs#mediator-libraries-and-licensing).
+
 The public API stays JSON over HTTP. gRPC is a decision only when an internal client needs an HTTP/2 contract.
 
 ### CQRS without a second store
@@ -73,6 +76,11 @@ Commands and queries can have different handlers here and still read and write t
 - TODO: Open a separate read store when reads slow the writes down, when a query is really a search, or when a report must keep rows the operational store will drop.
 - TODO: Before adding that store, plan for lag, a projector to operate, a way to rebuild it, and a second schema to migrate.
 - TODO: Put a read replica in between. See [Read replicas](/building-a-saas/07-data-layer/overview#read-replicas) and [One database, two models](/patterns/application-patterns/cqrs#one-database-two-models).
+
+## Context and instructions
+
+- TODO: Keep the rules an agent follows for this product in the repository, next to the architecture they describe.
+- TODO: A procedure that ships inside a package is [Agent skills](/ai-assisted-development/agent-skills). The standing files are [Context and instructions](/ai-assisted-development/context-and-instructions).
 
 ## Dependency Injection
 

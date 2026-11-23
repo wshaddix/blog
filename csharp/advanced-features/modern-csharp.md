@@ -26,14 +26,22 @@ Where the pattern-matching page goes deeper.
 
 ## Unions and closed hierarchies
 
+### Unions on hot paths
+
+- TODO: A union can stand in for a result type, or for a library that boxes every case.
+- TODO: Measure a value-type case against a reference case with BenchmarkDotNet before a union sits on a hot path. Allocations are the signal that a case was boxed.
+- TODO: Keep a closed record hierarchy when the cases are large, or when callers already share that type.
+- TODO: The language feature arrives with the framework bump in [Moving from 10 to 11](/building-a-saas/01-project-setup/overview#moving-from-10-to-11). Mapping the cases onto HTTP status codes is [Known failures](/csharp/aspnet-core/web-apis/error-handling#known-failures).
+
 ## Result-style errors
 
 ## .NET 8, 10, and 11
 
-### .NET 11 RC2
+### .NET 11
 
-- TODO: A release candidate is a preview of the next runtime. Read what it changes, and keep the solution on the release you ship.
-- TODO: List which language and library changes from that candidate this site will adopt, and which ones wait for the final release.
+- TODO: This is a release the site can target once the product chooses it. Read the release notes, and keep the solution on the version it ships.
+- TODO: List which language and library changes from this release the site adopts, and which ones it leaves.
+- TODO: The checklist for moving a solution from 10 to 11 is [Moving from 10 to 11](/building-a-saas/01-project-setup/overview#moving-from-10-to-11). What the authentication stack changed is [What changed in .NET 11](/csharp/aspnet-core/authentication/overview#what-changed-in-net-11).
 
 ### Async handled by the runtime
 

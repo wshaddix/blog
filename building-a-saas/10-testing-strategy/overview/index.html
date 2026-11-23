@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -186,6 +186,10 @@
    /          \ Unit (many, fast, focused)
   /------------\</code></pre>
 </doc-codeblock></div>
+<h3 id="end-to-end-tests">End-to-end tests</h3>
+<ul>
+<li>TODO: Keep a browser test for a path the lower layers cannot see, and point it at <a href="../../../csharp/testing/playwright/">Playwright for .NET</a>.</li>
+</ul>
 <h2 id="unit-tests">Unit Tests</h2>
 <!-- TODO: Domain logic, services, TUnit setup. See [TUnit project setup](/csharp/testing/project-setup). -->
 <h3 id="bug-fixes-start-with-a-failing-test">Bug fixes start with a failing test</h3>
@@ -217,7 +221,7 @@
 <li>TODO: Put the rule in the name. A name that describes the assertion machinery hides which rule failed.</li>
 <li>TODO: <code translate="no" v-pre>Fails_the_greater_than_check</code> is the weak form of a seat limit. <code translate="no" v-pre>Refuses_a_member_past_the_seat_limit</code> is the rule.</li>
 <li>TODO: When the test fails, the name alone should identify the rule.</li>
-<li>TODO: Keep one class per behavior and one case per boundary, grouped by the rule.</li>
+<li>TODO: Keep one class per behavior and one case per boundary, grouped by the rule. How to pick those inputs is <a href="../../../csharp/testing/unit-testing/#boundary-values">Boundary values</a>. Prove the test notices a broken operator with <a href="../../../csharp/testing/unit-testing/#watching-a-test-fail">Watching a test fail</a>. An integration test reads the row back in <a href="../../../csharp/testing/integration-testing/#assert-what-was-saved">Assert what was saved</a>.</li>
 <li>TODO: Treat the names as the notes the next person or the next agent uses to edit the code.</li>
 <li>TODO: A review check: a product person can read the test list and recognize the rules.</li>
 <li>TODO: How to name the method is <a href="../../../csharp/testing/unit-testing/#names-that-state-the-rule">Names that state the rule</a>.</li>
@@ -253,6 +257,7 @@
 <h2 id="evals-against-a-second-model">Evals against a second model</h2>
 <ul>
 <li>TODO: Run the same evals against the replacement before switching, as in <a href="../../../csharp/mcp/clients-and-agents/#changing-the-model-without-changing-the-feature">Changing the model without changing the feature</a>, and keep the checks in <a href="../../../ai-assisted-development/verification/">Verification</a>.</li>
+<li>TODO: Validate a typed answer, including the business rules on top of the schema, as in <a href="../../06-api-development/overview/#checking-a-models-answer">Checking a model&#x27;s answer</a>.</li>
 </ul>
 <h3 id="trying-smaller-models">Trying smaller models</h3>
 <ul>
@@ -313,6 +318,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/building-a-saas/09-billing-integration/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -359,16 +374,6 @@
                 <span class="card-compact-title">Testing Strategy</span>
             </div>
             <p class="card-compact-description">What a unit test, an API test, a component test, and a scenario each prove. The runner for all of them on this site is TUnit.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/csharp/testing/time-dependent-code/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Time-Dependent Code</span>
-            </div>
-            <p class="card-compact-description">Tests that depend on the clock should take a clock you control.</p>
         </div>
     </a>
 </div>

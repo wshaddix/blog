@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -172,6 +172,11 @@
 <p>RFC 9457, <code translate="no" v-pre>type</code>, <code translate="no" v-pre>title</code>, <code translate="no" v-pre>status</code>, and <code translate="no" v-pre>detail</code>.</p>
 <h2 id="known-failures">Known failures</h2>
 <p>A domain error mapped to a status code.</p>
+<ul>
+<li>TODO: Represent the failures the domain has already named as a union, and map each case to a status code.</li>
+<li>TODO: A failure the union does not contain is an unknown failure, handled in the next section.</li>
+<li>TODO: The domain side of that union is <a href="../../../../building-a-saas/03-domain-modeling/overview/#result-style-errors">Result-style errors</a> and <a href="../../../advanced-features/modern-csharp/#unions-on-hot-paths">Unions on hot paths</a>.</li>
+</ul>
 <h2 id="unknown-failures">Unknown failures</h2>
 <p>A global handler, a log, and a body that does not leak internals.</p>
 <h2 id="validation-errors">Validation errors</h2>
@@ -214,6 +219,36 @@
                 <span class="card-compact-title">Exceptions</span>
             </div>
             <p class="card-compact-description">How C# reports a failure that the current method cannot finish.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/advanced-features/modern-csharp/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Modern C#</span>
+            </div>
+            <p class="card-compact-description">Language features you will see in current .NET code. Each one is small. Together they are the dialect this site uses.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/03-domain-modeling/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The domain model is the heart of your application - getting it right is crucial.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/hosting/security-checklist/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Security Checklist</span>
+            </div>
+            <p class="card-compact-description">Each category on the current top-ten risk list points at the page on this site that covers it.</p>
         </div>
     </a>
 </div>

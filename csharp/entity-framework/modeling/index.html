@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -174,6 +174,19 @@
 <p>One-to-many and many-to-many. Required and optional.</p>
 <h2 id="owned-types">Owned types</h2>
 <p>A value object stored in the owner&#x27;s table.</p>
+<h2 id="private-setters-and-backing-fields">Private setters and backing fields</h2>
+<ul>
+<li>TODO: Give EF a constructor it can call. A private constructor is enough when the public one is what enforces the rules.</li>
+<li>TODO: Map a navigation to the field that stores it when the property is not one EF should assign.</li>
+<li>TODO: Store a value object as a complex property or as an owned type, and stay with that choice.</li>
+<li>TODO: Domain events are not columns. Ignore them on the model.</li>
+<li>TODO: Save the aggregate and load it back in a test, then compare the instance that returns. The subscription in this product is <a href="../../../building-a-saas/07-data-layer/overview/#the-subscription-aggregate">The subscription aggregate</a>.</li>
+</ul>
+<h2 id="collections-behind-a-read-only-view">Collections behind a read-only view</h2>
+<ul>
+<li>TODO: Expose the children as a read-only view. Keep the list that can change private.</li>
+<li>TODO: Point the EF mapping at that field, so a child is added only through the method that protects the invariant.</li>
+</ul>
 <h2 id="conversions">Conversions</h2>
 <p>An enum, a strongly typed id, and a value the database stores as a primitive.</p>
 <h3 id="text-number-or-lookup-table">Text, number, or lookup table</h3>
@@ -207,6 +220,16 @@
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/03-domain-modeling/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The domain model is the heart of your application - getting it right is crucial.</p>
         </div>
     </a>
 </div>

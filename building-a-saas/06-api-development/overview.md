@@ -34,11 +34,19 @@ Every endpoint should serialize with the same JSON options.
 
 ## Error Handling
 
+### A stable code and a localized message
+
+- TODO: Return one error code and a message resolved for the request culture. The code does not change when the text does. See [Localized messages](/csharp/aspnet-core/web-apis/validation#localized-messages).
+
 ## Request timeouts
 
 - TODO: Bound how long one request may run, and pass that limit into the work. See [Request timeouts](/csharp/advanced-features/cancellation#request-timeouts).
 
 ## API Versioning
+
+### Who still calls a deprecated field
+
+- TODO: Before a deprecated field is removed, record which tenants still send or read it. See [Deprecating deliberately](/csharp/aspnet-core/web-apis/versioning#deprecating-deliberately).
 
 ## Documentation
 
@@ -59,6 +67,10 @@ A dashboard that wants daily activity counts for one tenant should receive those
 
 ## Async request-reply
 
+### Loading the same data twice
+
+- TODO: A screen that prerenders and then becomes interactive can load the same data twice. Persist the first result, as in [Prerendering and persisted state](/csharp/aspnet-core/blazor/overview#prerendering-and-persisted-state).
+
 ## Conditional updates
 
 - TODO: Two admins of one tenant open the same settings page. The second save must not erase the first.
@@ -75,6 +87,14 @@ A dashboard that wants daily activity counts for one tenant should receive those
 - TODO: A tenant uploads thousands of records in one request. Stream the items and save them in batches instead of binding one array. See [Large request bodies](/csharp/aspnet-core/web-apis/routing-and-binding#large-request-bodies).
 - TODO: The size limit can follow the tenant's plan.
 
+### Tenant attachments
+
+- TODO: A file a tenant attaches is a different upload from a bulk record import. Accept it with a limit, or let the client write it straight to storage. See [File uploads](/csharp/aspnet-core/web-apis/file-uploads).
+
+### A streamed export
+
+- TODO: A CSV of many rows can be written as each row is read, instead of buffered into one array. See [Streaming results with IAsyncEnumerable](/csharp/advanced-features/async#streaming-results-with-iasyncenumerable).
+
 ## Rate limits per plan
 
 - TODO: A free plan and a paid plan carry different limits. The partition includes the plan, along with the caller.
@@ -83,6 +103,12 @@ A dashboard that wants daily activity counts for one tenant should receive those
 ### Counters shared across instances
 
 - TODO: Every instance reads and updates the same counters for a plan. See [More than one instance](/csharp/aspnet-core/web-apis/rate-limiting#more-than-one-instance).
+
+## Checking a model's answer
+
+- TODO: Parse the model's reply into a typed value and validate it the way a request body is validated.
+- TODO: Reject a reply that breaks a business rule even when it matches the schema, and retry or fall back a small number of times. See [AI clients](/csharp/platform/ai-clients).
+- TODO: The same checks, run before a model change, are [Evals against a second model](/building-a-saas/10-testing-strategy/overview#evals-against-a-second-model).
 
 ## APIs called by agents
 

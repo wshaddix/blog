@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -180,6 +180,14 @@
 </ul>
 <h2 id="render-modes">Render modes</h2>
 <p>Static, interactive server, WebAssembly, and auto. What runs where.</p>
+<h2 id="prerendering-and-persisted-state">Prerendering and persisted state</h2>
+<ul>
+<li>TODO: A prerendered component loads its data, then loads it again when the interactive circuit starts.</li>
+<li>TODO: Persist the first result and reuse it, so the second pass does not fetch.</li>
+<li>TODO: Do not persist a secret, and do not persist a list large enough to bloat the page.</li>
+<li>TODO: Cover both passes with bUnit. See <a href="../../../testing/bunit/">bUnit</a>.</li>
+<li>TODO: The same double load on a long-running request is <a href="../../../../building-a-saas/06-api-development/overview/#loading-the-same-data-twice">Loading the same data twice</a>.</li>
+</ul>
 <h2 id="the-host">The host</h2>
 <p>A Blazor app is an ASP.NET Core app with a component model.</p>
 <h2 id="auth">Auth</h2>
@@ -222,6 +230,16 @@
                 <span class="card-compact-title">Learning Path</span>
             </div>
             <p class="card-compact-description">A roadmap through the material based on your experience level. Most pages are outlines. Each one will grow a C# sample, with a companion .cs file when the sample is longer than about 30 lines.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
         </div>
     </a>
 </div>

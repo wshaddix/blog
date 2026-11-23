@@ -31,6 +31,12 @@ A write model and a read model that have diverged.
 
 A CRUD screen where one model is still honest.
 
+## Mediator libraries and licensing
+
+- TODO: A mediator sends a request to a handler in this process. That is a library choice, separate from having a command model and a query model.
+- TODO: When the license changes, pay, stay on the last release whose terms you accept, or replace the library. The same three choices for a broker client are [When the license changes](/patterns/integration-patterns/message-brokers#when-the-license-changes).
+- TODO: Write down what you would have to maintain for each choice. This product records its choice under [Patterns we'll use](/building-a-saas/02-architecture-decisions/overview#patterns-well-use).
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -192,7 +192,22 @@
 <h3 id="staging-and-production-on-separate-machines">Staging and production on separate machines</h3>
 <ul>
 <li>TODO: Run each environment on its own machine. Staging and production do not share a host.</li>
-<li>TODO: Store secrets for each environment separately, and run a restore drill so a backup is known to work.</li>
+<li>TODO: Store secrets for each environment separately, and run a restore drill so a backup is known to work. See <doc-anchor-trigger to="#restore-drills">Restore drills</doc-anchor-trigger>.</li>
+</ul>
+<h2 id="database-on-the-app-server">Database on the app server</h2>
+<ul>
+<li>TODO: Keeping the database on the application machine removes a network hop, and one failure takes the app and the data together.</li>
+<li>TODO: The two processes share CPU, memory, and disk. Size the machine for both, not for the app alone.</li>
+</ul>
+<h2 id="backups-off-the-box">Backups off the box</h2>
+<ul>
+<li>TODO: On a schedule, dump the database to object storage. Keep a retention window, and encrypt the dump.</li>
+<li>TODO: Alert when an expected dump does not arrive.</li>
+</ul>
+<h2 id="restore-drills">Restore drills</h2>
+<ul>
+<li>TODO: On a schedule, restore a dump into an empty database and record how long it took.</li>
+<li>TODO: A dump you have not restored is an untested file.</li>
 </ul>
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>

@@ -15,6 +15,10 @@ The data layer connects your domain model to the database. Done right, it's reli
 
 ## Entity Configurations
 
+### The subscription aggregate
+
+- TODO: Map Subscription with a private constructor, a field-backed collection, and owned value objects. See [Private setters and backing fields](/csharp/entity-framework/modeling#private-setters-and-backing-fields) and [Collections behind a read-only view](/csharp/entity-framework/modeling#collections-behind-a-read-only-view).
+
 ### Status values a person can read
 
 A status stored on an entity should be readable in a query without a decoder.
@@ -58,6 +62,11 @@ A fan-out that opens one database call per item can take every connection the po
 
 - TODO: A bulk check or an export can pass thousands of ids into one query.
 - TODO: Join to that set. Do not run one query per id.
+
+### Several collections on one parent
+
+- TODO: Loading one aggregate that has two collections can multiply rows. See [Single versus split queries](/csharp/entity-framework/performance#single-versus-split-queries).
+- TODO: A reconciliation that must list unmatched rows from both sides is [Full outer joins](/csharp/entity-framework/querying#full-outer-joins).
 
 ## SaveChanges in a loop
 

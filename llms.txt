@@ -18,6 +18,7 @@
 - [Tools](https://wshaddix.com/ai-assisted-development/tools.md): The categories of assistant you will meet. Product names change. The categories do not.
 - [Techniques](https://wshaddix.com/ai-assisted-development/techniques.md): Ways of working that make an assistant useful on a real change.
 - [Prompting](https://wshaddix.com/ai-assisted-development/prompting.md): A prompt is a specification for one turn. It has a goal, constraints, and the context the model would otherwise invent.
+- [Agent Skills](https://wshaddix.com/ai-assisted-development/agent-skills.md): A skill is a named procedure a tool can load. An instructions file is the set of rules that apply without being asked.
 - [Context and Instructions](https://wshaddix.com/ai-assisted-development/context-and-instructions.md): The model only knows what is in the window. You decide what that is.
 - [Verification](https://wshaddix.com/ai-assisted-development/verification.md): Generated code is a draft. The same checks apply as if a new teammate wrote it.
 - [Using MCP](https://wshaddix.com/ai-assisted-development/using-mcp.md): MCP lets an assistant call a tool on a server: read a ticket, query a database, or hit an API. Building the server is covered under C#.
@@ -103,6 +104,7 @@
 - [Dependency Injection](https://wshaddix.com/csharp/platform/dependency-injection.md): A type asks for what it needs. The container creates it.
 - [Configuration and Options](https://wshaddix.com/csharp/platform/configuration-and-options.md): Settings come from files, environment variables, and user secrets. Code reads them through the options pattern.
 - [Logging](https://wshaddix.com/csharp/platform/logging.md): ILogger is the logging abstraction. The sink (console, file, or a vendor) is a registration.
+- [AI Clients](https://wshaddix.com/csharp/platform/ai-clients.md): Application code calls a model through one interface, then checks the answer the way it checks any other input.
 - [HTTP Clients](https://wshaddix.com/csharp/platform/http-clients.md): One way to call HTTP from a console app, an API, Blazor, WinUI, Uno, and an MCP server.
 - [Publishing](https://wshaddix.com/csharp/platform/publishing.md): How a project becomes a program you can run on another machine.
 
@@ -138,6 +140,7 @@
 - [Minimal APIs and Controllers](https://wshaddix.com/csharp/aspnet-core/web-apis/minimal-apis-and-controllers.md): ASP.NET Core has two ways to declare an endpoint. Pick one per project and stay with it unless a feature forces the other.
 - [JSON Serialization](https://wshaddix.com/csharp/aspnet-core/web-apis/json-serialization.md): How an ASP.NET Core API turns a request body into an object and an object into a response.
 - [Routing and Model Binding](https://wshaddix.com/csharp/aspnet-core/web-apis/routing-and-binding.md): How a request URL and body become arguments on a handler.
+- [File Uploads](https://wshaddix.com/csharp/aspnet-core/web-apis/file-uploads.md): The API can accept the bytes, or the client can write them straight to storage and tell the API when they have landed.
 - [Validation](https://wshaddix.com/csharp/aspnet-core/web-apis/validation.md): Reject a request that cannot succeed before any state changes.
 - [Error Handling](https://wshaddix.com/csharp/aspnet-core/web-apis/error-handling.md): One error shape for the whole API, so every client parses failures the same way.
 - [OpenAPI](https://wshaddix.com/csharp/aspnet-core/web-apis/openapi.md): OpenAPI is the contract. Swagger UI is one way to read it.
@@ -175,10 +178,12 @@
 
 #### Hosting
 
+- [Security Checklist](https://wshaddix.com/csharp/aspnet-core/hosting/security-checklist.md): Each category on the current top-ten risk list points at the page on this site that covers it.
 - [Kestrel and HTTPS](https://wshaddix.com/csharp/aspnet-core/hosting/kestrel-and-https.md): Kestrel is the server. In production it usually sits behind a reverse proxy that terminates TLS.
 
 #### Observability
 
+- [Server-Timing](https://wshaddix.com/csharp/aspnet-core/observability/server-timing.md): A response header that names how long each part of one request took, for the caller who received that response.
 - [Observability](https://wshaddix.com/csharp/aspnet-core/observability/overview.md): Logs, metrics, and traces from the running API. Alerting and the operational response live in the DevOps monitoring pages.
 - [Health Checks](https://wshaddix.com/csharp/aspnet-core/observability/health-checks.md): A health endpoint tells a platform whether to send traffic.
 
@@ -237,9 +242,11 @@
 
 - [TUnit Project Setup](https://wshaddix.com/csharp/testing/project-setup.md): Tests on this site run on TUnit. A test project is an executable that discovers tests at compile time. It is not an xUnit, NUnit, or MSTest project.
 - [Unit Testing](https://wshaddix.com/csharp/testing/unit-testing.md): A unit test checks one behavior of one type. Collaborators are replaced so the test does not touch a database, the network, or the clock. The runner is TUnit.
+- [Mutation Testing](https://wshaddix.com/csharp/testing/mutation-testing.md): A mutation tool edits the code on purpose and checks whether the tests notice.
 - [Mocking](https://wshaddix.com/csharp/testing/mocking.md): A mock stands in for a collaborator so the test can decide what that collaborator returns and can check that it was called. This site uses TUnit.Mocks.
 - [Time-Dependent Code](https://wshaddix.com/csharp/testing/time-dependent-code.md): Tests that depend on the clock should take a clock you control.
 - [Integration Testing](https://wshaddix.com/csharp/testing/integration-testing.md): An integration test checks that two or more real parts work together. On this site that usually means the API, the database, or both. The runner is still TUnit.
+- [Playwright for .NET](https://wshaddix.com/csharp/testing/playwright.md): A few browser tests that drive the real UI. They live in the same test project as the rest of the suite.
 - [ASP.NET Core Tests](https://wshaddix.com/csharp/testing/webapplicationfactory.md): API tests boot the app in-process with TUnit.AspNetCore. Use TestWebApplicationFactoryTEntryPoint, not the vanilla WebApplicationFactoryT, so traces and logs stay tied to the test that made the call.
 - [Testcontainers](https://wshaddix.com/csharp/testing/testcontainers.md): A test can start a real SQL Server in Docker and throw it away when the test session ends.
 - [bUnit](https://wshaddix.com/csharp/testing/bunit.md): bUnit renders a Blazor component in memory. It runs on TUnit the same way any other test does.
@@ -259,6 +266,7 @@
 
 - [SQL Fundamentals](https://wshaddix.com/databases/relational/sql-fundamentals.md): Structured Query Language (SQL) is the standard language for relational databases.
 - [Database Design](https://wshaddix.com/databases/relational/database-design.md): Designing databases that are efficient, maintainable, and correct.
+- [Row-Level Security](https://wshaddix.com/databases/relational/row-level-security.md): The database can refuse a row that an application filter forgot to hide.
 - [Indexes and Query Plans](https://wshaddix.com/databases/relational/indexes-and-query-plans.md): Why a query is fast or slow, and how an index changes the plan.
 - [Transactions and Isolation](https://wshaddix.com/databases/relational/transactions-and-isolation.md): How a group of writes becomes one atomic change, and the anomalies each isolation level allows.
 
@@ -315,6 +323,7 @@
 ### Integration Patterns
 
 - [Overview](https://wshaddix.com/patterns/integration-patterns/overview.md): This page is a catalog of names, not a lesson. Messaging shows up in practice in background services and in Building a SaaS: Background Jobs.
+- [Message Brokers](https://wshaddix.com/patterns/integration-patterns/message-brokers.md): A broker carries a message from a publisher to a consumer. A transport library is the client you put in front of the broker.
 - [Outbox and the Idempotent Consumer](https://wshaddix.com/patterns/integration-patterns/outbox-and-idempotent-consumer.md): Saving state and sending a message are two writes, and either one can fail on its own.
 - [Sagas](https://wshaddix.com/patterns/integration-patterns/sagas.md): A multi-step workflow that crosses service boundaries.
 - [Durable Workflows](https://wshaddix.com/patterns/integration-patterns/durable-workflows.md): A workflow that stores its place so another process can continue it after a crash.
@@ -350,6 +359,7 @@
 
 ### CI/CD
 
+- [Feature Flags](https://wshaddix.com/devops/ci-cd/feature-flags.md): Putting a build on the host and letting callers use a feature are two decisions.
 - [Azure DevOps](https://wshaddix.com/devops/ci-cd/azure-devops.md): Microsoft's complete DevOps platform.
 - [GitHub Actions](https://wshaddix.com/devops/ci-cd/github-actions.md): Automation built into GitHub for CI/CD workflows.
 - [CI/CD Concepts](https://wshaddix.com/devops/ci-cd/concepts.md): Continuous Integration and Continuous Delivery automate the path from code to production.

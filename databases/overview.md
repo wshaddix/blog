@@ -13,6 +13,7 @@ Traditional SQL databases with structured schemas:
 - [SQL Server](/databases/relational/sql-server/overview) - Microsoft's enterprise database
 - [Indexes and Query Plans](/databases/relational/indexes-and-query-plans) - Why a query is fast or slow
 - [Transactions and Isolation](/databases/relational/transactions-and-isolation) - Atomic changes and the anomalies isolation allows
+- [Row-level security](/databases/relational/row-level-security) - A database policy under the application filter
 
 ### NoSQL Databases
 

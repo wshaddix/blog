@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -183,6 +183,20 @@
 <!-- TODO: CancellationToken through the async call stack. See [Cancellation](/csharp/advanced-features/cancellation). -->
 <h2 id="bounded-concurrency">Bounded concurrency</h2>
 <!-- TODO: A cap on how much work runs at once -->
+<h2 id="streaming-results-with-iasyncenumerable">Streaming results with IAsyncEnumerable</h2>
+<ul>
+<li>TODO: Yield a row as it becomes ready instead of buffering the whole sequence first.</li>
+<li>TODO: Pass the caller&#x27;s cancellation token into <code translate="no" v-pre>await foreach</code> with <code translate="no" v-pre>WithCancellation</code>.</li>
+<li>TODO: An endpoint can write that sequence as the response, one row at a time.</li>
+<li>TODO: A channel is the in-process queue for work of the same shape. See <a href="../../aspnet-core/web-apis/background-services/#channels">Channels</a>.</li>
+<li>TODO: An export that writes rows as they are read is <a href="../../../building-a-saas/06-api-development/overview/#a-streamed-export">A streamed export</a>.</li>
+</ul>
+<h2 id="valuetask">ValueTask</h2>
+<ul>
+<li>TODO: Return a <code translate="no" v-pre>ValueTask</code> when the result is often already complete and a profile shows the <code translate="no" v-pre>Task</code> allocation.</li>
+<li>TODO: Await a <code translate="no" v-pre>ValueTask</code> once. A second await is not valid, and neither is reading the result after the await.</li>
+<li>TODO: Prefer <code translate="no" v-pre>Task</code> on a path that is not hot. The simpler type is the default.</li>
+</ul>
 <h2 id="practical-examples">Practical Examples</h2>
 <ul>
 <li>See <a href="../../../fundamentals/programming-concepts/concurrency/">Fundamentals: Concurrency</a> - The theory</li>
@@ -230,6 +244,16 @@
                 <span class="card-compact-title">LINQ</span>
             </div>
             <p class="card-compact-description">Query collections with a consistent, expressive syntax.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
         </div>
     </a>
 </div>

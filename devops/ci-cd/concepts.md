@@ -19,6 +19,8 @@ The suite can run on a developer machine before the commit is pushed, which chan
 
 ## Continuous Deployment
 
+Turning a feature on without another deploy is [Feature flags](/devops/ci-cd/feature-flags).
+
 ## Pipeline Stages
 
 ### Headless review

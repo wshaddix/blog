@@ -46,6 +46,11 @@ A well-organized project structure sets the foundation for maintainability and s
 - TODO: Plan the move off a target framework before its support window closes, and confirm the date on Microsoft's support policy page before you schedule the work.
 - TODO: Follow the upgrade order in [Support windows and end of support](/csharp/platform/publishing#support-windows-and-end-of-support), including a fresh publish of every self-contained deploy.
 
+### Moving from 10 to 11
+
+- TODO: Raise the target framework, rebuild, and run the suite. List what the compiler rejects before changing behavior.
+- TODO: The language side of the same bump is [.NET 11](/csharp/advanced-features/modern-csharp#net-11). Authentication changes are [What changed in .NET 11](/csharp/aspnet-core/authentication/overview#what-changed-in-net-11). Unions used for domain failures are [Result-style errors](/building-a-saas/03-domain-modeling/overview#result-style-errors).
+
 ### What an upgrade gives for free
 
 Some runtime changes arrive with the new target framework, with no edit to the methods that await.

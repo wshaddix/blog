@@ -46,6 +46,7 @@ A short C# sample will go here. A sample longer than about 30 lines will live in
 ## Related
 
 - [Logging](/csharp/platform/logging)
+- [Server-Timing](/csharp/aspnet-core/observability/server-timing)
 - [Health checks](/csharp/aspnet-core/observability/health-checks)
 - [DevOps monitoring](/devops/monitoring/logging)
 - [Building a SaaS: Monitoring](/building-a-saas/12-monitoring-operations/overview)

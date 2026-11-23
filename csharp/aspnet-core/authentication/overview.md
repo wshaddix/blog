@@ -12,6 +12,12 @@ How an ASP.NET Core app establishes who the caller is. Pick the scheme on the ch
 - [OpenID Connect](/csharp/aspnet-core/authentication/openid-connect) - An external identity provider.
 - [Modern authentication](/csharp/aspnet-core/authentication/modern-auth) - Passkeys, device-bound sessions, and machine-to-machine calls.
 
+## What changed in .NET 11
+
+- TODO: Read the authentication and authorization notes for .NET 11 before copying a sample that was written for an older release.
+- TODO: Name what a project on .NET 10 has to change when it moves: a renamed API, a new default, or a scheme registration that moved.
+- TODO: The framework bump for this product is [Moving from 10 to 11](/building-a-saas/01-project-setup/overview#moving-from-10-to-11).
+
 ## Related
 
 - [Authorization](/csharp/aspnet-core/authorization/overview)

@@ -12,6 +12,12 @@ Every file. Look for extra changes you did not ask for.
 
 The project's tests, on TUnit. A green run is the minimum.
 
+### A red pipeline
+
+- TODO: When the pipeline is already failing, read that check and its log before editing.
+- TODO: Reproduce the failure locally, change the code the failure points at, and run the same check again.
+- TODO: A failure that sits outside the change, or that does not reproduce, stays with a person.
+
 ### A reproduction you checked yourself
 
 A test written in the same pass as the fix can pass because it shares the fix's assumption.

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -180,6 +180,10 @@
 <!-- TODO: Configuration, connection strings -->
 <h2 id="entity-configurations">Entity Configurations</h2>
 <!-- TODO: Fluent API, relationships, indexes -->
+<h3 id="the-subscription-aggregate">The subscription aggregate</h3>
+<ul>
+<li>TODO: Map Subscription with a private constructor, a field-backed collection, and owned value objects. See <a href="../../../csharp/entity-framework/modeling/#private-setters-and-backing-fields">Private setters and backing fields</a> and <a href="../../../csharp/entity-framework/modeling/#collections-behind-a-read-only-view">Collections behind a read-only view</a>.</li>
+</ul>
 <h3 id="status-values-a-person-can-read">Status values a person can read</h3>
 <p>A status stored on an entity should be readable in a query without a decoder.</p>
 <ul>
@@ -220,6 +224,11 @@
 <ul>
 <li>TODO: A bulk check or an export can pass thousands of ids into one query.</li>
 <li>TODO: Join to that set. Do not run one query per id.</li>
+</ul>
+<h3 id="several-collections-on-one-parent">Several collections on one parent</h3>
+<ul>
+<li>TODO: Loading one aggregate that has two collections can multiply rows. See <a href="../../../csharp/entity-framework/performance/#single-versus-split-queries">Single versus split queries</a>.</li>
+<li>TODO: A reconciliation that must list unmatched rows from both sides is <a href="../../../csharp/entity-framework/querying/#full-outer-joins">Full outer joins</a>.</li>
 </ul>
 <h2 id="savechanges-in-a-loop">SaveChanges in a loop</h2>
 <ul>
@@ -287,16 +296,6 @@
     <h2>See also</h2>
 <div class="card-compact-group">
 <div class="card-compact-container">
-    <a href="/csharp/aspnet-core/web-apis/caching/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Caching</span>
-            </div>
-            <p class="card-compact-description">Cache a response when the bytes do not depend on a side effect.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
     <a href="/fundamentals/distributed-systems/caching/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -317,12 +316,12 @@
     </a>
 </div>
 <div class="card-compact-container">
-    <a href="/fundamentals/programming-concepts/concurrency/" class="group card-compact no-link">
+    <a href="/patterns/application-patterns/cqrs/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
-                <span class="card-compact-title">Concurrency</span>
+                <span class="card-compact-title">CQRS</span>
             </div>
-            <p class="card-compact-description">Concurrency is managing multiple tasks that can be in progress at the same time. Parallelism is actually executing multiple tasks simultaneously.</p>
+            <p class="card-compact-description">Separate the model that changes state from the model that reads it, when those two models want different shapes.</p>
         </div>
     </a>
 </div>
@@ -403,6 +402,16 @@
                 <span class="card-compact-title">Performance</span>
             </div>
             <p class="card-compact-description">Avoiding common performance pitfalls.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/entity-framework/querying/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Querying</span>
+            </div>
+            <p class="card-compact-description">Using LINQ to query databases.</p>
         </div>
     </a>
 </div>

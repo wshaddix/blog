@@ -6,6 +6,11 @@ Two ways a change becomes a stream of facts.
 
 ## Change data capture
 
+### Reading the log as a relay
+
+- TODO: A consumer can read the database log and publish what committed, instead of polling an outbox table.
+- TODO: That reader is a process to run, to watch, and to catch up after it stops. See [Relaying: polling workers vs log-based](/patterns/integration-patterns/outbox-and-idempotent-consumer#relaying-polling-workers-vs-log-based).
+
 ## Practical Examples
 
 - See [Building a SaaS: Domain Modeling](/building-a-saas/03-domain-modeling/overview) - Domain events

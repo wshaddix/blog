@@ -48,9 +48,18 @@ Security is non-negotiable. We'll implement robust authentication that's also us
 
 ## Permission-based authorization
 
+## Cached authorization decisions
+
+- TODO: Decide how long a cached allow or deny may stand, and how a revocation reaches every instance. See [Cached decisions and revocation](/csharp/aspnet-core/authorization/permissions#cached-decisions-and-revocation).
+
 ## Reviewing authorization changes
 
 - TODO: A change to who can do what gets a second reviewer, even when the diff is small. See [Changes that need a second reviewer](/sdlc/code-review#changes-that-need-a-second-reviewer).
+
+## Closing checklist
+
+- TODO: When sign-in and permissions are in place, walk [Security checklist](/csharp/aspnet-core/hosting/security-checklist).
+- TODO: Tenant isolation is the other half. Finish that half in [Chapter 5](/building-a-saas/05-multi-tenancy/overview#closing-checklist) before treating the list as done.
 
 ## Moving tenants to a new identity provider
 

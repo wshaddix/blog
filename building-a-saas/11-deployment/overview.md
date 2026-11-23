@@ -13,6 +13,10 @@ Getting code to production reliably and repeatedly.
 
 ## CI/CD Pipeline
 
+### Pinning the workflow
+
+- TODO: Pin each action to a commit, and review the diff when the pin moves. See [Pinning actions](/devops/ci-cd/github-actions#pinning-actions).
+
 ### Checking the release after it lands
 
 - TODO: After the deploy, follow [After the deploy is triggered](/devops/ci-cd/concepts#after-the-deploy-is-triggered) and confirm the running app with [Health Checks](/building-a-saas/12-monitoring-operations/overview#health-checks).
@@ -54,10 +58,15 @@ A migration that ships with one release has to leave the previous version able t
 | Blue-Green | Instant switch | Medium |
 | Canary | Gradual traffic shift | Low |
 
+### Releasing behind a flag
+
+- TODO: Ship the build, then turn the feature on for a tenant or a slice of traffic. See [Feature flags](/devops/ci-cd/feature-flags).
+
 ### A VPS instead of Azure
 
 - TODO: Host the app on a rented machine when Azure App Service is not the target. See [A rented VPS](/devops/self-hosting/overview#a-rented-vps).
 - TODO: Keep staging and production on different machines, with secrets split by environment. See [Staging and production on separate machines](/devops/self-hosting/overview#staging-and-production-on-separate-machines).
+- TODO: A database on that machine, a dump that leaves the machine, and a timed restore are [Database on the app server](/devops/self-hosting/overview#database-on-the-app-server), [Backups off the box](/devops/self-hosting/overview#backups-off-the-box), and [Restore drills](/devops/self-hosting/overview#restore-drills).
 
 ### Why not Kubernetes yet
 

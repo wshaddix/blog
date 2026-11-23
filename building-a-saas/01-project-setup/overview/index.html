@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -211,6 +211,11 @@
 <li>TODO: Plan the move off a target framework before its support window closes, and confirm the date on Microsoft&#x27;s support policy page before you schedule the work.</li>
 <li>TODO: Follow the upgrade order in <a href="../../../csharp/platform/publishing/#support-windows-and-end-of-support">Support windows and end of support</a>, including a fresh publish of every self-contained deploy.</li>
 </ul>
+<h3 id="moving-from-10-to-11">Moving from 10 to 11</h3>
+<ul>
+<li>TODO: Raise the target framework, rebuild, and run the suite. List what the compiler rejects before changing behavior.</li>
+<li>TODO: The language side of the same bump is <a href="../../../csharp/advanced-features/modern-csharp/#net-11">.NET 11</a>. Authentication changes are <a href="../../../csharp/aspnet-core/authentication/overview/#what-changed-in-net-11">What changed in .NET 11</a>. Unions used for domain failures are <a href="../../03-domain-modeling/overview/#result-style-errors">Result-style errors</a>.</li>
+</ul>
 <h3 id="what-an-upgrade-gives-for-free">What an upgrade gives for free</h3>
 <p>Some runtime changes arrive with the new target framework, with no edit to the methods that await.</p>
 <ul>
@@ -283,6 +288,16 @@
                 <span class="card-compact-title">.NET Aspire</span>
             </div>
             <p class="card-compact-description">Orchestrate the local dependencies of a multi-project app.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/authentication/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Authentication</span>
+            </div>
+            <p class="card-compact-description">How an ASP.NET Core app establishes who the caller is. Pick the scheme on the choosing page before implementing any of the others.</p>
         </div>
     </a>
 </div>

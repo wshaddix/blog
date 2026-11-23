@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -219,6 +219,11 @@
 <!-- TODO: Subdomain, header, claim-based -->
 <h2 id="data-isolation">Data Isolation</h2>
 <!-- TODO: Global query filters, TenantId on entities -->
+<h2 id="row-level-security-as-a-second-guard">Row-level security as a second guard</h2>
+<ul>
+<li>TODO: The query filter is the first guard. A database policy is the second, for the paths that never hit the filter.</li>
+<li>TODO: How to write that policy on SQL Server and on Postgres is <a href="../../../databases/relational/row-level-security/">Row-level security</a>.</li>
+</ul>
 <h2 id="ef-core-implementation">EF Core Implementation</h2>
 <!-- TODO: ITenantProvider, SaveChanges override -->
 <h2 id="paths-that-skip-the-filter">Paths that skip the filter</h2>
@@ -239,8 +244,14 @@
 <li>TODO: Show one page of rows. The API returns the next page with a keyset cursor. See <a href="../../06-api-development/overview/#keyset-pagination">Keyset pagination</a>.</li>
 <li>TODO: Render that page with the grid in <a href="../../../csharp/aspnet-core/blazor/data-grids/">Data grids</a>.</li>
 </ul>
+<h2 id="closing-checklist">Closing checklist</h2>
+<ul>
+<li>TODO: Walk <a href="../../../csharp/aspnet-core/hosting/security-checklist/">Security checklist</a> for tenant data together with the sign-in items in <a href="../../04-authentication/overview/#closing-checklist">Chapter 4</a>.</li>
+<li>TODO: Include the database policy, not only the query filter. See <doc-anchor-trigger to="#row-level-security-as-a-second-guard">Row-level security as a second guard</doc-anchor-trigger>.</li>
+</ul>
 <h2 id="related-topics">Related Topics</h2>
 <ul>
+<li>See <a href="../../../databases/relational/row-level-security/">Row-level security</a></li>
 <li>See <a href="../../../databases/data-modeling/overview/">Databases: Data Modeling</a></li>
 <li>See <a href="../../../csharp/entity-framework/querying/">Entity Framework: Querying</a></li>
 <li>See <a href="../../../csharp/platform/configuration-and-options/">Configuration and options</a></li>
@@ -328,6 +339,26 @@
                 <span class="card-compact-title">Risks and Limits</span>
             </div>
             <p class="card-compact-description">The failure modes that show up in a team that uses assistants every day.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/databases/relational/row-level-security/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Row-Level Security</span>
+            </div>
+            <p class="card-compact-description">The database can refuse a row that an application filter forgot to hide.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/hosting/security-checklist/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Security Checklist</span>
+            </div>
+            <p class="card-compact-description">Each category on the current top-ten risk list points at the page on this site that covers it.</p>
         </div>
     </a>
 </div>

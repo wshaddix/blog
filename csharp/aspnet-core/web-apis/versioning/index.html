@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -168,12 +168,25 @@
 <h1 id="api-versioning">API Versioning</h1>
 <p>How a contract changes without breaking a client you already shipped.</p>
 <p><em>This page is an outline. The sections will be filled in over time, including a C# sample where the topic has one.</em></p>
+<h2 id="changes-that-dont-need-a-version">Changes that don&#x27;t need a version</h2>
+<ul>
+<li>TODO: A new field an existing client can ignore does not need a new version.</li>
+<li>TODO: Clients this product ships, including Uno and WinUI, keep working when a response gains a field they do not read.</li>
+<li>TODO: The point where a new version costs less than another compatible change is <doc-anchor-trigger to="#what-counts-as-a-break">What counts as a break</doc-anchor-trigger>.</li>
+</ul>
 <h2 id="what-counts-as-a-break">What counts as a break</h2>
 <p>Removing a field, changing a type, and changing an error code.</p>
 <h2 id="url-and-header-versions">URL and header versions</h2>
 <p>Where the version lives, and one choice per API.</p>
 <h2 id="supporting-two-versions">Supporting two versions</h2>
 <p>How long the old one stays, and who deletes it.</p>
+<h2 id="deprecating-deliberately">Deprecating deliberately</h2>
+<ul>
+<li>TODO: Name the field you will remove. Send <code translate="no" v-pre>Deprecation</code> and <code translate="no" v-pre>Sunset</code>, and link to the page that explains the replacement.</li>
+<li>TODO: Measure who still sends or reads the old shape before you delete it.</li>
+<li>TODO: Open a new version when one more compatible patch would cost more than carrying two contracts.</li>
+<li>TODO: The tenants still on the old field are <a href="../../../../building-a-saas/06-api-development/overview/#who-still-calls-a-deprecated-field">Who still calls a deprecated field</a>.</li>
+</ul>
 <h2 id="clients">Clients</h2>
 <p>Uno and WinUI builds in the field will call the old version.</p>
 <h2 id="code-example">Code example</h2>
@@ -187,6 +200,16 @@
 <div id="retype-backlinks">
     <h2>See also</h2>
 <div class="card-compact-group">
+<div class="card-compact-container">
+    <a href="/building-a-saas/06-api-development/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Well-designed APIs are a pleasure to use. We'll build RESTful endpoints that are consistent, documented, and secure.</p>
+        </div>
+    </a>
+</div>
 <div class="card-compact-container">
     <a href="/csharp/aspnet-core/web-apis/polling-sse-and-async-request-reply/" class="group card-compact no-link">
         <div class="card-compact-body">

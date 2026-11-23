@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -171,6 +171,13 @@
 <!-- TODO: Find, Where, Single, First -->
 <h2 id="loading-related-data">Loading Related Data</h2>
 <!-- TODO: Eager loading (Include), explicit loading, lazy loading -->
+<h2 id="full-outer-joins">Full outer joins</h2>
+<ul>
+<li>TODO: A full outer join keeps the rows that match and the rows that have no partner on the other side.</li>
+<li>TODO: Use it for a reconciliation that has to show what exists only on the left and what exists only on the right.</li>
+<li>TODO: Assert the SQL text, not only the materialized rows, so a later EF version cannot change the shape unnoticed.</li>
+<li>TODO: Where this product needs that report is <a href="../../../building-a-saas/07-data-layer/overview/#several-collections-on-one-parent">Several collections on one parent</a>.</li>
+</ul>
 <h2 id="projections">Projections</h2>
 <!-- TODO: Select, anonymous types, DTOs -->
 <h2 id="filtering-and-sorting">Filtering and Sorting</h2>
@@ -243,6 +250,16 @@
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">Multi-tenancy allows one application to serve many customers with isolated data.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/07-data-layer/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">The data layer connects your domain model to the database. Done right, it's reliable and performant.</p>
         </div>
     </a>
 </div>

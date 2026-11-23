@@ -97,6 +97,8 @@ TUnit is the runner. Reqnroll runs behavior scenarios on that same runner.
 - [Mocking](/csharp/testing/mocking) - TUnit.Mocks
 - [Time-dependent code](/csharp/testing/time-dependent-code) - A clock the test controls
 - [Integration Testing](/csharp/testing/integration-testing) - The API and a real database
+- [Playwright for .NET](/csharp/testing/playwright) - A few browser tests
+- [Mutation testing](/csharp/testing/mutation-testing) - Edits that the tests should notice
 - [Reqnroll](/csharp/testing/reqnroll/overview) - Gherkin features
 
 ## Learning Path

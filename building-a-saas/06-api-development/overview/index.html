@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -197,12 +197,20 @@
 <!-- TODO: FluentValidation, model validation -->
 <h2 id="error-handling">Error Handling</h2>
 <!-- TODO: Problem Details, global exception handling -->
+<h3 id="a-stable-code-and-a-localized-message">A stable code and a localized message</h3>
+<ul>
+<li>TODO: Return one error code and a message resolved for the request culture. The code does not change when the text does. See <a href="../../../csharp/aspnet-core/web-apis/validation/#localized-messages">Localized messages</a>.</li>
+</ul>
 <h2 id="request-timeouts">Request timeouts</h2>
 <ul>
 <li>TODO: Bound how long one request may run, and pass that limit into the work. See <a href="../../../csharp/advanced-features/cancellation/#request-timeouts">Request timeouts</a>.</li>
 </ul>
 <h2 id="api-versioning">API Versioning</h2>
 <!-- TODO: URL vs header versioning -->
+<h3 id="who-still-calls-a-deprecated-field">Who still calls a deprecated field</h3>
+<ul>
+<li>TODO: Before a deprecated field is removed, record which tenants still send or read it. See <a href="../../../csharp/aspnet-core/web-apis/versioning/#deprecating-deliberately">Deprecating deliberately</a>.</li>
+</ul>
 <h2 id="documentation">Documentation</h2>
 <!-- TODO: Built-in OpenAPI document generation, with Scalar or Swagger UI -->
 <h2 id="output-caching">Output caching</h2>
@@ -221,6 +229,10 @@
 </ul>
 <h2 id="async-request-reply">Async request-reply</h2>
 <!-- TODO: 202 Accepted and a status resource for work that outlives the request -->
+<h3 id="loading-the-same-data-twice">Loading the same data twice</h3>
+<ul>
+<li>TODO: A screen that prerenders and then becomes interactive can load the same data twice. Persist the first result, as in <a href="../../../csharp/aspnet-core/blazor/overview/#prerendering-and-persisted-state">Prerendering and persisted state</a>.</li>
+</ul>
 <h2 id="conditional-updates">Conditional updates</h2>
 <ul>
 <li>TODO: Two admins of one tenant open the same settings page. The second save must not erase the first.</li>
@@ -237,6 +249,14 @@
 <li>TODO: A tenant uploads thousands of records in one request. Stream the items and save them in batches instead of binding one array. See <a href="../../../csharp/aspnet-core/web-apis/routing-and-binding/#large-request-bodies">Large request bodies</a>.</li>
 <li>TODO: The size limit can follow the tenant&#x27;s plan.</li>
 </ul>
+<h3 id="tenant-attachments">Tenant attachments</h3>
+<ul>
+<li>TODO: A file a tenant attaches is a different upload from a bulk record import. Accept it with a limit, or let the client write it straight to storage. See <a href="../../../csharp/aspnet-core/web-apis/file-uploads/">File uploads</a>.</li>
+</ul>
+<h3 id="a-streamed-export">A streamed export</h3>
+<ul>
+<li>TODO: A CSV of many rows can be written as each row is read, instead of buffered into one array. See <a href="../../../csharp/advanced-features/async/#streaming-results-with-iasyncenumerable">Streaming results with IAsyncEnumerable</a>.</li>
+</ul>
 <h2 id="rate-limits-per-plan">Rate limits per plan</h2>
 <ul>
 <li>TODO: A free plan and a paid plan carry different limits. The partition includes the plan, along with the caller.</li>
@@ -245,6 +265,12 @@
 <h3 id="counters-shared-across-instances">Counters shared across instances</h3>
 <ul>
 <li>TODO: Every instance reads and updates the same counters for a plan. See <a href="../../../csharp/aspnet-core/web-apis/rate-limiting/#more-than-one-instance">More than one instance</a>.</li>
+</ul>
+<h2 id="checking-a-models-answer">Checking a model&#x27;s answer</h2>
+<ul>
+<li>TODO: Parse the model&#x27;s reply into a typed value and validate it the way a request body is validated.</li>
+<li>TODO: Reject a reply that breaks a business rule even when it matches the schema, and retry or fall back a small number of times. See <a href="../../../csharp/platform/ai-clients/">AI clients</a>.</li>
+<li>TODO: The same checks, run before a model change, are <a href="../../10-testing-strategy/overview/#evals-against-a-second-model">Evals against a second model</a>.</li>
 </ul>
 <h2 id="apis-called-by-agents">APIs called by agents</h2>
 <ul>
@@ -300,32 +326,32 @@
     <h2>See also</h2>
 <div class="card-compact-group">
 <div class="card-compact-container">
+    <a href="/csharp/advanced-features/async/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Async/Await</span>
+            </div>
+            <p class="card-compact-description">Write asynchronous code that reads like synchronous code.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/blazor/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Blazor</span>
+            </div>
+            <p class="card-compact-description">Blazor is the C# web UI. It talks to the API. It does not become a second place where business rules live.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/fundamentals/distributed-systems/caching/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Caching</span>
             </div>
             <p class="card-compact-description">A cache keeps a copy so you can skip the slower read, and then you have to live with that copy being old.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/csharp/advanced-features/cancellation/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Cancellation</span>
-            </div>
-            <p class="card-compact-description">Cooperative cancellation, and a limit on how much work runs at once.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/csharp/aspnet-core/web-apis/conditional-requests/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Conditional Requests</span>
-            </div>
-            <p class="card-compact-description">Two clients edit the same resource. The second save should fail instead of erasing the first.</p>
         </div>
     </a>
 </div>
@@ -350,22 +376,32 @@
     </a>
 </div>
 <div class="card-compact-container">
-    <a href="/csharp/mcp/authentication/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">MCP Authentication</span>
-            </div>
-            <p class="card-compact-description">A local stdio server runs as the user. A remote HTTP server has to know who is calling.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
     <a href="/building-a-saas/05-multi-tenancy/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Overview</span>
             </div>
             <p class="card-compact-description">Multi-tenancy allows one application to serve many customers with isolated data.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/10-testing-strategy/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Tests give you confidence to ship. We'll build a comprehensive testing strategy.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/building-a-saas/12-monitoring-operations/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Your job isn't done when code ships. Observability keeps your SaaS running smoothly.</p>
         </div>
     </a>
 </div>
@@ -380,32 +416,22 @@
     </a>
 </div>
 <div class="card-compact-container">
-    <a href="/csharp/aspnet-core/web-apis/pagination/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Pagination, Filtering, and Sorting</span>
-            </div>
-            <p class="card-compact-description">List endpoints return a page, not a table.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
-    <a href="/csharp/aspnet-core/web-apis/rate-limiting/" class="group card-compact no-link">
-        <div class="card-compact-body">
-            <div class="card-compact-header">
-                <span class="card-compact-title">Rate Limiting</span>
-            </div>
-            <p class="card-compact-description">The built-in rate limiter slows a caller down before they crowd out everyone else.</p>
-        </div>
-    </a>
-</div>
-<div class="card-compact-container">
     <a href="/ai-assisted-development/using-mcp/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
                 <span class="card-compact-title">Using MCP</span>
             </div>
             <p class="card-compact-description">MCP lets an assistant call a tool on a server: read a ticket, query a database, or hit an API. Building the server is covered under C#.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/web-apis/validation/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Validation</span>
+            </div>
+            <p class="card-compact-description">Reject a request that cannot succeed before any state changes.</p>
         </div>
     </a>
 </div>

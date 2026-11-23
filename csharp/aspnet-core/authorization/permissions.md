@@ -16,6 +16,12 @@ A permission names one action the caller may perform.
 
 ## One row
 
+## Cached decisions and revocation
+
+- TODO: Decide how old an allow or a deny is allowed to be before it is wrong.
+- TODO: Drop the cached decision on every instance when a permission changes, or read the store on each request when that lag is not acceptable.
+- TODO: Work that runs after the request has ended is [Acting on a user's behalf later](/csharp/aspnet-core/web-apis/background-services#acting-on-a-users-behalf-later). The product side is [Cached authorization decisions](/building-a-saas/04-authentication/overview#cached-authorization-decisions).
+
 ## Practical Examples
 
 - See [Building a SaaS: Authentication](/building-a-saas/04-authentication/overview) - Permission checks beside sign-in

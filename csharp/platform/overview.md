@@ -12,6 +12,7 @@ Console apps, MCP servers, APIs, Blazor, WinUI, and Uno are composed the same wa
 - [Configuration and options](/csharp/platform/configuration-and-options) - Settings, environments, and the options pattern.
 - [Logging](/csharp/platform/logging) - `ILogger` and structured events.
 - [HTTP clients](/csharp/platform/http-clients) - Typed clients, timeouts, and retries.
+- [AI clients](/csharp/platform/ai-clients) - One client interface for a model, and a check on the answer.
 - [Publishing](/csharp/platform/publishing) - How a build becomes something you can run.
 
 ## One composition model

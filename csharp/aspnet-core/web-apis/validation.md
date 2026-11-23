@@ -20,6 +20,13 @@ Automatic validation on minimal APIs and controllers.
 
 A 400 whose body matches the Problem Details page.
 
+## Localized messages
+
+- TODO: The text comes from the attribute, from a resource key, or from the validator. The code that identifies the failure stays the same.
+- TODO: Read the culture from the request and resolve the text for that culture.
+- TODO: Assert one failure under two cultures: the same code, two different strings.
+- TODO: How this API returns that pair is [A stable code and a localized message](/building-a-saas/06-api-development/overview#a-stable-code-and-a-localized-message).
+
 ## Code example
 
 A short C# sample will go here. A sample longer than about 30 lines will live in a companion `.cs` file next to this page.

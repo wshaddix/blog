@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -190,6 +190,17 @@
 <li>TODO: Count the queries that read that set, and walk the rows once.</li>
 <li>TODO: Release the database reader before the await that sends the notification, so a slow provider leaves the connection free.</li>
 </ul>
+<h3 id="one-job-per-channel">One job per channel</h3>
+<ul>
+<li>TODO: One job that sends email, SMS, and push will retry all three when one of them fails.</li>
+<li>TODO: Fan out so each channel is its own job.</li>
+<li>TODO: Store a delivery record per channel. A retry skips a channel that already succeeded.</li>
+<li>TODO: Keep a dead letter per channel, and alert on that channel.</li>
+</ul>
+<h2 id="work-queued-for-a-user">Work queued for a user</h2>
+<ul>
+<li>TODO: Store who enqueued the job and what they were allowed to do. Check again at execution, and skip the action when the permission is gone. See <a href="../../../csharp/aspnet-core/web-apis/background-services/#acting-on-a-users-behalf-later">Acting on a user&#x27;s behalf later</a>.</li>
+</ul>
 <h2 id="job-processing-options">Job Processing Options</h2>
 <retype-table copy-text="| Option | Pros | Cons |
 |--------|------|------|
@@ -225,16 +236,28 @@
 </table>
 </div>
 </retype-table>
+<h3 id="a-broker-instead-of-a-table">A broker instead of a table</h3>
+<ul>
+<li>TODO: Move off a database-table queue when a lightweight broker gives you a durable stream without that load on the application database. See <a href="../../../csharp/aspnet-core/web-apis/background-services/#an-external-job-queue">An external job queue</a>.</li>
+</ul>
 <h2 id="implementation">Implementation</h2>
 <!-- TODO: Job creation, scheduling, monitoring -->
 <h2 id="error-handling">Error Handling</h2>
-<!-- TODO: Retries, dead letter, alerting -->
+<!-- TODO: Retries, dead letter -->
+<h3 id="alerting-on-how-long-work-has-waited">Alerting on how long work has waited</h3>
+<ul>
+<li>TODO: Alert when the oldest queued job is older than the wait you promised. Length is not that signal. See <a href="../../../devops/monitoring/alerting/#age-of-the-oldest-item">Age of the oldest item</a>.</li>
+</ul>
 <h3 id="one-retry-owner-per-job">One retry owner per job</h3>
 <ul>
 <li>TODO: One layer owns the retries for a job. See <a href="../../../fundamentals/distributed-systems/failure-and-degradation/#retries-at-every-layer">Retries at every layer</a> and <a href="../../../fundamentals/distributed-systems/failure-and-degradation/#retry-budget">Retry budget</a>.</li>
 </ul>
 <h2 id="reliable-messaging">Reliable messaging</h2>
 <!-- TODO: Publish domain events through an outbox -->
+<h3 id="how-the-outbox-leaves-the-database">How the outbox leaves the database</h3>
+<ul>
+<li>TODO: Several workers can poll the outbox, or one process can read the database log. Order per aggregate and at-least-once delivery stay either way. See <a href="../../../patterns/integration-patterns/outbox-and-idempotent-consumer/#relaying-polling-workers-vs-log-based">Relaying: polling workers vs log-based</a>.</li>
+</ul>
 <h3 id="indexing-unsent-messages">Indexing unsent messages</h3>
 <ul>
 <li>TODO: Index the outbox rows that are still unsent, and leave the sent rows out of that index. See <a href="../../../databases/relational/indexes-and-query-plans/#filtered-indexes">Filtered indexes</a>.</li>
@@ -281,12 +304,12 @@
     <h2>See also</h2>
 <div class="card-compact-group">
 <div class="card-compact-container">
-    <a href="/devops/azure/functions/" class="group card-compact no-link">
+    <a href="/devops/monitoring/alerting/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
-                <span class="card-compact-title">Azure Functions</span>
+                <span class="card-compact-title">Alerting</span>
             </div>
-            <p class="card-compact-description">Serverless compute for event-driven applications.</p>
+            <p class="card-compact-description">Proactive notification of issues.</p>
         </div>
     </a>
 </div>

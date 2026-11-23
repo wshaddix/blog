@@ -23,6 +23,10 @@ Tests give you confidence to ship. We'll build a comprehensive testing strategy.
   /------------\
 ```
 
+### End-to-end tests
+
+- TODO: Keep a browser test for a path the lower layers cannot see, and point it at [Playwright for .NET](/csharp/testing/playwright).
+
 ## Unit Tests
 
 ### Bug fixes start with a failing test
@@ -58,7 +62,7 @@ A unit test in this product is named for the business rule it guards.
 - TODO: Put the rule in the name. A name that describes the assertion machinery hides which rule failed.
 - TODO: `Fails_the_greater_than_check` is the weak form of a seat limit. `Refuses_a_member_past_the_seat_limit` is the rule.
 - TODO: When the test fails, the name alone should identify the rule.
-- TODO: Keep one class per behavior and one case per boundary, grouped by the rule.
+- TODO: Keep one class per behavior and one case per boundary, grouped by the rule. How to pick those inputs is [Boundary values](/csharp/testing/unit-testing#boundary-values). Prove the test notices a broken operator with [Watching a test fail](/csharp/testing/unit-testing#watching-a-test-fail). An integration test reads the row back in [Assert what was saved](/csharp/testing/integration-testing#assert-what-was-saved).
 - TODO: Treat the names as the notes the next person or the next agent uses to edit the code.
 - TODO: A review check: a product person can read the test list and recognize the rules.
 - TODO: How to name the method is [Names that state the rule](/csharp/testing/unit-testing#names-that-state-the-rule).
@@ -95,6 +99,7 @@ Isolation shows up only when the fixture holds two tenants that could be mistake
 ## Evals against a second model
 
 - TODO: Run the same evals against the replacement before switching, as in [Changing the model without changing the feature](/csharp/mcp/clients-and-agents#changing-the-model-without-changing-the-feature), and keep the checks in [Verification](/ai-assisted-development/verification).
+- TODO: Validate a typed answer, including the business rules on top of the schema, as in [Checking a model's answer](/building-a-saas/06-api-development/overview#checking-a-models-answer).
 
 ### Trying smaller models
 

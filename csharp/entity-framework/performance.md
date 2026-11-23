@@ -4,6 +4,14 @@ Avoiding common performance pitfalls.
 
 ## N+1 Query Problem
 
+## Single versus split queries
+
+- TODO: Loading two collections in one query multiplies their rows. That product is a cartesian explosion.
+- TODO: A split query spends one round trip per collection. The rows can change between those trips.
+- TODO: Read the SQL the current EF version emits for both shapes, including a join the database no longer needs.
+- TODO: Choose the split for the whole model or for one query, and record which you picked.
+- TODO: One parent loaded with several collections is [Several collections on one parent](/building-a-saas/07-data-layer/overview#several-collections-on-one-parent).
+
 ## Tracking vs No-Tracking
 
 ## Compiled Queries

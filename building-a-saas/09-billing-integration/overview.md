@@ -27,6 +27,11 @@ Monetization is what makes a SaaS sustainable. We'll integrate Stripe for subscr
 
 ## Subscription Management
 
+## Flags per plan
+
+- TODO: A feature can be on for one plan or one tenant and off for the others. Billing decides who is entitled. The flag decides who currently sees it.
+- TODO: Where that flag is stored is [Where the state lives](/devops/ci-cd/feature-flags#where-the-state-lives).
+
 ## Hold, then capture
 
 - TODO: When a subscription change needs a payment, authorize the amount and leave it as a hold.

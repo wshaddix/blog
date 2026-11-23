@@ -31,6 +31,18 @@ Assertions are asynchronous. An `Assert.That` that is not awaited does not run.
 
 `[Arguments]` supplies another set of inputs to the same method. There is no `[Fact]` or `[Theory]`.
 
+## Boundary values
+
+- TODO: Pick an input on each side of the rule, and one input exactly on the boundary.
+- TODO: For a rule that expires, move the clock with `TimeProvider` instead of waiting. See [Time-dependent code](/csharp/testing/time-dependent-code).
+- TODO: One case per boundary in this product is [Names from the domain](/building-a-saas/10-testing-strategy/overview#names-from-the-domain).
+
+## Watching a test fail
+
+- TODO: Change an operator on purpose and run the test. The failure is the evidence that the test sees the rule.
+- TODO: Put the operator back. A test that stays green through that edit is not protecting the rule.
+- TODO: A tool that makes those edits across the code is [Mutation testing](/csharp/testing/mutation-testing).
+
 ## Hooks
 
 `[Before(Test)]` and `[After(Test)]` run around each test. Class, assembly, and session hooks exist for more expensive setup. Prefer a fresh object inside the test when setup is cheap.

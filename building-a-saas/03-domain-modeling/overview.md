@@ -22,11 +22,19 @@ The domain model is the heart of your application - getting it right is crucial.
 
 ## Aggregates
 
+- TODO: Persist an aggregate through EF with a private constructor and a field-backed collection. See [Private setters and backing fields](/csharp/entity-framework/modeling#private-setters-and-backing-fields) and [Collections behind a read-only view](/csharp/entity-framework/modeling#collections-behind-a-read-only-view).
+
 ## Our Domain Model
 
 ## Domain events
 
 ## Aggregate version
+
+## Result-style errors
+
+- TODO: A failure the domain already named can be a union of those cases, instead of a result class.
+- TODO: Measure that union before it sits on a hot path. See [Unions on hot paths](/csharp/advanced-features/modern-csharp#unions-on-hot-paths).
+- TODO: Each case maps to an HTTP status in [Known failures](/csharp/aspnet-core/web-apis/error-handling#known-failures).
 
 ## Related Topics
 

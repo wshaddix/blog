@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847396136628">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.848754790231">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -40,11 +40,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../../resources/css/retype.css?v=4.6.0.847396136628" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.848754790231" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.847396136628" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.848754790231" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -213,9 +213,18 @@
 <!-- TODO: Expiry that tests can control -->
 <h2 id="permission-based-authorization">Permission-based authorization</h2>
 <!-- TODO: Named permissions on the caller, enforced with a policy -->
+<h2 id="cached-authorization-decisions">Cached authorization decisions</h2>
+<ul>
+<li>TODO: Decide how long a cached allow or deny may stand, and how a revocation reaches every instance. See <a href="../../../csharp/aspnet-core/authorization/permissions/#cached-decisions-and-revocation">Cached decisions and revocation</a>.</li>
+</ul>
 <h2 id="reviewing-authorization-changes">Reviewing authorization changes</h2>
 <ul>
 <li>TODO: A change to who can do what gets a second reviewer, even when the diff is small. See <a href="../../../sdlc/code-review/#changes-that-need-a-second-reviewer">Changes that need a second reviewer</a>.</li>
+</ul>
+<h2 id="closing-checklist">Closing checklist</h2>
+<ul>
+<li>TODO: When sign-in and permissions are in place, walk <a href="../../../csharp/aspnet-core/hosting/security-checklist/">Security checklist</a>.</li>
+<li>TODO: Tenant isolation is the other half. Finish that half in <a href="../../05-multi-tenancy/overview/#closing-checklist">Chapter 5</a> before treating the list as done.</li>
 </ul>
 <h2 id="moving-tenants-to-a-new-identity-provider">Moving tenants to a new identity provider</h2>
 <ul>
@@ -307,6 +316,16 @@
     </a>
 </div>
 <div class="card-compact-container">
+    <a href="/building-a-saas/05-multi-tenancy/overview/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Overview</span>
+            </div>
+            <p class="card-compact-description">Multi-tenancy allows one application to serve many customers with isolated data.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
     <a href="/building-a-saas/overview/" class="group card-compact no-link">
         <div class="card-compact-body">
             <div class="card-compact-header">
@@ -323,6 +342,16 @@
                 <span class="card-compact-title">Permission-Based Authorization</span>
             </div>
             <p class="card-compact-description">A permission names one action the caller may perform.</p>
+        </div>
+    </a>
+</div>
+<div class="card-compact-container">
+    <a href="/csharp/aspnet-core/hosting/security-checklist/" class="group card-compact no-link">
+        <div class="card-compact-body">
+            <div class="card-compact-header">
+                <span class="card-compact-title">Security Checklist</span>
+            </div>
+            <p class="card-compact-description">Each category on the current top-ten risk list points at the page on this site that covers it.</p>
         </div>
     </a>
 </div>
